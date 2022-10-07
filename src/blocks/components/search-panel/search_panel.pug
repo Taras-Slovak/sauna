@@ -1,0 +1,22 @@
+.search-panel
+  .search-panel__item.search-panel__sauna
+    label(for='sauna') Тип парной
+    select#sauna    
+      option Не важно
+
+  .search-panel__item
+    label(for='location') Расположение
+    select#location   
+      option Район города
+
+  .search-panel__item
+    label(for='price') Цена
+    select#price  
+      option Цена за час
+
+  .search-panel__item.search-panel__data
+    label(for='data-picker') Data    
+    input#data-picker(type="text" value="Mon Oct 03 2022")
+
+  .search-panel__button
+    button(for='search' type="button") Найти

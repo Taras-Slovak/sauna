@@ -1,0 +1,40 @@
+.advantage {
+  margin-top: 64px;
+
+  &__inner {
+    max-width: 1490px;
+    height: 141px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 350px;
+    height: 144px;
+    display: flex;
+    gap: 30px;
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &__text {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__text-big {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 130%;
+  }
+  &__text-small {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 135%;
+  }
+}
