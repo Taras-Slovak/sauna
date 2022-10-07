@@ -37,6 +37,16 @@ var picker = js_datepicker__WEBPACK_IMPORTED_MODULE_0___default()("#data-picker"
 
 /***/ }),
 
+/***/ "./src/blocks/modules/popular/popular.js":
+/*!***********************************************!*\
+  !*** ./src/blocks/modules/popular/popular.js ***!
+  \***********************************************/
+/***/ (function() {
+
+
+
+/***/ }),
+
 /***/ "./src/js/import/components.js":
 /*!*************************************!*\
   !*** ./src/js/import/components.js ***!
@@ -62,6 +72,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_header_header__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
 /* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_popular_popular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/popular/popular */ "./src/blocks/modules/popular/popular.js");
+/* harmony import */ var _modules_popular_popular__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_popular_popular__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
