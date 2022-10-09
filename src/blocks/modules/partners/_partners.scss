@@ -1,0 +1,50 @@
+.partners {
+  display: block;
+  max-width: 1489px;
+  height: 442px;
+  background-image: url(../img/png/partners.webp);
+  background-size: cover;
+  margin: 158px auto 0 auto;
+
+  @media only screen and (max-width: 1150px) {
+    max-width: 731px;
+    height: 332px;
+    margin-top: 74px;
+    background-image: url(../img/png/partners-920.webp);
+  }
+
+  &__inner {
+    max-width: 649px;
+    padding-top: 73px;
+    padding-left: 131px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    color: #ffffff;
+    @media only screen and (max-width: 1150px) {
+      max-width: 389px;
+      padding-top: 60px;
+      padding-left: 36px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 130%;
+
+    @media only screen and (max-width: 1150px) {
+      font-size: 32px;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+
+    @media only screen and (max-width: 1150px) {
+      max-width: 323px;
+    }
+  }
+}

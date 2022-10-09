@@ -1,0 +1,104 @@
+.popular {
+  max-width: 1490px;
+  margin: 117px auto 0 auto;
+  color: #2f2f2f;
+  @media only screen and (max-width: 1150px) {
+    margin-top: 77px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 150%;
+  }
+
+  &__link {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: #2f2f2f;
+    text-decoration: none;
+  }
+
+  &__card-list {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+.card-item {
+  position: relative;
+  width: 350px;
+  box-sizing: border-box;
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 201px;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  &__like {
+    position: absolute;
+    top: 17px;
+    right: 16px;
+  }
+
+  &__content {
+    padding-top: 20px;
+    padding-left: 15px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 130%;
+  }
+  &__address {
+    margin-top: 26px;
+    line-height: 120%;
+  }
+
+  &__btn-group {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  &__left-btn {
+    width: 59px;
+    height: 26px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    gap: 5px;
+    border: 1px solid #2f2f2f;
+    border-radius: 6px;
+    background: rgb(255, 255, 255);
+  }
+
+  &__right-btn {
+    width: 97px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    gap: 5px;
+    border: 1px solid #2f2f2f;
+    border-radius: 6px;
+    background: rgb(255, 255, 255);
+  }
+}
