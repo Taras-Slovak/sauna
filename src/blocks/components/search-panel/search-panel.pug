@@ -1,0 +1,62 @@
+.search-panel
+  .search-panel__item.search-panel__sauna
+    .search-panel__dropdown
+      .search-panel__dropdown-item        
+        input(type="checkbox", id="finnish"  name="finnish")
+        label(for="finnish") Финская баня
+
+      .search-panel__dropdown-item        
+        input(type="checkbox", id="turkish"  name="turkish")
+        label(for="turkish") Турецкая баня
+
+      .search-panel__dropdown-item
+        input(type="checkbox", id="japanese"  name="japanese")
+        label(for="japanese") Японская баня
+
+      .search-panel__dropdown-item
+        input(type="checkbox", id="firewood" name="firewood")
+        label(for="firewood") На дровах
+
+      .search-panel__dropdown-item        
+        input(type="checkbox", id="roman" name="roman")
+        label(for="roman") Римская парная
+
+      .search-panel__dropdown-item        
+        input(type="checkbox", id="phyto"  name="phyto")
+        label(for="phyto") Фитосауна
+
+    p.search-panel__sauna-txt Тип парной
+    span.search-panel__sauna-filter Не важно
+    
+    img.search-panel__arrow-down(src="img/search-panel/arrow-down.svg", alt="arrow-down")    
+        
+      //- option Не важно
+      //- option Финская баня
+      //- option Турецкая баня
+      //- option На дровах
+      //- option Римская парная
+      //- option Фитосауна
+
+  .search-panel__item
+    label(for='location') Расположение
+    select#location   
+      option Район города
+      option Оболонский район
+      option Деснянский район
+      option Шевченковский район
+      option Харьковский район
+      option Соломенский район
+      option Днепровский район
+
+
+  .search-panel__item
+    label(for='price') Цена
+    select#price  
+      option Цена за час
+
+  .search-panel__item.search-panel__data
+    label(for='data-picker') Data    
+    input#data-picker(type="text" value="17 июня 2021")
+
+  .search-panel__button
+    button(for='search' type="button") Найти
