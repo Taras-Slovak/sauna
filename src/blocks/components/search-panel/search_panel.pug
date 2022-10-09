@@ -3,11 +3,23 @@
     label(for='sauna') Тип парной
     select#sauna    
       option Не важно
+      option Финская баня
+      option Турецкая баня
+      option На дровах
+      option Римская парная
+      option Фитосауна
 
   .search-panel__item
     label(for='location') Расположение
     select#location   
       option Район города
+      option Оболонский район
+      option Деснянский район
+      option Шевченковский район
+      option Харьковский район
+      option Соломенский район
+      option Днепровский район
+
 
   .search-panel__item
     label(for='price') Цена
@@ -16,7 +28,7 @@
 
   .search-panel__item.search-panel__data
     label(for='data-picker') Data    
-    input#data-picker(type="text" value="Mon Oct 03 2022")
+    input#data-picker(type="text" value="17 июня 2021")
 
   .search-panel__button
     button(for='search' type="button") Найти

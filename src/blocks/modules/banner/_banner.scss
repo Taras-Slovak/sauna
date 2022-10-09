@@ -1,6 +1,27 @@
 .banner {
+  position: relative;
   background-image: url(../img/png/banner.webp);
   width: 100%;
-  height: 490px;
+  height: 563px;
   background-size: cover;
+  @media only screen and (max-width: 1150px) {
+    height: 439px;
+    background-image: url(../img/png/banner-920.webp);
+  }
+
+  &__title {
+    display: none;
+    width: 492px;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, 100px);
+    position: absolute;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 160%;
+    color: #ffffff;
+    @media only screen and (max-width: 1150px) {
+      display: block;
+    }
+  }
 }

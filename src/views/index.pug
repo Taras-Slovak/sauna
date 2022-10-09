@@ -6,11 +6,24 @@ block variables
 
 block content
 	include ../blocks/modules/header/header
-	.wrapper
-		main.main
+	
+	main.main
+		.wrapper
 			include ../blocks/modules/banner/banner
+
+		.wrapper
 			include ../blocks/modules/advantage/advantage
+
+		.wrapper
+			include ../blocks/modules/popular/popular
+
+		.wrapper
+			include ../blocks/modules/offers/offers
 			
+		include ../blocks/modules/subscription/subscription
+		.wrapper
+			include ../blocks/modules/partners/partners
+	
 	include ../blocks/modules/footer/footer
 
 block scripts

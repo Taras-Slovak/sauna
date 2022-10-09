@@ -1,5 +1,8 @@
 .advantage {
   margin-top: 64px;
+  @media only screen and (max-width: 1150px) {
+    margin-top: 102px;
+  }
 
   &__inner {
     max-width: 1490px;
@@ -8,6 +11,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media only screen and (max-width: 1150px) {
+      flex-direction: column;
+      height: auto;
+      gap: 30px;
+    }
   }
 
   &__item {

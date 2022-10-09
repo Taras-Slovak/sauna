@@ -7,12 +7,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   background: #ffffff;
+  z-index: 500;
+
   &__navigation {
     display: flex;
+    width: 1509px;
     align-items: center;
-    gap: 807px;
+    justify-content: space-between;
   }
 
   &__location {
@@ -22,12 +25,14 @@
 
   &__left {
     display: flex;
+    margin-left: 22px;
     align-items: center;
     gap: 62px;
   }
 
   &__right {
     display: flex;
+    margin-right: 27px;
     align-items: center;
     gap: 30px;
   }
