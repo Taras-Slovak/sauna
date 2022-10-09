@@ -1,0 +1,147 @@
+@mixin font-size($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 350;
+  font-size: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 350px) / #{$maxWidth})
+  );
+}
+
+@mixin width($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 350;
+  width: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 350px) / #{$maxWidth})
+  );
+}
+
+@mixin max-width($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 350;
+  max-width: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 350px) / #{$maxWidth})
+  );
+}
+
+@mixin height($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 350;
+  height: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 350px) / #{$maxWidth})
+  );
+}
+
+@mixin top($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 350;
+  top: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 350px) / #{$maxWidth}));
+}
+
+@mixin left($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 350;
+  left: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 350px) / #{$maxWidth}));
+}
+
+@mixin right($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 350;
+  right: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 350px) / #{$maxWidth})
+  );
+}
+
+@mixin bottom($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 350;
+  bottom: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 350px) / #{$maxWidth})
+  );
+}
+
+@mixin margin($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 350;
+  margin: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 350px) / #{$maxWidth})
+  );
+}
+
+@mixin margin-top($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 350;
+  margin-top: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 350px) / #{$maxWidth})
+  );
+}
+
+@mixin margin-right($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 350;
+  margin-right: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 350px) / #{$maxWidth})
+  );
+}
+
+@mixin margin-left($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 350;
+  margin-left: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 350px) / #{$maxWidth})
+  );
+}
+
+@mixin margin-bottom($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 350;
+  margin-bottom: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 350px) / #{$maxWidth})
+  );
+}
+
+@mixin padding($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 350;
+  padding: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 350px) / #{$maxWidth})
+  );
+}
+
+@mixin padding-top($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 350;
+  padding-top: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 350px) / #{$maxWidth})
+  );
+}
+
+@mixin padding-right($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 350;
+  padding-right: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 350px) / #{$maxWidth})
+  );
+}
+
+@mixin padding-left($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 350;
+  padding-left: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 350px) / #{$maxWidth})
+  );
+}
+
+@mixin padding-bottom($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 350;
+  padding-bottom: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 350px) / #{$maxWidth})
+  );
+}
+
+@mixin line-height($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 350;
+  line-height: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 350px) / #{$maxWidth})
+  );
+}

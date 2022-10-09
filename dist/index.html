@@ -9,13 +9,16 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
     <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"> </script>
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
     <header class="header"> 
       <nav class="header__navigation">
-        <div class="header__left"><img class="header__logo" src="img/header/logo.svg" alt="logo">
-          <div class="header__location"><img src="img/header/location.svg" alt="location"><a class="header__link" href="#">Киев</a></div><a class="header__link" href="#">Поиск бани</a>
+        <div class="header__left"><img class="header__logo" src="img/header/logo.svg" alt="logo"><img class="header__logo-min" src="img/header/logo-min.svg" alt="logo-min">
+          <div class="header__location"><img src="img/header/location.svg" alt="location"><a href="#">Киев</a></div><a class="header__search" href="#">
+            <p>Поиск бани</p>
+            <p>Поиск</p><img src="img/header/search.svg" alt="search"></a>
         </div>
         <div class="header__right"><a class="header__link" href="#">Разместить баню</a><img class="header__hurt" src="img/header/hurt.svg" alt="hurt">
           <button class="header__button" type="button"><img src="img/header/account-circle.svg" alt="account"><img src="img/header/menu.svg" alt="menu"></button>
@@ -23,49 +26,65 @@
       </nav>
     </header>
     <main class="main">
-      <div class="wrapper">
-        <section class="banner">
-          <h2 class="banner__title">Поиск <br> и бронирование бань</h2>
-          <div class="search-panel">
-            <div class="search-panel__item search-panel__sauna">
-              <label for="sauna">Тип парной</label>
-              <select id="sauna">   
-                <option>Не важно</option>
-                <option>Финская баня</option>
-                <option>Турецкая баня</option>
-                <option>На дровах</option>
-                <option>Римская парная</option>
-                <option>Фитосауна</option>
-              </select>
+      <section class="banner">
+        <h2 class="banner__title">Поиск <br> и бронирование бань</h2>
+        <div class="search-panel">
+          <div class="search-panel__item search-panel__sauna">
+            <div class="search-panel__dropdown">
+              <div class="search-panel__dropdown-item">       
+                <input type="checkbox" id="finnish" name="finnish">
+                <label for="finnish">Финская баня</label>
+              </div>
+              <div class="search-panel__dropdown-item">       
+                <input type="checkbox" id="turkish" name="turkish">
+                <label for="turkish">Турецкая баня</label>
+              </div>
+              <div class="search-panel__dropdown-item">
+                <input type="checkbox" id="japanese" name="japanese">
+                <label for="japanese">Японская баня</label>
+              </div>
+              <div class="search-panel__dropdown-item">
+                <input type="checkbox" id="firewood" name="firewood">
+                <label for="firewood">На дровах</label>
+              </div>
+              <div class="search-panel__dropdown-item">       
+                <input type="checkbox" id="roman" name="roman">
+                <label for="roman">Римская парная</label>
+              </div>
+              <div class="search-panel__dropdown-item">       
+                <input type="checkbox" id="phyto" name="phyto">
+                <label for="phyto">Фитосауна</label>
+              </div>
             </div>
-            <div class="search-panel__item">
-              <label for="location">Расположение</label>
-              <select id="location">  
-                <option>Район города</option>
-                <option>Оболонский район</option>
-                <option>Деснянский район</option>
-                <option>Шевченковский район</option>
-                <option>Харьковский район</option>
-                <option>Соломенский район</option>
-                <option>Днепровский район</option>
-              </select>
-            </div>
-            <div class="search-panel__item">
-              <label for="price">Цена</label>
-              <select id="price"> 
-                <option>Цена за час</option>
-              </select>
-            </div>
-            <div class="search-panel__item search-panel__data">
-              <label for="data-picker">Data    </label>
-              <input id="data-picker" type="text" value="17 июня 2021">
-            </div>
-            <div class="search-panel__button">
-              <button for="search" type="button">Найти</button>
-            </div>
+            <p class="search-panel__sauna-txt">Тип парной</p><span class="search-panel__sauna-filter">Не важно</span><img class="search-panel__arrow-down" src="img/search-panel/arrow-down.svg" alt="arrow-down">
           </div>
-        </section>
-      </div>
+          <div class="search-panel__item">
+            <label for="location">Расположение</label>
+            <select id="location">  
+              <option>Район города</option>
+              <option>Оболонский район</option>
+              <option>Деснянский район</option>
+              <option>Шевченковский район</option>
+              <option>Харьковский район</option>
+              <option>Соломенский район</option>
+              <option>Днепровский район</option>
+            </select>
+          </div>
+          <div class="search-panel__item">
+            <label for="price">Цена</label>
+            <select id="price"> 
+              <option>Цена за час</option>
+            </select>
+          </div>
+          <div class="search-panel__item search-panel__data">
+            <label for="data-picker">Data    </label>
+            <input id="data-picker" type="text" value="17 июня 2021">
+          </div>
+          <div class="search-panel__button">
+            <button for="search" type="button">Найти</button>
+          </div>
+        </div>
+      </section>
       <div class="wrapper">
         <section class="advantage">
           <div class="advantage__inner"> 
@@ -94,65 +113,63 @@
         <section class="popular">
           <div class="popular__top">
             <h2 class="popular__title">Популярные</h2><a class="popular__link" href="#">Все варианты </a>
-          </div>
-          <div class="popular__card-list">
-            <div class="card-item"><img class="card-item__img" src="img/png/pic-1.png" alt="pic"><a class="card-item__like" href="#" title="like"><img src="img/card/like.svg" alt="like"></a>
-              <div class="card-item__content">
-                <h4 class="card-item__title">Сауна Аквамарин</h4>
-                <div class="card-item__address">
-                  <p>ул. Волинська 10</p>
-                  <p>Оболонский район</p>
-                </div>
-                <div class="card-item__btn-group"> 
-                  <button class="card-item__left-btn" type="button"><img src="img/card/star.svg" alt="star">
-                    <p>4.5</p>
-                  </button>
-                  <button class="card-item__right-btn" type="button">от 1 000 грн.</button>
+          </div><a class="popular__link-350" href="#">Все варианты</a>
+          <div class="carousel slide" id="slider-sauna" data-bs-ride="true" data-bs-touch="true">
+            <div class="carousel-indicators">
+              <button class="active" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card-item"><img class="card-item__img" src="img/png/pic-1.png" alt="pic"><a class="card-item__like" href="#" title="like"><img src="img/card/like.svg" alt="like"></a>
+                  <div class="card-item__content">
+                    <h4 class="card-item__title">Сауна Аквамарин</h4>
+                    <div class="card-item__address">
+                      <p>ул. Волинська 10</p>
+                      <p>Оболонский район</p>
+                    </div>
+                    <div class="card-item__btn-group"> 
+                      <button class="card-item__left-btn" type="button"><img src="img/card/star.svg" alt="star">
+                        <p>4.5</p>
+                      </button>
+                      <button class="card-item__right-btn" type="button">от 1 000 грн.</button>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card-item"><img class="card-item__img" src="img/png/pic-2.png" alt="pic"><a class="card-item__like" href="#" title="like"><img src="img/card/like.svg" alt="like"></a>
-              <div class="card-item__content">
-                <h4 class="card-item__title">Сауна Аквамарин</h4>
-                <div class="card-item__address">
-                  <p>ул. Волинська 10</p>
-                  <p>Оболонский район</p>
-                </div>
-                <div class="card-item__btn-group"> 
-                  <button class="card-item__left-btn" type="button"><img src="img/card/star.svg" alt="star">
-                    <p>4.5</p>
-                  </button>
-                  <button class="card-item__right-btn" type="button">от 1 000 грн.</button>
-                </div>
-              </div>
-            </div>
-            <div class="card-item"><img class="card-item__img" src="img/png/pic-3.png" alt="pic"><a class="card-item__like" href="#" title="like"><img src="img/card/like.svg" alt="like"></a>
-              <div class="card-item__content">
-                <h4 class="card-item__title">Сауна Аквамарин</h4>
-                <div class="card-item__address">
-                  <p>ул. Волинська 10</p>
-                  <p>Оболонский район</p>
-                </div>
-                <div class="card-item__btn-group"> 
-                  <button class="card-item__left-btn" type="button"><img src="img/card/star.svg" alt="star">
-                    <p>4.5</p>
-                  </button>
-                  <button class="card-item__right-btn" type="button">от 1 000 грн.</button>
+              <div class="carousel-item">
+                <div class="card-item"><img class="card-item__img" src="img/png/pic-1.png" alt="pic"><a class="card-item__like" href="#" title="like"><img src="img/card/like.svg" alt="like"></a>
+                  <div class="card-item__content">
+                    <h4 class="card-item__title">Сауна Аквамарин</h4>
+                    <div class="card-item__address">
+                      <p>ул. Волинська 10</p>
+                      <p>Оболонский район</p>
+                    </div>
+                    <div class="card-item__btn-group"> 
+                      <button class="card-item__left-btn" type="button"><img src="img/card/star.svg" alt="star">
+                        <p>4.5</p>
+                      </button>
+                      <button class="card-item__right-btn" type="button">от 1 000 грн.</button>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card-item"><img class="card-item__img" src="img/png/pic-4.png" alt="pic"><a class="card-item__like" href="#" title="like"><img src="img/card/like.svg" alt="like"></a>
-              <div class="card-item__content">
-                <h4 class="card-item__title">Сауна Аквамарин</h4>
-                <div class="card-item__address">
-                  <p>ул. Волинська 10</p>
-                  <p>Оболонский район</p>
-                </div>
-                <div class="card-item__btn-group"> 
-                  <button class="card-item__left-btn" type="button"><img src="img/card/star.svg" alt="star">
-                    <p>4.5</p>
-                  </button>
-                  <button class="card-item__right-btn" type="button">от 1 000 грн.</button>
+              <div class="carousel-item">
+                <div class="card-item"><img class="card-item__img" src="img/png/pic-1.png" alt="pic"><a class="card-item__like" href="#" title="like"><img src="img/card/like.svg" alt="like"></a>
+                  <div class="card-item__content">
+                    <h4 class="card-item__title">Сауна Аквамарин</h4>
+                    <div class="card-item__address">
+                      <p>ул. Волинська 10</p>
+                      <p>Оболонский район</p>
+                    </div>
+                    <div class="card-item__btn-group"> 
+                      <button class="card-item__left-btn" type="button"><img src="img/card/star.svg" alt="star">
+                        <p>4.5</p>
+                      </button>
+                      <button class="card-item__right-btn" type="button">от 1 000 грн.</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -162,70 +179,9 @@
       <div class="wrapper">
         <section class="offers"> 
           <div class="offers__top">
-            <h2 class="offers__title">Акции и спецпредложения</h2><a class="offers__link" href="#">Все варианты </a>
+            <h2 class="offers__title">Акции и спецпредложения</h2>
           </div>
-          <div class="offers__card-list">
-            <div class="card-item"><img class="card-item__img" src="img/png/pic-5.png" alt="pic"><a class="card-item__like" href="#" title="like"><img src="img/card/like.svg" alt="like"></a>
-              <div class="card-item__content">
-                <h4 class="card-item__title">Сауна Аквамарин</h4>
-                <div class="card-item__address">
-                  <p>ул. Волинська 10</p>
-                  <p>Оболонский район</p>
-                </div>
-                <div class="card-item__btn-group"> 
-                  <button class="card-item__left-btn" type="button"><img src="img/card/star.svg" alt="star">
-                    <p>4.5</p>
-                  </button>
-                  <button class="card-item__right-btn" type="button">от 1 000 грн.</button>
-                </div>
-              </div>
-            </div>
-            <div class="card-item"><img class="card-item__img" src="img/png/pic-6.png" alt="pic"><a class="card-item__like" href="#" title="like"><img src="img/card/like.svg" alt="like"></a>
-              <div class="card-item__content">
-                <h4 class="card-item__title">Сауна Аквамарин</h4>
-                <div class="card-item__address">
-                  <p>ул. Волинська 10</p>
-                  <p>Оболонский район</p>
-                </div>
-                <div class="card-item__btn-group"> 
-                  <button class="card-item__left-btn" type="button"><img src="img/card/star.svg" alt="star">
-                    <p>4.5</p>
-                  </button>
-                  <button class="card-item__right-btn" type="button">от 1 000 грн.</button>
-                </div>
-              </div>
-            </div>
-            <div class="card-item"><img class="card-item__img" src="img/png/pic-7.png" alt="pic"><a class="card-item__like" href="#" title="like"><img src="img/card/like.svg" alt="like"></a>
-              <div class="card-item__content">
-                <h4 class="card-item__title">Сауна Аквамарин</h4>
-                <div class="card-item__address">
-                  <p>ул. Волинська 10</p>
-                  <p>Оболонский район</p>
-                </div>
-                <div class="card-item__btn-group"> 
-                  <button class="card-item__left-btn" type="button"><img src="img/card/star.svg" alt="star">
-                    <p>4.5</p>
-                  </button>
-                  <button class="card-item__right-btn" type="button">от 1 000 грн.</button>
-                </div>
-              </div>
-            </div>
-            <div class="card-item"><img class="card-item__img" src="img/png/pic-8.png" alt="pic"><a class="card-item__like" href="#" title="like"><img src="img/card/like.svg" alt="like"></a>
-              <div class="card-item__content">
-                <h4 class="card-item__title">Сауна Аквамарин</h4>
-                <div class="card-item__address">
-                  <p>ул. Волинська 10</p>
-                  <p>Оболонский район</p>
-                </div>
-                <div class="card-item__btn-group"> 
-                  <button class="card-item__left-btn" type="button"><img src="img/card/star.svg" alt="star">
-                    <p>4.5</p>
-                  </button>
-                  <button class="card-item__right-btn" type="button">от 1 000 грн.</button>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="offers__card-list"></div>
         </section>
       </div>
       <section class="subscription">
@@ -235,16 +191,14 @@
           <button class="subscription__btn" type="button">Подписаться</button><img class="subscription__image" src="img/png/subscription.png" alt="subscription.png">
         </div>
       </section>
-      <div class="wrapper">
-        <section class="partners">
-          <div class="partners__inner">
-            <h2 class="partners__title">Продавайте свои услуги вместе с нами</h2>
-            <p class="partners__text">Размещайте свои бани на портале, публикуйте акции, увеличивайте продажи </p>
-          </div>
-        </section>
-      </div>
+      <section class="partners">
+        <div class="partners__inner">
+          <h2 class="partners__title">Продавайте свои услуги вместе с нами</h2>
+          <p class="partners__text">Размещайте свои бани на портале, публикуйте акции, увеличивайте продажи </p>
+        </div>
+      </section>
     </main>
-    <footer class="footer">
+    <footer class="footer"><img class="footer__logo" src="img/other/logo-foot.svg" alt="logo">
       <div class="footer__inner">
         <div class="footer__block-navigation">
           <div class="footer__item-nav">

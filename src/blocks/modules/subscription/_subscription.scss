@@ -13,14 +13,30 @@
     height: 290px;
     margin: auto;
     box-sizing: border-box;
-    @media only screen and (max-width: 1480px) {
+    @media only screen and (max-width: 1600px) {
       padding-left: 16px;
       padding-right: 16px;
     }
 
-    @media only screen and (max-width: 1150px) {
+    @media only screen and (max-width: 1600px) {
       max-width: 730px;
       height: 310px;
+    }
+
+    @media only screen and (max-width: 930px) {
+      width: 100%;
+      height: 310px;
+    }
+
+    @media only screen and (max-width: 650px) {
+      padding-top: 110px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 400px;
     }
   }
 
@@ -28,8 +44,16 @@
     font-weight: 700;
     font-size: 45px;
     line-height: 130%;
-    @media only screen and (max-width: 1150px) {
+    @media only screen and (max-width: 1600px) {
       font-size: 32px;
+    }
+    @media only screen and (max-width: 650px) {
+      font-size: 22px;
+    }
+    @media only screen and (max-width: 350px) {
+      margin-left: 16px;
+      display: block;
+      width: 100%;
     }
   }
 
@@ -40,8 +64,15 @@
     font-size: 18px;
     line-height: 120%;
 
-    @media only screen and (max-width: 1150px) {
+    @media only screen and (max-width: 1600px) {
       max-width: 294px;
+    }
+    @media only screen and (max-width: 650px) {
+      font-size: 16px;
+    }
+    @media only screen and (max-width: 350px) {
+      display: block;
+      width: 100%;
     }
   }
   &__btn {
@@ -56,14 +87,30 @@
     font-family: "Montserrat";
     line-height: 150%;
     color: #ffffff;
+    @media only screen and (max-width: 650px) {
+      margin-top: 40px;
+      width: 288px;
+    }
   }
 
   &__image {
     position: absolute;
     top: -35px;
     right: -90px;
-    @media only screen and (max-width: 1150px) {
+    @media only screen and (max-width: 1600px) {
       max-width: 406px;
+    }
+
+    @media only screen and (max-width: 920px) {
+      @include width(450, 273);
+      right: 0px;
+    }
+
+    @media only screen and (max-width: 650px) {
+      max-width: 237px;
+      left: 50%;
+      top: 50px;
+      transform: translate(-50%, -50%);
     }
   }
 }

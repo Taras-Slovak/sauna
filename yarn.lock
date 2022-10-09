@@ -2025,6 +2025,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@popperjs/core@npm:^2.11.6":
+  version: 2.11.6
+  resolution: "@popperjs/core@npm:2.11.6"
+  checksum: 47fb328cec1924559d759b48235c78574f2d71a8a6c4c03edb6de5d7074078371633b91e39bbf3f901b32aa8af9b9d8f82834856d2f5737a23475036b16817f0
+  languageName: node
+  linkType: hard
+
 "@sindresorhus/is@npm:^0.7.0":
   version: 0.7.0
   resolution: "@sindresorhus/is@npm:0.7.0"
@@ -3546,6 +3553,15 @@ bem-tools-create@bem-tools/bem-tools-create:
   version: 1.0.0
   resolution: "boolbase@npm:1.0.0"
   checksum: 3e25c80ef626c3a3487c73dbfc70ac322ec830666c9ad915d11b701142fab25ec1e63eff2c450c74347acfd2de854ccde865cd79ef4db1683f7c7b046ea43bb0
+  languageName: node
+  linkType: hard
+
+"bootstrap@npm:5.2.2":
+  version: 5.2.2
+  resolution: "bootstrap@npm:5.2.2"
+  peerDependencies:
+    "@popperjs/core": ^2.11.6
+  checksum: 14e6df28feb975dc10702cac0a6c2a21132a6e4e5562e31cdae1db3970e287ed29001020066b61d96b2cea2a45ecf44c08c8c26bc84a31cdeabec0a9be6b9389
   languageName: node
   linkType: hard
 
@@ -13250,9 +13266,11 @@ bem-tools-create@bem-tools/bem-tools-create:
     "@babel/eslint-parser": ^7.17.0
     "@babel/preset-env": ^7.16.11
     "@babel/register": ^7.17.0
+    "@popperjs/core": ^2.11.6
     babel-loader: ^8.2.3
     bem-tools-core: bem-tools/bem-tools-core
     bem-tools-create: bem-tools/bem-tools-create
+    bootstrap: 5.2.2
     browser-sync: ^2.27.7
     del: ^6.0.0
     dev: ^0.1.3

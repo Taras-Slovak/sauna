@@ -18,3 +18,11 @@ const picker = datepicker("#data-picker", {
     "Декабрь",
   ],
 });
+
+const searchItems = document.querySelectorAll(".search-panel__item");
+
+searchItems.forEach((searchItem) => {
+  searchItem.addEventListener("click", () => {
+    console.log(searchItem.classList.contains("open"));
+  });
+});

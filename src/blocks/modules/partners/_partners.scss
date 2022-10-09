@@ -11,6 +11,22 @@
     height: 332px;
     margin-top: 74px;
     background-image: url(../img/png/partners-920.webp);
+    background-size: cover;
+  }
+
+  @media only screen and (max-width: 950px) {
+    margin: 74px 95px 0 95px;
+    max-width: 100%;
+    background-position: center right;
+  }
+  @media only screen and (max-width: 670px) {
+    height: 600px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/png/partners-350.webp);
+
+    background-position: 100% 0;
   }
 
   &__inner {
@@ -26,15 +42,29 @@
       padding-top: 60px;
       padding-left: 36px;
     }
+
+    @media only screen and (max-width: 950px) {
+      width: 100%;
+      padding-top: 60px;
+      padding-left: 36px;
+    }
   }
 
   &__title {
+    width: 649px;
     font-weight: 700;
     font-size: 45px;
     line-height: 130%;
 
     @media only screen and (max-width: 1150px) {
+      width: 389px;
       font-size: 32px;
+    }
+    @media only screen and (max-width: 830px) {
+      width: 250px;
+      font-size: 22px;
+    }
+    @media only screen and (max-width: 670px) {
     }
   }
 
@@ -44,7 +74,15 @@
     line-height: 120%;
 
     @media only screen and (max-width: 1150px) {
-      max-width: 323px;
+      width: 323px;
+    }
+
+    @media only screen and (max-width: 830px) {
+      width: 255px;
+      font-size: 16px;
+    }
+
+    @media only screen and (max-width: 670px) {
     }
   }
 }

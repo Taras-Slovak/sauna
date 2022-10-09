@@ -11,16 +11,23 @@
   background: #ffffff;
   z-index: 500;
 
-  &__navigation {
-    display: flex;
-    width: 1509px;
-    align-items: center;
-    justify-content: space-between;
+  @media only screen and (max-width: 470px) {
+    height: 50px;
   }
 
-  &__location {
+  a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    color: #2f2f2f;
+  }
+
+  &__navigation {
     display: flex;
+    flex-basis: 1509px;
+    flex-shrink: 1;
     align-items: center;
+    justify-content: space-between;
   }
 
   &__left {
@@ -28,6 +35,51 @@
     margin-left: 22px;
     align-items: center;
     gap: 62px;
+
+    @media only screen and (max-width: 950px) {
+      gap: 27px;
+    }
+  }
+
+  &__logo {
+    @media only screen and (max-width: 470px) {
+      display: none;
+    }
+  }
+
+  &__logo-min {
+    display: none;
+    @media only screen and (max-width: 470px) {
+      display: block;
+    }
+  }
+
+  &__search {
+    p:nth-child(2) {
+      display: none;
+    }
+    img {
+      display: none;
+    }
+
+    @media only screen and (max-width: 840px) {
+      display: flex;
+      gap: 9px;
+      align-items: center;
+
+      p:nth-child(1) {
+        display: none;
+      }
+      p:nth-child(2) {
+        display: block;
+      }
+
+      img {
+        display: block;
+        width: 24px;
+        height: 24px;
+      }
+    }
   }
 
   &__right {
@@ -35,14 +87,29 @@
     margin-right: 27px;
     align-items: center;
     gap: 30px;
+    @media only screen and (max-width: 470px) {
+      margin-right: 16px;
+      gap: 16px;
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    @media only screen and (max-width: 560px) {
+      display: none;
+    }
   }
 
   &__link {
     width: max-content;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 14px;
-    color: #2f2f2f;
+    @media only screen and (max-width: 840px) {
+      display: none;
+    }
   }
 
   &__button {
@@ -58,5 +125,13 @@
     border: 1px solid #b3b3b3;
     border-radius: 100px;
     cursor: pointer;
+
+    @media only screen and (max-width: 470px) {
+      border: none;
+      width: max-content;
+      padding: 0;
+      height: 24px;
+      gap: 16px;
+    }
   }
 }
