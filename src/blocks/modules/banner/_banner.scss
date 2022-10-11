@@ -23,5 +23,11 @@
     @media only screen and (max-width: 1150px) {
       display: block;
     }
+
+    @media only screen and (max-width: 410px) {
+      display: block;
+      width: 300px;
+      font-size: 22px;
+    }
   }
 }

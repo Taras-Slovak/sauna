@@ -1,7 +1,14 @@
 .card-item {
   position: relative;
-  width: 350px;
+  width: auto;
   box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 10px 10px;
+  padding-bottom: 25px;
+  &:hover {
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.271);
+  }
 
   &__img {
     display: block;
@@ -14,6 +21,15 @@
     position: absolute;
     top: 17px;
     right: 16px;
+    svg {
+      fill: #2f2f2f;
+      stroke: white;
+      transition: all 0.2s;
+      &:hover {
+        fill: #ff8a00;
+        stroke: white;
+      }
+    }
   }
 
   &__content {
@@ -50,6 +66,26 @@
     border: 1px solid #2f2f2f;
     border-radius: 6px;
     background: rgb(255, 255, 255);
+    transition: all 0.3s;
+
+    svg {
+      transition: all 0.3s;
+      fill: #ff8a00;
+    }
+    p {
+      transition: all 0.3s;
+    }
+    &:hover {
+      background: #ff8a00;
+      border: 1px solid #ff8a00;
+    }
+
+    &:hover p {
+      color: white;
+    }
+    &:hover svg {
+      fill: white;
+    }
   }
 
   &__right-btn {
@@ -61,5 +97,11 @@
     border: 1px solid #2f2f2f;
     border-radius: 6px;
     background: rgb(255, 255, 255);
+    transition: all 0.3s;
+    &:hover {
+      background: #ff8a00;
+      border: 1px solid #ff8a00;
+      color: white;
+    }
   }
 }

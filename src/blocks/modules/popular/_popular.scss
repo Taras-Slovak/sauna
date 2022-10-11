@@ -24,6 +24,11 @@
     line-height: 150%;
     color: #2f2f2f;
     text-decoration: none;
+    transition: all 0.2s;
+    &:hover {
+      color: #ff8a00;
+    }
+
     @media only screen and (max-width: 761px) {
       display: none;
     }
@@ -36,6 +41,12 @@
     line-height: 150%;
     color: #2f2f2f;
     text-decoration: none;
+    transition: all 0.2s;
+
+    &::hover {
+      color: #ff8a00;
+    }
+
     @media only screen and (max-width: 761px) {
       margin-top: 33px;
       display: block;
@@ -48,5 +59,17 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
+    @media only screen and (max-width: 350px) {
+      display: none;
+    }
+  }
+
+  &__slider {
+    max-width: 320px;
+    display: none;
+
+    @media only screen and (max-width: 350px) {
+      display: block;
+    }
   }
 }

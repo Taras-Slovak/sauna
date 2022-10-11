@@ -87,6 +87,11 @@
     font-family: "Montserrat";
     line-height: 150%;
     color: #ffffff;
+    transition: all 0.1s;
+
+    &:active {
+      transform: scale(0.975);
+    }
     @media only screen and (max-width: 650px) {
       margin-top: 40px;
       width: 288px;

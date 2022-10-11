@@ -1,12 +1,28 @@
-#slider-sauna.carousel.slide(data-bs-ride='true' data-bs-touch="true")
-  .carousel-indicators
-    button.active(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
-    button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='1' aria-label='Slide 2')
-    button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='2' aria-label='Slide 3')
-  .carousel-inner
-    .carousel-item.active
-      include ../../components/card-item/card-item
-    .carousel-item
-      include ../../components/card-item/card-item
-    .carousel-item
-      include ../../components/card-item/card-item
+mixin slider-popular()
+  #slider-popular.carousel.slide(data-bs-ride='true' data-bs-touch="true")
+    .carousel-indicators
+      button.active(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+      button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='1' aria-label='Slide 2')
+      button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='2' aria-label='Slide 3')
+    .carousel-inner
+      .carousel-item.active
+        include ../../components/card-item/card-item
+      .carousel-item
+        include ../../components/card-item/card-item
+      .carousel-item
+        include ../../components/card-item/card-item
+
+
+mixin slider-offer()
+  #slider-offer.carousel.slide(data-bs-ride='true' data-bs-touch="true")
+    .carousel-indicators
+      button.active(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+      button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='1' aria-label='Slide 2')
+      button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='2' aria-label='Slide 3')
+    .carousel-inner
+      .carousel-item.active
+        include ../../components/card-item/card-item
+      .carousel-item
+        include ../../components/card-item/card-item
+      .carousel-item
+        include ../../components/card-item/card-item

@@ -1,8 +1,18 @@
 .search-panel
-  .search-panel__item.search-panel__sauna
-    .search-panel__dropdown
+
+  .search-panel__filter#filter-sauna
+    img.search-panel__arrow-back(src="img/search-panel/arrow-back.svg", alt="arrow-back")
+
+    .search-panel__item.search-panel__sauna 
+
+      img.search-panel__arrow-down(src="img/search-panel/arrow-down.svg", alt="arrow-down") 
+      p.search-panel__sauna-txt Тип парной
+      span.search-panel__sauna-filter Не важно
+      
+
+    .search-panel__dropdown.search-panel__dropdown-sauna
       .search-panel__dropdown-item        
-        input(type="checkbox", id="finnish"  name="finnish")
+        input(type="checkbox", id="finnish" value="finnish"  name="finnish")
         label(for="finnish") Финская баня
 
       .search-panel__dropdown-item        
@@ -25,38 +35,64 @@
         input(type="checkbox", id="phyto"  name="phyto")
         label(for="phyto") Фитосауна
 
-    p.search-panel__sauna-txt Тип парной
-    span.search-panel__sauna-filter Не важно
-    
-    img.search-panel__arrow-down(src="img/search-panel/arrow-down.svg", alt="arrow-down")    
-        
-      //- option Не важно
-      //- option Финская баня
-      //- option Турецкая баня
-      //- option На дровах
-      //- option Римская парная
-      //- option Фитосауна
+  .search-panel__filter
+    img.search-panel__arrow-back(src="img/search-panel/arrow-back.svg", alt="arrow-back")
 
-  .search-panel__item
-    label(for='location') Расположение
-    select#location   
-      option Район города
-      option Оболонский район
-      option Деснянский район
-      option Шевченковский район
-      option Харьковский район
-      option Соломенский район
-      option Днепровский район
+    .search-panel__item
 
+      img.search-panel__arrow-down(src="img/search-panel/arrow-down.svg", alt="arrow-down") 
+      p.search-panel__location-txt Расположение
+      span.search-panel__location-filter Район города
+      
 
-  .search-panel__item
-    label(for='price') Цена
-    select#price  
-      option Цена за час
+    .search-panel__dropdown.search-panel__location    
+      .search-panel__dropdown-item  
+        input(type="checkbox", id="obolonsky"  name="obolonsky")
+        label(for="obolonsky") Оболонский 
 
-  .search-panel__item.search-panel__data
-    label(for='data-picker') Data    
-    input#data-picker(type="text" value="17 июня 2021")
+      .search-panel__dropdown-item        
+        input(type="checkbox", id="desnyansky"  name="desnyansky")
+        label(for="desnyansky") Деснянский 
+
+      .search-panel__dropdown-item
+        input(type="checkbox", id="shevchenkovskiy"  name="shevchenkovskiy")
+        label(for="shevchenkovskiy") Шевченковский 
+
+      .search-panel__dropdown-item
+        input(type="checkbox", id="kharkivsky" name="firekharkivsky")
+        label(for="kharkivsky") Харьковский 
+
+      .search-panel__dropdown-item        
+        input(type="checkbox", id="solomensky" name="solomensky")
+        label(for="solomensky") Соломенский 
+
+      .search-panel__dropdown-item        
+        input(type="checkbox", id="dneprovskiy"  name="dneprovskiy")
+        label(for="dneprovskiy") Днепровский 
+
+  .search-panel__filter
+    img.search-panel__arrow-back(src="img/search-panel/arrow-back.svg", alt="arrow-back")
+
+    .search-panel__item
+
+      img.search-panel__arrow-down(src="img/search-panel/arrow-down.svg", alt="arrow-down") 
+      p.search-panel__price-txt Цена
+      span.search-panel__price-hourly Цена за час
+      
+
+    .search-panel__dropdown
+      p.search-panel__price Цена грн./час
+      .search-panel__input-group
+        input(type="text" value='100' )#input-min
+        input(type="text" value='1500')#input-max
+      .search-panel__input-group#range
+
+  
+  .search-panel__filter 
+
+    .search-panel__data-picker 
+      p.search-panel__sauna-txt Дата
+      input#data-picker(type="text")
 
   .search-panel__button
     button(for='search' type="button") Найти
