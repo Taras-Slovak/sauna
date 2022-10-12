@@ -49,10 +49,25 @@
   }
 
   &__filter {
+    width: 226px;
     position: relative;
     display: flex;
     align-items: center;
-    width: 100%;
+    @media only screen and (max-width: 1150px) {
+      width: 325px;
+    }
+    @media only screen and (max-width: 410px) {
+      width: 100%;
+    }
+  }
+  &__filter-sauna {
+    width: 240px;
+    @media only screen and (max-width: 1150px) {
+      width: 325px;
+    }
+    @media only screen and (max-width: 410px) {
+      width: 100%;
+    }
   }
 
   &__arrow-back {
@@ -63,6 +78,7 @@
   }
 
   .visibility-back {
+    position: relative;
     width: 26px;
     height: 26px;
     opacity: 1;
@@ -159,6 +175,15 @@
     }
   }
 
+  .only-one-opened {
+    @media only screen and (max-width: 1150px) {
+      border: none;
+      border-radius: 5px 5px 0px 0px;
+      box-shadow: 3px -3px 4px 0px rgba(0, 0, 0, 0.1),
+        -3px 0px 4px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
+
   &__sauna {
     width: 240px;
     padding: 4px 17px 9px 28px;
@@ -182,7 +207,7 @@
   &__dropdown {
     z-index: 200;
     position: absolute;
-    width: 100%;
+    width: calc(100% - 1px);
     top: 58px;
     left: 0px;
     display: flex;
@@ -200,19 +225,15 @@
     overflow: hidden;
 
     @media only screen and (max-width: 1150px) {
+      width: calc(300px - 1px);
       left: 25px;
       top: 50px;
     }
 
     @media only screen and (max-width: 410px) {
-      width: 100%;
-      left: 0px;
-      top: 50px;
+      width: calc(216px - 1px);
+      padding: 10px;
     }
-  }
-
-  &__dropdown-sauna {
-    width: 264.5px;
   }
 
   &__dropdown-picker {
@@ -223,6 +244,12 @@
     box-shadow: 0 4px 2px -2px gray;
     opacity: 1;
     transform: scale(1);
+    @media only screen and (max-width: 1150px) {
+      top: 49px;
+      left: 26px;
+      box-shadow: -3px 3px 4px 0px rgba(0, 0, 0, 0.1),
+        3px 0px 4px 0px rgba(0, 0, 0, 0.1);
+    }
   }
   &__dropdown-item {
     position: relative;

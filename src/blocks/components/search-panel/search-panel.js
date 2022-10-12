@@ -19,64 +19,120 @@ function dataPicker() {
 dataPicker();
 
 function searchPanel() {
-  const searchItems = document.querySelectorAll(".search-panel__item");
-  const someClose = document.querySelector(".banner");
-
   let canEdit = false;
 
-  searchItems.forEach((searchItem) => {
-    searchItem.addEventListener("click", () => {
-      canEdit = !canEdit;
-      searchItem.previousElementSibling.classList.toggle("visibility-back");
-      searchItem.nextElementSibling.classList.toggle("show");
-      searchItem.firstElementChild.classList.toggle("visibility-down");
-    });
-  });
+  function dropdown() {
+    const searchItems = document.querySelectorAll(".search-panel__item");
 
-  someClose.addEventListener("click", (e) => {
-    if (e.target.classList.contains("banner")) {
-      searchItems.forEach((item) => {
-        item.previousElementSibling.classList.remove("visibility-back");
-        item.nextElementSibling.classList.remove("show");
-        item.firstElementChild.classList.remove("visibility-down");
+    if (window.screen.width > 1150) {
+      searchItems.forEach((searchItem) => {
+        searchItem.addEventListener("click", () => {
+          canEdit = !canEdit;
+          searchItem.previousElementSibling.classList.toggle("visibility-back");
+          searchItem.nextElementSibling.classList.toggle("show");
+          searchItem.firstElementChild.classList.toggle("visibility-down");
+        });
+      });
+    } else {
+      searchItems.forEach((searchItem) => {
+        searchItem.addEventListener("click", () => {
+          canEdit = !canEdit;
+          // searchItem.previousElementSibling.classList.toggle("visibility-back");
+          // searchItem.nextElementSibling.classList.toggle("show");
+          // searchItem.firstElementChild.classList.toggle("visibility-down");
+          if (searchItem.classList.contains("only-one-opened")) {
+            searchItem.classList.remove("only-one-opened");
+            searchItems.forEach((item) => {
+              item.classList.remove("only-one-opened");
+              item.previousElementSibling.classList.remove("visibility-back");
+              item.nextElementSibling.classList.remove("show");
+              item.firstElementChild.classList.remove("visibility-down");
+            });
+          } else {
+            searchItems.forEach((item) => {
+              item.classList.remove("only-one-opened");
+              item.classList.remove("only-one-opened");
+              item.previousElementSibling.classList.remove("visibility-back");
+              item.nextElementSibling.classList.remove("show");
+              item.firstElementChild.classList.remove("visibility-down");
+            });
+            searchItem.classList.add("only-one-opened");
+            searchItem.previousElementSibling.classList.add("visibility-back");
+            searchItem.nextElementSibling.classList.add("show");
+            searchItem.firstElementChild.classList.add("visibility-down");
+          }
+        });
       });
     }
-  });
+  }
+  dropdown();
 
-  let range = document.getElementById("range");
+  function closeOnClick() {
+    const searchItems = document.querySelectorAll(".search-panel__item");
+    const banner = document.querySelector(".banner");
+    const advantage = document.querySelector(".advantage");
+    banner.addEventListener("click", (e) => {
+      if (
+        e.target.classList.contains("banner") ||
+        e.target.classList.contains("banner__title")
+      ) {
+        searchItems.forEach((item) => {
+          item.previousElementSibling.classList.remove("visibility-back");
+          item.nextElementSibling.classList.remove("show");
+          item.firstElementChild.classList.remove("visibility-down");
+        });
+      }
+    });
 
-  noUiSlider.create(range, {
-    start: [100, 1500],
-    step: 10,
-    range: {
-      min: 0,
-      max: 1500,
-    },
-    connect: true,
-  });
+    advantage.addEventListener("click", (e) => {
+      if (e.currentTarget.classList.contains("advantage")) {
+        searchItems.forEach((item) => {
+          item.previousElementSibling.classList.remove("visibility-back");
+          item.nextElementSibling.classList.remove("show");
+          item.firstElementChild.classList.remove("visibility-down");
+        });
+      }
+    });
+  }
+  closeOnClick();
 
-  let price = document.querySelector(".search-panel__price-hourly");
-  let text = document.querySelector(".search-panel__price-txt");
+  function rangeItem() {
+    let range = document.getElementById("range");
+    noUiSlider.create(range, {
+      start: [100, 1500],
+      step: 10,
+      range: {
+        min: 0,
+        max: 1500,
+      },
+      connect: true,
+    });
 
-  let inputMin = document.getElementById("input-min");
-  let inputMax = document.getElementById("input-max");
+    let price = document.querySelector(".search-panel__price-hourly");
+    let text = document.querySelector(".search-panel__price-txt");
 
-  range.noUiSlider.on("update", (values) => {
-    inputMin.value = Math.round(values[0]);
-    inputMax.value = Math.round(values[1]);
-    if (canEdit) {
-      text.innerText = "Цена за час";
-      price.innerText = `${inputMin.value} - ${inputMax.value}`;
-    }
-  });
+    let inputMin = document.getElementById("input-min");
+    let inputMax = document.getElementById("input-max");
 
-  inputMin.addEventListener("change", () => {
-    range.noUiSlider.set([inputMin.value, null]);
-  });
+    range.noUiSlider.on("update", (values) => {
+      inputMin.value = Math.round(values[0]);
+      inputMax.value = Math.round(values[1]);
+      if (canEdit) {
+        text.innerText = "Цена за час";
+        price.innerText = `${inputMin.value} - ${inputMax.value}`;
+      }
+    });
 
-  inputMax.addEventListener("change", () => {
-    range.noUiSlider.set([null, inputMax.value]);
-  });
+    inputMin.addEventListener("change", () => {
+      range.noUiSlider.set([inputMin.value, null]);
+    });
+
+    inputMax.addEventListener("change", () => {
+      range.noUiSlider.set([null, inputMax.value]);
+    });
+  }
+
+  rangeItem();
 }
 
 searchPanel();
@@ -98,7 +154,6 @@ function radioButtons(initName, filterName, buttons) {
           filtered.push(elem.nextElementSibling.innerText);
 
           filteredName.innerText = `${filtered[0]} + 1`;
-          console.log(filtered);
         }
       });
     });

@@ -1,11 +1,13 @@
 .advantage {
-  margin-top: 64px;
+  padding-top: 64px;
   width: 100%;
+  background-color: #ffffff;
+
   @media only screen and (max-width: 1150px) {
-    margin-top: 102px;
+    padding-top: 102px;
   }
   @media only screen and (max-width: 780px) {
-    margin-top: 210px;
+    padding-top: 210px;
   }
 
   &__inner {

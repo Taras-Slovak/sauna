@@ -1,6 +1,6 @@
 .search-panel
 
-  .search-panel__filter#filter-sauna
+  .search-panel__filter.search-panel__filter-sauna
     img.search-panel__arrow-back(src="img/search-panel/arrow-back.svg", alt="arrow-back")
 
     .search-panel__item.search-panel__sauna 
@@ -49,7 +49,7 @@
       .search-panel__dropdown-item  
         input(type="checkbox", id="obolonsky"  name="obolonsky")
         label(for="obolonsky") Оболонский 
-
+      
       .search-panel__dropdown-item        
         input(type="checkbox", id="desnyansky"  name="desnyansky")
         label(for="desnyansky") Деснянский 
@@ -69,18 +69,17 @@
       .search-panel__dropdown-item        
         input(type="checkbox", id="dneprovskiy"  name="dneprovskiy")
         label(for="dneprovskiy") Днепровский 
-
-  .search-panel__filter
+  
+  .search-panel__filter    
     img.search-panel__arrow-back(src="img/search-panel/arrow-back.svg", alt="arrow-back")
 
-    .search-panel__item
-
+    .search-panel__item    
       img.search-panel__arrow-down(src="img/search-panel/arrow-down.svg", alt="arrow-down") 
       p.search-panel__price-txt Цена
       span.search-panel__price-hourly Цена за час
       
 
-    .search-panel__dropdown
+    .search-panel__dropdown.search-panel__dropdown-range
       p.search-panel__price Цена грн./час
       .search-panel__input-group
         input(type="text" value='100' )#input-min

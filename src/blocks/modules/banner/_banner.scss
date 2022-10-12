@@ -4,9 +4,11 @@
   width: 100%;
   height: 563px;
   background-size: cover;
+  background-color: #ffffff;
   @media only screen and (max-width: 1150px) {
     height: 439px;
     background-image: url(../img/png/banner-920.webp);
+    background-color: #ffffff;
   }
 
   &__title {

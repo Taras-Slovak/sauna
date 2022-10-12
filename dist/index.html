@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
     <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.min.js"> </script>
-    <link rel="stylesheet" href="styles/main.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"> </script>
+    <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
     <header class="header"> 
@@ -42,7 +42,7 @@
       <section class="banner">
         <h2 class="banner__title">Поиск <br> и бронирование бань</h2>
         <div class="search-panel">
-          <div class="search-panel__filter" id="filter-sauna"><img class="search-panel__arrow-back" src="img/search-panel/arrow-back.svg" alt="arrow-back">
+          <div class="search-panel__filter search-panel__filter-sauna"><img class="search-panel__arrow-back" src="img/search-panel/arrow-back.svg" alt="arrow-back">
             <div class="search-panel__item search-panel__sauna"> <img class="search-panel__arrow-down" src="img/search-panel/arrow-down.svg" alt="arrow-down">
               <p class="search-panel__sauna-txt">Тип парной</p><span class="search-panel__sauna-filter">Не важно</span>
             </div>
@@ -104,11 +104,11 @@
               </div>
             </div>
           </div>
-          <div class="search-panel__filter"><img class="search-panel__arrow-back" src="img/search-panel/arrow-back.svg" alt="arrow-back">
-            <div class="search-panel__item"><img class="search-panel__arrow-down" src="img/search-panel/arrow-down.svg" alt="arrow-down">
+          <div class="search-panel__filter">   <img class="search-panel__arrow-back" src="img/search-panel/arrow-back.svg" alt="arrow-back">
+            <div class="search-panel__item">   <img class="search-panel__arrow-down" src="img/search-panel/arrow-down.svg" alt="arrow-down">
               <p class="search-panel__price-txt">Цена</p><span class="search-panel__price-hourly">Цена за час</span>
             </div>
-            <div class="search-panel__dropdown">
+            <div class="search-panel__dropdown search-panel__dropdown-range">
               <p class="search-panel__price">Цена грн./час</p>
               <div class="search-panel__input-group">
                 <input type="text" value="100" id="input-min">
@@ -500,7 +500,7 @@
         <button class="footer__btn">Добавить баню</button>
       </div>
     </footer>
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
