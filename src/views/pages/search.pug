@@ -3,10 +3,16 @@ extends ../layouts/default
 block variables
 	- const title = "Search";
 
+block links
+	link(rel="stylesheet" href="styles/search.css")
+
 block content
-	include ../../blocks/modules/header/header
-	include ../../blocks/modules/footer/footer
+	include ../../blocks/modules/SEARCH/header/header
+
+	include ../../blocks/modules/SEARCH/main/main
+
+	include ../../blocks/modules/SEARCH/footer/footer
 
 block scripts
 	script(src="js/vendor.js")
-	script(src="js/main.js")
+	script(src="js/search.js")

@@ -1,0 +1,13 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+
+// CSS-файлы библиотек
+@import "vendor/libs";
+
+// Основное
+@import "base/fonts";
+@import "base/general";
+
+@import "../blocks/modules/SEARCH";
+@import "../blocks/components/SEARCH";

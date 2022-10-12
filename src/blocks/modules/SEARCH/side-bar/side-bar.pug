@@ -1,0 +1,38 @@
+section.side-bar 
+
+  h2.side-bar__title Поиск бани 
+
+
+  .side-bar__data-picker 
+      p.side-bar__txt Дата бронирования
+      input#side-bar-picker(type="text" value="Дата")
+      img(src="img/SEARCH/side-bar/calendar.svg", alt="calendar")
+
+  .side-bar__range-group
+
+    .side-bar__range
+      p.side-bar__txt Время бронирования
+      .side-bar__input-group
+        input.side-bar__value-min(type="text")#time-min
+        input.side-bar__value-max(type="text")#time-max
+      .side-bar__range-item.range-time
+
+    .side-bar__range
+      p.side-bar__txt Цена грн./час
+      .side-bar__input-group
+        input.side-bar__value-min(type="text" )#price-min
+        input.side-bar__value-max(type="text" )#price-max
+      .side-bar__range-item.range-price
+
+  .side-bar__search 
+    label.side-bar__txt(for="side-bar-search") Название бани
+    input(type="search" placeholder="Поиск")#side-bar-search
+
+    .side-bar__line  
+
+  .side-bar__location
+    p.side-bar__txt Район
+
+    button.side-bar__button
+      img(src="img/SEARCH/side-bar/location_icon.svg", alt="location")
+      p Найти поблизости
