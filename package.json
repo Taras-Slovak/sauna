@@ -76,6 +76,7 @@
         "dual-range-slider": "^1.0.41",
         "i": "^0.3.7",
         "js-datepicker": "^5.18.0",
+        "leaflet": "^1.9.2",
         "nouislider": "^15.6.1",
         "webpack": "^5.70.0",
         "webpack-stream": "^7.0.0"

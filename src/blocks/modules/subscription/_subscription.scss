@@ -87,10 +87,14 @@
     font-family: "Montserrat";
     line-height: 150%;
     color: #ffffff;
-    transition: all 0.1s;
+    transition: all 0.2s;
+
+    &:hover {
+      background: #ffac4e;
+    }
 
     &:active {
-      transform: scale(0.975);
+      transform: scale(0.98);
     }
     @media only screen and (max-width: 650px) {
       margin-top: 40px;

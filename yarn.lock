@@ -10386,6 +10386,13 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
+"leaflet@npm:^1.9.2":
+  version: 1.9.2
+  resolution: "leaflet@npm:1.9.2"
+  checksum: ab6edb278c6bbd05db9a9395694fc517557433bedbcb233941ea42327ee90650f2d61dd3f9caf861040c8b25abfd8e1f79018f6ae899181e280287c7481ba4bf
+  languageName: node
+  linkType: hard
+
 "levn@npm:^0.3.0, levn@npm:~0.3.0":
   version: 0.3.0
   resolution: "levn@npm:0.3.0"
@@ -14162,6 +14169,7 @@ bem-tools-create@bem-tools/bem-tools-create:
     imagemin-webp: ^6.0.0
     imagemin-zopfli: ^7.0.0
     js-datepicker: ^5.18.0
+    leaflet: ^1.9.2
     lint-staged: ^12.3.5
     nouislider: ^15.6.1
     postcss: ^8.4.8

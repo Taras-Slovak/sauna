@@ -350,7 +350,11 @@
       color: #ffffff;
       margin-right: 10px;
 
-      transition: all 0.1s;
+      transition: all 0.2s;
+
+      &:hover {
+        background: #ffac4e;
+      }
 
       &:active {
         transform: scale(0.975);

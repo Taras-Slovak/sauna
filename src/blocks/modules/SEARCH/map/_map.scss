@@ -1,0 +1,129 @@
+.map {
+  position: relative;
+  @media only screen and (max-width: 1600px) {
+    order: -1;
+  }
+
+  &__map-content {
+    width: calc(100vw - 1060px);
+    height: 965px;
+
+    @media only screen and (max-width: 1600px) {
+      width: calc(100vw - 300px);
+    }
+    @media only screen and (max-width: 1000px) {
+      width: 100vw;
+      height: calc(100vh - 150px);
+    }
+  }
+  &__panel {
+    position: absolute;
+    top: 48px;
+    right: 0;
+    z-index: 200;
+    width: 100%;
+    padding-left: 21px;
+    padding-right: 38px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media only screen and (max-width: 1000px) {
+      top: 20px;
+      width: max-content;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 20px;
+    }
+  }
+  &__btn-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__full-btn {
+    width: max-content;
+    padding: 0 6px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    cursor: pointer;
+
+    @media only screen and (max-width: 1600px) {
+      display: none;
+    }
+
+    svg {
+      fill: #000000;
+      transition: all 0.2s;
+    }
+    &:hover svg {
+      fill: #ff8a00;
+    }
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 120%;
+      padding-right: 11px;
+      transition: all 0.2s;
+    }
+
+    &:hover p {
+      color: #ff8a00;
+    }
+  }
+
+  &__location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .leaflet-control {
+    margin-top: 110px;
+    margin-right: 38px;
+    @media only screen and (max-width: 1000px) {
+      margin-top: 140px;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    padding: 0 15px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    input {
+      &:checked + label::before {
+        top: 2px;
+      }
+    }
+  }
+}
+
+.card-list-hide {
+  display: none;
+}
+
+.card-full-screen {
+  width: calc(100vw - 320px);
+}

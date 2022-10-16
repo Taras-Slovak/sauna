@@ -119,10 +119,14 @@
     font-family: "Montserrat";
     border: none;
     color: #ffffff;
-    transition: all 0.1s;
+    transition: all 0.2s;
+
+    &:hover {
+      background: #ffac4e;
+    }
 
     &:active {
-      transform: scale(0.975);
+      transform: scale(0.98);
     }
 
     @media only screen and (max-width: 700px) {

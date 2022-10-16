@@ -118,7 +118,6 @@ function showLessOrMore() {
           <path d="M6.175 12.8417L10 9.02501L13.825 12.8417L15 11.6667L10 6.66667L5 11.6667L6.175 12.8417Z" />
         </svg>
       `;
-        console.log(button.dataset.open === "false");
         button.previousElementSibling.classList.add("height-auto");
         button.dataset.open = "true";
       } else {
