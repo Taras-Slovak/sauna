@@ -15,16 +15,14 @@ getMainBtn.addEventListener("click", () => {
   }
 });
 
-getCloseBtn.addEventListener("click", (e) => {
+getCloseBtn.addEventListener("click", () => {
   getMainSideBar.classList.remove("side-bar-opened");
   getMainBtn.classList.remove("button-hidden");
   document.body.style.overflow = "";
-  console.log(e.currentTarget);
 });
 
-mainContent.addEventListener("click", (e) => {
+mainContent.addEventListener("click", () => {
   document.body.style.overflow = "";
   getMainSideBar.classList.remove("side-bar-opened");
   getMainBtn.classList.remove("button-hidden");
-  console.log(e.target);
 });
