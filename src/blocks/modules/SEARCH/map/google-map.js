@@ -8,7 +8,7 @@ let map;
 
 function renderMap() {
   let mapOptions = {
-    center: [50.459235610457284, 30.36476092787283],
+    center: [50.4368368475358, 30.401243422712376],
     zoom: 12,
     zoomControl: false,
   };
@@ -26,6 +26,43 @@ function renderMap() {
     .addTo(map);
 
   map.addLayer(layer);
+
+  var locationSauna = L.icon({
+    iconUrl: "img/SEARCH/map/location-sauna.svg",
+    iconSize: [25, 25],
+    popupAnchor: [-3, -25],
+  });
+
+  L.marker([50.481431223379865, 30.39808773689317], {
+    icon: locationSauna,
+  })
+    .addTo(map)
+    .bindPopup("Сауна Аквамарин");
+  L.marker([50.47137871796593, 30.372233193653827], {
+    icon: locationSauna,
+  })
+    .addTo(map)
+    .bindPopup("Сауна Аквамарин");
+  L.marker([50.46558929098933, 30.364096807395054], {
+    icon: locationSauna,
+  })
+    .addTo(map)
+    .bindPopup("Сауна Аквамарин");
+  L.marker([50.47563591367001, 30.421065088001715], {
+    icon: locationSauna,
+  })
+    .addTo(map)
+    .bindPopup("Сауна Аквамарин");
+  L.marker([50.43755788840393, 30.39711101941428], {
+    icon: locationSauna,
+  })
+    .addTo(map)
+    .bindPopup("Сауна Аквамарин");
+  L.marker([50.43235820151973, 30.4473325232155], {
+    icon: locationSauna,
+  })
+    .addTo(map)
+    .bindPopup("Сауна Аквамарин");
 }
 
 renderMap();
@@ -64,3 +101,20 @@ function fullScreenMap() {
   });
 }
 fullScreenMap();
+
+function getLocation() {
+  const locationBtn = document.querySelector(".map__location");
+  locationBtn.addEventListener("click", () => {
+    const successCallback = ({ coords }) => {
+      console.log(coords.latitude);
+    };
+
+    const errorCallback = (error) => {
+      console.log(error);
+    };
+
+    navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+  });
+}
+
+getLocation();
