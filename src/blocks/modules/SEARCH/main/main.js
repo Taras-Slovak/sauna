@@ -1,7 +1,6 @@
 const getMainBtn = document.querySelector(".main__button");
 const getCloseBtn = document.querySelector(".main__close");
 const getMainSideBar = document.querySelector(".main__side-bar");
-const mainContent = document.querySelector(".main__content");
 
 getMainBtn.addEventListener("click", () => {
   if (!getMainSideBar.classList.contains("side-bar-opened")) {
@@ -21,8 +20,12 @@ getCloseBtn.addEventListener("click", () => {
   document.body.style.overflow = "";
 });
 
-mainContent.addEventListener("click", () => {
-  document.body.style.overflow = "";
-  getMainSideBar.classList.remove("side-bar-opened");
-  getMainBtn.classList.remove("button-hidden");
+getMainSideBar.addEventListener("click", (e) => {
+  if (e.target.classList.contains("side-bar-opened")) {
+    document.body.style.overflow = "";
+    getMainSideBar.classList.remove("side-bar-opened");
+    getMainBtn.classList.remove("button-hidden");
+  }
+
+  console.log();
 });

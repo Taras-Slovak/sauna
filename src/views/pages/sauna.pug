@@ -1,0 +1,18 @@
+extends ../layouts/default
+
+block variables
+	- const title = "Sauna";
+
+block links
+	link(rel="stylesheet" href="styles/sauna.css")
+
+block content
+	include ../../blocks/modules/SAUNA/header/header
+
+	
+
+	include ../../blocks/modules/SAUNA/footer/footer
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/sauna.js")

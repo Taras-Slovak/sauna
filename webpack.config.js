@@ -4,6 +4,7 @@ module.exports = {
   entry: {
     main: "./src/js/index.js",
     search: "./src/js/search.js",
+    sauna: "./src/js/sauna.js",
   },
 
   output: {
