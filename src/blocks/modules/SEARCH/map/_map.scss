@@ -7,6 +7,9 @@
   &__map-content {
     width: calc(100vw - 1060px);
     height: 965px;
+    &.card-full-screen {
+      width: calc(100vw - 300px);
+    }
 
     @media only screen and (max-width: 1600px) {
       width: calc(100vw - 750px);
@@ -136,8 +139,4 @@
 
 .card-list-hide {
   display: none;
-}
-
-.card-full-screen {
-  width: calc(100vw - 320px);
 }
