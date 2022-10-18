@@ -1,6 +1,6 @@
-const getMainBtn = document.querySelector(".main__button");
-const getCloseBtn = document.querySelector(".main__close");
-const getMainSideBar = document.querySelector(".main__side-bar");
+const getMainBtn = document.querySelector(".search__button");
+const getCloseBtn = document.querySelector(".search__close");
+const getMainSideBar = document.querySelector(".search__side-bar");
 
 getMainBtn.addEventListener("click", () => {
   if (!getMainSideBar.classList.contains("side-bar-opened")) {
@@ -26,6 +26,4 @@ getMainSideBar.addEventListener("click", (e) => {
     getMainSideBar.classList.remove("side-bar-opened");
     getMainBtn.classList.remove("button-hidden");
   }
-
-  console.log();
 });

@@ -23,10 +23,10 @@
   &__inner {
     display: flex;
     gap: 30px;
-    cursor: pointer;
     border-radius: 10px;
     transition: all 0.3s;
     box-sizing: border-box;
+
     @media only screen and (max-width: 1600px) {
       flex-direction: column;
     }
@@ -247,9 +247,13 @@
         font-size: 14px;
       }
     }
-    button {
+    a {
       width: 126px;
       height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
       background: #ff8a00;
       border-radius: 6px;
       color: #ffff;
