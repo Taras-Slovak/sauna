@@ -1,2 +1,2 @@
-import "./import/modules-sauna";
-import "./import/components-sauna";
+import "./import/modules-search";
+import "./import/components-search";

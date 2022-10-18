@@ -6,9 +6,13 @@
   padding-left: 20px;
   display: flex;
   gap: 25px;
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1400px) {
     padding-left: 0;
     gap: 0;
+  }
+
+  @media only screen and (max-width: 470px) {
+    padding-top: 50px;
   }
 
   &__content {
@@ -16,7 +20,7 @@
     display: flex;
     gap: 25px;
 
-    @media only screen and (max-width: 1600px) {
+    @media only screen and (max-width: 1400px) {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -30,7 +34,7 @@
     opacity: 1;
     z-index: 350;
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: 1400px) {
       position: fixed;
       transform: translateX(-130%);
       opacity: 0;
@@ -57,7 +61,7 @@
     cursor: pointer;
     transition: all 0.2s;
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: 1400px) {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -76,7 +80,7 @@
     border-radius: 3px;
     color: rgb(255, 255, 255);
     cursor: pointer;
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: 1400px) {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -85,7 +89,7 @@
 }
 
 .side-bar-opened {
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1400px) {
     transform: translateX(0);
     opacity: 1;
   }
