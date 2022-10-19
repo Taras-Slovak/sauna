@@ -1,0 +1,113 @@
+.sauna-card {
+  width: 100%;
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__title {
+    color: #2f2f2f;
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 120%;
+    }
+    h2 {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 150%;
+    }
+  }
+  &__stickers {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__btn-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__btn-left {
+    width: 61px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #2f2f2f;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 120%;
+    transition: all 0.2s;
+
+    &:hover {
+      border: 1px solid #ff8a00;
+      color: #ffffff;
+      background-color: #ff8a00;
+    }
+  }
+
+  &__btn-right {
+    width: 61px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid #2f2f2f;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 120%;
+    transition: all 0.2s;
+
+    p {
+      transition: all 0.2s;
+      color: #2f2f2f;
+    }
+
+    svg {
+      transition: all 0.2s;
+      fill: #ff8a00;
+    }
+
+    &:hover {
+      border: 1px solid #ff8a00;
+      color: #ffffff;
+      background-color: #ff8a00;
+    }
+
+    &:hover svg {
+      fill: #ffffff;
+    }
+
+    &:hover p {
+      color: #ffffff;
+    }
+  }
+
+  &__like {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    p {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 130%;
+      color: black;
+    }
+
+    svg {
+      fill: black;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        fill: #ff8a00;
+      }
+    }
+  }
+}

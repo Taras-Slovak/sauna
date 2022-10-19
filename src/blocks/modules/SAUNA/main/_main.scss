@@ -1,5 +1,13 @@
 .sauna {
-  margin-top: 70px;
+  margin: 70px auto 0 auto;
   max-width: 1100px;
-  margin: auto;
+
+  a {
+    color: #2f2f2f;
+    text-decoration: none;
+  }
+
+  &__card-list {
+    padding-top: 54px;
+  }
 }

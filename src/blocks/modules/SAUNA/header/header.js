@@ -1,4 +1,4 @@
 /* eslint-disable no-unused-vars */
-import { Modal } from "bootstrap";
+// import { Modal } from "bootstrap";
 
-const myModalAlternative = new Modal("#modalFooter", {});
+// const modalHeaderSauna = new Modal("#modalHeaderSauna", {});
