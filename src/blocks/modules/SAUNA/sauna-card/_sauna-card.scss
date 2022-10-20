@@ -110,4 +110,36 @@
       }
     }
   }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 665px;
+  }
+
+  &__sub-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 130%;
+    color: #2f2f2f;
+  }
+  &__adress-inner {
+    display: flex;
+    gap: 110px;
+  }
+  &__adress-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  &__adress-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    p {
+      width: max-content;
+    }
+  }
 }
