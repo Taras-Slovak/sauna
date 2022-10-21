@@ -1,13 +1,28 @@
 main.sauna
 
-  section.sauna__card-list
+  section.sauna__big-card
     include ../sauna-card/sauna-card
-    span.sauna-card__line
-
+    
     include ../small-card/small-card
 
-  section.sauna__booking
+  span.sauna__line
 
+  +small-card('#modalGallerySmall','modalGallerySmall','modalGallerySmallLabel','carouselSaunaSmall','#carouselSaunaSmall')
+
+  +small-card('#modalGallerySmall-2','modalGallerySmall-2','modalGallerySmallLabel-2','carouselSaunaSmall-2','#carouselSaunaSmall-2') 
+
+  span.sauna__line
+
+  section.sauna__booking
+    button.sauna__booking-button(type='button')
+      p Бронирование на
+      span сегодня
+      <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.4999 19.3334C14.2176 19.3339 13.9439 19.2356 13.7266 19.0555L6.47655 13.0138C6.22979 12.8087 6.07461 12.514 6.04515 12.1945C6.01569 11.8749 6.11437 11.5568 6.31947 11.31C6.52457 11.0633 6.8193 10.9081 7.13881 10.8786C7.45833 10.8492 7.77646 10.9479 8.02322 11.153L14.4999 16.5663L20.9766 11.3463C21.1001 11.2459 21.2424 11.171 21.395 11.1257C21.5477 11.0805 21.7078 11.0659 21.8661 11.0827C22.0244 11.0996 22.1779 11.1476 22.3176 11.2239C22.4573 11.3002 22.5806 11.4034 22.6803 11.5275C22.791 11.6518 22.8748 11.7975 22.9265 11.9557C22.9782 12.1138 22.9967 12.2809 22.9808 12.4466C22.9649 12.6122 22.915 12.7727 22.8342 12.9182C22.7534 13.0636 22.6434 13.1908 22.5111 13.2917L15.2611 19.128C15.0375 19.2796 14.7695 19.352 14.4999 19.3334V19.3334Z"/>
+      </svg>
+    
+    include ../../../components/SAUNA/booking/booking
+    
   section.sauna__reviews
 
   section.sauna__location
