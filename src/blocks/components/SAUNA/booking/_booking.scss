@@ -97,11 +97,15 @@
         background: #ff8a00;
         border: 1px solid #ff8a00;
         border: none;
+        color: #fff;
       }
 
       &:hover {
-        background: #ffcb8d;
-        border: 1px solid #ff8a00;
+        transform: scale(1.1);
+      }
+
+      &:active {
+        transform: scale(1);
       }
 
       &:disabled {
@@ -117,7 +121,7 @@
   }
 
   &__calculation {
-    display: flex;
+    display: none;
     align-items: flex-start;
     justify-content: space-between;
   }
