@@ -36,20 +36,20 @@ function accordion() {
         element.nextElementSibling.classList.add("sauna-card__open");
 
         element.firstElementChild.nextElementSibling.innerHTML = `
-        <svg class="sauna-card__offers-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle class="sauna-card__offers-circle" cx="15" cy="15" r="15"/>
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M15.75 8.25C15.75 7.83579 15.4142 7.5 15 7.5C14.5858 7.5 14.25 7.83579 14.25 8.25V14.25H8.25C7.83579 14.25 7.5 14.5858 7.5 15C7.5 15.4142 7.83579 15.75 8.25 15.75H14.25V21.75C14.25 22.1642 14.5858 22.5 15 22.5C15.4142 22.5 15.75 22.1642 15.75 21.75V15.75H21.75C22.1642 15.75 22.5 15.4142 22.5 15C22.5 14.5858 22.1642 14.25 21.75 14.25H15.75V8.25Z" fill="white"/>
-        </svg>
+          <svg class="sauna-card__offers-icon" width="32" height="32" viewBox="0 0 32 32" fill="none"   xmlns="http://www.w3.org/2000/svg">
+            <circle class="sauna-card__offers-circle" cx="15" cy="15" r="15" />
+            <path d="M21.75 15H8.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         `;
 
         element.dataset.open = "true";
       } else {
         element.nextElementSibling.classList.remove("sauna-card__open");
         element.firstElementChild.nextElementSibling.innerHTML = `
-        <svg class="sauna-card__offers-icon" width="32" height="32" viewBox="0 0 32 32" fill="none"   xmlns="http://www.w3.org/2000/svg">
-          <circle class="sauna-card__offers-circle" cx="15" cy="15" r="15" />
-          <path d="M21.75 15H8.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+          <svg class="sauna-card__offers-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle class="sauna-card__offers-circle" cx="15" cy="15" r="15"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.75 8.25C15.75 7.83579 15.4142 7.5 15 7.5C14.5858 7.5 14.25 7.83579 14.25 8.25V14.25H8.25C7.83579 14.25 7.5 14.5858 7.5 15C7.5 15.4142 7.83579 15.75 8.25 15.75H14.25V21.75C14.25 22.1642 14.5858 22.5 15 22.5C15.4142 22.5 15.75 22.1642 15.75 21.75V15.75H21.75C22.1642 15.75 22.5 15.4142 22.5 15C22.5 14.5858 22.1642 14.25 21.75 14.25H15.75V8.25Z" fill="white"/>
+          </svg>     
         `;
         element.dataset.open = "false";
       }

@@ -112,6 +112,13 @@
         background: #f2f2f2;
         border: 1px solid #b3b3b3;
         color: #707070;
+        &:hover {
+          transform: scale(1);
+        }
+
+        &:active {
+          transform: scale(1);
+        }
       }
 
       &:disabled + p {
