@@ -1,1 +1,1 @@
-import "%components%/SAUNA/booking/booking";
+// import "%components%/SAUNA/booking/booking";

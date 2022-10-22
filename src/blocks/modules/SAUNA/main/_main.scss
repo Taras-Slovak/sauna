@@ -50,4 +50,10 @@
       transition: all 0.2s;
     }
   }
+  &__booking-content {
+    margin-top: 21px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
 }
