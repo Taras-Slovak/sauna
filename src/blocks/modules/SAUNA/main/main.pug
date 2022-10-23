@@ -13,6 +13,8 @@ main.sauna
 
   span.sauna__line
 
+  .to-scroll
+    #booking
   section.sauna__booking
     button.sauna__booking-button(type='button')
       p Бронирование на
@@ -26,12 +28,16 @@ main.sauna
       include ../../../components/SAUNA/booking/booking
 
       include ../../../components/SAUNA/booking/booking
-    
+  .to-scroll
+    #reviews  
   section.sauna__reviews
 
     include ../reviews/reviews
-
+  .to-scroll  
+    #location-sauna
   section.sauna__map
+
+    h4.sauna__map-title Расположение
 
     include ../map-sauna/map-sauna
 

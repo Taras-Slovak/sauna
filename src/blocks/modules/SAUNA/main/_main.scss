@@ -61,6 +61,17 @@
     margin-top: 70px;
   }
 
+  &__map {
+    margin-top: 40px;
+  }
+  &__map-title {
+    padding-bottom: 20px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 130%;
+    color: black;
+  }
+
   &__watched {
     margin-top: 80px;
     margin-bottom: 92px;
@@ -71,5 +82,20 @@
     font-size: 22px;
     line-height: 130%;
     color: #2f2f2f;
+  }
+}
+
+.to-scroll {
+  position: relative;
+  width: 0;
+  height: 0;
+
+  #booking,
+  #reviews,
+  #location-sauna,
+  #description-sauna,
+  #gallery-sauna {
+    position: absolute;
+    top: -65px;
   }
 }

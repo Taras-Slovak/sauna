@@ -10,6 +10,7 @@
   font-family: "Montserrat";
   background: #ffffff;
   z-index: 500;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
 
   @media only screen and (max-width: 470px) {
     height: 50px;
@@ -245,4 +246,20 @@
   overflow-x: hidden;
   overflow-y: auto;
   outline: 0;
+}
+
+.menu-sauna {
+  width: 1100px;
+  margin: auto;
+  display: none;
+  align-items: center;
+  justify-content: start;
+
+  gap: 35px;
+  &__item {
+    transition: all 0.2s;
+    &:hover {
+      color: #ff8a00;
+    }
+  }
 }
