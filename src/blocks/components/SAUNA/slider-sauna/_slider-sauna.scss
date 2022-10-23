@@ -1,0 +1,50 @@
+.slider-sauna {
+  position: relative;
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    padding: 1px;
+    max-width: 255px;
+  }
+
+  &__btn-group {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: static;
+    width: 34px;
+  }
+
+  &__arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    background: #f2f2f2;
+    border: 1px solid #b3b3b3;
+    border-radius: 50%;
+    transition: all 0.2s;
+
+    &:hover {
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+    }
+    svg {
+      display: block;
+      width: 18px;
+      height: 16px;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.slider-sauna
+
+  #sliderSauna.carousel.slide(data-bs-ride='true' data-bs-touch="true")
+      
+    .carousel-inner
+
+      .carousel-item.active
+        .slider-sauna__list
+          .slider-sauna__item        
+            include ../card-item-sauna/card-item-sauna
+          .slider-sauna__item
+            include ../card-item-sauna/card-item-sauna
+          .slider-sauna__item
+            include ../card-item-sauna/card-item-sauna
+          .slider-sauna__item
+            include ../card-item-sauna/card-item-sauna
+            
+      .carousel-item
+        .slider-sauna__list
+          .slider-sauna__item        
+            include ../card-item-sauna/card-item-sauna
+          .slider-sauna__item
+            include ../card-item-sauna/card-item-sauna
+          .slider-sauna__item
+            include ../card-item-sauna/card-item-sauna
+          .slider-sauna__item
+            include ../card-item-sauna/card-item-sauna
+
+      .carousel-item
+        .slider-sauna__list
+          .slider-sauna__item        
+            include ../card-item-sauna/card-item-sauna
+          .slider-sauna__item
+            include ../card-item-sauna/card-item-sauna
+          .slider-sauna__item
+            include ../card-item-sauna/card-item-sauna
+          .slider-sauna__item
+            include ../card-item-sauna/card-item-sauna
+
+      .carousel-item
+        .slider-sauna__list
+          .slider-sauna__item        
+            include ../card-item-sauna/card-item-sauna
+          .slider-sauna__item
+            include ../card-item-sauna/card-item-sauna
+          .slider-sauna__item
+            include ../card-item-sauna/card-item-sauna
+          .slider-sauna__item
+            include ../card-item-sauna/card-item-sauna
+
+  .slider-sauna__btn-group
+
+    button.carousel-control-prev(type='button' data-bs-target='#sliderSauna' data-bs-slide='prev')  
+            .slider-sauna__arrow 
+              <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5056 0.234318C11.7985 -0.0585749 12.2733 -0.0585749 12.5662 0.234318C12.8591 0.527212 12.8591 1.00209 12.5662 1.29498L3.0371 10.8241H24.647C25.0612 10.8241 25.397 11.1599 25.397 11.5741C25.397 11.9883 25.0612 12.3241 24.647 12.3241H3.03705L12.5662 21.8533C12.8591 22.1462 12.8591 22.621 12.5662 22.9139C12.2733 23.2068 11.7985 23.2068 11.5056 22.9139L0.696091 12.1045C0.403196 11.8116 0.403196 11.3367 0.696091 11.0438L11.5056 0.234318Z" fill="#2F2F2F"/>
+              </svg>
+            
+    button.carousel-control-next(type='button' data-bs-target='#sliderSauna' data-bs-slide='next')
+      .slider-sauna__arrow 
+        <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M14.4939 0.234318C14.201 -0.0585749 13.7262 -0.0585749 13.4333 0.234318C13.1404 0.527212 13.1404 1.00209 13.4333 1.29498L22.9624 10.8241H1.35254C0.938325 10.8241 0.602539 11.1599 0.602539 11.5741C0.602539 11.9883 0.938325 12.3241 1.35254 12.3241H22.9625L13.4333 21.8533C13.1404 22.1462 13.1404 22.621 13.4333 22.9139C13.7262 23.2068 14.201 23.2068 14.4939 22.9139L25.3034 12.1045C25.5963 11.8116 25.5963 11.3367 25.3034 11.0438L14.4939 0.234318Z" fill="#2F2F2F"/>
+        </svg>
