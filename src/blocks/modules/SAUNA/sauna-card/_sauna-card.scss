@@ -23,6 +23,10 @@
     justify-content: space-between;
     @media only screen and (max-width: 1200px) {
       justify-content: space-evenly;
+      margin-bottom: 15px;
+    }
+    @media only screen and (max-width: 630px) {
+      flex-direction: column;
     }
   }
   &__title {
@@ -36,6 +40,10 @@
       font-weight: 700;
       font-size: 32px;
       line-height: 150%;
+      @media only screen and (max-width: 630px) {
+        margin: 15px 0;
+        font-size: 24px;
+      }
     }
   }
   &__stickers {
@@ -162,6 +170,10 @@
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    @media only screen and (max-width: 630px) {
+      flex-direction: column;
+      gap: 16px;
+    }
   }
   &__adress-group {
     display: flex;
