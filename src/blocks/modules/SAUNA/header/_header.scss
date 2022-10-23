@@ -254,10 +254,29 @@
   display: none;
   align-items: center;
   justify-content: start;
-
   gap: 35px;
+  @media only screen and (max-width: 1200px) {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  @media only screen and (max-width: 630px) {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  @media only screen and (max-width: 470px) {
+    margin: 0 20px;
+    gap: 10px 20px;
+    flex-wrap: wrap;
+  }
+
   &__item {
     transition: all 0.2s;
+    font-size: 14px;
+    @media only screen and (max-width: 630px) {
+      font-size: 12px !important;
+    }
     &:hover {
       color: #ff8a00;
     }

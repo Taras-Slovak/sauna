@@ -3,14 +3,23 @@
   width: 100%;
   display: flex;
   gap: 8px;
+  @media only screen and (max-width: 1200px) {
+    flex-direction: column-reverse;
+  }
   &__left {
     max-width: 753px;
     position: relative;
+    @media only screen and (max-width: 1200px) {
+      max-width: 100%;
+    }
     img {
       display: block;
       width: 100%;
       height: 465px;
       object-fit: contain;
+      @media only screen and (max-width: 1200px) {
+        height: 300px;
+      }
     }
   }
   &__btn {
@@ -31,6 +40,11 @@
     line-height: 120%;
     color: #2f2f2f;
     transition: all 0.2s;
+    @media only screen and (max-width: 1200px) {
+      bottom: 21px;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
 
     &:hover {
       color: #ffffff;
@@ -42,11 +56,22 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+    @media only screen and (max-width: 1200px) {
+      width: 100%;
+      flex-direction: row;
+      justify-content: center;
+    }
     img {
       display: block;
       max-width: 347px;
       height: 228px;
       object-fit: contain;
+
+      @media only screen and (max-width: 1200px) {
+        max-width: auto;
+        width: auto;
+      }
     }
   }
   &__modal {
