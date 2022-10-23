@@ -266,6 +266,11 @@
     align-items: flex-start;
     gap: 15px;
 
+    @media only screen and (max-width: 400px) {
+      flex-direction: column;
+      gap: 7px;
+    }
+
     img {
       width: 30px;
       height: 30px;
@@ -274,6 +279,10 @@
       width: 114px;
       font-weight: 600;
       line-height: 120%;
+      @media only screen and (max-width: 400px) {
+        font-size: 14px;
+        width: 100px;
+      }
     }
   }
 
@@ -282,6 +291,9 @@
     max-width: 475px;
     font-weight: 400;
     line-height: 135%;
+    @media only screen and (max-width: 630px) {
+      font-size: 14px;
+    }
   }
   &__offers-item {
     position: relative;

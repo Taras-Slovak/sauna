@@ -120,13 +120,25 @@
     justify-content: center;
   }
 
+  @media only screen and (max-width: 800px) {
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+
   &__left {
     max-width: 468px;
     position: relative;
+    @media only screen and (max-width: 800px) {
+      border-radius: 16px;
+    }
     img {
       display: block;
       width: 100%;
       height: 305px;
+      @media only screen and (max-width: 800px) {
+        border-radius: 16px;
+        object-fit: cover;
+      }
     }
   }
   &__btn {
@@ -158,6 +170,10 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+    @media only screen and (max-width: 800px) {
+      display: none;
+    }
 
     img {
       display: block;
