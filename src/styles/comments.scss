@@ -1,0 +1,63 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+
+// CSS-файлы библиотек
+@import "vendor/libs-comments";
+
+// Основное
+@import "base/fonts";
+@import "base/general";
+
+.comments {
+  width: 100%;
+
+  &__nav {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    z-index: 999;
+    border-bottom: 1px solid #b3b3b3;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+    text-decoration: none;
+    margin-left: 25px;
+    gap: 20px;
+
+    svg {
+      transition: all 0.2s;
+      fill: black;
+    }
+    p {
+      transition: all 0.2s;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 130%;
+      color: #2f2f2f;
+    }
+
+    &:hover svg {
+      fill: #ff8a00;
+    }
+
+    &:hover p {
+      color: #ff8a00;
+    }
+  }
+}
+
+.reviews {
+  padding-top: 80px;
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto 111px auto;
+}
