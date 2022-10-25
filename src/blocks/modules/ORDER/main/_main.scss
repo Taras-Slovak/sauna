@@ -1,0 +1,23 @@
+.order {
+  max-width: 1110px;
+  padding-top: 125px;
+  margin: auto;
+
+  &__left {
+    max-width: 636px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__line {
+    width: 100%;
+    height: 1px;
+    background: #b3b3b3;
+  }
+
+  &__booking {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

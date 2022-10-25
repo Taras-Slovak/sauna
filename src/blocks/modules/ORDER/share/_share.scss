@@ -1,0 +1,144 @@
+.share {
+  width: 100%;
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    h4 {
+      color: #ff8a00;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 130%;
+    }
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 135%;
+      color: #2f2f2f;
+    }
+  }
+
+  &__item-group {
+    margin-top: 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    @media only screen and (max-width: 600px) {
+      margin-top: 36px;
+      gap: 35px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    p {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 130%;
+      @media only screen and (max-width: 460px) {
+        font-size: 14px;
+      }
+    }
+  }
+  &__left-btn {
+    width: max-content;
+    border: none;
+    background: white;
+    transition: all 0.2s;
+
+    &:hover svg {
+      stroke: #ff8a00;
+    }
+
+    svg {
+      transition: all 0.2s;
+      stroke: black;
+    }
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    @media only screen and (max-width: 600px) {
+      position: relative;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__hidden-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: #707070;
+    opacity: 0;
+    transition: all 0.2s;
+    @media only screen and (max-width: 600px) {
+      position: absolute;
+      top: -25px;
+      right: 10px;
+    }
+    @media only screen and (max-width: 460px) {
+      font-size: 12px;
+    }
+  }
+
+  &__button {
+    width: 125px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #b3b3b3;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    color: #b3b3b3;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.2s;
+    @media only screen and (max-width: 460px) {
+      width: 95px;
+      height: 30px;
+      font-size: 13px;
+    }
+
+    &.share-active {
+      border: 2px solid #ff8a00;
+      border-radius: 6px;
+      color: #ff8a00;
+    }
+
+    &:hover {
+      border: 2px solid #ff8a00;
+      border-radius: 6px;
+      color: #ff8a00;
+    }
+  }
+}
+
+.popover-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  p {
+    font-weight: 500;
+    color: black;
+  }
+  span {
+    font-weight: 400;
+    color: #2f2f2f;
+  }
+}

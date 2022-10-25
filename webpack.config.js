@@ -5,6 +5,7 @@ module.exports = {
     main: "./src/js/index.js",
     search: "./src/js/search.js",
     sauna: "./src/js/sauna.js",
+    order: "./src/js/order.js",
   },
 
   output: {

@@ -1,0 +1,18 @@
+extends ../layouts/default
+
+block variables
+	- const title = "Order";
+
+block links
+	link(rel="stylesheet" href="styles/order.css")
+
+block content
+	include ../../blocks/modules/ORDER/header/header
+
+	include ../../blocks/modules/ORDER/main/main
+
+	include ../../blocks/modules/ORDER/footer/footer
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/order.js")

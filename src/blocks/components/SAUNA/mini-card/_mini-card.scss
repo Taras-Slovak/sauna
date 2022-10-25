@@ -60,13 +60,16 @@
   &__button {
     width: 197px;
     height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 20px;
     font-weight: 700;
     font-size: 16px;
     line-height: 150%;
     background: #ff8a00;
     border-radius: 6px;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255) !important;
     border: none;
     transition: all 0.2s;
 
