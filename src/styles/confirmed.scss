@@ -1,0 +1,74 @@
+@import "vendor/import/rest";
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #b3b3b3;
+  z-index: 500;
+
+  &__nav {
+    max-width: 1110px;
+    height: 80px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 20px;
+    transition: all 0.2s;
+
+    @media only screen and (max-width: 1110px) {
+      margin-left: 20px;
+      gap: 10px;
+    }
+
+    p {
+      transition: all 0.2s;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 150%;
+      color: #2f2f2f;
+
+      @media only screen and (max-width: 600px) {
+        font-size: 22px;
+      }
+
+      @media only screen and (max-width: 400px) {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  background: #f2f2f2;
+
+  &__inner {
+    height: 80px;
+    max-width: 1110px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    @media only screen and (max-width: 1200px) {
+      max-width: 100%;
+      padding: 0 16px;
+    }
+  }
+
+  &__item {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+  }
+}

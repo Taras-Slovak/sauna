@@ -1,0 +1,49 @@
+extends ../layouts/default
+
+block variables
+	- const title = "Order";
+
+block links
+	link(rel="stylesheet" href="styles/payment.css")
+
+block content
+
+	header.header
+		.header__nav
+			.header__link 
+				p Оплата заказа
+
+	main.main 
+		.main__inner 
+			.main__left 
+				h3 Оплата банковской картой
+				h2 3 400 грн.
+			
+			.main__field-group
+
+				.main__field
+					label(for="card-id") Номер карты
+					input(type="text" placeholder="0000 0000 0000 000" id='card-id') 
+					
+
+				.main__card-data
+
+					.main__field
+						label(for="card-date") Срок действия
+						input(type="text" placeholder="мм / гг" id="card-date") 
+
+					.main__field 
+						label(for="CVC") CVC код
+						input(type="text" placeholder="CVV / CVC" id="CVC") 
+
+					.main__radio 						
+						input(type="checkbox", id="save-card"  name="save-card")
+						label(for="save-card") Сохранить карту
+						
+
+
+	footer.footer
+		.footer__inner
+			p.footer__item 2022 Портал бронирования саун «Хочу в Баню»
+
+block scripts
