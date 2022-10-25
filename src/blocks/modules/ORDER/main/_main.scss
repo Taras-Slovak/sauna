@@ -1,13 +1,30 @@
 .order {
   max-width: 1110px;
   padding-top: 125px;
+  padding-bottom: 250px;
   margin: auto;
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 1200px) {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 100px;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    max-width: 100%;
+    flex-direction: column-reverse;
+  }
 
   &__left {
     max-width: 636px;
     display: flex;
     flex-direction: column;
     gap: 40px;
+    @media only screen and (max-width: 1050px) {
+      max-width: 100%;
+    }
   }
 
   &__line {
@@ -19,5 +36,44 @@
   &__booking {
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  &__result {
+    margin-top: 20px;
+  }
+
+  &__result-title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 130%;
+    color: black;
+  }
+
+  &__result-text {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__result-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 135%;
+    color: #2f2f2f;
+  }
+
+  &__result-bottom {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 130%;
+    color: black;
   }
 }

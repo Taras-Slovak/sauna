@@ -164,7 +164,7 @@
       }
     }
 
-    button {
+    a {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -178,6 +178,7 @@
       font-size: 16px;
       line-height: 150%;
       color: #ff8a00;
+      text-decoration: none;
       transition: all 0.2s;
       @media only screen and (max-width: 420px) {
         margin: 10px auto 0 auto;

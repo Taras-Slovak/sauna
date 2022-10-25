@@ -1,9 +1,9 @@
-main.order
+.order
 
   .order__left
 
     .order__booking 
-      include ../booking/booking
+      include ../editing/editing
     .order__line
 
     .order__share
@@ -20,3 +20,33 @@ main.order
   .order__right
 
     .order__card-detail
+
+      include ../card-detail/card-detail
+
+      .order__line
+
+    .order__result 
+
+      h4.order__result-title К оплате
+
+      .order__result-text
+
+        .order__result-item
+          p 1 час x 700 грн.
+          p 700 грн.
+
+        .order__result-item
+          p 2 час x 1 200 грн.
+          p 2 400 грн.
+
+        .order__result-item
+          p Доплата за 2 места
+          p 300 грн.
+
+        .order__result-item
+          p 3-й час в подарок
+          p -700 грн.
+
+      .order__result-bottom
+        p Итого
+        p 2 700 грн.

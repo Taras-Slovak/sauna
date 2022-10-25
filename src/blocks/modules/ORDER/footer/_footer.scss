@@ -1,0 +1,24 @@
+.footer {
+  width: 100%;
+  background: #f2f2f2;
+
+  &__inner {
+    height: 80px;
+    max-width: 1110px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    @media only screen and (max-width: 1200px) {
+      max-width: 100%;
+      padding: 0 16px;
+    }
+  }
+
+  &__item {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+  }
+}
