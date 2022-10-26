@@ -1,0 +1,127 @@
+.advantage {
+  width: 100%;
+  background-color: #ffffff;
+
+  @media only screen and (max-width: 1600px) {
+    padding: 0 10px;
+  }
+
+  &__inner {
+    margin: 90px auto 0 auto;
+    max-width: 1488px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
+
+  &__left {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__title {
+    max-width: 740px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 150%;
+    color: #000000;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 24px;
+    }
+  }
+
+  &__item-group {
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    img {
+      display: block;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+    }
+
+    p {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 120%;
+      @media only screen and (max-width: 600px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 279px;
+    height: 48px;
+    background: #2f2f2f;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover {
+      background: #ff8a00;
+      color: #fff;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  &__right-img {
+    display: block;
+    width: 445px;
+    height: 445px;
+    border-radius: 50%;
+
+    @media only screen and (max-width: 900px) {
+      width: 345px;
+      height: 345px;
+    }
+
+    @media only screen and (max-width: 800px) {
+      width: 245px;
+      height: 245px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
+
+    img {
+      width: 445px;
+      height: 445px;
+      border-radius: 50%;
+      object-fit: cover;
+      @media only screen and (max-width: 900px) {
+        width: 345px;
+        height: 345px;
+      }
+
+      @media only screen and (max-width: 800px) {
+        width: 245px;
+        height: 245px;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+extends ../layouts/default
+
+block variables
+	- const title = "Connection"
+
+block links
+	link(rel="stylesheet" href="styles/connection.css")
+
+block content
+
+	include ../../blocks/modules/CONNECTION/header/header
+
+	include ../../blocks/modules/CONNECTION/main/main
+
+	include ../../blocks/modules/CONNECTION/footer/footer
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/connection.js")

@@ -1,4 +1,9 @@
 @import "vendor/import/rest";
+@import "base/fonts";
+
+body {
+  font-family: "Montserrat";
+}
 
 .header {
   width: 100%;

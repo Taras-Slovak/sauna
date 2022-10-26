@@ -7,6 +7,7 @@ module.exports = {
     sauna: "./src/js/sauna.js",
     order: "./src/js/order.js",
     payment: "./src/js/payment.js",
+    connection: "./src/js/connection.js",
   },
 
   output: {
