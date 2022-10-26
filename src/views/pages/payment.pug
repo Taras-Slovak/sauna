@@ -13,33 +13,84 @@ block content
 			.header__link 
 				p Оплата заказа
 
+
 	main.main 
-		.main__inner 
-			.main__left 
-				h3 Оплата банковской картой
-				h2 3 400 грн.
-			
-			.main__field-group
+		.main__inner
+			.main__content 
+				.main__left 
+					h3 Оплата банковской картой
+					h2 3 400 грн.
+				
+					.main__field-group
 
-				.main__field
-					label(for="card-id") Номер карты
-					input(type="text" placeholder="0000 0000 0000 000" id='card-id') 
-					
+						.main__field
+							label(for="card-id") Номер карты
+							input(type="text" placeholder="0000 0000 0000 000" id='card-id') 
+							
 
-				.main__card-data
+						.main__card-data
 
-					.main__field
-						label(for="card-date") Срок действия
-						input(type="text" placeholder="мм / гг" id="card-date") 
+							.main__field
+								label(for="card-date") Срок действия
+								input(type="text" placeholder="мм / гг" id="card-date") 
 
-					.main__field 
-						label(for="CVC") CVC код
-						input(type="text" placeholder="CVV / CVC" id="CVC") 
+							.main__field 
+								label(for="CVC") CVC код
+								input(type="text" placeholder="CVV / CVC" id="CVC") 
 
-					.main__radio 						
-						input(type="checkbox", id="save-card"  name="save-card")
-						label(for="save-card") Сохранить карту
-						
+						.main__radio 						
+							input(type="checkbox", id="save-card"  name="save-card")
+							label(for="save-card") Сохранить карту
+							button.main__radio-popover(type='button' data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="<p> С понедельника по пятницу с 9:00 до 17:00 - 3 часа отдыха: </p> <span> 700 грн. в усадьбе, </span>  <span> 800 грн. в срубе </span>" )
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_634_20661)">
+									<path d="M10 5V6.25M10 8.75V14.375V8.75Z"  stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M10 18.75C14.8325 18.75 18.75 14.8325 18.75 10C18.75 5.16751 14.8325 1.25 10 1.25C5.16751 1.25 1.25 5.16751 1.25 10C1.25 14.8325 5.16751 18.75 10 18.75Z"  stroke-linecap="round" stroke-linejoin="round"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_634_20661">
+									<rect width="20" height="20" fill="white"/>
+									</clipPath>
+									</defs>
+								</svg>	
+				.main__right 
+
+					h3.main__right-title Мы принимаем
+
+					.main__credit-group
+
+						a(href="#").main__credit-item
+							img(src="img/other/credit.webp", alt="credit-card")
+
+						a(href="#").main__credit-item
+							img(src="img/other/credit.webp", alt="credit-card")
+
+						a(href="#").main__credit-item
+							img(src="img/other/credit.webp", alt="credit-card")
+
+						a(href="#").main__credit-item
+							img(src="img/other/credit.webp", alt="credit-card")
+
+						a(href="#").main__credit-item
+							img(src="img/other/credit.webp", alt="credit-card")
+
+						a(href="#").main__credit-item
+							img(src="img/other/credit.webp", alt="credit-card")
+
+						a(href="#").main__credit-item
+							img(src="img/other/credit.webp", alt="credit-card")
+
+						a(href="#").main__credit-item
+							img(src="img/other/credit.webp", alt="credit-card")
+
+					.main__right-text 
+						p Как только вы нажмёте «Оплатить заказ», с вашей карты будет списана полная стоимость услуг.
+
+						p Гарантируем безопастность платежа и сохранность данных.
+
+			.main__line 
+
+			a.main__button(href="#") Оплатить заказ
 
 
 	footer.footer
@@ -47,3 +98,5 @@ block content
 			p.footer__item 2022 Портал бронирования саун «Хочу в Баню»
 
 block scripts
+	script(src="js/vendor.js")
+	script(src="js/payment.js") 

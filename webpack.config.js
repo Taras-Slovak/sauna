@@ -6,6 +6,7 @@ module.exports = {
     search: "./src/js/search.js",
     sauna: "./src/js/sauna.js",
     order: "./src/js/order.js",
+    payment: "./src/js/payment.js",
   },
 
   output: {
