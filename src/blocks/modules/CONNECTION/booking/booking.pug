@@ -3,4 +3,85 @@ section.booking
 
     h2.booking__title Платформа для бронирования                     предложений саун и банных комплексов
 
-    a.booking__btn(href="#") Добавить объект отдыха
+    a.booking__btn(data-bs-toggle="modal" href="#bookingModalToggle" role="button") Добавить объект отдыха
+
+  #bookingModalToggle.modal.fade(tabindex='-1' aria-labelledby='bookingModalToggleLabel' aria-hidden='true')
+    .modal-dialog.booking__modal-dialog
+      .modal-content.booking__modal-content 
+        .modal-header.booking__modal-header
+          button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+        .modal-body.booking__modal-body 
+
+          .form
+            h3.form__title Создайте аккаунта партнера
+
+            p.form__text-top Аккаунт партнера необходим для управления и настройками вашего объекта предоставления услуг
+
+            .form__field 
+
+              label(for="connection-mail") Почта
+
+              input(type="email" id="connection-mail" placeholder='example@example.com')        
+
+            button.form__btn-main(data-bs-target='#bookingModalToggle2' data-bs-toggle='modal')  Зарегистрироваться
+
+            a.form__btn-log(href="#")  Войти
+
+            p.form__text-bottom Входя в аккаунт или создавая новый, вы соглашаетесь с нашими Правилами и условиями и Положением о конфиденциальности
+
+
+
+#bookingModalToggle2.modal.fade(aria-hidden='true' aria-labelledby='bookingModalToggleLabel2' tabindex='-1')
+    .modal-dialog.booking__modal-dialog
+      .modal-content.booking__modal-content  
+        .modal-header.booking__modal-header
+          button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+        .modal-body.booking__modal-body         
+          .form
+            h3.form__title Контактные данные
+
+            p.form__text-top Укажите контактную информацию для завершения регистрации вашего кабинета
+
+            .form__field 
+
+              label(for="company") Компания
+
+              input(type="text" id="company" placeholder='Название компании')        
+
+            .form__field 
+
+              label(for="telephone") Мобильный телефон
+
+              input(type="text" id="telephone" placeholder='+38 067 123-23-23 ')        
+
+            button.form__btn-main(data-bs-target='#bookingModalToggle3' data-bs-toggle='modal')  Далее            
+
+            p.form__text-bottom Входя в аккаунт или создавая новый, вы соглашаетесь с нашими Правилами и условиями и Положением о конфиденциальности
+
+
+#bookingModalToggle3.modal.fade(aria-hidden='true' aria-labelledby='bookingModalToggleLabel2' tabindex='-1')
+  .modal-dialog.booking__modal-dialog
+    .modal-content.booking__modal-content  
+      .modal-header.booking__modal-header
+        button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+      .modal-body.booking__modal-body         
+        .form
+          h3.form__title Создание пароля
+
+          p.form__text-top Длина пароля не менее 10 символов (заглавные и строчные буквы и цифры)
+
+          .form__field 
+
+            label(for="userPassword") Пароль
+
+            input(id="userPassword" type="password" placeholder='**********')        
+
+          .form__field 
+
+            label(for="userPassword2") Введите пароль еще раз
+
+            input(id="userPassword2" type="password" placeholder='**********')        
+
+          button.form__btn-main(data-bs-target='#bookingModalToggle4' data-bs-toggle='modal')  Создать аккаунт            
+
+          p.form__text-bottom Входя в аккаунт или создавая новый, вы соглашаетесь с нашими Правилами и условиями и Положением о конфиденциальности

@@ -56,6 +56,17 @@
       height: 44px;
     }
 
+    h4 {
+      margin-bottom: 15px;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 130%;
+      color: #000000;
+      @media only screen and (max-width: 600px) {
+        font-size: 18px;
+      }
+    }
+
     p {
       font-style: normal;
       font-weight: 500;
@@ -123,5 +134,10 @@
         height: 245px;
       }
     }
+  }
+
+  &__reverse {
+    margin-top: 233px;
+    flex-direction: row-reverse;
   }
 }

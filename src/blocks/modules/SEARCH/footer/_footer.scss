@@ -106,6 +106,12 @@
     line-height: 120%;
     text-decoration: none;
     color: #000000;
+
+    transition: all 0.2s;
+
+    &:hover {
+      color: #ff8a00;
+    }
   }
 
   &__btn {
