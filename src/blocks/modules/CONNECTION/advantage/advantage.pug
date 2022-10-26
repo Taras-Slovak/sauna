@@ -24,7 +24,7 @@ section.advantage
           img(src="img/CONNECTION/pic/small.webp", alt="some-pic")
           p База клиентов в вашем ЛК, статистика по продажам,отзывы напрямую от клиентов, побывавших в вашем заведении
 
-      a.advantage__btn(href="#") Начать сотрудничество
+      button.advantage__btn(data-bs-toggle="modal" href="#advantageRegister" role="button") Начать сотрудничество
 
     .advantage__right 
 
@@ -73,3 +73,49 @@ section.advantage
       .advantage__right-img
 
         img(src="img/CONNECTION/pic/big.webp", alt="some-pic")
+
+#advantageRegister.modal.fade(tabindex='-1' aria-labelledby='advantageRegisterLabel' aria-hidden='true')
+    .modal-dialog.booking__modal-dialog
+      .modal-content.booking__modal-content 
+        .modal-header.booking__modal-header
+          button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+        .modal-body.booking__modal-body 
+
+          .form
+            h3.form__title Заявка на подключение к системе
+
+            p.form__text-top Оставьте свои контактные данные и мы расскажем условия сотрудничества и подключения к системе бронирования 
+
+            .form__field 
+
+              label(for="company") Компания
+
+              input(type="text" id="company" placeholder='Название компании')        
+
+            .form__field 
+
+              label(for="connection-mail") Почта
+
+              input(type="email" id="connection-mail" placeholder='example@example.com')
+
+            .form__field 
+
+              label(for="telephone") Мобильный телефон
+
+              input(type="text" id="telephone" placeholder='+38 067 123-23-23 ')        
+
+            button.form__btn-main(data-bs-target='#advantageRegister2' data-bs-toggle='modal')  Отправить заявку
+
+            p.form__text-bottom Оставляя заявку, вы соглашаетесь с нашими Правилами и условиями и Положением о конфиденциальности
+
+#advantageRegister2.modal.fade(tabindex='-1' aria-labelledby='advantageRegisterLabel2' aria-hidden='true')
+    .modal-dialog.booking__modal-dialog
+      .modal-content.booking__modal-content 
+        .modal-header.booking__modal-header
+          button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+        .modal-body.booking__modal-body 
+
+          .form
+            h3.form__title Ваша заявка успешно отправлена
+
+            p.form__text-bottom Наш менеджер свяжется с вами в течении 15 минут

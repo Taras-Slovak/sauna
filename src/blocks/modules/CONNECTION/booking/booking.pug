@@ -3,9 +3,9 @@ section.booking
 
     h2.booking__title Платформа для бронирования                     предложений саун и банных комплексов
 
-    a.booking__btn(data-bs-toggle="modal" href="#bookingModalToggle" role="button") Добавить объект отдыха
+    a.booking__btn(data-bs-toggle="modal" href="#bookingRegister" role="button") Добавить объект отдыха
 
-  #bookingModalToggle.modal.fade(tabindex='-1' aria-labelledby='bookingModalToggleLabel' aria-hidden='true')
+  #bookingRegister.modal.fade(tabindex='-1' aria-labelledby='bookingRegisterLabel' aria-hidden='true')
     .modal-dialog.booking__modal-dialog
       .modal-content.booking__modal-content 
         .modal-header.booking__modal-header
@@ -23,15 +23,15 @@ section.booking
 
               input(type="email" id="connection-mail" placeholder='example@example.com')        
 
-            button.form__btn-main(data-bs-target='#bookingModalToggle2' data-bs-toggle='modal')  Зарегистрироваться
+            button.form__btn-main(data-bs-target='#bookingSingUp' data-bs-toggle='modal')  Зарегистрироваться
 
-            a.form__btn-log(href="#")  Войти
+            button.form__btn-log(data-bs-target='#bookingLogIn' data-bs-toggle='modal')  Войти
 
             p.form__text-bottom Входя в аккаунт или создавая новый, вы соглашаетесь с нашими Правилами и условиями и Положением о конфиденциальности
 
 
 
-#bookingModalToggle2.modal.fade(aria-hidden='true' aria-labelledby='bookingModalToggleLabel2' tabindex='-1')
+#bookingSingUp.modal.fade(aria-hidden='true' aria-labelledby='bookingSingUpLabel' tabindex='-1')
     .modal-dialog.booking__modal-dialog
       .modal-content.booking__modal-content  
         .modal-header.booking__modal-header
@@ -54,12 +54,12 @@ section.booking
 
               input(type="text" id="telephone" placeholder='+38 067 123-23-23 ')        
 
-            button.form__btn-main(data-bs-target='#bookingModalToggle3' data-bs-toggle='modal')  Далее            
+            button.form__btn-main(data-bs-target='#bookingSingUp2' data-bs-toggle='modal')  Далее            
 
             p.form__text-bottom Входя в аккаунт или создавая новый, вы соглашаетесь с нашими Правилами и условиями и Положением о конфиденциальности
 
 
-#bookingModalToggle3.modal.fade(aria-hidden='true' aria-labelledby='bookingModalToggleLabel2' tabindex='-1')
+#bookingSingUp2.modal.fade(aria-hidden='true' aria-labelledby='bookingSingUpLabel2' tabindex='-1')
   .modal-dialog.booking__modal-dialog
     .modal-content.booking__modal-content  
       .modal-header.booking__modal-header
@@ -82,6 +82,57 @@ section.booking
 
             input(id="userPassword2" type="password" placeholder='**********')        
 
-          button.form__btn-main(data-bs-target='#bookingModalToggle4' data-bs-toggle='modal')  Создать аккаунт            
+          button.form__btn-main(data-bs-target='#bookingSingUp4' data-bs-toggle='modal')  Создать аккаунт            
 
           p.form__text-bottom Входя в аккаунт или создавая новый, вы соглашаетесь с нашими Правилами и условиями и Положением о конфиденциальности
+
+#bookingLogIn.modal.fade(aria-hidden='true' aria-labelledby='bookingLogInLabel' tabindex='-1')
+  .modal-dialog.booking__modal-dialog
+    .modal-content.booking__modal-content  
+      .modal-header.booking__modal-header
+        button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+      .modal-body.booking__modal-body         
+        .form
+          h3.form__title Войдите в аккаунт, чтобы управлять бронированиями
+
+          p.form__text-top Аккаунт партнера необходим для управления и настройками вашего объекта предоставления услуг
+
+          .form__field 
+
+            label(for="login") Логин / Почта
+
+            input(id="login" type="password" placeholder='ID партнера или почта')        
+
+          .form__field 
+
+            label(for="userPassword") Пароль
+
+            input(id="userPassword" type="password" placeholder='**********')        
+
+          button.form__btn-main(data-bs-target='#bookingLogIn' data-bs-toggle='modal')  Войти
+
+          a.form__restore-password(href="#" data-bs-target='#RestorePassword' data-bs-toggle='modal') Забыли пароль?
+
+          button.form__btn-log(data-bs-target='#bookingSingUp' data-bs-toggle='modal')  Зарегистрироваться           
+
+          p.form__text-bottom Входя в аккаунт или создавая новый, вы соглашаетесь с нашими Правилами и условиями и Положением о конфиденциальности
+
+
+#RestorePassword.modal.fade(aria-hidden='true' aria-labelledby='RestorePasswordLabel' tabindex='-1')
+  .modal-dialog.booking__modal-dialog
+    .modal-content.booking__modal-content  
+      .modal-header.booking__modal-header
+        button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+      .modal-body.booking__modal-body         
+        .form
+          h3.form__title Забыли пароль?
+
+          p.form__text-top Подтвердите имя пользователя, и мы пришлем вам ссылку на смену пароля.
+
+          .form__field 
+
+            label(for="login") Логин / Почта
+
+            input(id="login" type="password" placeholder='ID партнера или почта')      
+
+          button.form__btn-main(data-bs-target='#RestorePassword2' data-bs-toggle='modal')  Отправить ссылку для смены пароля

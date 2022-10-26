@@ -78,6 +78,7 @@
 
 .form {
   max-width: 350px;
+  padding-bottom: 35px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -182,9 +183,23 @@
 
   &__text-bottom {
     margin-top: 20px;
-    margin-bottom: 35px;
     font-weight: 500;
     font-size: 12px;
     line-height: 120%;
+  }
+
+  &__restore-password {
+    margin-top: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    color: #2f2f2f;
+    transition: all 0.2s;
+
+    &:hover {
+      color: #ff8a00;
+    }
   }
 }
