@@ -9,6 +9,7 @@ module.exports = {
     payment: "./src/js/payment.js",
     connection: "./src/js/connection.js",
     profile: "./src/js/profile.js",
+    company: "./src/js/company.js",
   },
 
   output: {

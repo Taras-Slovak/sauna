@@ -1,0 +1,19 @@
+extends ../layouts/default
+
+block variables
+	- const title = "Company"
+
+block links
+	link(rel="stylesheet" href="styles/company.css")
+
+block content
+
+	include ../../blocks/modules/COMPANY/header/header
+
+	include ../../blocks/modules/COMPANY/main/main
+
+	include ../../blocks/modules/COMPANY/footer/footer
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/company.js")
