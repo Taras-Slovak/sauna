@@ -1,2 +1,2 @@
-import "%components%/search-panel/search-panel";
-import "%components%/slider/slider";
+import "%components%/INDEX/search-panel/search-panel";
+import "%components%/INDEX/slider/slider";

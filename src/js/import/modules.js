@@ -1,4 +1,4 @@
-import "%modules%/header/header";
-import "%modules%/footer/footer";
-import "%modules%/popular/popular";
-import "%modules%/offers/offers";
+import "%modules%/INDEX/header/header";
+import "%modules%/INDEX/footer/footer";
+import "%modules%/INDEX/popular/popular";
+import "%modules%/INDEX/offers/offers";

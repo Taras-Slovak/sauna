@@ -8,6 +8,7 @@ module.exports = {
     order: "./src/js/order.js",
     payment: "./src/js/payment.js",
     connection: "./src/js/connection.js",
+    profile: "./src/js/profile.js",
   },
 
   output: {
