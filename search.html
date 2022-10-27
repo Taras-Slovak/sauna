@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Search</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="styles/search.min.css">
+  </head>
+  <body>
+    <header class="header"> 
+      <nav class="header__navigation">
+        <div class="header__left"><a href="index.html"> <img class="header__logo" src="img/header/logo.svg" alt="logo"></a><img class="header__logo-min" src="img/header/logo-min.svg" alt="logo-min">
+          <div class="header__location"><svg width="27" height="27" viewBox="0 0 27 27"  xmlns="http://www.w3.org/2000/svg">
+<path d="M13.5376 4.32788C17.5586 4.32788 20.8179 7.58721 20.8179 11.6082C20.8179 14.6846 18.6562 18.0372 14.3889 21.702C14.1516 21.9059 13.849 22.0178 13.5362 22.0175C13.2234 22.0173 12.9211 21.9048 12.6841 21.7005L12.4019 21.4556C8.32343 17.8864 6.25732 14.6159 6.25732 11.6082C6.25732 7.58721 9.51666 4.32788 13.5376 4.32788ZM13.5376 8.80806C12.795 8.80806 12.0828 9.10307 11.5576 9.6282C11.0325 10.1533 10.7375 10.8655 10.7375 11.6082C10.7375 12.3508 11.0325 13.063 11.5576 13.5882C12.0828 14.1133 12.795 14.4083 13.5376 14.4083C14.2803 14.4083 14.9925 14.1133 15.5176 13.5882C16.0427 13.063 16.3377 12.3508 16.3377 11.6082C16.3377 10.8655 16.0427 10.1533 15.5176 9.6282C14.9925 9.10307 14.2803 8.80806 13.5376 8.80806Z" />
+</svg><a href="#">Киев</a>
+          </div>
+        </div>
+        <div class="header__right"><a class="header__link" href="#">Разместить баню</a><svg class="header__hurt" width="25" height="25" viewBox="0 0 25 25"  xmlns="http://www.w3.org/2000/svg">
+<path d="M11.7469 5.16475L12.5 6.02678L13.2531 5.16475C14.0083 4.30027 14.7014 3.62075 15.5318 3.14594C16.3436 2.68176 17.3437 2.38184 18.75 2.38184C20.0874 2.38184 21.3571 2.82255 22.3035 3.87442C23.2587 4.93612 24 6.74922 24 9.7168C24 10.9906 23.3403 13.1276 21.4656 15.6274C19.674 18.0164 16.8096 20.6834 12.5 23.1535C8.19035 20.6834 5.32596 18.0164 3.5344 15.6274C1.65969 13.1276 1 10.9906 1 9.7168C1 6.74922 1.74129 4.93612 2.69652 3.87442C3.6429 2.82255 4.91262 2.38184 6.25 2.38184C7.65628 2.38184 8.65641 2.68176 9.46823 3.14594C10.2986 3.62075 10.9917 4.30027 11.7469 5.16475Z"  stroke-width="2"/>
+</svg>
+          <button class="header__button" type="button"><svg width="30" height="30" viewBox="0 0 30 30"  xmlns="http://www.w3.org/2000/svg">
+<path d="M15.5 2C8.6 2 3 7.6 3 14.5C3 21.4 8.6 27 15.5 27C22.4 27 28 21.4 28 14.5C28 7.6 22.4 2 15.5 2ZM15.5 7C17.9125 7 19.875 8.9625 19.875 11.375C19.875 13.7875 17.9125 15.75 15.5 15.75C13.0875 15.75 11.125 13.7875 11.125 11.375C11.125 8.9625 13.0875 7 15.5 7ZM15.5 24.5C12.9625 24.5 9.9625 23.475 7.825 20.9C10.0145 19.1821 12.717 18.2485 15.5 18.2485C18.283 18.2485 20.9855 19.1821 23.175 20.9C21.0375 23.475 18.0375 24.5 15.5 24.5Z" />
+</svg>
+            <div class="header__modal-btn" data-bs-toggle="modal" data-bs-target="#modalFooterSearch"><svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 7.5C4.5 7.10218 4.65804 6.72064 4.93934 6.43934C5.22064 6.15804 5.60218 6 6 6H24C24.3978 6 24.7794 6.15804 25.0607 6.43934C25.342 6.72064 25.5 7.10218 25.5 7.5C25.5 7.89782 25.342 8.27936 25.0607 8.56066C24.7794 8.84196 24.3978 9 24 9H6C5.60218 9 5.22064 8.84196 4.93934 8.56066C4.65804 8.27936 4.5 7.89782 4.5 7.5Z" />
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 15C4.5 14.6022 4.65804 14.2206 4.93934 13.9393C5.22064 13.658 5.60218 13.5 6 13.5H24C24.3978 13.5 24.7794 13.658 25.0607 13.9393C25.342 14.2206 25.5 14.6022 25.5 15C25.5 15.3978 25.342 15.7794 25.0607 16.0607C24.7794 16.342 24.3978 16.5 24 16.5H6C5.60218 16.5 5.22064 16.342 4.93934 16.0607C4.65804 15.7794 4.5 15.3978 4.5 15Z" />
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 22.5C4.5 22.1022 4.65804 21.7206 4.93934 21.4393C5.22064 21.158 5.60218 21 6 21H24C24.3978 21 24.7794 21.158 25.0607 21.4393C25.342 21.7206 25.5 22.1022 25.5 22.5C25.5 22.8978 25.342 23.2794 25.0607 23.5607C24.7794 23.842 24.3978 24 24 24H6C5.60218 24 5.22064 23.842 4.93934 23.5607C4.65804 23.2794 4.5 22.8978 4.5 22.5Z" />
+</svg>
+            </div>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <div class="modal fade" id="modalFooterSearch" tabindex="-1" aria-labelledby="modalFooterSearchLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">     
+          <div class="modal-body header__modal"><a class="header__modal-link" href="#">Настройки аккаунта</a><a class="header__modal-link" href="#">Бронирования</a><a class="header__modal-link" href="#">Уведомления (1)</a><a class="header__modal-link" href="#">Мои отзывы</a><a class="header__modal-link" href="#">Мои подборки</a><a class="header__modal-link" href="#">Выйти</a></div>
+        </div>
+      </div>
+    </div>
+    <main class="search">
+      <div class="search__side-bar">
+        <section class="side-bar"> 
+          <h2 class="side-bar__title">Поиск бани </h2>
+          <div class="side-bar__data-picker"> 
+            <p class="side-bar__txt">Дата бронирования</p>
+            <input id="side-bar-picker" type="text" value="Дата"><img src="img/SEARCH/side-bar/calendar.svg" alt="calendar">
+          </div>
+          <div class="side-bar__range-group">
+            <div class="side-bar__range">
+              <p class="side-bar__txt">Время бронирования</p>
+              <div class="side-bar__input-group">
+                <input class="side-bar__value-min" type="text" id="time-min">
+                <input class="side-bar__value-max" type="text" id="time-max">
+              </div>
+              <div class="side-bar__range-item range-time"></div>
+            </div>
+            <div class="side-bar__range">
+              <p class="side-bar__txt">Цена грн./час</p>
+              <div class="side-bar__input-group">
+                <input class="side-bar__value-min" type="text" id="price-min">
+                <input class="side-bar__value-max" type="text" id="price-max">
+              </div>
+              <div class="side-bar__range-item range-price"></div>
+            </div>
+          </div>
+          <div class="side-bar__search"> 
+            <label class="side-bar__txt" for="side-bar-search">Название бани</label>
+            <input type="search" placeholder="Поиск" id="side-bar-search">
+            <div class="side-bar__line"> </div>
+          </div>
+          <div class="side-bar__location">
+            <p class="side-bar__txt">Район</p>
+            <button class="side-bar__button"><img src="img/SEARCH/side-bar/location_icon.svg" alt="location">
+              <p>Найти поблизости</p>
+            </button>
+          </div>
+          <div class="side-bar__block-checkboxes">
+            <div class="side-bar__checkbox-group">
+              <div class="side-bar__checkbox-inner"> 
+                <div class="side-bar__checkbox-item">
+                  <input type="checkbox" id="obolonsky" name="obolonsky">
+                  <label for="obolonsky">Оболонский </label>
+                </div>
+                <div class="side-bar__checkbox-item">       
+                  <input type="checkbox" id="desnyansky" name="desnyansky">
+                  <label for="desnyansky">Деснянский </label>
+                </div>
+                <div class="side-bar__checkbox-item">
+                  <input type="checkbox" id="shevchenkovskiy" name="shevchenkovskiy">
+                  <label for="shevchenkovskiy">Шевченковский </label>
+                </div>
+                <div class="side-bar__checkbox-item">
+                  <input type="checkbox" id="kharkivsky" name="firekharkivsky">
+                  <label for="kharkivsky">Харьковский </label>
+                </div>
+                <div class="side-bar__checkbox-item">      
+                  <input type="checkbox" id="solomensky" name="solomensky">
+                  <label for="solomensky">Соломенский </label>
+                </div>
+                <div class="side-bar__checkbox-item">       
+                  <input type="checkbox" id="dneprovskiy" name="dneprovskiy">
+                  <label for="dneprovskiy">Днепровский </label>
+                </div>
+              </div><span class="side-bar__btn-capacity" data-open="false">
+                <p>Показать больше</p><svg width="20" height="20" viewBox="0 0 20 20" fill="none"   xmlns="http://www.w3.org/2000/svg">
+<path d="M13.825 6.66663L10 10.4833L6.175 6.66663L5 7.84163L10 12.8416L15 7.84163L13.825 6.66663Z"/>
+</svg></span>
+              <div class="side-bar__line"></div>
+            </div>
+            <div class="side-bar__checkbox-group">
+              <div class="side-bar__checkbox-inner">
+                <div class="side-bar__txt">Тип парной  </div>
+                <div class="side-bar__checkbox-item">      
+                  <input type="checkbox" id="finnish" value="finnish" name="finnish">
+                  <label for="finnish">Финская баня</label>
+                </div>
+                <div class="side-bar__checkbox-item">       
+                  <input type="checkbox" id="turkish" name="turkish">
+                  <label for="turkish">Турецкая баня</label>
+                </div>
+                <div class="side-bar__checkbox-item"> 
+                  <input type="checkbox" id="japanese" name="japanese">
+                  <label for="japanese">Японская баня</label>
+                </div>
+                <div class="side-bar__checkbox-item"> 
+                  <input type="checkbox" id="firewood" name="firewood">
+                  <label for="firewood">На дровах</label>
+                </div>
+                <div class="side-bar__checkbox-item">      
+                  <input type="checkbox" id="roman" name="roman">
+                  <label for="roman">Римская парная</label>
+                </div>
+              </div><span class="side-bar__btn-capacity" data-open="false">
+                <p>Показать больше</p><svg width="20" height="20" viewBox="0 0 20 20" fill="none"   xmlns="http://www.w3.org/2000/svg">
+<path d="M13.825 6.66663L10 10.4833L6.175 6.66663L5 7.84163L10 12.8416L15 7.84163L13.825 6.66663Z"/>
+</svg></span>
+              <div class="side-bar__line"></div>
+            </div>
+            <div class="side-bar__checkbox-group">
+              <div class="side-bar__checkbox-inner">
+                <div class="side-bar__txt">Вместимость бани</div>
+                <div class="side-bar__checkbox-item">
+                  <input type="checkbox" id="capacity-1-4" name="capacity-1-4">
+                  <label for="capacity-1-4">1-4 </label>
+                </div>
+                <div class="side-bar__checkbox-item">      
+                  <input type="checkbox" id="capacity-5-8" name="capacity-5-8">
+                  <label for="capacity-5-8">5-8 </label>
+                </div>
+                <div class="side-bar__checkbox-item">
+                  <input type="checkbox" id="capacity-9-15" name="capacity-9-15">
+                  <label for="capacity-9-15">9-15</label>
+                </div>
+                <div class="side-bar__checkbox-item">
+                  <input type="checkbox" id="capacity-more-15" name="capacity-more-15">
+                  <label for="capacity-more-15">Более 15</label>
+                </div>
+              </div>
+              <div class="side-bar__line"></div>
+            </div>
+            <div class="side-bar__checkbox-group">             
+              <div class="side-bar__checkbox-inner">
+                <div class="side-bar__txt">Аква зона  </div>
+                <div class="side-bar__checkbox-item">      
+                  <input type="checkbox" id="swimming-pool" value="swimming-pool" name="swimming-pool">
+                  <label for="swimming-pool">Бассейн</label>
+                </div>
+                <div class="side-bar__checkbox-item">       
+                  <input type="checkbox" id="jacuzzi" name="jacuzzi">
+                  <label for="jacuzzi">Джакузи</label>
+                </div>
+                <div class="side-bar__checkbox-item"> 
+                  <input type="checkbox" id="baptistery" name="baptistery">
+                  <label for="baptistery">Купель</label>
+                </div>
+                <div class="side-bar__checkbox-item"> 
+                  <input type="checkbox" id="cedar-barrel" name="cedar-barrel">
+                  <label for="cedar-barrel">Кедровая бочка</label>
+                </div>
+                <div class="side-bar__checkbox-item">      
+                  <input type="checkbox" id="massage" name="massage">
+                  <label for="massage">Массаж</label>
+                </div>
+              </div><span class="side-bar__btn-capacity" data-open="false">
+                <p>Показать больше</p><svg width="20" height="20" viewBox="0 0 20 20" fill="none"   xmlns="http://www.w3.org/2000/svg">
+<path d="M13.825 6.66663L10 10.4833L6.175 6.66663L5 7.84163L10 12.8416L15 7.84163L13.825 6.66663Z"/>
+</svg></span>
+            </div>
+          </div>
+        </section><span class="search__close">&#x2716;</span>
+      </div>
+      <div class="search__content">
+        <section class="card-list">
+          <div class="search-card">
+            <div class="search-card__inner">
+              <div class="search-card__left-side"><img class="search-card__img" src="img/SEARCH/side-bar/pic.webp" alt="pic"><a class="search-card__like" href="#" title="like"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke-width="2"/>
+</svg></a></div>
+              <div class="search-card__right-side">
+                <div class="search-card__top">
+                  <div class="search-card__title">Сауна Аквамарин</div>
+                  <div class="search-card__btn-group"> 
+                    <button class="search-card__left-btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z" />
+</svg>
+                      <p>4.5</p>
+                    </button>
+                    <button class="search-card__right-btn" type="button">от 1 000 грн.</button>
+                  </div>
+                </div>
+                <div class="search-card__middle">
+                  <div class="search-card__icon-group">
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/location.svg" alt="location">
+                      <p class="search-card__text">Оболонский район</p>
+                    </div>
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/address.svg" alt="address">
+                      <p class="search-card__text">ул. Волинська 10</p>
+                    </div>
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/square.svg" alt="square">
+                      <p class="search-card__text">6 залов</p>
+                    </div>
+                  </div>
+                  <div class="search-card__icon-group">
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/people.svg" alt="people">
+                      <p class="search-card__text">10-15 человек</p>
+                    </div>
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/heating.svg" alt="heating">
+                      <p class="search-card__text">Турецкая, Хамам, Финская,С веником</p>
+                    </div>
+                  </div><span class="search-card__line-middle"></span>
+                </div>
+                <div class="search-card__bottom">
+                  <p class="search-card__text">бассейн, зона отдыха с большим столом, ТВ, бар, теплый пол, аудио-видео аппаратура, мангал, мангальная зона</p>
+                  <div class="search-card__btn">
+                    <p>от 1 500 грн./час</p><a href="sauna.html">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div><span class="search-card__line-bottom"></span>
+          </div>
+          <div class="search-card">
+            <div class="search-card__inner">
+              <div class="search-card__left-side"><img class="search-card__img" src="img/SEARCH/side-bar/pic.webp" alt="pic"><a class="search-card__like" href="#" title="like"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke-width="2"/>
+</svg></a></div>
+              <div class="search-card__right-side">
+                <div class="search-card__top">
+                  <div class="search-card__title">Сауна Аквамарин</div>
+                  <div class="search-card__btn-group"> 
+                    <button class="search-card__left-btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z" />
+</svg>
+                      <p>4.5</p>
+                    </button>
+                    <button class="search-card__right-btn" type="button">от 1 000 грн.</button>
+                  </div>
+                </div>
+                <div class="search-card__middle">
+                  <div class="search-card__icon-group">
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/location.svg" alt="location">
+                      <p class="search-card__text">Оболонский район</p>
+                    </div>
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/address.svg" alt="address">
+                      <p class="search-card__text">ул. Волинська 10</p>
+                    </div>
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/square.svg" alt="square">
+                      <p class="search-card__text">6 залов</p>
+                    </div>
+                  </div>
+                  <div class="search-card__icon-group">
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/people.svg" alt="people">
+                      <p class="search-card__text">10-15 человек</p>
+                    </div>
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/heating.svg" alt="heating">
+                      <p class="search-card__text">Турецкая, Хамам, Финская,С веником</p>
+                    </div>
+                  </div><span class="search-card__line-middle"></span>
+                </div>
+                <div class="search-card__bottom">
+                  <p class="search-card__text">бассейн, зона отдыха с большим столом, ТВ, бар, теплый пол, аудио-видео аппаратура, мангал, мангальная зона</p>
+                  <div class="search-card__btn">
+                    <p>от 1 500 грн./час</p><a href="sauna.html">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div><span class="search-card__line-bottom"></span>
+          </div>
+          <div class="search-card">
+            <div class="search-card__inner">
+              <div class="search-card__left-side"><img class="search-card__img" src="img/SEARCH/side-bar/pic.webp" alt="pic"><a class="search-card__like" href="#" title="like"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke-width="2"/>
+</svg></a></div>
+              <div class="search-card__right-side">
+                <div class="search-card__top">
+                  <div class="search-card__title">Сауна Аквамарин</div>
+                  <div class="search-card__btn-group"> 
+                    <button class="search-card__left-btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z" />
+</svg>
+                      <p>4.5</p>
+                    </button>
+                    <button class="search-card__right-btn" type="button">от 1 000 грн.</button>
+                  </div>
+                </div>
+                <div class="search-card__middle">
+                  <div class="search-card__icon-group">
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/location.svg" alt="location">
+                      <p class="search-card__text">Оболонский район</p>
+                    </div>
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/address.svg" alt="address">
+                      <p class="search-card__text">ул. Волинська 10</p>
+                    </div>
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/square.svg" alt="square">
+                      <p class="search-card__text">6 залов</p>
+                    </div>
+                  </div>
+                  <div class="search-card__icon-group">
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/people.svg" alt="people">
+                      <p class="search-card__text">10-15 человек</p>
+                    </div>
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/heating.svg" alt="heating">
+                      <p class="search-card__text">Турецкая, Хамам, Финская,С веником</p>
+                    </div>
+                  </div><span class="search-card__line-middle"></span>
+                </div>
+                <div class="search-card__bottom">
+                  <p class="search-card__text">бассейн, зона отдыха с большим столом, ТВ, бар, теплый пол, аудио-видео аппаратура, мангал, мангальная зона</p>
+                  <div class="search-card__btn">
+                    <p>от 1 500 грн./час</p><a href="sauna.html">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div><span class="search-card__line-bottom"></span>
+          </div>
+          <div class="search-card">
+            <div class="search-card__inner">
+              <div class="search-card__left-side"><img class="search-card__img" src="img/SEARCH/side-bar/pic.webp" alt="pic"><a class="search-card__like" href="#" title="like"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke-width="2"/>
+</svg></a></div>
+              <div class="search-card__right-side">
+                <div class="search-card__top">
+                  <div class="search-card__title">Сауна Аквамарин</div>
+                  <div class="search-card__btn-group"> 
+                    <button class="search-card__left-btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z" />
+</svg>
+                      <p>4.5</p>
+                    </button>
+                    <button class="search-card__right-btn" type="button">от 1 000 грн.</button>
+                  </div>
+                </div>
+                <div class="search-card__middle">
+                  <div class="search-card__icon-group">
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/location.svg" alt="location">
+                      <p class="search-card__text">Оболонский район</p>
+                    </div>
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/address.svg" alt="address">
+                      <p class="search-card__text">ул. Волинська 10</p>
+                    </div>
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/square.svg" alt="square">
+                      <p class="search-card__text">6 залов</p>
+                    </div>
+                  </div>
+                  <div class="search-card__icon-group">
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/people.svg" alt="people">
+                      <p class="search-card__text">10-15 человек</p>
+                    </div>
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/heating.svg" alt="heating">
+                      <p class="search-card__text">Турецкая, Хамам, Финская,С веником</p>
+                    </div>
+                  </div><span class="search-card__line-middle"></span>
+                </div>
+                <div class="search-card__bottom">
+                  <p class="search-card__text">бассейн, зона отдыха с большим столом, ТВ, бар, теплый пол, аудио-видео аппаратура, мангал, мангальная зона</p>
+                  <div class="search-card__btn">
+                    <p>от 1 500 грн./час</p><a href="sauna.html">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div><span class="search-card__line-bottom"></span>
+          </div>
+          <div class="search-card">
+            <div class="search-card__inner">
+              <div class="search-card__left-side"><img class="search-card__img" src="img/SEARCH/side-bar/pic.webp" alt="pic"><a class="search-card__like" href="#" title="like"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke-width="2"/>
+</svg></a></div>
+              <div class="search-card__right-side">
+                <div class="search-card__top">
+                  <div class="search-card__title">Сауна Аквамарин</div>
+                  <div class="search-card__btn-group"> 
+                    <button class="search-card__left-btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z" />
+</svg>
+                      <p>4.5</p>
+                    </button>
+                    <button class="search-card__right-btn" type="button">от 1 000 грн.</button>
+                  </div>
+                </div>
+                <div class="search-card__middle">
+                  <div class="search-card__icon-group">
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/location.svg" alt="location">
+                      <p class="search-card__text">Оболонский район</p>
+                    </div>
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/address.svg" alt="address">
+                      <p class="search-card__text">ул. Волинська 10</p>
+                    </div>
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/square.svg" alt="square">
+                      <p class="search-card__text">6 залов</p>
+                    </div>
+                  </div>
+                  <div class="search-card__icon-group">
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/people.svg" alt="people">
+                      <p class="search-card__text">10-15 человек</p>
+                    </div>
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/heating.svg" alt="heating">
+                      <p class="search-card__text">Турецкая, Хамам, Финская,С веником</p>
+                    </div>
+                  </div><span class="search-card__line-middle"></span>
+                </div>
+                <div class="search-card__bottom">
+                  <p class="search-card__text">бассейн, зона отдыха с большим столом, ТВ, бар, теплый пол, аудио-видео аппаратура, мангал, мангальная зона</p>
+                  <div class="search-card__btn">
+                    <p>от 1 500 грн./час</p><a href="sauna.html">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div><span class="search-card__line-bottom"></span>
+          </div>
+          <div class="search-card">
+            <div class="search-card__inner">
+              <div class="search-card__left-side"><img class="search-card__img" src="img/SEARCH/side-bar/pic.webp" alt="pic"><a class="search-card__like" href="#" title="like"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke-width="2"/>
+</svg></a></div>
+              <div class="search-card__right-side">
+                <div class="search-card__top">
+                  <div class="search-card__title">Сауна Аквамарин</div>
+                  <div class="search-card__btn-group"> 
+                    <button class="search-card__left-btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z" />
+</svg>
+                      <p>4.5</p>
+                    </button>
+                    <button class="search-card__right-btn" type="button">от 1 000 грн.</button>
+                  </div>
+                </div>
+                <div class="search-card__middle">
+                  <div class="search-card__icon-group">
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/location.svg" alt="location">
+                      <p class="search-card__text">Оболонский район</p>
+                    </div>
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/address.svg" alt="address">
+                      <p class="search-card__text">ул. Волинська 10</p>
+                    </div>
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/square.svg" alt="square">
+                      <p class="search-card__text">6 залов</p>
+                    </div>
+                  </div>
+                  <div class="search-card__icon-group">
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/people.svg" alt="people">
+                      <p class="search-card__text">10-15 человек</p>
+                    </div>
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/heating.svg" alt="heating">
+                      <p class="search-card__text">Турецкая, Хамам, Финская,С веником</p>
+                    </div>
+                  </div><span class="search-card__line-middle"></span>
+                </div>
+                <div class="search-card__bottom">
+                  <p class="search-card__text">бассейн, зона отдыха с большим столом, ТВ, бар, теплый пол, аудио-видео аппаратура, мангал, мангальная зона</p>
+                  <div class="search-card__btn">
+                    <p>от 1 500 грн./час</p><a href="sauna.html">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div><span class="search-card__line-bottom"></span>
+          </div>
+          <div class="search-card">
+            <div class="search-card__inner">
+              <div class="search-card__left-side"><img class="search-card__img" src="img/SEARCH/side-bar/pic.webp" alt="pic"><a class="search-card__like" href="#" title="like"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke-width="2"/>
+</svg></a></div>
+              <div class="search-card__right-side">
+                <div class="search-card__top">
+                  <div class="search-card__title">Сауна Аквамарин</div>
+                  <div class="search-card__btn-group"> 
+                    <button class="search-card__left-btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z" />
+</svg>
+                      <p>4.5</p>
+                    </button>
+                    <button class="search-card__right-btn" type="button">от 1 000 грн.</button>
+                  </div>
+                </div>
+                <div class="search-card__middle">
+                  <div class="search-card__icon-group">
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/location.svg" alt="location">
+                      <p class="search-card__text">Оболонский район</p>
+                    </div>
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/address.svg" alt="address">
+                      <p class="search-card__text">ул. Волинська 10</p>
+                    </div>
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/square.svg" alt="square">
+                      <p class="search-card__text">6 залов</p>
+                    </div>
+                  </div>
+                  <div class="search-card__icon-group">
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/people.svg" alt="people">
+                      <p class="search-card__text">10-15 человек</p>
+                    </div>
+                    <div class="search-card__icon"> <img src="img/SEARCH/card-list/heating.svg" alt="heating">
+                      <p class="search-card__text">Турецкая, Хамам, Финская,С веником</p>
+                    </div>
+                  </div><span class="search-card__line-middle"></span>
+                </div>
+                <div class="search-card__bottom">
+                  <p class="search-card__text">бассейн, зона отдыха с большим столом, ТВ, бар, теплый пол, аудио-видео аппаратура, мангал, мангальная зона</p>
+                  <div class="search-card__btn">
+                    <p>от 1 500 грн./час</p><a href="sauna.html">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div><span class="search-card__line-bottom"></span>
+          </div>
+          <div class="card-list__pagination">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">&lsaquo;</span></a></li>
+                <li class="page-item"><a class="page-link activated" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span class="card-list-arrow" aria-hidden="true">&rsaquo;</span></a></li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+        <section class="map">
+          <div class="map__map-content" id="map"></div>
+          <div class="map__panel">
+            <div class="map__btn-group"> 
+              <div class="map__full-btn"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.135 22.1666C15.9607 22.1672 15.7885 22.1287 15.631 22.054C15.4735 21.9793 15.3348 21.8703 15.225 21.7349L9.58999 14.7349C9.41839 14.5262 9.32458 14.2643 9.32458 13.9941C9.32458 13.7239 9.41839 13.462 9.58999 13.2532L15.4233 6.25325C15.6214 6.015 15.9059 5.86517 16.2144 5.83672C16.5229 5.80828 16.8301 5.90355 17.0683 6.10158C17.3066 6.29961 17.4564 6.58417 17.4848 6.89267C17.5133 7.20117 17.418 7.50833 17.22 7.74658L12.005 13.9999L17.045 20.2533C17.1877 20.4245 17.2783 20.633 17.3061 20.8542C17.334 21.0753 17.2979 21.2998 17.2022 21.5011C17.1065 21.7024 16.9551 21.872 16.7659 21.99C16.5768 22.1079 16.3579 22.1692 16.135 22.1666Z"/>
+</svg>
+              </div>
+              <div class="map__checkbox">
+                <div class="side-bar__checkbox-item">      
+                  <input type="checkbox" checked id="google-map" value="google-map" name="google-map">
+                  <label for="google-map">Поиск при перемещения карты</label>
+                </div>
+              </div>
+            </div>
+            <div class="map__location"><img src="img/SEARCH/map/location.svg" alt="location"></div>
+          </div>
+        </section>
+      </div>
+      <div class="search__button">Поиск бани</div>
+    </main>
+    <footer class="footer"><img class="footer__logo" src="img/other/logo-foot.svg" alt="logo">
+      <div class="footer__inner">
+        <div class="footer__block-navigation">
+          <div class="footer__item-nav">
+            <h4 class="footer__text">Идеи для отдыха</h4><a class="footer__link" href="#">Для большой компании</a><a class="footer__link" href="#">Семейный отдых</a><a class="footer__link" href="#">Для двоих</a><a class="footer__link" href="#">Баня с купелью на улице</a><a class="footer__link" href="#">Баня за городом</a><a class="footer__link" href="#">Бани и сауны в центре</a><a class="footer__link" href="#">СПА и процедуры</a>
+          </div>
+          <div class="footer__item-nav">
+            <h4 class="footer__text">Расположение</h4><a class="footer__link" href="#">Бани Оболонского района</a><a class="footer__link" href="#">Бани Деснянского района</a><a class="footer__link" href="#">Бани Шевченковского района</a><a class="footer__link" href="#">Бани Харьковского района</a><a class="footer__link" href="#">Бани Соломенского района</a><a class="footer__link" href="#">Бани Днепровского района</a>
+          </div>
+          <div class="footer__item-nav">
+            <h4 class="footer__text">Пользователям</h4><a class="footer__link" href="#">О проекте</a><a class="footer__link" href="#">Правила и условия бронирования</a><a class="footer__link" href="#">Пользовательское соглашение</a><a class="footer__link" href="#">Положение о конфиденциальности и cookie</a><a class="footer__link" href="#">Вопрос-Ответ</a><a class="footer__link" href="#">Для партнеров</a><a class="footer__link" href="#">Контакты</a>
+          </div>
+        </div>
+        <button class="footer__btn">Добавить баню</button>
+      </div>
+    </footer>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/search.min.js"></script>
+  </body>
+</html>

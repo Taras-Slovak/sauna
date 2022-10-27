@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Order</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="styles/order.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__nav"><a class="header__link" href="sauna.html"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.4396 25.3334C18.2404 25.3341 18.0436 25.2901 17.8636 25.2047C17.6836 25.1193 17.5251 24.9947 17.3996 24.84L10.9596 16.84C10.7635 16.6015 10.6562 16.3022 10.6562 15.9934C10.6562 15.6845 10.7635 15.3853 10.9596 15.1467L17.6262 7.14671C17.8526 6.87442 18.1778 6.70319 18.5303 6.67068C18.8829 6.63817 19.2339 6.74706 19.5062 6.97338C19.7785 7.19969 19.9498 7.52491 19.9823 7.87748C20.0148 8.23005 19.9059 8.58109 19.6796 8.85338L13.7196 16L19.4796 23.1467C19.6426 23.3424 19.7462 23.5807 19.778 23.8335C19.8099 24.0862 19.7686 24.3428 19.6592 24.5728C19.5498 24.8028 19.3768 24.9967 19.1607 25.1315C18.9445 25.2663 18.6943 25.3364 18.4396 25.3334Z" />
+</svg>
+          <p>Подтверждение и оплата</p></a></div>
+    </header>
+    <div class="order">
+      <div class="order__left">
+        <div class="order__booking"> 
+          <div class="editing">
+            <div class="editing__top">
+              <p>Ваш заказ</p><span data-bs-toggle="modal" data-bs-target="#modalEditing">Редактировать</span>
+            </div>
+            <div class="editing__item-group">
+              <div class="editing__item">
+                <p>Дата бронирования</p><span>9 июля 2021</span>
+              </div>
+              <div class="editing__item">
+                <p>Время</p><span>20:00 -23:00</span>
+              </div>
+              <div class="editing__item">
+                <p>Гости</p><span>8 человек</span>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="modalEditing" tabindex="-1" aria-labelledby="modalEditingLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button class="modal-close-btn btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">   </button>
+                </div>
+                <div class="modal-body">
+                  <button class="booking__button-top" type="button">
+                    <p>Бронирование на</p><span>сегодня</span><svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.4999 19.3334C14.2176 19.3339 13.9439 19.2356 13.7266 19.0555L6.47655 13.0138C6.22979 12.8087 6.07461 12.514 6.04515 12.1945C6.01569 11.8749 6.11437 11.5568 6.31947 11.31C6.52457 11.0633 6.8193 10.9081 7.13881 10.8786C7.45833 10.8492 7.77646 10.9479 8.02322 11.153L14.4999 16.5663L20.9766 11.3463C21.1001 11.2459 21.2424 11.171 21.395 11.1257C21.5477 11.0805 21.7078 11.0659 21.8661 11.0827C22.0244 11.0996 22.1779 11.1476 22.3176 11.2239C22.4573 11.3002 22.5806 11.4034 22.6803 11.5275C22.791 11.6518 22.8748 11.7975 22.9265 11.9557C22.9782 12.1138 22.9967 12.2809 22.9808 12.4466C22.9649 12.6122 22.915 12.7727 22.8342 12.9182C22.7534 13.0636 22.6434 13.1908 22.5111 13.2917L15.2611 19.128C15.0375 19.2796 14.7695 19.352 14.4999 19.3334V19.3334Z"/>
+</svg>
+                  </button>
+                  <div class="booking">       
+                    <div class="booking__inner">
+                      <div class="booking__left">
+                        <div class="booking__title">
+                          <h4>Сруб «Гусарский»</h4>
+                          <p>Оболонский р-н, ул. Волинська 10</p>
+                        </div>
+                        <div class="booking__explanation">
+                          <p>Min заказ - от 3 часов</p>
+                          <p>Max вместимость - 8+2 чел</p>
+                          <p>Цена указана за час</p>
+                        </div>
+                      </div>
+                      <div class="booking__right">
+                        <div class="booking__button-group">       
+                          <div class="booking__btn-hour">
+                            <button type="button">01:00</button>
+                            <p data-price="1500">1 500 грн.</p>
+                          </div>
+                          <div class="booking__btn-hour">
+                            <button type="button">02:00</button>
+                            <p data-price="1500">1 500 грн.</p>
+                          </div>
+                          <div class="booking__btn-hour">
+                            <button type="button">03:00</button>
+                            <p data-price="1500">1 500 грн.</p>
+                          </div>
+                          <div class="booking__btn-hour">
+                            <button type="button">04:00</button>
+                            <p data-price="1500">1 500 грн.</p>
+                          </div>
+                          <div class="booking__btn-hour">
+                            <button type="button">05:00</button>
+                            <p data-price="1500">1 500 грн.</p>
+                          </div>
+                          <div class="booking__btn-hour">
+                            <button type="button">06:00</button>
+                            <p data-price="1500">1 500 грн.</p>
+                          </div>
+                          <div class="booking__btn-hour">
+                            <button type="button">07:00</button>
+                            <p data-price="1500">1 500 грн.</p>
+                          </div>
+                          <div class="booking__btn-hour">
+                            <button type="button">08:00</button>
+                            <p data-price="1500">1 500 грн.        </p>
+                          </div>
+                          <div class="booking__btn-hour">
+                            <button type="button">09:00</button>
+                            <p data-price="1500">1 500 грн.</p>
+                          </div>
+                          <div class="booking__btn-hour">
+                            <button type="button">10:00</button>
+                            <p data-price="1500">1 500 грн.</p>
+                          </div>
+                          <div class="booking__btn-hour">
+                            <button type="button">11:00</button>
+                            <p data-price="1500">1 500 грн.</p>
+                          </div>
+                          <div class="booking__btn-hour">
+                            <button type="button">12:00</button>
+                            <p data-price="1500">1 500 грн.</p>
+                          </div>
+                          <div class="booking__btn-hour">
+                            <button type="button">13:00</button>
+                            <p data-price="1500">1 500 грн.</p>
+                          </div>
+                          <div class="booking__btn-hour">
+                            <button type="button">14:00</button>
+                            <p data-price="1500">1 500 грн.</p>
+                          </div>
+                          <div class="booking__btn-hour">
+                            <button type="button" disabled>15:00</button>
+                            <p data-price="1500">1 500 грн.</p>
+                          </div>
+                          <div class="booking__btn-hour">
+                            <button type="button" disabled>16:00</button>
+                            <p data-price="1500">1 500 грн.</p>
+                          </div>
+                          <div class="booking__btn-hour">
+                            <button type="button" disabled>17:00</button>
+                            <p data-price="1500">1 500 грн.</p>
+                          </div>
+                          <div class="booking__btn-hour">
+                            <button type="button">18:00</button>
+                            <p data-price="1500">1 500 грн.</p>
+                          </div>
+                          <div class="booking__btn-hour">
+                            <button type="button">19:00</button>
+                            <p data-price="1500">1 500 грн.</p>
+                          </div>
+                          <div class="booking__btn-hour">
+                            <button type="button">20:00</button>
+                            <p data-price="1500">1 500 грн.</p>
+                          </div>
+                          <div class="booking__btn-hour">
+                            <button type="button">21:00</button>
+                            <p data-price="1500">1 500 грн.</p>
+                          </div>
+                          <div class="booking__btn-hour">
+                            <button type="button" disabled>22:00</button>
+                            <p data-price="1500">1 500 грн.</p>
+                          </div>
+                          <div class="booking__btn-hour">
+                            <button type="button" disabled>23:00</button>
+                            <p data-price="1500">1 500 грн.</p>
+                          </div>
+                          <div class="booking__btn-hour">
+                            <button type="button" disabled>00:00</button>
+                            <p data-price="1500">1 500 грн.</p>
+                          </div>
+                        </div>
+                        <div class="booking__calculation">
+                          <div class="booking__data-picker">
+                            <p>Человек</p>
+                            <div class="booking__picker">
+                              <button class="booking__picker-minus" type="button">&#8722;</button><span class="booking__picker-result">0</span>
+                              <button class="booking__picker-plus" type="button">&#43;</button>
+                            </div>
+                          </div>
+                          <div class="booking__summary">
+                            <div class="booking__summary-data"> 
+                              <p class="booking__summary-people">8 человек </p><span>,</span>
+                              <p class="booking__summary-time">с 18:00 -22:00</p>
+                            </div>
+                            <div class="booking__summary-amount"> 
+                              <p>Сумма:</p>
+                              <div class="booking__summary-price">6 000 </div>
+                              <p>грн.</p>
+                            </div>
+                            <div class="booking__bottom">
+                              <div class="booking__adit" data-bs-dismiss="modal">Редактировать</div>
+                              <button class="booking__summary-btn" type="button" data-bs-dismiss="modal">Сохранить</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="order__line"></div>
+        <div class="order__share">
+          <div class="share"> 
+            <div class="share__top">
+              <h4>На ваше бронирование применимы акции</h4>
+              <p>Обращаем ваше внимание что скидки не суммируются, возможно выбрать только одну акцию</p>
+            </div>
+            <div class="share__item-group">
+              <div class="share__item">
+                <div class="share__left">
+                  <p>Каждый 3-й час в подарок</p>
+                  <button class="share__left-btn" type="button" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="&lt;p&gt; С понедельника по пятницу с 9:00 до 17:00 - 3 часа отдыха: &lt;/p&gt; &lt;span&gt; 700 грн. в усадьбе, &lt;/span&gt;  &lt;span&gt; 800 грн. в срубе &lt;/span&gt;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_634_20661)">
+<path d="M10 5V6.25M10 8.75V14.375V8.75Z"  stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 18.75C14.8325 18.75 18.75 14.8325 18.75 10C18.75 5.16751 14.8325 1.25 10 1.25C5.16751 1.25 1.25 5.16751 1.25 10C1.25 14.8325 5.16751 18.75 10 18.75Z" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_634_20661">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                  </button>
+                </div>
+                <div class="share__right">
+                  <p class="share__hidden-text">Применено</p>
+                  <button class="share__button" type="button">Применить</button>
+                </div>
+              </div>
+              <div class="share__item">
+                <div class="share__left">
+                  <p>Тариф «Счастливые часы»</p>
+                  <button class="share__left-btn" type="button" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="&lt;p&gt; С понедельника по пятницу с 9:00 до 17:00 - 3 часа отдыха: &lt;/p&gt; &lt;span&gt; 700 грн. в усадьбе, &lt;/span&gt;  &lt;span&gt; 800 грн. в срубе &lt;/span&gt;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_634_20661)">
+<path d="M10 5V6.25M10 8.75V14.375V8.75Z"  stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 18.75C14.8325 18.75 18.75 14.8325 18.75 10C18.75 5.16751 14.8325 1.25 10 1.25C5.16751 1.25 1.25 5.16751 1.25 10C1.25 14.8325 5.16751 18.75 10 18.75Z"  stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_634_20661">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                  </button>
+                </div>
+                <div class="share__right">
+                  <p class="share__hidden-text">Применено</p>
+                  <button class="share__button" type="button">Применить</button>
+                </div>
+              </div>
+              <div class="share__item">
+                <div class="share__left">
+                  <p>Тариф «-10% именнинику»</p>
+                  <button class="share__left-btn" type="button" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="&lt;p&gt; С понедельника по пятницу с 9:00 до 17:00 - 3 часа отдыха: &lt;/p&gt; &lt;span&gt; 700 грн. в усадьбе, &lt;/span&gt;  &lt;span&gt; 800 грн. в срубе &lt;/span&gt;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_634_20661)">
+<path d="M10 5V6.25M10 8.75V14.375V8.75Z" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 18.75C14.8325 18.75 18.75 14.8325 18.75 10C18.75 5.16751 14.8325 1.25 10 1.25C5.16751 1.25 1.25 5.16751 1.25 10C1.25 14.8325 5.16751 18.75 10 18.75Z" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_634_20661">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                  </button>
+                </div>
+                <div class="share__right">
+                  <p class="share__hidden-text">Применено</p>
+                  <button class="share__button" type="button">Применить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="order__line"></div>
+        <div class="order__form">
+          <form class="form"> 
+            <h4 class="form__title">Данные для получения заказа</h4>
+            <div class="form__description">
+              <h5>Вы можете оформить заказ без регистрации</h5>
+              <p>Укажите контактные данные для отправки информации по бронированию</p>
+            </div>
+            <div class="form__fields">
+              <div class="form__item">
+                <label for="phone">Телефон</label>
+                <input type="text" id="phone" name="phone" placeholder="+38 067 123-23-23" required>
+              </div>
+              <div class="form__item">
+                <label for="email">Почта</label>
+                <input type="text" id="email" name="email" placeholder="example@example.com" required>
+              </div>
+            </div>
+            <div class="form__agreement">
+              <div class="form__radio">
+                <input type="checkbox" id="agreement-1" name="agreement-1">
+                <label for="agreement-1">Согласен с уловиями бронирования услуг и обработки данных</label>
+              </div>
+              <div class="form__radio"> 
+                <input type="checkbox" id="agreement-2" name="agreement-2">
+                <label for="agreement-2">Хочу получать информации об акциях и спецпредложениях</label>
+              </div>
+            </div>
+            <div class="form__submission">
+              <h5>или войти в личный кабинет</h5>
+              <p>Войдите в аккаунт, чтобы использовать сохраненные данные, иметь доступ к заказам и бонусной программе.</p><a href="account.html">Вход в личный кабинет</a>
+            </div>
+          </form>
+        </div>
+        <div class="order__line"></div>
+        <div class="order__policy-pay">
+          <div class="policy-pay">
+            <h4 class="policy-pay__title">Правила отмены бронирования</h4>
+            <div class="policy-pay__text"> 
+              <p>Здесь должны быть описаны правила отмены бронирования, установленные этим сервисом + <a href="#">ссылка на страницу с описанием полных правил бронирования </a></p>
+            </div><a class="policy-pay__button" href="payment.html">Оплатить заказ</a>
+          </div>
+        </div>
+      </div>
+      <div class="order__right">
+        <div class="order__card-detail">
+          <div class="card-detail"><img class="card-detail__img" src="img/png/pic-1.png" alt="pic"><a class="card-detail__like" href="#" title="like"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.6" d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke-width="2"/>
+</svg></a>
+            <div class="card-detail__content">
+              <h4 class="card-detail__title">Сауна Аквамарин</h4>
+              <div class="card-detail__address">
+                <p>ул. Волинська 10</p>
+                <p>Оболонский район</p>
+              </div>
+              <div class="card-detail__btn-group"> 
+                <button class="card-detail__left-btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z" />
+</svg>
+                  <p>4.5</p>
+                </button>
+                <button class="card-detail__right-btn" type="button">от 1 000 грн.</button>
+              </div>
+            </div>
+          </div>
+          <div class="order__line"></div>
+        </div>
+        <div class="order__result"> 
+          <h4 class="order__result-title">К оплате</h4>
+          <div class="order__result-text">
+            <div class="order__result-item">
+              <p>1 час x 700 грн.</p>
+              <p>700 грн.</p>
+            </div>
+            <div class="order__result-item">
+              <p>2 час x 1 200 грн.</p>
+              <p>2 400 грн.</p>
+            </div>
+            <div class="order__result-item">
+              <p>Доплата за 2 места</p>
+              <p>300 грн.</p>
+            </div>
+            <div class="order__result-item">
+              <p>3-й час в подарок</p>
+              <p>-700 грн.</p>
+            </div>
+          </div>
+          <div class="order__result-bottom">
+            <p>Итого</p>
+            <p>2 700 грн.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__inner">
+        <p class="footer__item">2022 Портал бронирования саун «Хочу в Баню»</p>
+      </div>
+    </footer>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/order.min.js"></script>
+  </body>
+</html>

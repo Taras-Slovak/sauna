@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Order</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="styles/payment.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__nav">
+        <div class="header__link"> 
+          <p>Оплата заказа</p>
+        </div>
+      </div>
+    </header>
+    <main class="main"> 
+      <div class="main__inner">
+        <div class="main__content"> 
+          <div class="main__left"> 
+            <h3>Оплата банковской картой</h3>
+            <h2>3 400 грн.</h2>
+            <div class="main__field-group">
+              <div class="main__field">
+                <label for="card-id">Номер карты</label>
+                <input type="text" placeholder="0000 0000 0000 000" id="card-id">
+              </div>
+              <div class="main__card-data">
+                <div class="main__field">
+                  <label for="card-date">Срок действия</label>
+                  <input type="text" placeholder="мм / гг" id="card-date">
+                </div>
+                <div class="main__field"> 
+                  <label for="CVC">CVC код</label>
+                  <input type="text" placeholder="CVV / CVC" id="CVC">
+                </div>
+              </div>
+              <div class="main__radio">						
+                <input type="checkbox" id="save-card" name="save-card">
+                <label for="save-card">Сохранить карту</label>
+                <button class="main__radio-popover" type="button" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="&lt;p&gt; С понедельника по пятницу с 9:00 до 17:00 - 3 часа отдыха: &lt;/p&gt; &lt;span&gt; 700 грн. в усадьбе, &lt;/span&gt;  &lt;span&gt; 800 грн. в срубе &lt;/span&gt;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_634_20661)">
+<path d="M10 5V6.25M10 8.75V14.375V8.75Z"  stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 18.75C14.8325 18.75 18.75 14.8325 18.75 10C18.75 5.16751 14.8325 1.25 10 1.25C5.16751 1.25 1.25 5.16751 1.25 10C1.25 14.8325 5.16751 18.75 10 18.75Z"  stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_634_20661">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>	
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="main__right"> 
+            <h3 class="main__right-title">Мы принимаем</h3>
+            <div class="main__credit-group"><a class="main__credit-item" href="#"><img src="img/other/credit.webp" alt="credit-card"></a><a class="main__credit-item" href="#"><img src="img/other/credit.webp" alt="credit-card"></a><a class="main__credit-item" href="#"><img src="img/other/credit.webp" alt="credit-card"></a><a class="main__credit-item" href="#"><img src="img/other/credit.webp" alt="credit-card"></a><a class="main__credit-item" href="#"><img src="img/other/credit.webp" alt="credit-card"></a><a class="main__credit-item" href="#"><img src="img/other/credit.webp" alt="credit-card"></a><a class="main__credit-item" href="#"><img src="img/other/credit.webp" alt="credit-card"></a><a class="main__credit-item" href="#"><img src="img/other/credit.webp" alt="credit-card"></a></div>
+            <div class="main__right-text"> 
+              <p>Как только вы нажмёте «Оплатить заказ», с вашей карты будет списана полная стоимость услуг.</p>
+              <p>Гарантируем безопастность платежа и сохранность данных.</p>
+            </div>
+          </div>
+        </div>
+        <div class="main__line"> </div><a class="main__button" href="#">Оплатить заказ</a>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <p class="footer__item">2022 Портал бронирования саун «Хочу в Баню»</p>
+      </div>
+    </footer>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/payment.min.js"> </script>
+  </body>
+</html>
