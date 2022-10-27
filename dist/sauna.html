@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sauna</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="styles/sauna.min.css">
+  </head>
+  <body>
+    <header class="header"> 
+      <nav class="header__navigation" id="saunaNavBar">
+        <div class="header__left"><a href="index.html"> <img class="header__logo" src="img/header/logo.svg" alt="logo"></a><img class="header__logo-min" src="img/header/logo-min.svg" alt="logo-min">
+          <div class="header__location"><svg width="27" height="27" viewBox="0 0 27 27"  xmlns="http://www.w3.org/2000/svg">
+<path d="M13.5376 4.32788C17.5586 4.32788 20.8179 7.58721 20.8179 11.6082C20.8179 14.6846 18.6562 18.0372 14.3889 21.702C14.1516 21.9059 13.849 22.0178 13.5362 22.0175C13.2234 22.0173 12.9211 21.9048 12.6841 21.7005L12.4019 21.4556C8.32343 17.8864 6.25732 14.6159 6.25732 11.6082C6.25732 7.58721 9.51666 4.32788 13.5376 4.32788ZM13.5376 8.80806C12.795 8.80806 12.0828 9.10307 11.5576 9.6282C11.0325 10.1533 10.7375 10.8655 10.7375 11.6082C10.7375 12.3508 11.0325 13.063 11.5576 13.5882C12.0828 14.1133 12.795 14.4083 13.5376 14.4083C14.2803 14.4083 14.9925 14.1133 15.5176 13.5882C16.0427 13.063 16.3377 12.3508 16.3377 11.6082C16.3377 10.8655 16.0427 10.1533 15.5176 9.6282C14.9925 9.10307 14.2803 8.80806 13.5376 8.80806Z" />
+</svg><a href="#">Киев</a>
+          </div><a class="header__search" href="search.html">
+            <p>Поиск бани</p>
+            <p>Поиск</p><img src="img/header/search.svg" alt="search"></a>
+        </div>
+        <div class="header__right"><a class="header__link" href="#">Разместить баню</a><svg class="header__hurt" width="25" height="25" viewBox="0 0 25 25"  xmlns="http://www.w3.org/2000/svg">
+<path d="M11.7469 5.16475L12.5 6.02678L13.2531 5.16475C14.0083 4.30027 14.7014 3.62075 15.5318 3.14594C16.3436 2.68176 17.3437 2.38184 18.75 2.38184C20.0874 2.38184 21.3571 2.82255 22.3035 3.87442C23.2587 4.93612 24 6.74922 24 9.7168C24 10.9906 23.3403 13.1276 21.4656 15.6274C19.674 18.0164 16.8096 20.6834 12.5 23.1535C8.19035 20.6834 5.32596 18.0164 3.5344 15.6274C1.65969 13.1276 1 10.9906 1 9.7168C1 6.74922 1.74129 4.93612 2.69652 3.87442C3.6429 2.82255 4.91262 2.38184 6.25 2.38184C7.65628 2.38184 8.65641 2.68176 9.46823 3.14594C10.2986 3.62075 10.9917 4.30027 11.7469 5.16475Z"  stroke-width="2"/>
+</svg>
+          <button class="header__button" type="button"><svg width="30" height="30" viewBox="0 0 30 30"  xmlns="http://www.w3.org/2000/svg">
+<path d="M15.5 2C8.6 2 3 7.6 3 14.5C3 21.4 8.6 27 15.5 27C22.4 27 28 21.4 28 14.5C28 7.6 22.4 2 15.5 2ZM15.5 7C17.9125 7 19.875 8.9625 19.875 11.375C19.875 13.7875 17.9125 15.75 15.5 15.75C13.0875 15.75 11.125 13.7875 11.125 11.375C11.125 8.9625 13.0875 7 15.5 7ZM15.5 24.5C12.9625 24.5 9.9625 23.475 7.825 20.9C10.0145 19.1821 12.717 18.2485 15.5 18.2485C18.283 18.2485 20.9855 19.1821 23.175 20.9C21.0375 23.475 18.0375 24.5 15.5 24.5Z" />
+</svg>
+            <div class="header__modal-btn" data-bs-toggle="modal" data-bs-target="#modalHeaderSauna"><svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 7.5C4.5 7.10218 4.65804 6.72064 4.93934 6.43934C5.22064 6.15804 5.60218 6 6 6H24C24.3978 6 24.7794 6.15804 25.0607 6.43934C25.342 6.72064 25.5 7.10218 25.5 7.5C25.5 7.89782 25.342 8.27936 25.0607 8.56066C24.7794 8.84196 24.3978 9 24 9H6C5.60218 9 5.22064 8.84196 4.93934 8.56066C4.65804 8.27936 4.5 7.89782 4.5 7.5Z" />
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 15C4.5 14.6022 4.65804 14.2206 4.93934 13.9393C5.22064 13.658 5.60218 13.5 6 13.5H24C24.3978 13.5 24.7794 13.658 25.0607 13.9393C25.342 14.2206 25.5 14.6022 25.5 15C25.5 15.3978 25.342 15.7794 25.0607 16.0607C24.7794 16.342 24.3978 16.5 24 16.5H6C5.60218 16.5 5.22064 16.342 4.93934 16.0607C4.65804 15.7794 4.5 15.3978 4.5 15Z" />
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 22.5C4.5 22.1022 4.65804 21.7206 4.93934 21.4393C5.22064 21.158 5.60218 21 6 21H24C24.3978 21 24.7794 21.158 25.0607 21.4393C25.342 21.7206 25.5 22.1022 25.5 22.5C25.5 22.8978 25.342 23.2794 25.0607 23.5607C24.7794 23.842 24.3978 24 24 24H6C5.60218 24 5.22064 23.842 4.93934 23.5607C4.65804 23.2794 4.5 22.8978 4.5 22.5Z" />
+</svg>
+            </div>
+          </button>
+        </div>
+      </nav>
+      <div class="menu-sauna"><a class="menu-sauna__item" href="#gallery-sauna">Фото</a><a class="menu-sauna__item" href="#description-sauna">Описание</a><a class="menu-sauna__item" href="#booking">Бронирование</a><a class="menu-sauna__item" href="#reviews">Отзывы</a><a class="menu-sauna__item" href="#location-sauna">Расположение</a></div>
+    </header>
+    <div class="modal fade" id="modalHeaderSauna" tabindex="-1" aria-labelledby="modalHeaderSaunaLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">     
+          <div class="modal-body header__modal"><a class="header__modal-link" href="#">Настройки аккаунта</a><a class="header__modal-link" href="#">Бронирования</a><a class="header__modal-link" href="#">Уведомления (1)</a><a class="header__modal-link" href="#">Мои отзывы</a><a class="header__modal-link" href="#">Мои подборки</a><a class="header__modal-link" href="#">Выйти</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <main class="sauna">
+        <section class="sauna__big-card">
+          <div class="sauna-card">
+            <div class="sauna-card__preview"> 
+              <div class="sauna-card__top">
+                <div class="sauna-card__title">
+                  <p>Сауна</p>
+                  <h2>Аквамарин</h2>
+                </div>
+                <div class="sauna-card__stickers">
+                  <div class="sauna-card__btn-group"><a class="sauna-card__btn-left" href="#">Акция</a><a class="sauna-card__btn-right" href="#"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z"/>
+</svg>
+                      <p>4.5</p></a></div>
+                  <div class="sauna-card__like">
+                    <p>20 отзывов</p><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke="black" stroke-width="2"/>
+<path d="M18 1.32666C15 1.32666 13.4906 2.62041 12 4.32666C10.5094 2.62041 9 1.32666 6 1.32666C3 1.32666 0 3.32822 0 9.32822C0 12.3282 3 18.3282 12 23.3298C21 18.3282 24 12.3282 24 9.32822C24 3.32822 21 1.32666 18 1.32666Z" />
+</svg>
+                  </div>
+                </div>
+              </div>
+              <div class="to-scroll">
+                <div id="gallery-sauna"></div>
+              </div>
+              <div class="sauna-card__gallery">
+                <div class="gallery"> 
+                  <div class="gallery__left"><img src="img/SAUNA/pic/left.webp" alt="sauna">
+                    <button class="gallery__btn" data-bs-toggle="modal" data-bs-target="#modalGallery">Все фото</button>
+                  </div>
+                  <div class="gallery__right"> <img src="img/SAUNA/pic/top.webp" alt="sauna"><img src="img/SAUNA/pic/bottom.webp" alt="sauna"></div>
+                </div>
+                <div class="gallery__modal">
+                  <div class="modal fade" id="modalGallery" tabindex="-1" aria-labelledby="modalGalleryLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.8799 9.00009L16.6133 3.28008C16.8643 3.02901 17.0054 2.68849 17.0054 2.33342C17.0054 1.97835 16.8643 1.63782 16.6133 1.38675C16.3622 1.13568 16.0217 0.994629 15.6666 0.994629C15.3115 0.994629 14.971 1.13568 14.7199 1.38675L8.99992 7.12009L3.27992 1.38675C3.02885 1.13568 2.68832 0.994629 2.33325 0.994629C1.97818 0.994629 1.63766 1.13568 1.38659 1.38675C1.13551 1.63782 0.994463 1.97835 0.994463 2.33342C0.994463 2.68849 1.13551 3.02901 1.38659 3.28008L7.11992 9.00009L1.38659 14.7201C1.26161 14.844 1.16242 14.9915 1.09473 15.154C1.02704 15.3165 0.992188 15.4907 0.992188 15.6668C0.992188 15.8428 1.02704 16.017 1.09473 16.1795C1.16242 16.342 1.26161 16.4895 1.38659 16.6134C1.51054 16.7384 1.658 16.8376 1.82048 16.9053C1.98296 16.973 2.15724 17.0078 2.33325 17.0078C2.50927 17.0078 2.68354 16.973 2.84602 16.9053C3.0085 16.8376 3.15597 16.7384 3.27992 16.6134L8.99992 10.8801L14.7199 16.6134C14.8439 16.7384 14.9913 16.8376 15.1538 16.9053C15.3163 16.973 15.4906 17.0078 15.6666 17.0078C15.8426 17.0078 16.0169 16.973 16.1794 16.9053C16.3418 16.8376 16.4893 16.7384 16.6133 16.6134C16.7382 16.4895 16.8374 16.342 16.9051 16.1795C16.9728 16.017 17.0077 15.8428 17.0077 15.6668C17.0077 15.4907 16.9728 15.3165 16.9051 15.154C16.8374 14.9915 16.7382 14.844 16.6133 14.7201L10.8799 9.00009Z"/>
+</svg>
+                        </button>
+                        <div class="modal-body">
+                          <div class="gallery__slider">
+                            <div class="carousel slide" id="carouselExampleControls" data-bs-ride="carousel">
+                              <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                  <p class="gallery__slider-text">1 / 24 Купель, Сруб Гусарский</p><img class="d-block w-100" src="img/SAUNA/pic/slider.webp" alt="picture">
+                                </div>
+                                <div class="carousel-item">
+                                  <p class="gallery__slider-text">2 / 24 Купель, Сруб Гусарский</p><img class="d-block w-100" src="img/SAUNA/pic/slider.webp" alt="picture">
+                                </div>
+                                <div class="carousel-item">
+                                  <p class="gallery__slider-text">3 / 24 Купель, Сруб Гусарский</p><img class="d-block w-100" src="img/SAUNA/pic/slider.webp" alt="picture">
+                                </div>
+                              </div>
+                              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev"> 
+                                <div class="gallery__slider-arrow">
+                                   <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.5056 0.234318C11.7985 -0.0585749 12.2733 -0.0585749 12.5662 0.234318C12.8591 0.527212 12.8591 1.00209 12.5662 1.29498L3.0371 10.8241H24.647C25.0612 10.8241 25.397 11.1599 25.397 11.5741C25.397 11.9883 25.0612 12.3241 24.647 12.3241H3.03705L12.5662 21.8533C12.8591 22.1462 12.8591 22.621 12.5662 22.9139C12.2733 23.2068 11.7985 23.2068 11.5056 22.9139L0.696091 12.1045C0.403196 11.8116 0.403196 11.3367 0.696091 11.0438L11.5056 0.234318Z" fill="#2F2F2F"/>
+</svg>
+                                </div>
+                              </button>
+                              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <div class="gallery__slider-arrow">
+                                   <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.4939 0.234318C14.201 -0.0585749 13.7262 -0.0585749 13.4333 0.234318C13.1404 0.527212 13.1404 1.00209 13.4333 1.29498L22.9624 10.8241H1.35254C0.938325 10.8241 0.602539 11.1599 0.602539 11.5741C0.602539 11.9883 0.938325 12.3241 1.35254 12.3241H22.9625L13.4333 21.8533C13.1404 22.1462 13.1404 22.621 13.4333 22.9139C13.7262 23.2068 14.201 23.2068 14.4939 22.9139L25.3034 12.1045C25.5963 11.8116 25.5963 11.3367 25.3034 11.0438L14.4939 0.234318Z" fill="#2F2F2F"/>
+</svg>
+                                </div>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sauna-card__mini-card"> 
+                <div class="mini-card">
+                  <div class="mini-card__items-group"> 
+                    <div class="mini-card__item"><img src="img/SAUNA/icon/square.svg" alt="icon">
+                      <p>6 залов</p>
+                    </div>
+                    <div class="mini-card__item"><img src="img/SAUNA/icon/people.svg" alt="icon">
+                      <p>10-15 человек</p>
+                    </div>
+                    <div class="mini-card__item"><img src="img/SAUNA/icon/heating.svg" alt="icon">
+                      <p>Турецкая, Хамам, Финская, С веником</p>
+                    </div>
+                    <div class="mini-card__item"><img src="img/SAUNA/icon/time.svg" alt="icon">
+                      <p>C 10:00 - 24:00</p>
+                    </div>
+                  </div>
+                  <p class="mini-card__text">от <span>1 500</span>грн./час</p><a class="mini-card__button" href="order.html">Забронировать</a>
+                </div>
+              </div>
+            </div>
+            <div class="sauna-card__content"> 
+              <div class="sauna-card__adress">
+                <h3 class="sauna-card__sub-title">Адрес</h3>
+                <div class="sauna-card__adress-inner">
+                  <div class="sauna-card__adress-group"> 
+                    <div class="sauna-card__adress-item"> <img src="img/SAUNA/icon/location-sauna.svg" alt="location">
+                      <p>Оболонский р-н, ул. Волинська 10</p>
+                    </div>
+                    <div class="sauna-card__adress-item"> <img src="img/SAUNA/icon/location-sauna.svg" alt="location">
+                      <p>Оболонский р-н, ул. Волинська 10</p>
+                    </div>
+                  </div>
+                  <div class="sauna-card__adress-group"> 
+                    <div class="sauna-card__adress-item"> <img src="img/SAUNA/icon/location-sauna.svg" alt="location">
+                      <p>Оболонский р-н, ул. Волинська 10</p>
+                    </div>
+                    <div class="sauna-card__adress-item"> <img src="img/SAUNA/icon/location-sauna.svg" alt="location">
+                      <p>Оболонский р-н, ул. Волинська 10</p>
+                    </div>
+                  </div>
+                </div>
+              </div><span class="sauna-card__line"></span>
+              <div class="to-scroll">
+                <div id="description-sauna"></div>
+              </div>
+              <div class="sauna-card__description"> 
+                <h3 class="sauna-card__sub-title">Описание сауны</h3>
+                <div class="sauna-card__text-group">
+                  <p>Сауна «Аквамарин» рад пригласить в гости всех ценителей настоящего банного отдыха. Здесь вы сможете попариться и повеселиться в стильной обстановке и оценить высокое качество предоставляемый услуг.</p>
+                  <p>Всем известно, что парение в настоящей финской сауне или русской бане приносит не только пользу для здоровья и омоложение телу, но и смывает стресс и негативные эмоции. Закрепить положительный эффект сауны вы можете, окунувшись в большой бассейн с прохладной водой.</p>
+                  <p>После всех процедур вы можете расположиться в гостиной, посмотреть спутниковые каналы и DVD, включить караоке, насладиться кальяном и даже сыграть партию в бильярд.</p>
+                </div><span class="sauna-card__btn-capacity" data-open="false">
+                  <p>Узнать больше</p><svg width="20" height="20" viewBox="0 0 20 20" fill="none"   xmlns="http://www.w3.org/2000/svg">
+<path d="M13.825 6.66663L10 10.4833L6.175 6.66663L5 7.84163L10 12.8416L15 7.84163L13.825 6.66663Z"/>
+</svg></span>
+              </div><span class="sauna-card__line"></span>
+              <div class="sauna-card__services">
+                <div class="sauna-card__services-item">
+                  <div class="sauna-card__service-icon"><img src="img/SAUNA/icon/food.svg" alt="icon">
+                    <p>Кухня</p>
+                  </div>
+                  <p class="sauna-card__service-text">Блюда собственной кухни: 6 видов шашлыков, 6 видов итальянской пасты и ризотто, блюда русской кухни в горшочках, а также любые блюда при предварительном заказе банкета</p>
+                </div>
+                <div class="sauna-card__services-item">
+                  <div class="sauna-card__service-icon"><img src="img/SAUNA/icon/sauna.svg" alt="icon">
+                    <p>Банные услуги</p>
+                  </div>
+                  <p class="sauna-card__service-text">Массажист (по предварительной записи) от 1000 грн., Парильщик (по предварительной записи) от 1000 грн.</p>
+                </div>
+                <div class="sauna-card__services-item">
+                  <div class="sauna-card__service-icon"><img src="img/SAUNA/icon/swimming.svg" alt="icon">
+                    <p>Аква зона</p>
+                  </div>
+                  <p class="sauna-card__service-text">Бассейн 3×6 м с водопадом, подсветкой, подогревом, двойной системой очистки, а также душевые комнаты.</p>
+                </div>
+                <div class="sauna-card__services-item">
+                  <div class="sauna-card__service-icon"><img src="img/SAUNA/icon/comfort.svg" alt="icon">
+                    <p>Удобства</p>
+                  </div>
+                  <p class="sauna-card__service-text">На территории отеля работает бесплатный «Wi-Fi», есть кабельное телевидение и парковка, которая находится под круглосуточным видеонаблюдением.</p>
+                </div>
+                <div class="sauna-card__services-item">
+                  <div class="sauna-card__service-icon"><img src="img/SAUNA/icon/holiday.svg" alt="icon">
+                    <p>Развлечения</p>
+                  </div>
+                  <p class="sauna-card__service-text">На территории отеля работает бесплатный «Wi-Fi», есть кабельное телевидение и парковка, которая находится под круглосуточным видеонаблюдением.</p>
+                </div>
+              </div><span class="sauna-card__line"></span>
+              <div class="sauna-card__offers">
+                <h3 class="sauna-card__sub-title">Акции и спецпредложения</h3>
+                <div class="sauna-card__offers-item">
+                  <div class="sauna-card__offers-top" data-open="false">
+                    <h4 class="sauna-card__offers-title">Каждый 3-й час в подарок</h4><svg class="sauna-card__offers-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="sauna-card__offers-circle" cx="15" cy="15" r="15"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.75 8.25C15.75 7.83579 15.4142 7.5 15 7.5C14.5858 7.5 14.25 7.83579 14.25 8.25V14.25H8.25C7.83579 14.25 7.5 14.5858 7.5 15C7.5 15.4142 7.83579 15.75 8.25 15.75H14.25V21.75C14.25 22.1642 14.5858 22.5 15 22.5C15.4142 22.5 15.75 22.1642 15.75 21.75V15.75H21.75C22.1642 15.75 22.5 15.4142 22.5 15C22.5 14.5858 22.1642 14.25 21.75 14.25H15.75V8.25Z" fill="white"/>
+</svg>
+                  </div>
+                  <div class="sauna-card__offers-content">
+                    <p class="sauna-card__offers-text">понедельника по пятницу с 9:00 до 17:00-3 часа отдыха:</p>
+                    <ul class="sauna-card__offers-list">
+                      <li>700 грн. в усадьбе  </li>
+                      <li>800 грн. в срубе</li>
+                    </ul>
+                  </div><span class="sauna-card__offers-line"></span>
+                </div>
+                <div class="sauna-card__offers-item">
+                  <div class="sauna-card__offers-top" data-open="false">
+                    <h4 class="sauna-card__offers-title">Тариф «Для двоих»          </h4><svg class="sauna-card__offers-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="sauna-card__offers-circle" cx="15" cy="15" r="15"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.75 8.25C15.75 7.83579 15.4142 7.5 15 7.5C14.5858 7.5 14.25 7.83579 14.25 8.25V14.25H8.25C7.83579 14.25 7.5 14.5858 7.5 15C7.5 15.4142 7.83579 15.75 8.25 15.75H14.25V21.75C14.25 22.1642 14.5858 22.5 15 22.5C15.4142 22.5 15.75 22.1642 15.75 21.75V15.75H21.75C22.1642 15.75 22.5 15.4142 22.5 15C22.5 14.5858 22.1642 14.25 21.75 14.25H15.75V8.25Z" fill="white"/>
+</svg>
+                  </div>
+                  <div class="sauna-card__offers-content"> 
+                    <p class="sauna-card__offers-text">понедельника по пятницу с 9:00 до 17:00-3 часа отдыха:</p>
+                    <ul class="sauna-card__offers-list">
+                      <li>700 грн. в усадьбе  </li>
+                      <li>800 грн. в срубе</li>
+                    </ul>
+                  </div><span class="sauna-card__offers-line"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section><span class="sauna__line"></span>
+                  <div class="small-card"> 
+                    <div class="small-card__top">
+                      <h3>Сруб «Гусарский»</h3>
+                    </div>
+                    <div class="small-card__preview">
+                      <div class="small-card__gallery">
+                        <div class="gallery-small"> 
+                          <div class="gallery-small__left"><img src="img/SAUNA/pic/small-left.webp" alt="sauna">
+                            <button class="gallery-small__btn" data-bs-toggle="modal" data-bs-target="#modalGallerySmall">Все фото</button>
+                          </div>
+                          <div class="gallery-small__right"> 
+                            <div class="gallery-small__img-right"> <img src="img/SAUNA/pic/small-top.webp" alt="sauna"></div>
+                            <div class="gallery-small__img-right"> <img src="img/SAUNA/pic/small-bottom.webp" alt="sauna"></div>
+                          </div>
+                        </div>
+                        <div class="gallery-small__modal">
+                          <div class="modal fade" id="modalGallerySmall" tabindex="-1" aria-labelledby="modalGallerySmallLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.8799 9.00009L16.6133 3.28008C16.8643 3.02901 17.0054 2.68849 17.0054 2.33342C17.0054 1.97835 16.8643 1.63782 16.6133 1.38675C16.3622 1.13568 16.0217 0.994629 15.6666 0.994629C15.3115 0.994629 14.971 1.13568 14.7199 1.38675L8.99992 7.12009L3.27992 1.38675C3.02885 1.13568 2.68832 0.994629 2.33325 0.994629C1.97818 0.994629 1.63766 1.13568 1.38659 1.38675C1.13551 1.63782 0.994463 1.97835 0.994463 2.33342C0.994463 2.68849 1.13551 3.02901 1.38659 3.28008L7.11992 9.00009L1.38659 14.7201C1.26161 14.844 1.16242 14.9915 1.09473 15.154C1.02704 15.3165 0.992188 15.4907 0.992188 15.6668C0.992188 15.8428 1.02704 16.017 1.09473 16.1795C1.16242 16.342 1.26161 16.4895 1.38659 16.6134C1.51054 16.7384 1.658 16.8376 1.82048 16.9053C1.98296 16.973 2.15724 17.0078 2.33325 17.0078C2.50927 17.0078 2.68354 16.973 2.84602 16.9053C3.0085 16.8376 3.15597 16.7384 3.27992 16.6134L8.99992 10.8801L14.7199 16.6134C14.8439 16.7384 14.9913 16.8376 15.1538 16.9053C15.3163 16.973 15.4906 17.0078 15.6666 17.0078C15.8426 17.0078 16.0169 16.973 16.1794 16.9053C16.3418 16.8376 16.4893 16.7384 16.6133 16.6134C16.7382 16.4895 16.8374 16.342 16.9051 16.1795C16.9728 16.017 17.0077 15.8428 17.0077 15.6668C17.0077 15.4907 16.9728 15.3165 16.9051 15.154C16.8374 14.9915 16.7382 14.844 16.6133 14.7201L10.8799 9.00009Z"/>
+</svg>
+                                </button>
+                                <div class="modal-body">
+                                  <div class="gallery-small__slider">
+                                    <div class="carousel slide" id="carouselSaunaSmall" data-bs-ride="carousel">
+                                      <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                          <p class="gallery-small__slider-text">1 / 24 Купель, Сруб Гусарский</p><img class="d-block w-100" src="img/SAUNA/pic/slider.webp" alt="picture">
+                                        </div>
+                                        <div class="carousel-item">
+                                          <p class="gallery-small__slider-text">2 / 24 Купель, Сруб Гусарский</p><img class="d-block w-100" src="img/SAUNA/pic/slider.webp" alt="picture">
+                                        </div>
+                                        <div class="carousel-item">
+                                          <p class="gallery-small__slider-text">3 / 24 Купель, Сруб Гусарский</p><img class="d-block w-100" src="img/SAUNA/pic/slider.webp" alt="picture">
+                                        </div>
+                                      </div>
+                                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselSaunaSmall" data-bs-slide="prev"> 
+                                        <div class="gallery-small__slider-arrow">
+                                           <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.5056 0.234318C11.7985 -0.0585749 12.2733 -0.0585749 12.5662 0.234318C12.8591 0.527212 12.8591 1.00209 12.5662 1.29498L3.0371 10.8241H24.647C25.0612 10.8241 25.397 11.1599 25.397 11.5741C25.397 11.9883 25.0612 12.3241 24.647 12.3241H3.03705L12.5662 21.8533C12.8591 22.1462 12.8591 22.621 12.5662 22.9139C12.2733 23.2068 11.7985 23.2068 11.5056 22.9139L0.696091 12.1045C0.403196 11.8116 0.403196 11.3367 0.696091 11.0438L11.5056 0.234318Z" fill="#2F2F2F"/>
+</svg>
+                                        </div>
+                                      </button>
+                                      <button class="carousel-control-next" type="button" data-bs-target="#carouselSaunaSmall" data-bs-slide="next">
+                                        <div class="gallery-small__slider-arrow">
+                                           <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.4939 0.234318C14.201 -0.0585749 13.7262 -0.0585749 13.4333 0.234318C13.1404 0.527212 13.1404 1.00209 13.4333 1.29498L22.9624 10.8241H1.35254C0.938325 10.8241 0.602539 11.1599 0.602539 11.5741C0.602539 11.9883 0.938325 12.3241 1.35254 12.3241H22.9625L13.4333 21.8533C13.1404 22.1462 13.1404 22.621 13.4333 22.9139C13.7262 23.2068 14.201 23.2068 14.4939 22.9139L25.3034 12.1045C25.5963 11.8116 25.5963 11.3367 25.3034 11.0438L14.4939 0.234318Z" fill="#2F2F2F"/>
+</svg>
+                                        </div>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="small-card__mini-card">
+                        <div class="mini-card">
+                          <div class="mini-card__items-group"> 
+                            <div class="mini-card__item"><img src="img/SAUNA/icon/square.svg" alt="icon">
+                              <p>6 залов</p>
+                            </div>
+                            <div class="mini-card__item"><img src="img/SAUNA/icon/people.svg" alt="icon">
+                              <p>10-15 человек</p>
+                            </div>
+                            <div class="mini-card__item"><img src="img/SAUNA/icon/heating.svg" alt="icon">
+                              <p>Турецкая, Хамам, Финская, С веником</p>
+                            </div>
+                            <div class="mini-card__item"><img src="img/SAUNA/icon/time.svg" alt="icon">
+                              <p>C 10:00 - 24:00</p>
+                            </div>
+                          </div>
+                          <p class="mini-card__text">от <span>1 500</span>грн./час</p><a class="mini-card__button" href="order.html">Забронировать</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="small-card__description"> 
+                      <h3 class="small-card__sub-title">Описание отделения</h3>
+                      <div class="small-card__text-group">
+                        <p>Сауна «Аквамарин» рад пригласить в гости всех ценителей настоящего банного отдыха. Здесь вы сможете попариться и повеселиться в стильной обстановке и оценить высокое качество предоставляемый услуг.</p>
+                        <p>Всем известно, что парение в настоящей финской сауне или русской бане приносит не только пользу для здоровья и омоложение телу, но и смывает стресс и негативные эмоции. Закрепить положительный эффект сауны вы можете, окунувшись в большой бассейн с прохладной водой.</p>
+                        <p>После всех процедур вы можете расположиться в гостиной, посмотреть спутниковые каналы и DVD, включить караоке, насладиться кальяном и даже сыграть партию в бильярд.</p>
+                      </div><span class="small-card__btn-capacity" data-open="false">
+                        <p>Узнать больше</p><svg width="20" height="20" viewBox="0 0 20 20" fill="none"   xmlns="http://www.w3.org/2000/svg"> 
+<path d="M13.825 6.66663L10 10.4833L6.175 6.66663L5 7.84163L10 12.8416L15 7.84163L13.825 6.66663Z"/>
+</svg></span>
+                    </div><span class="small-card__line"></span>
+                  </div>
+                  <div class="small-card"> 
+                    <div class="small-card__top">
+                      <h3>Сруб «Гусарский»</h3>
+                    </div>
+                    <div class="small-card__preview">
+                      <div class="small-card__gallery">
+                        <div class="gallery-small"> 
+                          <div class="gallery-small__left"><img src="img/SAUNA/pic/small-left.webp" alt="sauna">
+                            <button class="gallery-small__btn" data-bs-toggle="modal" data-bs-target="#modalGallerySmall-2">Все фото</button>
+                          </div>
+                          <div class="gallery-small__right"> 
+                            <div class="gallery-small__img-right"> <img src="img/SAUNA/pic/small-top.webp" alt="sauna"></div>
+                            <div class="gallery-small__img-right"> <img src="img/SAUNA/pic/small-bottom.webp" alt="sauna"></div>
+                          </div>
+                        </div>
+                        <div class="gallery-small__modal">
+                          <div class="modal fade" id="modalGallerySmall-2" tabindex="-1" aria-labelledby="modalGallerySmallLabel-2" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.8799 9.00009L16.6133 3.28008C16.8643 3.02901 17.0054 2.68849 17.0054 2.33342C17.0054 1.97835 16.8643 1.63782 16.6133 1.38675C16.3622 1.13568 16.0217 0.994629 15.6666 0.994629C15.3115 0.994629 14.971 1.13568 14.7199 1.38675L8.99992 7.12009L3.27992 1.38675C3.02885 1.13568 2.68832 0.994629 2.33325 0.994629C1.97818 0.994629 1.63766 1.13568 1.38659 1.38675C1.13551 1.63782 0.994463 1.97835 0.994463 2.33342C0.994463 2.68849 1.13551 3.02901 1.38659 3.28008L7.11992 9.00009L1.38659 14.7201C1.26161 14.844 1.16242 14.9915 1.09473 15.154C1.02704 15.3165 0.992188 15.4907 0.992188 15.6668C0.992188 15.8428 1.02704 16.017 1.09473 16.1795C1.16242 16.342 1.26161 16.4895 1.38659 16.6134C1.51054 16.7384 1.658 16.8376 1.82048 16.9053C1.98296 16.973 2.15724 17.0078 2.33325 17.0078C2.50927 17.0078 2.68354 16.973 2.84602 16.9053C3.0085 16.8376 3.15597 16.7384 3.27992 16.6134L8.99992 10.8801L14.7199 16.6134C14.8439 16.7384 14.9913 16.8376 15.1538 16.9053C15.3163 16.973 15.4906 17.0078 15.6666 17.0078C15.8426 17.0078 16.0169 16.973 16.1794 16.9053C16.3418 16.8376 16.4893 16.7384 16.6133 16.6134C16.7382 16.4895 16.8374 16.342 16.9051 16.1795C16.9728 16.017 17.0077 15.8428 17.0077 15.6668C17.0077 15.4907 16.9728 15.3165 16.9051 15.154C16.8374 14.9915 16.7382 14.844 16.6133 14.7201L10.8799 9.00009Z"/>
+</svg>
+                                </button>
+                                <div class="modal-body">
+                                  <div class="gallery-small__slider">
+                                    <div class="carousel slide" id="carouselSaunaSmall-2" data-bs-ride="carousel">
+                                      <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                          <p class="gallery-small__slider-text">1 / 24 Купель, Сруб Гусарский</p><img class="d-block w-100" src="img/SAUNA/pic/slider.webp" alt="picture">
+                                        </div>
+                                        <div class="carousel-item">
+                                          <p class="gallery-small__slider-text">2 / 24 Купель, Сруб Гусарский</p><img class="d-block w-100" src="img/SAUNA/pic/slider.webp" alt="picture">
+                                        </div>
+                                        <div class="carousel-item">
+                                          <p class="gallery-small__slider-text">3 / 24 Купель, Сруб Гусарский</p><img class="d-block w-100" src="img/SAUNA/pic/slider.webp" alt="picture">
+                                        </div>
+                                      </div>
+                                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselSaunaSmall-2" data-bs-slide="prev"> 
+                                        <div class="gallery-small__slider-arrow">
+                                           <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.5056 0.234318C11.7985 -0.0585749 12.2733 -0.0585749 12.5662 0.234318C12.8591 0.527212 12.8591 1.00209 12.5662 1.29498L3.0371 10.8241H24.647C25.0612 10.8241 25.397 11.1599 25.397 11.5741C25.397 11.9883 25.0612 12.3241 24.647 12.3241H3.03705L12.5662 21.8533C12.8591 22.1462 12.8591 22.621 12.5662 22.9139C12.2733 23.2068 11.7985 23.2068 11.5056 22.9139L0.696091 12.1045C0.403196 11.8116 0.403196 11.3367 0.696091 11.0438L11.5056 0.234318Z" fill="#2F2F2F"/>
+</svg>
+                                        </div>
+                                      </button>
+                                      <button class="carousel-control-next" type="button" data-bs-target="#carouselSaunaSmall-2" data-bs-slide="next">
+                                        <div class="gallery-small__slider-arrow">
+                                           <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.4939 0.234318C14.201 -0.0585749 13.7262 -0.0585749 13.4333 0.234318C13.1404 0.527212 13.1404 1.00209 13.4333 1.29498L22.9624 10.8241H1.35254C0.938325 10.8241 0.602539 11.1599 0.602539 11.5741C0.602539 11.9883 0.938325 12.3241 1.35254 12.3241H22.9625L13.4333 21.8533C13.1404 22.1462 13.1404 22.621 13.4333 22.9139C13.7262 23.2068 14.201 23.2068 14.4939 22.9139L25.3034 12.1045C25.5963 11.8116 25.5963 11.3367 25.3034 11.0438L14.4939 0.234318Z" fill="#2F2F2F"/>
+</svg>
+                                        </div>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="small-card__mini-card">
+                        <div class="mini-card">
+                          <div class="mini-card__items-group"> 
+                            <div class="mini-card__item"><img src="img/SAUNA/icon/square.svg" alt="icon">
+                              <p>6 залов</p>
+                            </div>
+                            <div class="mini-card__item"><img src="img/SAUNA/icon/people.svg" alt="icon">
+                              <p>10-15 человек</p>
+                            </div>
+                            <div class="mini-card__item"><img src="img/SAUNA/icon/heating.svg" alt="icon">
+                              <p>Турецкая, Хамам, Финская, С веником</p>
+                            </div>
+                            <div class="mini-card__item"><img src="img/SAUNA/icon/time.svg" alt="icon">
+                              <p>C 10:00 - 24:00</p>
+                            </div>
+                          </div>
+                          <p class="mini-card__text">от <span>1 500</span>грн./час</p><a class="mini-card__button" href="order.html">Забронировать</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="small-card__description"> 
+                      <h3 class="small-card__sub-title">Описание отделения</h3>
+                      <div class="small-card__text-group">
+                        <p>Сауна «Аквамарин» рад пригласить в гости всех ценителей настоящего банного отдыха. Здесь вы сможете попариться и повеселиться в стильной обстановке и оценить высокое качество предоставляемый услуг.</p>
+                        <p>Всем известно, что парение в настоящей финской сауне или русской бане приносит не только пользу для здоровья и омоложение телу, но и смывает стресс и негативные эмоции. Закрепить положительный эффект сауны вы можете, окунувшись в большой бассейн с прохладной водой.</p>
+                        <p>После всех процедур вы можете расположиться в гостиной, посмотреть спутниковые каналы и DVD, включить караоке, насладиться кальяном и даже сыграть партию в бильярд.</p>
+                      </div><span class="small-card__btn-capacity" data-open="false">
+                        <p>Узнать больше</p><svg width="20" height="20" viewBox="0 0 20 20" fill="none"   xmlns="http://www.w3.org/2000/svg"> 
+<path d="M13.825 6.66663L10 10.4833L6.175 6.66663L5 7.84163L10 12.8416L15 7.84163L13.825 6.66663Z"/>
+</svg></span>
+                    </div><span class="small-card__line"></span>
+                  </div><span class="sauna__line"></span>
+        <div class="to-scroll">
+          <div id="booking"></div>
+        </div>
+        <section class="sauna__booking">
+          <button class="sauna__booking-button" type="button">
+            <p>Бронирование на</p><span>сегодня</span><svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.4999 19.3334C14.2176 19.3339 13.9439 19.2356 13.7266 19.0555L6.47655 13.0138C6.22979 12.8087 6.07461 12.514 6.04515 12.1945C6.01569 11.8749 6.11437 11.5568 6.31947 11.31C6.52457 11.0633 6.8193 10.9081 7.13881 10.8786C7.45833 10.8492 7.77646 10.9479 8.02322 11.153L14.4999 16.5663L20.9766 11.3463C21.1001 11.2459 21.2424 11.171 21.395 11.1257C21.5477 11.0805 21.7078 11.0659 21.8661 11.0827C22.0244 11.0996 22.1779 11.1476 22.3176 11.2239C22.4573 11.3002 22.5806 11.4034 22.6803 11.5275C22.791 11.6518 22.8748 11.7975 22.9265 11.9557C22.9782 12.1138 22.9967 12.2809 22.9808 12.4466C22.9649 12.6122 22.915 12.7727 22.8342 12.9182C22.7534 13.0636 22.6434 13.1908 22.5111 13.2917L15.2611 19.128C15.0375 19.2796 14.7695 19.352 14.4999 19.3334V19.3334Z"/>
+</svg>
+          </button>
+          <div class="sauna__booking-content">
+            <div class="booking"> 
+              <div class="booking__inner">
+                <div class="booking__left">
+                  <div class="booking__title">
+                    <h4>Сруб «Гусарский»</h4>
+                    <p>Оболонский р-н, ул. Волинська 10</p>
+                  </div>
+                  <div class="booking__explanation">
+                    <p>Min заказ - от 3 часов</p>
+                    <p>Max вместимость - 8+2 чел</p>
+                    <p>Цена указана за час</p>
+                  </div>
+                </div>
+                <div class="booking__right">
+                  <div class="booking__button-group">       
+                    <div class="booking__btn-hour">
+                      <button type="button">01:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">02:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">03:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">04:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">05:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">06:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">07:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">08:00</button>
+                      <p data-price="1500">1 500 грн.        </p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">09:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">10:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">11:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">12:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">13:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">14:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button" disabled>15:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button" disabled>16:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button" disabled>17:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">18:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">19:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">20:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">21:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button" disabled>22:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button" disabled>23:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button" disabled>00:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                  </div>
+                  <div class="booking__calculation">
+                    <div class="booking__data-picker">
+                      <p>Человек</p>
+                      <div class="booking__picker">
+                        <button class="booking__picker-minus" type="button">&#8722;</button><span class="booking__picker-result">0</span>
+                        <button class="booking__picker-plus" type="button">&#43;</button>
+                      </div>
+                    </div>
+                    <div class="booking__summary">
+                      <div class="booking__summary-data"> 
+                        <p class="booking__summary-people">8 человек </p><span>,</span>
+                        <p class="booking__summary-time">с 18:00 -22:00</p>
+                      </div>
+                      <div class="booking__summary-amount"> 
+                        <p>Сумма:</p>
+                        <div class="booking__summary-price">6 000 </div>
+                        <p>грн.</p>
+                      </div>
+                      <button class="booking__summary-btn" type="button">Бронировать</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="booking"> 
+              <div class="booking__inner">
+                <div class="booking__left">
+                  <div class="booking__title">
+                    <h4>Сруб «Гусарский»</h4>
+                    <p>Оболонский р-н, ул. Волинська 10</p>
+                  </div>
+                  <div class="booking__explanation">
+                    <p>Min заказ - от 3 часов</p>
+                    <p>Max вместимость - 8+2 чел</p>
+                    <p>Цена указана за час</p>
+                  </div>
+                </div>
+                <div class="booking__right">
+                  <div class="booking__button-group">       
+                    <div class="booking__btn-hour">
+                      <button type="button">01:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">02:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">03:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">04:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">05:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">06:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">07:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">08:00</button>
+                      <p data-price="1500">1 500 грн.        </p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">09:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">10:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">11:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">12:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">13:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">14:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button" disabled>15:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button" disabled>16:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button" disabled>17:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">18:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">19:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">20:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">21:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button" disabled>22:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button" disabled>23:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button" disabled>00:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                  </div>
+                  <div class="booking__calculation">
+                    <div class="booking__data-picker">
+                      <p>Человек</p>
+                      <div class="booking__picker">
+                        <button class="booking__picker-minus" type="button">&#8722;</button><span class="booking__picker-result">0</span>
+                        <button class="booking__picker-plus" type="button">&#43;</button>
+                      </div>
+                    </div>
+                    <div class="booking__summary">
+                      <div class="booking__summary-data"> 
+                        <p class="booking__summary-people">8 человек </p><span>,</span>
+                        <p class="booking__summary-time">с 18:00 -22:00</p>
+                      </div>
+                      <div class="booking__summary-amount"> 
+                        <p>Сумма:</p>
+                        <div class="booking__summary-price">6 000 </div>
+                        <p>грн.</p>
+                      </div>
+                      <button class="booking__summary-btn" type="button">Бронировать</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="booking"> 
+              <div class="booking__inner">
+                <div class="booking__left">
+                  <div class="booking__title">
+                    <h4>Сруб «Гусарский»</h4>
+                    <p>Оболонский р-н, ул. Волинська 10</p>
+                  </div>
+                  <div class="booking__explanation">
+                    <p>Min заказ - от 3 часов</p>
+                    <p>Max вместимость - 8+2 чел</p>
+                    <p>Цена указана за час</p>
+                  </div>
+                </div>
+                <div class="booking__right">
+                  <div class="booking__button-group">       
+                    <div class="booking__btn-hour">
+                      <button type="button">01:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">02:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">03:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">04:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">05:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">06:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">07:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">08:00</button>
+                      <p data-price="1500">1 500 грн.        </p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">09:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">10:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">11:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">12:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">13:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">14:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button" disabled>15:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button" disabled>16:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button" disabled>17:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">18:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">19:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">20:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button">21:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button" disabled>22:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button" disabled>23:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                    <div class="booking__btn-hour">
+                      <button type="button" disabled>00:00</button>
+                      <p data-price="1500">1 500 грн.</p>
+                    </div>
+                  </div>
+                  <div class="booking__calculation">
+                    <div class="booking__data-picker">
+                      <p>Человек</p>
+                      <div class="booking__picker">
+                        <button class="booking__picker-minus" type="button">&#8722;</button><span class="booking__picker-result">0</span>
+                        <button class="booking__picker-plus" type="button">&#43;</button>
+                      </div>
+                    </div>
+                    <div class="booking__summary">
+                      <div class="booking__summary-data"> 
+                        <p class="booking__summary-people">8 человек </p><span>,</span>
+                        <p class="booking__summary-time">с 18:00 -22:00</p>
+                      </div>
+                      <div class="booking__summary-amount"> 
+                        <p>Сумма:</p>
+                        <div class="booking__summary-price">6 000 </div>
+                        <p>грн.</p>
+                      </div>
+                      <button class="booking__summary-btn" type="button">Бронировать</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="to-scroll">
+          <div id="reviews"> </div>
+        </div>
+        <section class="sauna__reviews">
+          <div class="reviews"> 
+            <div class="reviews__btn-group">
+              <bottom class="reviews__service-btn active-tab" type="button">Отзывы сервиса</bottom>
+              <bottom class="reviews__flamp-btn" type="button">Отзывы Flamp</bottom>
+            </div>
+            <div class="reviews__body">
+              <div class="reviews__service">
+                <div class="reviews__top">
+                  <div class="reviews__all"> 
+                    <div class="reviews__all-text">
+                       <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_634_22562)">
+<path d="M10.9999 0.412842L7.87176 7.38547L0.879883 8.49715L5.93988 13.927L4.74363 21.5878L10.9999 17.973L17.2561 21.5878L16.0599 13.927L21.1199 8.50472L14.128 7.38547L10.9999 0.412842Z" />
+</g>
+<defs>
+<clipPath id="clip0_634_22562">
+<rect width="22" height="22" fill="white"/>
+</clipPath>
+</defs>
+</svg><span>4.5</span>
+                      <p>Отзывы (22)</p>
+                    </div>
+                    <button class="reviews__all-btn" type="button">Написать рецензию</button>
+                  </div>
+                  <div class="reviews__statistics">
+                    <div class="reviews__statistics-group">
+                      <div class="reviews__statistics-item">
+                        <p>Чистота</p>
+                        <div class="reviews__statistics-line"> <span class="reviews__4-8"></span>
+                          <p>4,8</p>
+                        </div>
+                      </div>
+                      <div class="reviews__statistics-item">
+                        <p>Сотрудники</p>
+                        <div class="reviews__statistics-line"> <span class="reviews__4-0"> </span>
+                          <p>4,0</p>
+                        </div>
+                      </div>
+                      <div class="reviews__statistics-item">
+                        <p>Сервис</p>
+                        <div class="reviews__statistics-line"> <span class="reviews__4-8"></span>
+                          <p>4,8</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="reviews__statistics-group">
+                      <div class="reviews__statistics-item">
+                        <p>Интерьер</p>
+                        <div class="reviews__statistics-line"> <span class="reviews__4-0"></span>
+                          <p>4,0</p>
+                        </div>
+                      </div>
+                      <div class="reviews__statistics-item">
+                        <p>Парная</p>
+                        <div class="reviews__statistics-line"> <span class="reviews__4-8"></span>
+                          <p>4,8</p>
+                        </div>
+                      </div>
+                      <div class="reviews__statistics-item">
+                        <p>Соотношение <br> цена / качество</p>
+                        <div class="reviews__statistics-line"> <span class="reviews__4-0"></span>
+                          <p>4,0</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__content"> 
+                  <div class="reviews__content-item">
+                    <div class="reviews__content-top">
+                      <div class="reviews__content-person">
+                        <h4>Oleg</h4>
+                        <p>Декабрь 2020</p>
+                      </div>
+                      <div class="reviews__content-rate"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_634_22562)">
+<path d="M10.9999 0.412842L7.87176 7.38547L0.879883 8.49715L5.93988 13.927L4.74363 21.5878L10.9999 17.973L17.2561 21.5878L16.0599 13.927L21.1199 8.50472L14.128 7.38547L10.9999 0.412842Z" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_634_22562">
+<rect width="22" height="22" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                        <p>4.5</p>
+                      </div>
+                    </div>
+                    <p class="reviews__content-text">Мы вообще ярые поклонники всей сети, эта сауна ближе всего к нашему району поэтому ходим преимущественно туда. Все очень классно, интерьер шикарный, обслуживание на высоте, одним словом - ребята стараются поддерживать чистоту и комфорт в своих заведениях.</p>
+                  </div>
+                  <div class="reviews__content-item">
+                    <div class="reviews__content-top">
+                      <div class="reviews__content-person">
+                        <h4>Oleg</h4>
+                        <p>Декабрь 2020</p>
+                      </div>
+                      <div class="reviews__content-rate"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_634_22562)">
+<path d="M10.9999 0.412842L7.87176 7.38547L0.879883 8.49715L5.93988 13.927L4.74363 21.5878L10.9999 17.973L17.2561 21.5878L16.0599 13.927L21.1199 8.50472L14.128 7.38547L10.9999 0.412842Z" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_634_22562">
+<rect width="22" height="22" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                        <p>4.5</p>
+                      </div>
+                    </div>
+                    <p class="reviews__content-text">Мы вообще ярые поклонники всей сети, эта сауна ближе всего к нашему району поэтому ходим преимущественно туда. Все очень классно, интерьер шикарный, обслуживание на высоте, одним словом - ребята стараются поддерживать чистоту и комфорт в своих заведениях.</p>
+                  </div>
+                  <div class="reviews__content-item">
+                    <div class="reviews__content-top">
+                      <div class="reviews__content-person">
+                        <h4>Oleg</h4>
+                        <p>Декабрь 2020</p>
+                      </div>
+                      <div class="reviews__content-rate"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_634_22562)">
+<path d="M10.9999 0.412842L7.87176 7.38547L0.879883 8.49715L5.93988 13.927L4.74363 21.5878L10.9999 17.973L17.2561 21.5878L16.0599 13.927L21.1199 8.50472L14.128 7.38547L10.9999 0.412842Z" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_634_22562">
+<rect width="22" height="22" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                        <p>4.5</p>
+                      </div>
+                    </div>
+                    <p class="reviews__content-text">Мы вообще ярые поклонники всей сети, эта сауна ближе всего к нашему району поэтому ходим преимущественно туда. Все очень классно, интерьер шикарный, обслуживание на высоте, одним словом - ребята стараются поддерживать чистоту и комфорт в своих заведениях.</p>
+                  </div>
+                  <div class="reviews__content-item">
+                    <div class="reviews__content-top">
+                      <div class="reviews__content-person">
+                        <h4>Oleg</h4>
+                        <p>Декабрь 2020</p>
+                      </div>
+                      <div class="reviews__content-rate"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_634_22562)">
+<path d="M10.9999 0.412842L7.87176 7.38547L0.879883 8.49715L5.93988 13.927L4.74363 21.5878L10.9999 17.973L17.2561 21.5878L16.0599 13.927L21.1199 8.50472L14.128 7.38547L10.9999 0.412842Z" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_634_22562">
+<rect width="22" height="22" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                        <p>4.5</p>
+                      </div>
+                    </div>
+                    <p class="reviews__content-text">Мы вообще ярые поклонники всей сети, эта сауна ближе всего к нашему району поэтому ходим преимущественно туда. Все очень классно, интерьер шикарный, обслуживание на высоте, одним словом - ребята стараются поддерживать чистоту и комфорт в своих заведениях.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews__flamp">
+                <div class="reviews__top">
+                  <div class="reviews__all"> 
+                    <div class="reviews__all-text">
+                       <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_634_22562)">
+<path d="M10.9999 0.412842L7.87176 7.38547L0.879883 8.49715L5.93988 13.927L4.74363 21.5878L10.9999 17.973L17.2561 21.5878L16.0599 13.927L21.1199 8.50472L14.128 7.38547L10.9999 0.412842Z" />
+</g>
+<defs>
+<clipPath id="clip0_634_22562">
+<rect width="22" height="22" fill="white"/>
+</clipPath>
+</defs>
+</svg><span>4.5</span>
+                      <p>Отзывы (22)</p>
+                    </div>
+                    <button class="reviews__all-btn" type="button">Написать рецензию</button>
+                  </div>
+                  <div class="reviews__statistics">
+                    <div class="reviews__statistics-group">
+                      <div class="reviews__statistics-item">
+                        <p>Чистота</p>
+                        <div class="reviews__statistics-line"> <span class="reviews__4-8"></span>
+                          <p>4,8</p>
+                        </div>
+                      </div>
+                      <div class="reviews__statistics-item">
+                        <p>Сотрудники</p>
+                        <div class="reviews__statistics-line"> <span class="reviews__4-0"> </span>
+                          <p>4,0</p>
+                        </div>
+                      </div>
+                      <div class="reviews__statistics-item">
+                        <p>Сервис</p>
+                        <div class="reviews__statistics-line"> <span class="reviews__4-8"></span>
+                          <p>4,8</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="reviews__statistics-group">
+                      <div class="reviews__statistics-item">
+                        <p>Интерьер</p>
+                        <div class="reviews__statistics-line"> <span class="reviews__4-0"></span>
+                          <p>4,0</p>
+                        </div>
+                      </div>
+                      <div class="reviews__statistics-item">
+                        <p>Парная</p>
+                        <div class="reviews__statistics-line"> <span class="reviews__4-8"></span>
+                          <p>4,8</p>
+                        </div>
+                      </div>
+                      <div class="reviews__statistics-item">
+                        <p>Соотношение <br> цена / качество</p>
+                        <div class="reviews__statistics-line"> <span class="reviews__4-0"></span>
+                          <p>4,0</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__content"> 
+                  <div class="reviews__content-item">
+                    <div class="reviews__content-top">
+                      <div class="reviews__content-person">
+                        <h4>Petro</h4>
+                        <p>Декабрь 2022</p>
+                      </div>
+                      <div class="reviews__content-rate"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_634_22562)">
+<path d="M10.9999 0.412842L7.87176 7.38547L0.879883 8.49715L5.93988 13.927L4.74363 21.5878L10.9999 17.973L17.2561 21.5878L16.0599 13.927L21.1199 8.50472L14.128 7.38547L10.9999 0.412842Z" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_634_22562">
+<rect width="22" height="22" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                        <p>4.5</p>
+                      </div>
+                    </div>
+                    <p class="reviews__content-text">Мы вообще ярые поклонники всей сети, эта сауна ближе всего к нашему району поэтому ходим преимущественно туда. Все очень классно, интерьер шикарный, обслуживание на высоте, одним словом - ребята стараются поддерживать чистоту и комфорт в своих заведениях.</p>
+                  </div>
+                  <div class="reviews__content-item">
+                    <div class="reviews__content-top">
+                      <div class="reviews__content-person">
+                        <h4>Petro</h4>
+                        <p>Декабрь 2022</p>
+                      </div>
+                      <div class="reviews__content-rate"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_634_22562)">
+<path d="M10.9999 0.412842L7.87176 7.38547L0.879883 8.49715L5.93988 13.927L4.74363 21.5878L10.9999 17.973L17.2561 21.5878L16.0599 13.927L21.1199 8.50472L14.128 7.38547L10.9999 0.412842Z" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_634_22562">
+<rect width="22" height="22" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                        <p>4.5</p>
+                      </div>
+                    </div>
+                    <p class="reviews__content-text">Мы вообще ярые поклонники всей сети, эта сауна ближе всего к нашему району поэтому ходим преимущественно туда. Все очень классно, интерьер шикарный, обслуживание на высоте, одним словом - ребята стараются поддерживать чистоту и комфорт в своих заведениях.</p>
+                  </div>
+                  <div class="reviews__content-item">
+                    <div class="reviews__content-top">
+                      <div class="reviews__content-person">
+                        <h4>Petro</h4>
+                        <p>Декабрь 2022</p>
+                      </div>
+                      <div class="reviews__content-rate"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_634_22562)">
+<path d="M10.9999 0.412842L7.87176 7.38547L0.879883 8.49715L5.93988 13.927L4.74363 21.5878L10.9999 17.973L17.2561 21.5878L16.0599 13.927L21.1199 8.50472L14.128 7.38547L10.9999 0.412842Z" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_634_22562">
+<rect width="22" height="22" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                        <p>4.5</p>
+                      </div>
+                    </div>
+                    <p class="reviews__content-text">Мы вообще ярые поклонники всей сети, эта сауна ближе всего к нашему району поэтому ходим преимущественно туда. Все очень классно, интерьер шикарный, обслуживание на высоте, одним словом - ребята стараются поддерживать чистоту и комфорт в своих заведениях.</p>
+                  </div>
+                  <div class="reviews__content-item">
+                    <div class="reviews__content-top">
+                      <div class="reviews__content-person">
+                        <h4>Petro</h4>
+                        <p>Декабрь 2022</p>
+                      </div>
+                      <div class="reviews__content-rate"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_634_22562)">
+<path d="M10.9999 0.412842L7.87176 7.38547L0.879883 8.49715L5.93988 13.927L4.74363 21.5878L10.9999 17.973L17.2561 21.5878L16.0599 13.927L21.1199 8.50472L14.128 7.38547L10.9999 0.412842Z" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_634_22562">
+<rect width="22" height="22" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                        <p>4.5</p>
+                      </div>
+                    </div>
+                    <p class="reviews__content-text">Мы вообще ярые поклонники всей сети, эта сауна ближе всего к нашему району поэтому ходим преимущественно туда. Все очень классно, интерьер шикарный, обслуживание на высоте, одним словом - ребята стараются поддерживать чистоту и комфорт в своих заведениях.</p>
+                  </div>
+                </div>
+              </div><a class="reviews__more" href="comments.html">Читать все отзывы (22)</a>
+            </div><span class="reviews__line"></span>
+          </div>
+        </section>
+        <div class="to-scroll"> 
+          <div id="location-sauna"></div>
+        </div>
+        <section class="sauna__map">
+          <h4 class="sauna__map-title">Расположение</h4>
+          <section class="map-sauna">
+            <div class="map-sauna__map-content" id="map-sauna"></div>
+            <div class="map-sauna__location"><img src="img/SAUNA/icon/location.svg" alt="location"></div>
+            <button class="map-sauna__button" type="button">Варианты неподалеку</button>
+          </section>
+        </section>
+        <section class="sauna__watched">
+          <h4 class="sauna__watched-title">Вы смотрели</h4>
+          <div class="slider-sauna">
+            <div class="carousel slide" id="sliderSauna" data-bs-ride="true" data-bs-touch="true">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="slider-sauna__list">
+                    <div class="slider-sauna__item">       
+                      <div class="card-item-sauna"><img class="card-item-sauna__img" src="img/png/pic-1.png" alt="pic"><a class="card-item-sauna__like" href="#" title="like"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.6" d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke-width="2"/>
+</svg></a>
+                        <div class="card-item-sauna__content">
+                          <h4 class="card-item-sauna__title">Сауна Аквамарин</h4>
+                          <div class="card-item-sauna__address">
+                            <p>ул. Волинська 10</p>
+                            <p>Оболонский район</p>
+                          </div>
+                          <div class="card-item-sauna__btn-group"> 
+                            <button class="card-item-sauna__left-btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z" />
+</svg>
+                              <p>4.5</p>
+                            </button>
+                            <button class="card-item-sauna__right-btn" type="button">от 1 000 грн.</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider-sauna__item">
+                      <div class="card-item-sauna"><img class="card-item-sauna__img" src="img/png/pic-1.png" alt="pic"><a class="card-item-sauna__like" href="#" title="like"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.6" d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke-width="2"/>
+</svg></a>
+                        <div class="card-item-sauna__content">
+                          <h4 class="card-item-sauna__title">Сауна Аквамарин</h4>
+                          <div class="card-item-sauna__address">
+                            <p>ул. Волинська 10</p>
+                            <p>Оболонский район</p>
+                          </div>
+                          <div class="card-item-sauna__btn-group"> 
+                            <button class="card-item-sauna__left-btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z" />
+</svg>
+                              <p>4.5</p>
+                            </button>
+                            <button class="card-item-sauna__right-btn" type="button">от 1 000 грн.</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider-sauna__item">
+                      <div class="card-item-sauna"><img class="card-item-sauna__img" src="img/png/pic-1.png" alt="pic"><a class="card-item-sauna__like" href="#" title="like"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.6" d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke-width="2"/>
+</svg></a>
+                        <div class="card-item-sauna__content">
+                          <h4 class="card-item-sauna__title">Сауна Аквамарин</h4>
+                          <div class="card-item-sauna__address">
+                            <p>ул. Волинська 10</p>
+                            <p>Оболонский район</p>
+                          </div>
+                          <div class="card-item-sauna__btn-group"> 
+                            <button class="card-item-sauna__left-btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z" />
+</svg>
+                              <p>4.5</p>
+                            </button>
+                            <button class="card-item-sauna__right-btn" type="button">от 1 000 грн.</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider-sauna__item">
+                      <div class="card-item-sauna"><img class="card-item-sauna__img" src="img/png/pic-1.png" alt="pic"><a class="card-item-sauna__like" href="#" title="like"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.6" d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke-width="2"/>
+</svg></a>
+                        <div class="card-item-sauna__content">
+                          <h4 class="card-item-sauna__title">Сауна Аквамарин</h4>
+                          <div class="card-item-sauna__address">
+                            <p>ул. Волинська 10</p>
+                            <p>Оболонский район</p>
+                          </div>
+                          <div class="card-item-sauna__btn-group"> 
+                            <button class="card-item-sauna__left-btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z" />
+</svg>
+                              <p>4.5</p>
+                            </button>
+                            <button class="card-item-sauna__right-btn" type="button">от 1 000 грн.</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="slider-sauna__list">
+                    <div class="slider-sauna__item">       
+                      <div class="card-item-sauna"><img class="card-item-sauna__img" src="img/png/pic-1.png" alt="pic"><a class="card-item-sauna__like" href="#" title="like"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.6" d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke-width="2"/>
+</svg></a>
+                        <div class="card-item-sauna__content">
+                          <h4 class="card-item-sauna__title">Сауна Аквамарин</h4>
+                          <div class="card-item-sauna__address">
+                            <p>ул. Волинська 10</p>
+                            <p>Оболонский район</p>
+                          </div>
+                          <div class="card-item-sauna__btn-group"> 
+                            <button class="card-item-sauna__left-btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z" />
+</svg>
+                              <p>4.5</p>
+                            </button>
+                            <button class="card-item-sauna__right-btn" type="button">от 1 000 грн.</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider-sauna__item">
+                      <div class="card-item-sauna"><img class="card-item-sauna__img" src="img/png/pic-1.png" alt="pic"><a class="card-item-sauna__like" href="#" title="like"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.6" d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke-width="2"/>
+</svg></a>
+                        <div class="card-item-sauna__content">
+                          <h4 class="card-item-sauna__title">Сауна Аквамарин</h4>
+                          <div class="card-item-sauna__address">
+                            <p>ул. Волинська 10</p>
+                            <p>Оболонский район</p>
+                          </div>
+                          <div class="card-item-sauna__btn-group"> 
+                            <button class="card-item-sauna__left-btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z" />
+</svg>
+                              <p>4.5</p>
+                            </button>
+                            <button class="card-item-sauna__right-btn" type="button">от 1 000 грн.</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider-sauna__item">
+                      <div class="card-item-sauna"><img class="card-item-sauna__img" src="img/png/pic-1.png" alt="pic"><a class="card-item-sauna__like" href="#" title="like"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.6" d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke-width="2"/>
+</svg></a>
+                        <div class="card-item-sauna__content">
+                          <h4 class="card-item-sauna__title">Сауна Аквамарин</h4>
+                          <div class="card-item-sauna__address">
+                            <p>ул. Волинська 10</p>
+                            <p>Оболонский район</p>
+                          </div>
+                          <div class="card-item-sauna__btn-group"> 
+                            <button class="card-item-sauna__left-btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z" />
+</svg>
+                              <p>4.5</p>
+                            </button>
+                            <button class="card-item-sauna__right-btn" type="button">от 1 000 грн.</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider-sauna__item">
+                      <div class="card-item-sauna"><img class="card-item-sauna__img" src="img/png/pic-1.png" alt="pic"><a class="card-item-sauna__like" href="#" title="like"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.6" d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke-width="2"/>
+</svg></a>
+                        <div class="card-item-sauna__content">
+                          <h4 class="card-item-sauna__title">Сауна Аквамарин</h4>
+                          <div class="card-item-sauna__address">
+                            <p>ул. Волинська 10</p>
+                            <p>Оболонский район</p>
+                          </div>
+                          <div class="card-item-sauna__btn-group"> 
+                            <button class="card-item-sauna__left-btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z" />
+</svg>
+                              <p>4.5</p>
+                            </button>
+                            <button class="card-item-sauna__right-btn" type="button">от 1 000 грн.</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="slider-sauna__list">
+                    <div class="slider-sauna__item">       
+                      <div class="card-item-sauna"><img class="card-item-sauna__img" src="img/png/pic-1.png" alt="pic"><a class="card-item-sauna__like" href="#" title="like"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.6" d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke-width="2"/>
+</svg></a>
+                        <div class="card-item-sauna__content">
+                          <h4 class="card-item-sauna__title">Сауна Аквамарин</h4>
+                          <div class="card-item-sauna__address">
+                            <p>ул. Волинська 10</p>
+                            <p>Оболонский район</p>
+                          </div>
+                          <div class="card-item-sauna__btn-group"> 
+                            <button class="card-item-sauna__left-btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z" />
+</svg>
+                              <p>4.5</p>
+                            </button>
+                            <button class="card-item-sauna__right-btn" type="button">от 1 000 грн.</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider-sauna__item">
+                      <div class="card-item-sauna"><img class="card-item-sauna__img" src="img/png/pic-1.png" alt="pic"><a class="card-item-sauna__like" href="#" title="like"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.6" d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke-width="2"/>
+</svg></a>
+                        <div class="card-item-sauna__content">
+                          <h4 class="card-item-sauna__title">Сауна Аквамарин</h4>
+                          <div class="card-item-sauna__address">
+                            <p>ул. Волинська 10</p>
+                            <p>Оболонский район</p>
+                          </div>
+                          <div class="card-item-sauna__btn-group"> 
+                            <button class="card-item-sauna__left-btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z" />
+</svg>
+                              <p>4.5</p>
+                            </button>
+                            <button class="card-item-sauna__right-btn" type="button">от 1 000 грн.</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider-sauna__item">
+                      <div class="card-item-sauna"><img class="card-item-sauna__img" src="img/png/pic-1.png" alt="pic"><a class="card-item-sauna__like" href="#" title="like"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.6" d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke-width="2"/>
+</svg></a>
+                        <div class="card-item-sauna__content">
+                          <h4 class="card-item-sauna__title">Сауна Аквамарин</h4>
+                          <div class="card-item-sauna__address">
+                            <p>ул. Волинська 10</p>
+                            <p>Оболонский район</p>
+                          </div>
+                          <div class="card-item-sauna__btn-group"> 
+                            <button class="card-item-sauna__left-btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z" />
+</svg>
+                              <p>4.5</p>
+                            </button>
+                            <button class="card-item-sauna__right-btn" type="button">от 1 000 грн.</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider-sauna__item">
+                      <div class="card-item-sauna"><img class="card-item-sauna__img" src="img/png/pic-1.png" alt="pic"><a class="card-item-sauna__like" href="#" title="like"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.6" d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke-width="2"/>
+</svg></a>
+                        <div class="card-item-sauna__content">
+                          <h4 class="card-item-sauna__title">Сауна Аквамарин</h4>
+                          <div class="card-item-sauna__address">
+                            <p>ул. Волинська 10</p>
+                            <p>Оболонский район</p>
+                          </div>
+                          <div class="card-item-sauna__btn-group"> 
+                            <button class="card-item-sauna__left-btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z" />
+</svg>
+                              <p>4.5</p>
+                            </button>
+                            <button class="card-item-sauna__right-btn" type="button">от 1 000 грн.</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="slider-sauna__list">
+                    <div class="slider-sauna__item">       
+                      <div class="card-item-sauna"><img class="card-item-sauna__img" src="img/png/pic-1.png" alt="pic"><a class="card-item-sauna__like" href="#" title="like"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.6" d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke-width="2"/>
+</svg></a>
+                        <div class="card-item-sauna__content">
+                          <h4 class="card-item-sauna__title">Сауна Аквамарин</h4>
+                          <div class="card-item-sauna__address">
+                            <p>ул. Волинська 10</p>
+                            <p>Оболонский район</p>
+                          </div>
+                          <div class="card-item-sauna__btn-group"> 
+                            <button class="card-item-sauna__left-btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z" />
+</svg>
+                              <p>4.5</p>
+                            </button>
+                            <button class="card-item-sauna__right-btn" type="button">от 1 000 грн.</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider-sauna__item">
+                      <div class="card-item-sauna"><img class="card-item-sauna__img" src="img/png/pic-1.png" alt="pic"><a class="card-item-sauna__like" href="#" title="like"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.6" d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke-width="2"/>
+</svg></a>
+                        <div class="card-item-sauna__content">
+                          <h4 class="card-item-sauna__title">Сауна Аквамарин</h4>
+                          <div class="card-item-sauna__address">
+                            <p>ул. Волинська 10</p>
+                            <p>Оболонский район</p>
+                          </div>
+                          <div class="card-item-sauna__btn-group"> 
+                            <button class="card-item-sauna__left-btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z" />
+</svg>
+                              <p>4.5</p>
+                            </button>
+                            <button class="card-item-sauna__right-btn" type="button">от 1 000 грн.</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider-sauna__item">
+                      <div class="card-item-sauna"><img class="card-item-sauna__img" src="img/png/pic-1.png" alt="pic"><a class="card-item-sauna__like" href="#" title="like"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.6" d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke-width="2"/>
+</svg></a>
+                        <div class="card-item-sauna__content">
+                          <h4 class="card-item-sauna__title">Сауна Аквамарин</h4>
+                          <div class="card-item-sauna__address">
+                            <p>ул. Волинська 10</p>
+                            <p>Оболонский район</p>
+                          </div>
+                          <div class="card-item-sauna__btn-group"> 
+                            <button class="card-item-sauna__left-btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z" />
+</svg>
+                              <p>4.5</p>
+                            </button>
+                            <button class="card-item-sauna__right-btn" type="button">от 1 000 грн.</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider-sauna__item">
+                      <div class="card-item-sauna"><img class="card-item-sauna__img" src="img/png/pic-1.png" alt="pic"><a class="card-item-sauna__like" href="#" title="like"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.6" d="M11.2469 4.98458L12 5.84661L12.7531 4.98458C13.4773 4.15564 14.1391 3.50737 14.9304 3.05493C15.7031 2.61311 16.6562 2.32666 18 2.32666C19.2749 2.32666 20.4821 2.74653 21.3816 3.74629C22.29 4.7559 23 6.48565 23 9.32822C23 10.5395 22.3716 12.5828 20.575 14.9784C18.8615 17.2633 16.1221 19.8156 12 22.1814C7.87792 19.8156 5.1385 17.2633 3.42502 14.9784C1.62844 12.5828 1 10.5395 1 9.32822C1 6.48565 1.71004 4.7559 2.6184 3.74629C3.5179 2.74653 4.72512 2.32666 6 2.32666C7.34378 2.32666 8.29694 2.61311 9.06964 3.05493C9.86093 3.50737 10.5227 4.15564 11.2469 4.98458Z" stroke-width="2"/>
+</svg></a>
+                        <div class="card-item-sauna__content">
+                          <h4 class="card-item-sauna__title">Сауна Аквамарин</h4>
+                          <div class="card-item-sauna__address">
+                            <p>ул. Волинська 10</p>
+                            <p>Оболонский район</p>
+                          </div>
+                          <div class="card-item-sauna__btn-group"> 
+                            <button class="card-item-sauna__left-btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00014 1L5.72514 5.61L0.640137 6.345L4.32014 9.935L3.45014 15L8.00014 12.61L12.5501 15L11.6801 9.935L15.3601 6.35L10.2751 5.61L8.00014 1Z" />
+</svg>
+                              <p>4.5</p>
+                            </button>
+                            <button class="card-item-sauna__right-btn" type="button">от 1 000 грн.</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-sauna__btn-group">
+              <button class="carousel-control-prev" type="button" data-bs-target="#sliderSauna" data-bs-slide="prev"> 
+                <div class="slider-sauna__arrow">
+                   <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.5056 0.234318C11.7985 -0.0585749 12.2733 -0.0585749 12.5662 0.234318C12.8591 0.527212 12.8591 1.00209 12.5662 1.29498L3.0371 10.8241H24.647C25.0612 10.8241 25.397 11.1599 25.397 11.5741C25.397 11.9883 25.0612 12.3241 24.647 12.3241H3.03705L12.5662 21.8533C12.8591 22.1462 12.8591 22.621 12.5662 22.9139C12.2733 23.2068 11.7985 23.2068 11.5056 22.9139L0.696091 12.1045C0.403196 11.8116 0.403196 11.3367 0.696091 11.0438L11.5056 0.234318Z" fill="#2F2F2F"/>
+</svg>
+                </div>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#sliderSauna" data-bs-slide="next">
+                <div class="slider-sauna__arrow">
+                   <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.4939 0.234318C14.201 -0.0585749 13.7262 -0.0585749 13.4333 0.234318C13.1404 0.527212 13.1404 1.00209 13.4333 1.29498L22.9624 10.8241H1.35254C0.938325 10.8241 0.602539 11.1599 0.602539 11.5741C0.602539 11.9883 0.938325 12.3241 1.35254 12.3241H22.9625L13.4333 21.8533C13.1404 22.1462 13.1404 22.621 13.4333 22.9139C13.7262 23.2068 14.201 23.2068 14.4939 22.9139L25.3034 12.1045C25.5963 11.8116 25.5963 11.3367 25.3034 11.0438L14.4939 0.234318Z" fill="#2F2F2F"/>
+</svg>
+                </div>
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer class="footer"><img class="footer__logo" src="img/other/logo-foot.svg" alt="logo">
+      <div class="footer__inner">
+        <div class="footer__block-navigation">
+          <div class="footer__item-nav">
+            <h4 class="footer__text">Идеи для отдыха</h4><a class="footer__link" href="#">Для большой компании</a><a class="footer__link" href="#">Семейный отдых</a><a class="footer__link" href="#">Для двоих</a><a class="footer__link" href="#">Баня с купелью на улице</a><a class="footer__link" href="#">Баня за городом</a><a class="footer__link" href="#">Бани и сауны в центре</a><a class="footer__link" href="#">СПА и процедуры</a>
+          </div>
+          <div class="footer__item-nav">
+            <h4 class="footer__text">Расположение</h4><a class="footer__link" href="#">Бани Оболонского района</a><a class="footer__link" href="#">Бани Деснянского района</a><a class="footer__link" href="#">Бани Шевченковского района</a><a class="footer__link" href="#">Бани Харьковского района</a><a class="footer__link" href="#">Бани Соломенского района</a><a class="footer__link" href="#">Бани Днепровского района</a>
+          </div>
+          <div class="footer__item-nav">
+            <h4 class="footer__text">Пользователям</h4><a class="footer__link" href="#">О проекте</a><a class="footer__link" href="#">Правила и условия бронирования</a><a class="footer__link" href="#">Пользовательское соглашение</a><a class="footer__link" href="#">Положение о конфиденциальности и cookie</a><a class="footer__link" href="#">Вопрос-Ответ</a><a class="footer__link" href="#">Для партнеров</a><a class="footer__link" href="#">Контакты</a>
+          </div>
+        </div>
+        <button class="footer__btn">Добавить баню</button>
+      </div>
+    </footer>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/sauna.min.js"></script>
+  </body>
+</html>
