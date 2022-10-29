@@ -42,7 +42,28 @@ getMainSideBar.addEventListener("click", function (e) {
   \*************************************************************************/
 /***/ (function() {
 
+function companyDropdown(dropdown, menu, items) {
+  var getBtn = document.querySelector(dropdown),
+      getMenu = document.querySelector(menu),
+      getMenuItems = document.querySelectorAll(items);
+  getBtn.addEventListener("click", function () {
+    if (!getMenu.classList.contains("dropdown-opened")) {
+      getMenu.classList.add("dropdown-opened");
+      getBtn.classList.add("dropdown-opened");
+      getMenuItems.forEach(function (item) {
+        item.addEventListener("click", function () {
+          getBtn.firstElementChild.textContent = item.textContent;
+        });
+      });
+    } else {
+      getMenu.classList.remove("dropdown-opened");
+      getBtn.classList.remove("dropdown-opened");
+    }
+  });
+}
 
+companyDropdown("#dropdown-city", "#menu-city", ".company-contacts__dropdown-city");
+companyDropdown("#dropdown-street", "#menu-street", ".company-contacts__dropdown-street");
 
 /***/ }),
 
