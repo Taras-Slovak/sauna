@@ -1,1 +1,1 @@
-// import "%modules%/COMPANY/main/main";
+import "%modules%/COMPANY/company-contacts/company-contacts";
