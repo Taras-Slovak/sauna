@@ -9,4 +9,11 @@
 @import "base/fonts";
 @import "base/general";
 
+@import "../blocks/components/COMPANY";
 @import "../blocks/modules/COMPANY";
+
+.main {
+  position: relative;
+  display: flex;
+  margin-top: 70px;
+}

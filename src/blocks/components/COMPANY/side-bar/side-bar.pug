@@ -1,0 +1,66 @@
+include block-icon.pug
+
+aside.side-bar 
+
+  .side-bar__inner 
+
+    .side-bar__left     
+            
+    .side-bar__right
+
+      .side-bar__nav
+
+        a.side-bar__link(href="#")           
+          .side-bar__icon
+            +setting
+          p Профиль компании
+
+        .side-bar__group-link
+
+          a.side-bar__link(href="#") 
+            p Юридическая информация
+
+          a.side-bar__link(href="#") 
+            p Основное описание
+
+          a.side-bar__link(href="#") 
+            p Отделения, филиалы
+
+          a.side-bar__link(href="#") 
+            p Акции
+
+          a.side-bar__link(href="#") 
+            p Доступы / Аккаунты
+
+          a.side-bar__link(href="#") 
+            p Отзывы
+
+          a.side-bar__link(href="#") 
+            p Платежная информация
+
+        a.side-bar__link(href="#")           
+          .side-bar__icon
+            +calendar
+          p Расписание
+
+        a.side-bar__link(href="#")           
+          .side-bar__icon
+            +booking
+          p Бронирования
+
+        a.side-bar__link(href="#")           
+          .side-bar__icon
+            +dolar
+          p Оплаты / Возврат
+
+        a.side-bar__link(href="#")         
+          .side-bar__icon
+            +stat
+          p Статистика
+
+    .side-bar__close
+      +close
+
+.side-bar__open 
+
+  +open

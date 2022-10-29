@@ -87,19 +87,6 @@ function rangeItem(rangeClass, inputMinItem, inputMaxItem) {
     range.noUiSlider.on("update", function(values, handle) {
       convertValuesToTime(values, handle);
     });
-
-    // range.noUiSlider.on("update", (values) => {
-    //   inputMin.value = Math.round(values[0]);
-    //   inputMax.value = Math.round(values[1]);
-    // });
-
-    // inputMin.addEventListener("change", () => {
-    //   range.noUiSlider.set([inputMin.value, null]);
-    // });
-
-    // inputMax.addEventListener("change", () => {
-    //   range.noUiSlider.set([null, inputMax.value]);
-    // });
   }
 }
 
