@@ -1,35 +1,3 @@
-function companyDropdown(dropdown, menu, items) {
-  const getBtn = document.querySelector(dropdown),
-    getMenu = document.querySelector(menu),
-    getMenuItems = document.querySelectorAll(items);
-
-  getBtn.addEventListener("click", () => {
-    if (!getMenu.classList.contains("dropdown-opened")) {
-      getMenu.classList.add("dropdown-opened");
-      getBtn.classList.add("dropdown-opened");
-      getMenuItems.forEach((item) => {
-        item.addEventListener("click", () => {
-          getBtn.firstElementChild.textContent = item.textContent;
-        });
-      });
-    } else {
-      getMenu.classList.remove("dropdown-opened");
-      getBtn.classList.remove("dropdown-opened");
-    }
-  });
-}
-companyDropdown(
-  "#dropdown-city",
-  "#menu-city",
-  ".company-contacts__dropdown-city",
-);
-
-companyDropdown(
-  "#dropdown-street",
-  "#menu-street",
-  ".company-contacts__dropdown-street",
-);
-
 function addOrRemove() {
   const getMainField = document.querySelector(
     " .company-contacts__telephone-group",
@@ -76,6 +44,7 @@ function removeAddTime() {
   const getAddBtn = document.querySelector(".company-contacts__time-add");
   getAddBtn.addEventListener("click", () => {
     createNewDate();
+    companyDropdownAll();
     const getAllDelete = document.querySelectorAll(".company-contacts__date");
     getAllDelete.forEach((item) => {
       let getDeleteBtn =
@@ -89,11 +58,36 @@ function removeAddTime() {
   });
 }
 
-removeAddTime();
+function companyDropdownAll() {
+  const allBtnDropdown = document.querySelectorAll(
+    ".company-contacts__dropdown-button",
+  );
 
-function companyDropdownTime() {}
+  allBtnDropdown.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const menu = btn.firstElementChild.nextElementSibling.nextElementSibling;
+      const menuItems = menu.children;
 
-companyDropdownTime();
+      console.log(e.currentTarget);
+
+      if (btn.classList.contains("dropdown-opened")) {
+        btn.classList.remove("dropdown-opened");
+        menu.classList.remove("dropdown-opened");
+      } else {
+        btn.classList.add("dropdown-opened");
+        menu.classList.add("dropdown-opened");
+      }
+
+      const textBtn = btn.firstElementChild;
+
+      [...menuItems].forEach((item) => {
+        item.addEventListener("click", () => {
+          textBtn.innerText = item.innerText;
+        });
+      });
+    });
+  });
+}
 
 function createNewDate() {
   const getDatePicker = document.querySelector(
@@ -377,3 +371,5 @@ function createNewDate() {
 
   getDatePicker.appendChild(newDate);
 }
+
+removeAddTime();
