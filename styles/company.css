@@ -7711,6 +7711,7 @@ body {
 }
 
 .company-contacts__field {
+  position: relative;
   display: flex;
   flex-grow: 3;
   flex-direction: column;
@@ -7735,6 +7736,12 @@ body {
   line-height: 150%;
   color: #2f2f2f;
   border: 1px solid #2f2f2f;
+  transition: all 0.2s ease-in-out;
+}
+
+.company-contacts__field input:focus {
+  box-shadow: 0px 0px 5px 1px rgba(255, 136, 0, 0.25);
+  border: 1px solid #ff8a00;
 }
 
 .company-contacts__field input::placeholder {
@@ -7749,7 +7756,6 @@ body {
 }
 
 .company-contacts__dropdown-button {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -7766,6 +7772,7 @@ body {
 }
 
 .company-contacts__dropdown-txt {
+  padding-left: 10px;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -7776,7 +7783,7 @@ body {
   width: 100%;
   height: 0;
   position: absolute;
-  top: 50px;
+  top: 80px;
   right: 0;
   display: flex;
   flex-direction: column;
@@ -7791,7 +7798,8 @@ body {
   transition: all 0.2s ease-in-out;
   border-radius: 0px 0px 10px 10px;
   box-shadow: 0px 2px 10px -3px rgba(0, 0, 0, 0.25);
-  height: auto;
+  overflow-y: scroll;
+  height: 250px;
   opacity: 1;
 }
 
@@ -7810,6 +7818,123 @@ body {
 .company-contacts__dropdown-menu span:hover {
   background-color: #ff8a00;
   color: #fff;
+}
+
+.company-contacts__telephone-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.company-contacts__telephone {
+  display: flex;
+  align-items: flex-end;
+  gap: 25px;
+}
+
+.company-contacts__telephone .company-contacts__field {
+  max-width: 350px;
+}
+
+.company-contacts__telephone-add,
+.company-contacts__telephone-delete,
+.company-contacts__time-add,
+.company-contacts__time-delete {
+  width: max-content;
+  height: max-content;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  background: #ffffff;
+  border: none;
+}
+
+.company-contacts__telephone-add svg,
+.company-contacts__telephone-delete svg,
+.company-contacts__time-add svg,
+.company-contacts__time-delete svg {
+  display: block;
+  transition: all 0.1s ease-in-out;
+  fill: white;
+}
+
+.company-contacts__telephone-add svg:hover,
+.company-contacts__telephone-delete svg:hover,
+.company-contacts__time-add svg:hover,
+.company-contacts__time-delete svg:hover {
+  transform: scale(1.1);
+}
+
+.company-contacts__telephone-add svg:active,
+.company-contacts__telephone-delete svg:active,
+.company-contacts__time-add svg:active,
+.company-contacts__time-delete svg:active {
+  transform: scale(1);
+}
+
+.company-contacts__date-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.company-contacts__date {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.company-contacts__days {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.company-contacts__day {
+  width: 50px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #2f2f2f;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  line-height: 120%;
+  transition: all 0.1s ease-in-out;
+}
+
+.company-contacts__day:hover {
+  transform: scale(1.1);
+}
+
+.company-contacts__day:active {
+  transform: scale(1);
+}
+
+.company-contacts__times {
+  display: flex;
+  align-items: center;
+}
+
+.company-contacts__times .company-contacts__dropdown-menu {
+  top: 50px;
+}
+
+.company-contacts__line {
+  width: 10px;
+  margin: 0 5px;
+  height: 1px;
+  background: #2f2f2f;
+}
+
+.background-grey {
+  background: #707070;
+  border: 1px solid #707070;
+  color: #fff;
+  box-shadow: 0px 0px 5px 0px rgba(112, 112, 112, 0.5803921569);
 }
 
 .footer {
