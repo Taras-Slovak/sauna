@@ -207,24 +207,29 @@
         <div class="company-contacts__item">
           <h3 class="company-contacts__sub-title">Логотип компании</h3>
           <div class="company-contacts__content">
-            <div class="company-contact__uploading"></div>
-            <div class="company-contact__list">
-              <div class="company-contact__list-text"><span>1.</span>
+            <div class="company-contacts__uploading">
+              <input id="contacts-img-upload" type="file">
+              <label class="upload-field" id="file-label" for="contacts-img-upload"><img id="contacts-img-preview" src="img/COMPANY/download.svg" alt="logo">
+                <h3 id="contacts-img-filename">Загрузить фото</h3>
+              </label>
+            </div>
+            <div class="company-contacts__list">
+              <div class="company-contacts__list-text"><span>1.</span>
                 <p>Если на логотипе указывается название объекта, то проверьте, чтобы его было хорошо видно на экранах любого размера.</p>
               </div>
-              <div class="company-contact__list-text"><span>2.</span>
+              <div class="company-contacts__list-text"><span>2.</span>
                 <p>Соотношение сторон. Квадратные логотипы должны иметь соотношение сторон 1:1, у прямоугольных max  – 2:1.</p>
               </div>
-              <div class="company-contact__list-text"><span>3.</span>
+              <div class="company-contacts__list-text"><span>3.</span>
                 <p>Тип файла. Форматы SVG, PNG и JPG (рекомендуем использовать SVG, т.к эти изображения отлично видны практически на всех устройствах. У изображений форматов PNG и JPG минимальный размер должен составлять 500 x 500 пикселей, а максимальный – 2000 x 2000.</p>
               </div>
-              <div class="company-contact__list-text"><span>4.</span>
+              <div class="company-contacts__list-text"><span>4.</span>
                 <p>Размер файла. Можно загружать изображения размером не более 5 МБ.</p>
               </div>
+              <div class="company-contacts__bottom"><a href="company-description.html">Назад</a><a href="#">Сохранить</a></div>
             </div>
           </div>
         </div>
-        <div class="company-contacts__bottom"><a href="#">Назад</a><a href="#">Сохранить</a></div>
       </div>
     </main>
     <footer class="footer"><img class="footer__logo" src="img/other/logo-foot.svg" alt="logo">
