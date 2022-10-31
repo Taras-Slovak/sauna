@@ -21,6 +21,13 @@
     display: flex;
     justify-content: space-between;
     gap: 50px;
+
+    @media only screen and (max-width: 450px) {
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+    }
   }
 
   &__picker {
@@ -32,6 +39,10 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 120%;
+    @media only screen and (max-width: 450px) {
+      font-size: 20px;
+      font-weight: 700;
+    }
   }
 
   &__content {
@@ -113,7 +124,7 @@
         border-radius: 0px 0px 10px 10px;
         box-shadow: 0px 2px 10px -3px rgba(0, 0, 0, 0.25);
         overflow-y: scroll;
-        height: 250px;
+        height: 200px;
         opacity: 1;
       }
     }
@@ -255,7 +266,7 @@
     }
 
     .company-contacts__dropdown-menu {
-      top: 50px;
+      top: 40px;
     }
   }
 
