@@ -20,6 +20,7 @@
     max-width: 920px;
     display: flex;
     justify-content: space-between;
+    gap: 50px;
   }
 
   &__picker {
@@ -44,6 +45,9 @@
   &__field-group {
     display: flex;
     gap: 20px;
+    @media only screen and (max-width: 800px) {
+      flex-direction: column;
+    }
   }
 
   &__field {
@@ -244,6 +248,12 @@
   &__times {
     display: flex;
     align-items: center;
+
+    @media only screen and (max-width: 600px) {
+      gap: 5px;
+      flex-direction: column;
+    }
+
     .company-contacts__dropdown-menu {
       top: 50px;
     }
@@ -254,6 +264,103 @@
     margin: 0 5px;
     height: 1px;
     background: #2f2f2f;
+  }
+
+  &__uploading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 254px;
+    height: 130px;
+    background: #ffffff;
+    border: 1px dashed #b3b3b3;
+    border-radius: 10px;
+    input {
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+    label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        box-shadow: 0px 0px 4px 1px #34343442;
+      }
+    }
+    h3 {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 120%;
+      color: #2f2f2f;
+    }
+
+    img {
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  &__uploading-img {
+    display: block;
+    width: 254px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 1px #34343486;
+  }
+
+  &__list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #2f2f2f;
+  }
+
+  &__list-text {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  &__bottom {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 120px;
+      height: 36px;
+      color: #2f2f2f;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 150%;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #000000;
+        color: #fff;
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
   }
 }
 

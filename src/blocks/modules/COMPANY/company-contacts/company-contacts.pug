@@ -186,29 +186,35 @@
 
     .company-contacts__content
 
-      .company-contact__uploading
+      .company-contacts__uploading
+        input#contacts-img-upload(type='file')
+        label#file-label.upload-field(for='contacts-img-upload')
+          
+          img#contacts-img-preview(src='img/COMPANY/download.svg' alt='logo')
+          h3#contacts-img-filename Загрузить фото
 
-      .company-contact__list
-        .company-contact__list-text
+  
+      .company-contacts__list
+        .company-contacts__list-text
           span 1.
           p Если на логотипе указывается название объекта, то проверьте, чтобы его было хорошо видно на экранах любого размера.
 
-        .company-contact__list-text
+        .company-contacts__list-text
           span 2.
           p Соотношение сторон. Квадратные логотипы должны иметь соотношение сторон 1:1, у прямоугольных max  – 2:1.
 
-        .company-contact__list-text
+        .company-contacts__list-text
           span 3.
           p Тип файла. Форматы SVG, PNG и JPG (рекомендуем использовать SVG, т.к эти изображения отлично видны практически на всех устройствах. У изображений форматов PNG и JPG минимальный размер должен составлять 500 x 500 пикселей, а максимальный – 2000 x 2000.
 
 
-        .company-contact__list-text
+        .company-contacts__list-text
           span 4.
           p Размер файла. Можно загружать изображения размером не более 5 МБ.
 
 
-  .company-contacts__bottom
+        .company-contacts__bottom
 
-    a(href="#") Назад
+          a(href="company-description.html") Назад
 
-    a(href="#") Сохранить
+          a(href="#") Сохранить

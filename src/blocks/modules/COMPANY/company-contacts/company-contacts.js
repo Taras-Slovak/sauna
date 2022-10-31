@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 function addOrRemove() {
   const getMainField = document.querySelector(
     " .company-contacts__telephone-group",
@@ -360,3 +361,34 @@ function getText() {
   });
 }
 getText();
+
+function uploadingLogo() {
+  const getInputFile = document.getElementById("contacts-img-upload");
+  getInputFile.addEventListener("change", uploadYourLogo);
+
+  function uploadYourLogo() {
+    const path = getInputFile.value;
+    const extension = path.split(".").pop();
+    const getImg = document.getElementById("contacts-img-preview");
+    if (
+      extension == "jpg" ||
+      extension == "svg" ||
+      extension == "jpeg" ||
+      extension == "png" ||
+      extension == "webp"
+    ) {
+      getImg.classList.add("company-contacts__uploading-img");
+      getImg.src = window.URL.createObjectURL(getInputFile.files[0]);
+      // const filename = path
+      //   .replace(/^.*[\\\/]/, "")
+      //   .split(".")
+      //   .slice(0, -1)
+      //   .join(".");
+      // document.getElementById("contacts-img-filename").innerHTML = filename;
+      document.getElementById("contacts-img-filename").style.display = "none";
+    } else {
+      alert("File not supported");
+    }
+  }
+}
+uploadingLogo();
