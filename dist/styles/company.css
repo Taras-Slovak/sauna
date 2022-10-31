@@ -7690,6 +7690,10 @@ body {
   justify-content: space-between;
 }
 
+.company-contacts__picker {
+  max-width: 100%;
+}
+
 .company-contacts__sub-title {
   font-style: normal;
   font-weight: 500;
@@ -7771,6 +7775,16 @@ body {
   box-shadow: 0px -2px 10px -3px rgba(0, 0, 0, 0.25);
 }
 
+.company-contacts__dropdown-button.dropdown-opened .company-contacts__dropdown-menu {
+  box-shadow: 0 0 5px #333;
+  transition: all 0.2s ease-in-out;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0px 2px 10px -3px rgba(0, 0, 0, 0.25);
+  overflow-y: scroll;
+  height: 250px;
+  opacity: 1;
+}
+
 .company-contacts__dropdown-txt {
   padding-left: 10px;
   font-weight: 400;
@@ -7791,16 +7805,6 @@ body {
   opacity: 0;
   transition: all 0.2s ease-in-out;
   z-index: 200;
-}
-
-.company-contacts__dropdown-menu.dropdown-opened {
-  box-shadow: 0 0 5px #333;
-  transition: all 0.2s ease-in-out;
-  border-radius: 0px 0px 10px 10px;
-  box-shadow: 0px 2px 10px -3px rgba(0, 0, 0, 0.25);
-  overflow-y: scroll;
-  height: 250px;
-  opacity: 1;
 }
 
 .company-contacts__dropdown-menu span {
@@ -7882,6 +7886,10 @@ body {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+
+.company-contacts__date .company-contacts__dropdown-button {
+  width: 92px;
 }
 
 .company-contacts__days {

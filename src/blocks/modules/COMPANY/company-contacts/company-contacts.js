@@ -44,8 +44,8 @@ function removeAddTime() {
   const getAddBtn = document.querySelector(".company-contacts__time-add");
   getAddBtn.addEventListener("click", () => {
     createNewDate();
-    companyDropdownAll();
     const getAllDelete = document.querySelectorAll(".company-contacts__date");
+    getText();
     getAllDelete.forEach((item) => {
       let getDeleteBtn =
         item.firstElementChild.nextElementSibling.nextElementSibling;
@@ -53,37 +53,7 @@ function removeAddTime() {
       getDeleteBtn.addEventListener("click", () => {
         if (getDeleteBtn.classList.contains("company-contacts__time-delete"))
           item.remove();
-      });
-    });
-  });
-}
-
-function companyDropdownAll() {
-  const allBtnDropdown = document.querySelectorAll(
-    ".company-contacts__dropdown-button",
-  );
-
-  allBtnDropdown.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      const menu = btn.firstElementChild.nextElementSibling.nextElementSibling;
-      const menuItems = menu.children;
-
-      console.log(e.currentTarget);
-
-      if (btn.classList.contains("dropdown-opened")) {
-        btn.classList.remove("dropdown-opened");
-        menu.classList.remove("dropdown-opened");
-      } else {
-        btn.classList.add("dropdown-opened");
-        menu.classList.add("dropdown-opened");
-      }
-
-      const textBtn = btn.firstElementChild;
-
-      [...menuItems].forEach((item) => {
-        item.addEventListener("click", () => {
-          textBtn.innerText = item.innerText;
-        });
+        getText();
       });
     });
   });
@@ -153,9 +123,9 @@ function createNewDate() {
 </div>
 <div class="company-contacts__times">
   <div class="company-contacts__field">
-    <button
+    <button onclick="this.classList.toggle('dropdown-opened')"
       class="company-contacts__dropdown-button"
-      id="dropdown-hour"
+      id="dropdown-item"
       type="button"
     >
       <p class="company-contacts__dropdown-txt">00:00</p>
@@ -172,79 +142,79 @@ function createNewDate() {
         />
       </svg>
       <div class="company-contacts__dropdown-menu" id="menu-hour">
-        <span class="company-contacts__dropdown-hour" data-hour="00:00">
+        <span class="company-contacts__dropdown-item" data-hour="00:00">
           00:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="01:00">
+        <span class="company-contacts__dropdown-item" data-hour="01:00">
           01:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="02:00">
+        <span class="company-contacts__dropdown-item" data-hour="02:00">
           02:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="03:00">
+        <span class="company-contacts__dropdown-item" data-hour="03:00">
           03:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="04:00">
+        <span class="company-contacts__dropdown-item" data-hour="04:00">
           04:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="05:00">
+        <span class="company-contacts__dropdown-item" data-hour="05:00">
           05:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="06:00">
+        <span class="company-contacts__dropdown-item" data-hour="06:00">
           06:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="07:00">
+        <span class="company-contacts__dropdown-item" data-hour="07:00">
           07:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="08:00">
+        <span class="company-contacts__dropdown-item" data-hour="08:00">
           08:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="09:00">
+        <span class="company-contacts__dropdown-item" data-hour="09:00">
           09:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="10:00">
+        <span class="company-contacts__dropdown-item" data-hour="10:00">
           10:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="11:00">
+        <span class="company-contacts__dropdown-item" data-hour="11:00">
           11:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="12:00">
+        <span class="company-contacts__dropdown-item" data-hour="12:00">
           12:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="13:00">
+        <span class="company-contacts__dropdown-item" data-hour="13:00">
           13:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="14:00">
+        <span class="company-contacts__dropdown-item" data-hour="14:00">
           14:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="15:00">
+        <span class="company-contacts__dropdown-item" data-hour="15:00">
           15:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="16:00">
+        <span class="company-contacts__dropdown-item" data-hour="16:00">
           16:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="17:00">
+        <span class="company-contacts__dropdown-item" data-hour="17:00">
           17:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="18:00">
+        <span class="company-contacts__dropdown-item" data-hour="18:00">
           18:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="19:00">
+        <span class="company-contacts__dropdown-item" data-hour="19:00">
           19:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="20:00">
+        <span class="company-contacts__dropdown-item" data-hour="20:00">
           20:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="21:00">
+        <span class="company-contacts__dropdown-item" data-hour="21:00">
           21:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="22:00">
+        <span class="company-contacts__dropdown-item" data-hour="22:00">
           22:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="23:00">
+        <span class="company-contacts__dropdown-item" data-hour="23:00">
           23:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="24:00">
+        <span class="company-contacts__dropdown-item" data-hour="24:00">
           24:00
         </span>
       </div>
@@ -252,9 +222,9 @@ function createNewDate() {
   </div>
   <span class="company-contacts__line"> </span>
   <div class="company-contacts__field">
-    <button
+    <button onclick="this.classList.toggle('dropdown-opened')"
       class="company-contacts__dropdown-button"
-      id="dropdown-hour"
+      id="dropdown-item"
       type="button"
     >
       <p class="company-contacts__dropdown-txt">00:00</p>
@@ -270,80 +240,80 @@ function createNewDate() {
           fill="#2F2F2F"
         />
       </svg>
-      <div class="company-contacts__dropdown-menu" id="menu-hour">
-        <span class="company-contacts__dropdown-hour" data-hour="00:00">
+      <div class="company-contacts__dropdown-menu" id="menu-hour" >
+        <span class="company-contacts__dropdown-item" data-hour="00:00">
           00:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="01:00">
+        <span class="company-contacts__dropdown-item" data-hour="01:00">
           01:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="02:00">
+        <span class="company-contacts__dropdown-item" data-hour="02:00">
           02:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="03:00">
+        <span class="company-contacts__dropdown-item" data-hour="03:00">
           03:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="04:00">
+        <span class="company-contacts__dropdown-item" data-hour="04:00">
           04:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="05:00">
+        <span class="company-contacts__dropdown-item" data-hour="05:00">
           05:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="06:00">
+        <span class="company-contacts__dropdown-item" data-hour="06:00">
           06:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="07:00">
+        <span class="company-contacts__dropdown-item" data-hour="07:00">
           07:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="08:00">
+        <span class="company-contacts__dropdown-item" data-hour="08:00">
           08:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="09:00">
+        <span class="company-contacts__dropdown-item" data-hour="09:00">
           09:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="10:00">
+        <span class="company-contacts__dropdown-item" data-hour="10:00">
           10:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="11:00">
+        <span class="company-contacts__dropdown-item" data-hour="11:00">
           11:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="12:00">
+        <span class="company-contacts__dropdown-item" data-hour="12:00">
           12:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="13:00">
+        <span class="company-contacts__dropdown-item" data-hour="13:00">
           13:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="14:00">
+        <span class="company-contacts__dropdown-item" data-hour="14:00">
           14:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="15:00">
+        <span class="company-contacts__dropdown-item" data-hour="15:00">
           15:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="16:00">
+        <span class="company-contacts__dropdown-item" data-hour="16:00">
           16:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="17:00">
+        <span class="company-contacts__dropdown-item" data-hour="17:00">
           17:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="18:00">
+        <span class="company-contacts__dropdown-item" data-hour="18:00">
           18:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="19:00">
+        <span class="company-contacts__dropdown-item" data-hour="19:00">
           19:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="20:00">
+        <span class="company-contacts__dropdown-item" data-hour="20:00">
           20:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="21:00">
+        <span class="company-contacts__dropdown-item" data-hour="21:00">
           21:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="22:00">
+        <span class="company-contacts__dropdown-item" data-hour="22:00">
           22:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="23:00">
+        <span class="company-contacts__dropdown-item" data-hour="23:00">
           23:00
         </span>
-        <span class="company-contacts__dropdown-hour" data-hour="24:00">
+        <span class="company-contacts__dropdown-item" data-hour="24:00">
           24:00
         </span>
       </div>
@@ -373,3 +343,20 @@ function createNewDate() {
 }
 
 removeAddTime();
+
+function getText() {
+  const getAllText = document.querySelectorAll(
+    ".company-contacts__dropdown-item",
+  );
+
+  getAllText.forEach((element) => {
+    element.addEventListener("click", () => {
+      element.parentElement.parentElement.firstElementChild.innerText =
+        element.innerText;
+      console.log(
+        element.parentElement.parentElement.firstElementChild.innerText,
+      );
+    });
+  });
+}
+getText();

@@ -15,7 +15,7 @@
 
       .company-contacts__field
         p Город
-        button.company-contacts__dropdown-button( id="dropdown-city" type='button')
+        button.company-contacts__dropdown-button( id="dropdown-item" type='button' onclick="this.classList.toggle('dropdown-opened')")
           p.company-contacts__dropdown-txt Название город
 
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,27 +23,27 @@
           </svg>
           
           .company-contacts__dropdown-menu(id="menu-city")
-            span.company-contacts__dropdown-city(data-city="some-city") Название город-1
-            span.company-contacts__dropdown-city(data-city="some-city") Название город-2
-            span.company-contacts__dropdown-city(data-city="some-city") Название город-3
-            span.company-contacts__dropdown-city(data-city="some-city") Название город-4
-            span.company-contacts__dropdown-city(data-city="some-city") Название город-5
+            span.company-contacts__dropdown-item(data-city="some-city") Название город-1
+            span.company-contacts__dropdown-item(data-city="some-city") Название город-2
+            span.company-contacts__dropdown-item(data-city="some-city") Название город-3
+            span.company-contacts__dropdown-item(data-city="some-city") Название город-4
+            span.company-contacts__dropdown-item(data-city="some-city") Название город-5
 
-            span.company-contacts__dropdown-city(data-city="some-city") Название город-6
+            span.company-contacts__dropdown-item(data-city="some-city") Название город-6
 
-            span.company-contacts__dropdown-city(data-city="some-city") Название город-7
+            span.company-contacts__dropdown-item(data-city="some-city") Название город-7
 
-            span.company-contacts__dropdown-city(data-city="some-city") Название город-8
+            span.company-contacts__dropdown-item(data-city="some-city") Название город-8
 
-            span.company-contacts__dropdown-city(data-city="some-city") Название город-9
+            span.company-contacts__dropdown-item(data-city="some-city") Название город-9
 
-            span.company-contacts__dropdown-city(data-city="some-city") Название город-10
+            span.company-contacts__dropdown-item(data-city="some-city") Название город-10
       
       .company-contacts__field-group
         
         .company-contacts__field
           p Улица
-          button.company-contacts__dropdown-button( id="dropdown-street" type='button')
+          button.company-contacts__dropdown-button( id="dropdown-item" type='button' onclick="this.classList.toggle('dropdown-opened')")
             p.company-contacts__dropdown-txt Название улицы
 
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,16 +51,16 @@
             </svg>
             
             .company-contacts__dropdown-menu(id="menu-street")
-                span.company-contacts__dropdown-street(data-city="some-street") Название улицы-1
-                span.company-contacts__dropdown-street(data-city="some-street") Название улицы-2
-                span.company-contacts__dropdown-street(data-city="some-street") Название улицы-3
-                span.company-contacts__dropdown-street(data-city="some-street") Название улицы-4
-                span.company-contacts__dropdown-street(data-city="some-street") Название улицы-5
-                span.company-contacts__dropdown-street(data-city="some-street") Название улицы-6
-                span.company-contacts__dropdown-street(data-city="some-street") Название улицы-7
-                span.company-contacts__dropdown-street(data-city="some-street") Название улицы-8
-                span.company-contacts__dropdown-street(data-city="some-street") Название улицы-9
-                span.company-contacts__dropdown-street(data-city="some-street") Название улицы-10            
+                span.company-contacts__dropdown-item(data-city="some-street") Название улицы-1
+                span.company-contacts__dropdown-item(data-city="some-street") Название улицы-2
+                span.company-contacts__dropdown-item(data-city="some-street") Название улицы-3
+                span.company-contacts__dropdown-item(data-city="some-street") Название улицы-4
+                span.company-contacts__dropdown-item(data-city="some-street") Название улицы-5
+                span.company-contacts__dropdown-item(data-city="some-street") Название улицы-6
+                span.company-contacts__dropdown-item(data-city="some-street") Название улицы-7
+                span.company-contacts__dropdown-item(data-city="some-street") Название улицы-8
+                span.company-contacts__dropdown-item(data-city="some-street") Название улицы-9
+                span.company-contacts__dropdown-item(data-city="some-street") Название улицы-10            
 
         .company-contacts__field.company-contacts__building
           label(for="building") Дом
@@ -78,7 +78,7 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.75 6.9375C12.75 6.52329 12.4142 6.1875 12 6.1875C11.5858 6.1875 11.25 6.52329 11.25 6.9375V11.25H6.9375C6.52329 11.25 6.1875 11.5858 6.1875 12C6.1875 12.4142 6.52329 12.75 6.9375 12.75H11.25V17.0625C11.25 17.4767 11.5858 17.8125 12 17.8125C12.4142 17.8125 12.75 17.4767 12.75 17.0625V12.75H17.0625C17.4767 12.75 17.8125 12.4142 17.8125 12C17.8125 11.5858 17.4767 11.25 17.0625 11.25H12.75V6.9375Z" />
               </svg>        
 
-  .company-contacts__item
+  .company-contacts__item.company-contacts__picker
 
     h3.company-contacts__sub-title Время работы
 
@@ -100,7 +100,7 @@
 
           .company-contacts__field
 
-            button.company-contacts__dropdown-button( id="dropdown-hour" type='button')
+            button.company-contacts__dropdown-button( id="dropdown-item" type='button' onclick="this.classList.toggle('dropdown-opened')")
               p.company-contacts__dropdown-txt 00:00
 
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -108,37 +108,37 @@
               </svg>
               
               .company-contacts__dropdown-menu(id="menu-hour")
-                span.company-contacts__dropdown-hour(data-hour="00:00") 00:00
-                span.company-contacts__dropdown-hour(data-hour="01:00") 01:00
-                span.company-contacts__dropdown-hour(data-hour="02:00") 02:00
-                span.company-contacts__dropdown-hour(data-hour="03:00") 03:00
-                span.company-contacts__dropdown-hour(data-hour="04:00") 04:00
-                span.company-contacts__dropdown-hour(data-hour="05:00") 05:00
-                span.company-contacts__dropdown-hour(data-hour="06:00") 06:00
-                span.company-contacts__dropdown-hour(data-hour="07:00") 07:00
-                span.company-contacts__dropdown-hour(data-hour="08:00") 08:00
-                span.company-contacts__dropdown-hour(data-hour="09:00") 09:00
-                span.company-contacts__dropdown-hour(data-hour="10:00") 10:00
-                span.company-contacts__dropdown-hour(data-hour="11:00") 11:00
-                span.company-contacts__dropdown-hour(data-hour="12:00") 12:00
-                span.company-contacts__dropdown-hour(data-hour="13:00") 13:00
-                span.company-contacts__dropdown-hour(data-hour="14:00") 14:00
-                span.company-contacts__dropdown-hour(data-hour="15:00") 15:00
-                span.company-contacts__dropdown-hour(data-hour="16:00") 16:00
-                span.company-contacts__dropdown-hour(data-hour="17:00") 17:00
-                span.company-contacts__dropdown-hour(data-hour="18:00") 18:00
-                span.company-contacts__dropdown-hour(data-hour="19:00") 19:00
-                span.company-contacts__dropdown-hour(data-hour="20:00") 20:00
-                span.company-contacts__dropdown-hour(data-hour="21:00") 21:00
-                span.company-contacts__dropdown-hour(data-hour="22:00") 22:00
-                span.company-contacts__dropdown-hour(data-hour="23:00") 23:00
-                span.company-contacts__dropdown-hour(data-hour="24:00") 24:00
+                span.company-contacts__dropdown-item(data-hour="00:00") 00:00
+                span.company-contacts__dropdown-item(data-hour="01:00") 01:00
+                span.company-contacts__dropdown-item(data-hour="02:00") 02:00
+                span.company-contacts__dropdown-item(data-hour="03:00") 03:00
+                span.company-contacts__dropdown-item(data-hour="04:00") 04:00
+                span.company-contacts__dropdown-item(data-hour="05:00") 05:00
+                span.company-contacts__dropdown-item(data-hour="06:00") 06:00
+                span.company-contacts__dropdown-item(data-hour="07:00") 07:00
+                span.company-contacts__dropdown-item(data-hour="08:00") 08:00
+                span.company-contacts__dropdown-item(data-hour="09:00") 09:00
+                span.company-contacts__dropdown-item(data-hour="10:00") 10:00
+                span.company-contacts__dropdown-item(data-hour="11:00") 11:00
+                span.company-contacts__dropdown-item(data-hour="12:00") 12:00
+                span.company-contacts__dropdown-item(data-hour="13:00") 13:00
+                span.company-contacts__dropdown-item(data-hour="14:00") 14:00
+                span.company-contacts__dropdown-item(data-hour="15:00") 15:00
+                span.company-contacts__dropdown-item(data-hour="16:00") 16:00
+                span.company-contacts__dropdown-item(data-hour="17:00") 17:00
+                span.company-contacts__dropdown-item(data-hour="18:00") 18:00
+                span.company-contacts__dropdown-item(data-hour="19:00") 19:00
+                span.company-contacts__dropdown-item(data-hour="20:00") 20:00
+                span.company-contacts__dropdown-item(data-hour="21:00") 21:00
+                span.company-contacts__dropdown-item(data-hour="22:00") 22:00
+                span.company-contacts__dropdown-item(data-hour="23:00") 23:00
+                span.company-contacts__dropdown-item(data-hour="24:00") 24:00
           
           span.company-contacts__line 
 
           .company-contacts__field
 
-            button.company-contacts__dropdown-button( id="dropdown-hour" type='button')
+            button.company-contacts__dropdown-button( id="dropdown-item" type='button' onclick="this.classList.toggle('dropdown-opened')")
               p.company-contacts__dropdown-txt 00:00
 
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -146,31 +146,31 @@
               </svg>
             
               .company-contacts__dropdown-menu(id="menu-hour")
-                span.company-contacts__dropdown-hour(data-hour="00:00") 00:00
-                span.company-contacts__dropdown-hour(data-hour="01:00") 01:00
-                span.company-contacts__dropdown-hour(data-hour="02:00") 02:00
-                span.company-contacts__dropdown-hour(data-hour="03:00") 03:00
-                span.company-contacts__dropdown-hour(data-hour="04:00") 04:00
-                span.company-contacts__dropdown-hour(data-hour="05:00") 05:00
-                span.company-contacts__dropdown-hour(data-hour="06:00") 06:00
-                span.company-contacts__dropdown-hour(data-hour="07:00") 07:00
-                span.company-contacts__dropdown-hour(data-hour="08:00") 08:00
-                span.company-contacts__dropdown-hour(data-hour="09:00") 09:00
-                span.company-contacts__dropdown-hour(data-hour="10:00") 10:00
-                span.company-contacts__dropdown-hour(data-hour="11:00") 11:00
-                span.company-contacts__dropdown-hour(data-hour="12:00") 12:00
-                span.company-contacts__dropdown-hour(data-hour="13:00") 13:00
-                span.company-contacts__dropdown-hour(data-hour="14:00") 14:00
-                span.company-contacts__dropdown-hour(data-hour="15:00") 15:00
-                span.company-contacts__dropdown-hour(data-hour="16:00") 16:00
-                span.company-contacts__dropdown-hour(data-hour="17:00") 17:00
-                span.company-contacts__dropdown-hour(data-hour="18:00") 18:00
-                span.company-contacts__dropdown-hour(data-hour="19:00") 19:00
-                span.company-contacts__dropdown-hour(data-hour="20:00") 20:00
-                span.company-contacts__dropdown-hour(data-hour="21:00") 21:00
-                span.company-contacts__dropdown-hour(data-hour="22:00") 22:00
-                span.company-contacts__dropdown-hour(data-hour="23:00") 23:00
-                span.company-contacts__dropdown-hour(data-hour="24:00") 24:00
+                span.company-contacts__dropdown-item(data-hour="00:00") 00:00
+                span.company-contacts__dropdown-item(data-hour="01:00") 01:00
+                span.company-contacts__dropdown-item(data-hour="02:00") 02:00
+                span.company-contacts__dropdown-item(data-hour="03:00") 03:00
+                span.company-contacts__dropdown-item(data-hour="04:00") 04:00
+                span.company-contacts__dropdown-item(data-hour="05:00") 05:00
+                span.company-contacts__dropdown-item(data-hour="06:00") 06:00
+                span.company-contacts__dropdown-item(data-hour="07:00") 07:00
+                span.company-contacts__dropdown-item(data-hour="08:00") 08:00
+                span.company-contacts__dropdown-item(data-hour="09:00") 09:00
+                span.company-contacts__dropdown-item(data-hour="10:00") 10:00
+                span.company-contacts__dropdown-item(data-hour="11:00") 11:00
+                span.company-contacts__dropdown-item(data-hour="12:00") 12:00
+                span.company-contacts__dropdown-item(data-hour="13:00") 13:00
+                span.company-contacts__dropdown-item(data-hour="14:00") 14:00
+                span.company-contacts__dropdown-item(data-hour="15:00") 15:00
+                span.company-contacts__dropdown-item(data-hour="16:00") 16:00
+                span.company-contacts__dropdown-item(data-hour="17:00") 17:00
+                span.company-contacts__dropdown-item(data-hour="18:00") 18:00
+                span.company-contacts__dropdown-item(data-hour="19:00") 19:00
+                span.company-contacts__dropdown-item(data-hour="20:00") 20:00
+                span.company-contacts__dropdown-item(data-hour="21:00") 21:00
+                span.company-contacts__dropdown-item(data-hour="22:00") 22:00
+                span.company-contacts__dropdown-item(data-hour="23:00") 23:00
+                span.company-contacts__dropdown-item(data-hour="24:00") 24:00
 
         button.company-contacts__time-add(type="button")
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
