@@ -1,0 +1,22 @@
+.company-photos
+
+  h1.company-photos__title Основное описание / Фотографии объекта
+
+  .company-photos__text 
+
+    p Загрузите фотографии, которые будут размещены на вашей персональной странице. В данном разделе загружаются фото, которые относятся к банному комплексу в целом (не важно в каком отделении они были сделаны)
+
+    p Для публикации объявления нужно хотя бы одно 3 фото, весь вото не менее 50Кб. Перетаскивая изображения, расставьте их в нужном порядке. Отредактировать фото или добавить новые можно позже 
+
+  .company-photos__uploading-group
+
+    #dropBox.company-photos__uploading    
+      p Drag &amp; Drop Images Here...
+      form.imgUploader
+        input#imgUpload(type='file' multiple='' accept='image/*' onchange='filesManager(this.files)')
+        label.button(for='imgUpload') ...or Upload From Your Computer
+      #gallery
+
+
+
+  a(href="company.html").company-photos__back Назад
