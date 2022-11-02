@@ -78,6 +78,7 @@
         "js-datepicker": "^5.18.0",
         "leaflet": "^1.9.2",
         "nouislider": "^15.6.1",
+        "sortablejs": "^1.15.0",
         "webpack": "^5.70.0",
         "webpack-stream": "^7.0.0"
     },

@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+import Sortable from "sortablejs";
+
 function uploadingPhotos() {
   let files = [],
     input = document.querySelector("#photos-upload"),
@@ -5,20 +8,30 @@ function uploadingPhotos() {
 
   input.addEventListener("change", () => {
     let file = input.files;
+
     if (file.length == 0) return;
 
     for (let i = 0; i < file.length; i++) {
       if (file[i].type.split("/")[0] != "image") continue;
       if (!files.some((e) => e.name == file[i].name)) files.push(file[i]);
     }
+
     showImages();
-    dragImage();
+    sortPhotos();
   });
 
   function showImages() {
-    container.innerHTML = files.reduce((prev, curr, index) => {
+    if (files.length > 0) {
+      container.classList.add("show-gallery");
+      container.parentElement.classList.add("show-gallery");
+    } else {
+      container.classList.remove("show-gallery");
+      container.parentElement.classList.remove("show-gallery");
+    }
+
+    container.innerHTML = files.reduce((prev, curr) => {
       return `${prev}
-      <div class="company-photos__image draggable" draggable="true" id="drag-${index}" >
+      <div class="company-photos__image"  >
 
         <svg class="company-photos__delete" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="13" cy="13" r="13" fill="white"/>
@@ -44,57 +57,9 @@ function uploadingPhotos() {
 }
 uploadingPhotos();
 
-function dragImage() {
-  const dropzoneSource = document.querySelector(".source");
-  const dropzone = document.querySelector(".target");
-  const dropzones = [...document.querySelectorAll(".dropzone")];
-  const draggables = [...document.querySelectorAll(".draggable")];
-
-  function getDragAfterElement(container, x) {
-    const draggableElements = [
-      ...container.querySelectorAll(".draggable:not(.is-dragging)"),
-    ];
-
-    return draggableElements.reduce(
-      (closest, child) => {
-        const box = child.getBoundingClientRect();
-
-        const offset = x - box.left - box.width / 2;
-        console.log(offset);
-
-        if (offset < 0 && offset > closest.offset) {
-          return {
-            offset,
-            element: child,
-          };
-        } else {
-          return closest;
-        }
-      },
-      { offset: Number.NEGATIVE_INFINITY },
-    ).element;
-  }
-
-  draggables.forEach((draggable) => {
-    draggable.addEventListener("dragstart", () => {
-      draggable.classList.add("is-dragging");
-    });
-
-    draggable.addEventListener("dragend", () => {
-      draggable.classList.remove("is-dragging");
-    });
-  });
-
-  dropzones.forEach((zone) => {
-    zone.addEventListener("dragover", (e) => {
-      e.preventDefault();
-      const afterElement = getDragAfterElement(zone, e.clientY);
-      const draggable = document.querySelector(".is-dragging");
-      if (afterElement === null) {
-        zone.appendChild(draggable);
-      } else {
-        zone.insertBefore(draggable, afterElement);
-      }
-    });
-  });
+function sortPhotos() {
+  const el = document.querySelector(".company-photos__gallery");
+  const sortable = Sortable.create(el);
 }
+
+sortPhotos();

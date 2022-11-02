@@ -14176,6 +14176,7 @@ bem-tools-create@bem-tools/bem-tools-create:
     postcss-scss: ^4.0.3
     require-dir: ^1.2.0
     sass: ^1.49.9
+    sortablejs: ^1.15.0
     stylelint: ^14.5.3
     stylelint-config-standard-scss: ^3.0.0
     stylelint-order: ^5.0.0
@@ -14699,6 +14700,13 @@ bem-tools-create@bem-tools/bem-tools-create:
   dependencies:
     is-plain-obj: ^1.0.0
   checksum: f0fd827fa9f8f866e98588d2a38c35209afbf1e9a05bb0e4ceeeb8bbf31d923c8902b0a7e0f561590ddb65e58eba6a74f74b991c85360bcc52e83a3f0d1cffd7
+  languageName: node
+  linkType: hard
+
+"sortablejs@npm:^1.15.0":
+  version: 1.15.0
+  resolution: "sortablejs@npm:1.15.0"
+  checksum: bb82223a663484640d317cad510ac987f26b7a443631040407224de1be069afcc6c39048b6d8527f10f269e33595e8128d7de2fac23517c8260470f77f932d55
   languageName: node
   linkType: hard
 
