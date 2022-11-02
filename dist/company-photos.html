@@ -120,18 +120,18 @@
       <div class="company-photos">
         <h1 class="company-photos__title">Основное описание / Фотографии объекта</h1>
         <div class="company-photos__text"> 
-          <p>Загрузите фотографии, которые будут размещены на вашей персональной странице. В данном разделе загружаются фото, которые относятся к банному комплексу в целом (не важно в каком отделении они были сделаны)</p>
+          <p class="dragme">Загрузите фотографии, которые будут размещены на вашей персональной странице. В данном разделе загружаются фото, которые относятся к банному комплексу в целом (не важно в каком отделении они были сделаны)</p>
           <p>Для публикации объявления нужно хотя бы одно 3 фото, весь вото не менее 50Кб. Перетаскивая изображения, расставьте их в нужном порядке. Отредактировать фото или добавить новые можно позже </p>
         </div>
         <div class="company-photos__uploading-group">
-          <div class="company-photos__uploading" id="dropBox">   
-            <p>Drag &amp; Drop Images Here...</p>
-            <form class="imgUploader">
-              <input id="imgUpload" type="file" multiple="" accept="image/*" onchange="filesManager(this.files)">
-              <label class="button" for="imgUpload">...or Upload From Your Computer</label>
-            </form>
-            <div id="gallery"></div>
+          <div class="company-photos__gallery dropzone"></div>
+          <div class="company-photos__uploading">
+            <label for="photos-upload"> <img src="img/COMPANY/download.svg" alt="some">
+              <h3>Загрузить фото</h3>
+            </label>
+            <input class="file" id="photos-upload" name="file" type="file" multiple>
           </div>
+          <!-- IMAGE PREVIEW CONTAINER-->
         </div><a class="company-photos__back" href="company.html">Назад</a>
       </div>
     </main>
