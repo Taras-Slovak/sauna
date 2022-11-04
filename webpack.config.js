@@ -10,6 +10,7 @@ module.exports = {
     connection: "./src/js/connection.js",
     profile: "./src/js/profile.js",
     company: "./src/js/company.js",
+    companyContacts: "./src/js/company-contacts.js",
     companyPhotos: "./src/js/company-photos.js",
   },
 

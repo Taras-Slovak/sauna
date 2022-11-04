@@ -1,0 +1,110 @@
+.company-features {
+  max-width: 975px;
+  flex-grow: 1;
+  color: #2f2f2f;
+  margin: 50px 16px 279px 300px;
+  font-family: "Montserrat";
+
+  @media only screen and (max-width: 1000px) {
+    margin: 70px 16px 50px 16px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 130%;
+  }
+
+  &__item {
+    margin-top: 40px;
+    max-width: 920px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+
+    @media only screen and (max-width: 450px) {
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+    }
+  }
+
+  &__sub-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    @media only screen and (max-width: 450px) {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 634px;
+  }
+
+  &__field-group {
+    display: flex;
+    gap: 20px;
+    @media only screen and (max-width: 800px) {
+      flex-direction: column;
+    }
+  }
+
+  &__field {
+    position: relative;
+    display: flex;
+    flex-grow: 3;
+    flex-direction: column;
+    gap: 7px;
+
+    label,
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      color: #282828;
+    }
+    input,
+    textarea {
+      width: auto;
+
+      padding-left: 16px;
+      box-sizing: border-box;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #2f2f2f;
+      border: 1px solid #2f2f2f;
+      transition: all 0.2s ease-in-out;
+
+      &:focus {
+        box-shadow: 0px 0px 5px 1px rgba(255, 136, 0, 0.25);
+        border: 1px solid #ff8a00;
+      }
+
+      &::placeholder {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #2f2f2f;
+      }
+    }
+
+    textarea {
+      height: 280px;
+      padding: 8px 16px;
+    }
+
+    input {
+      height: 35px;
+      padding: 0px 16px;
+    }
+  }
+}
