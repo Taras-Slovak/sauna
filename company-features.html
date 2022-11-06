@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
     <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
-    <link rel="stylesheet" href="styles/company.css">
+    <link rel="stylesheet" href="styles/company.min.css">
   </head>
   <body>
     <header class="header"> 
@@ -119,13 +119,223 @@
       </div>
       <div class="company-features">
         <h1 class="company-features__title">Описание / Характеристики</h1>
-        <div class="company-features__item">
-          <h3 class="company-features__sub-title">Описание объекта</h3>
+        <div class="company-features__item">   
+          <h3 class="company-features__sub-title"> 
+            <p>Описание объекта</p>
+            <button type="button" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="&lt;p&gt; С понедельника по пятницу с 9:00 до 17:00 - 3 часа отдыха: &lt;/p&gt; &lt;span&gt; 700 грн. в усадьбе, &lt;/span&gt;  &lt;span&gt; 800 грн. в срубе &lt;/span&gt;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_634_20661)">
+<path d="M10 5V6.25M10 8.75V14.375V8.75Z"  stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 18.75C14.8325 18.75 18.75 14.8325 18.75 10C18.75 5.16751 14.8325 1.25 10 1.25C5.16751 1.25 1.25 5.16751 1.25 10C1.25 14.8325 5.16751 18.75 10 18.75Z" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_634_20661">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+            </button>
+          </h3>
           <div class="company-features__content">
             <div class="company-features__field">
-              <label for="textarea-features"> </label>
               <textarea id="textarea-features" placeholder="Введите описание"></textarea>
             </div>
+          </div>
+        </div>
+        <div class="company-features__item">
+          <h3 class="company-features__sub-title"> 
+            <p>Характеристики <br> объекта</p>
+            <button type="button" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="&lt;p&gt; С понедельника по пятницу с 9:00 до 17:00 - 3 часа отдыха: &lt;/p&gt; &lt;span&gt; 700 грн. в усадьбе, &lt;/span&gt;  &lt;span&gt; 800 грн. в срубе &lt;/span&gt;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_634_20661)">
+<path d="M10 5V6.25M10 8.75V14.375V8.75Z"  stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 18.75C14.8325 18.75 18.75 14.8325 18.75 10C18.75 5.16751 14.8325 1.25 10 1.25C5.16751 1.25 1.25 5.16751 1.25 10C1.25 14.8325 5.16751 18.75 10 18.75Z" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_634_20661">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+            </button>
+          </h3>
+          <div class="company-features__content">
+            <div class="company-features__field-group">
+              <div class="company-features__field company-features__object">
+                <label for="halls">Залов (кол-во)</label>
+                <input id="halls" name="halls" type="text" placeholder="Название">
+              </div>
+              <div class="company-features__field company-features__object">
+                <label for="capacity">Вместимость (чел)</label>
+                <input id="capacity" name="capacity" type="text" placeholder="Название">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="company-features__item">
+          <h3 class="company-features__sub-title"> 
+            <p>Тип парной</p>
+            <button type="button" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="&lt;p&gt; С понедельника по пятницу с 9:00 до 17:00 - 3 часа отдыха: &lt;/p&gt; &lt;span&gt; 700 грн. в усадьбе, &lt;/span&gt;  &lt;span&gt; 800 грн. в срубе &lt;/span&gt;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_634_20661)">
+<path d="M10 5V6.25M10 8.75V14.375V8.75Z"  stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 18.75C14.8325 18.75 18.75 14.8325 18.75 10C18.75 5.16751 14.8325 1.25 10 1.25C5.16751 1.25 1.25 5.16751 1.25 10C1.25 14.8325 5.16751 18.75 10 18.75Z" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_634_20661">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+            </button>
+          </h3>
+          <div class="company-features__content">
+            <div class="company-features__checkbox-wrapper">
+              <div class="company-features__checkbox-group">
+                <div class="company-features__checkbox-item"> 
+                  <input type="checkbox" id="japanese" name="japanese">
+                  <label for="japanese">Японская баня</label>
+                </div>
+                <div class="company-features__checkbox-item">      
+                  <input type="checkbox" id="finnish" value="finnish" name="finnish">
+                  <label for="finnish">Финская баня</label>
+                </div>
+                <div class="company-features__checkbox-item">       
+                  <input type="checkbox" id="turkish" name="turkish">
+                  <label for="turkish">Турецкая баня </label>
+                </div>
+              </div>
+              <div class="company-features__checkbox-group">
+                <div class="company-features__checkbox-item"> 
+                  <input type="checkbox" id="firewood" name="firewood">
+                  <label for="firewood">На дровах</label>
+                </div>
+                <div class="company-features__checkbox-item"> 
+                  <input type="checkbox" id="irish" name="irish">
+                  <label for="irish">Ирландская баня</label>
+                </div>
+                <div class="company-features__checkbox-item">      
+                  <input type="checkbox" id="roman" name="roman">
+                  <label for="roman">Римская парная</label>
+                </div>
+              </div>
+              <div class="company-features__checkbox-group">
+                <div class="company-features__checkbox-item"> 
+                  <input type="checkbox" id="sport" name="sport">
+                  <label for="sport">Сауна-спорт</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="company-features__item">
+          <h3 class="company-features__sub-title"> 
+            <p>Описание услуг</p>
+            <button type="button" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="&lt;p&gt; С понедельника по пятницу с 9:00 до 17:00 - 3 часа отдыха: &lt;/p&gt; &lt;span&gt; 700 грн. в усадьбе, &lt;/span&gt;  &lt;span&gt; 800 грн. в срубе &lt;/span&gt;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_634_20661)">
+<path d="M10 5V6.25M10 8.75V14.375V8.75Z"  stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 18.75C14.8325 18.75 18.75 14.8325 18.75 10C18.75 5.16751 14.8325 1.25 10 1.25C5.16751 1.25 1.25 5.16751 1.25 10C1.25 14.8325 5.16751 18.75 10 18.75Z" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_634_20661">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+            </button>
+          </h3>
+          <div class="company-features__content">
+            <div class="company-features__toggle">
+              <div class="company-features__switch">
+                <label class="switch">
+                  <input type="checkbox" checked><span class="slider round"></span>
+                </label>
+                <p>Кухня</p>
+              </div>
+              <div class="company-features__textarea">   
+                <textarea id="kitchen" placeholder="Введите описание"></textarea>
+              </div>
+            </div>
+            <div class="company-features__toggle">
+              <div class="company-features__switch">
+                <label class="switch">
+                  <input type="checkbox" checked><span class="slider round"></span>
+                </label>
+                <p>Банные услуги</p>
+              </div>
+              <div class="company-features__textarea">   
+                <textarea id="kitchen" placeholder="Введите описание"></textarea>
+              </div>
+            </div>
+            <div class="company-features__toggle">
+              <div class="company-features__switch">
+                <label class="switch">
+                  <input type="checkbox" checked><span class="slider round">    </span>
+                </label>
+                <p>Аква зона</p>
+              </div>
+              <div class="company-features__textarea">   
+                <textarea id="kitchen" placeholder="Введите описание"></textarea>
+              </div>
+            </div>
+            <div class="company-features__checkbox-wrapper company-features__checkbox-bottom">
+              <div class="company-features__checkbox-group">
+                <div class="company-features__checkbox-item"> 
+                  <input type="checkbox" id="pool" name="pool">
+                  <label for="pool">Бассейн</label>
+                </div>
+                <div class="company-features__checkbox-item">      
+                  <input type="checkbox" id="children" value="children" name="children">
+                  <label for="children">Детский бассейн</label>
+                </div>
+                <div class="company-features__checkbox-item">       
+                  <input type="checkbox" id="jacuzzi" name="jacuzzi">
+                  <label for="jacuzzi">Джакузи</label>
+                </div>
+                <div class="company-features__checkbox-item">       
+                  <input type="checkbox" id="heated" name="heated">
+                  <label for="heated">Бассейн с подогревом</label>
+                </div>
+              </div>
+              <div class="company-features__checkbox-group">
+                <div class="company-features__checkbox-item"> 
+                  <input type="checkbox" id="baptistery" name="baptistery">
+                  <label for="baptistery">Купель</label>
+                </div>
+                <div class="company-features__checkbox-item"> 
+                  <input type="checkbox" id="bucket" name="bucket">
+                  <label for="bucket">Обливное ведро</label>
+                </div>
+                <div class="company-features__checkbox-item">      
+                  <input type="checkbox" id="shower" name="shower">
+                  <label for="shower">Душ</label>
+                </div>
+                <div class="company-features__checkbox-item">       
+                  <input type="checkbox" id="barrel" name="barrel">
+                  <label for="barrel">Кедровая бочка</label>
+                </div>
+              </div>
+            </div>
+            <div class="company-features__toggle">
+              <div class="company-features__switch">
+                <label class="switch">
+                  <input type="checkbox" checked><span class="slider round">    </span>
+                </label>
+                <p>Удобства</p>
+              </div>
+              <div class="company-features__textarea">   
+                <textarea id="comfort" placeholder="Введите описание"></textarea>
+              </div>
+            </div>
+            <div class="company-features__toggle">
+              <div class="company-features__switch">
+                <label class="switch">
+                  <input type="checkbox" checked><span class="slider round">    </span>
+                </label>
+                <p>Развлечения</p>
+              </div>
+              <div class="company-features__textarea">
+                <textarea id="entertainment" placeholder="Введите описание"></textarea>
+              </div>
+            </div>
+            <div class="company-features__bottom"><a href="company-description.html">Назад</a><a href="#">Сохранить</a></div>
           </div>
         </div>
       </div>
@@ -146,7 +356,7 @@
         <button class="footer__btn">Добавить баню</button>
       </div>
     </footer>
-    <script src="js/vendor.js"></script>
-    <script src="js/company.js"></script>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/companyFeatures.min.js"></script>
   </body>
 </html>
