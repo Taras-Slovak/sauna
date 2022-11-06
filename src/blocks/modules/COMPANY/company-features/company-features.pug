@@ -1,17 +1,207 @@
 .company-features
-
   h1.company-features__title Описание / Характеристики
+  .company-features__item    
+    h3.company-features__sub-title 
+      p Описание объекта
+      button(type='button' data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="<p> С понедельника по пятницу с 9:00 до 17:00 - 3 часа отдыха: </p> <span> 700 грн. в усадьбе, </span>  <span> 800 грн. в срубе </span>" )
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_634_20661)">
+          <path d="M10 5V6.25M10 8.75V14.375V8.75Z"  stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10 18.75C14.8325 18.75 18.75 14.8325 18.75 10C18.75 5.16751 14.8325 1.25 10 1.25C5.16751 1.25 1.25 5.16751 1.25 10C1.25 14.8325 5.16751 18.75 10 18.75Z" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_634_20661">
+          <rect width="20" height="20" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>
+
+    .company-features__content
+      .company-features__field
+        textarea(id="textarea-features" placeholder="Введите описание")
+
+  .company-features__item
+    h3.company-features__sub-title 
+      p Характеристики <br> объекта
+      button(type='button' data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="<p> С понедельника по пятницу с 9:00 до 17:00 - 3 часа отдыха: </p> <span> 700 грн. в усадьбе, </span>  <span> 800 грн. в срубе </span>" )
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_634_20661)">
+          <path d="M10 5V6.25M10 8.75V14.375V8.75Z"  stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10 18.75C14.8325 18.75 18.75 14.8325 18.75 10C18.75 5.16751 14.8325 1.25 10 1.25C5.16751 1.25 1.25 5.16751 1.25 10C1.25 14.8325 5.16751 18.75 10 18.75Z" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_634_20661">
+          <rect width="20" height="20" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>
+
+    .company-features__content
+    
+      .company-features__field-group
+
+        .company-features__field.company-features__object
+          label(for="halls") Залов (кол-во)
+          input(id="halls" name="halls" type="text" placeholder="Название")
+
+        .company-features__field.company-features__object
+          label(for="capacity") Вместимость (чел)
+          input(id="capacity" name="capacity" type="text" placeholder="Название")
 
 
   .company-features__item
+    h3.company-features__sub-title 
 
-    
-    h3.company-features__sub-title Описание объекта
+      p Тип парной
+
+      button(type='button' data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="<p> С понедельника по пятницу с 9:00 до 17:00 - 3 часа отдыха: </p> <span> 700 грн. в усадьбе, </span>  <span> 800 грн. в срубе </span>" )
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_634_20661)">
+          <path d="M10 5V6.25M10 8.75V14.375V8.75Z"  stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10 18.75C14.8325 18.75 18.75 14.8325 18.75 10C18.75 5.16751 14.8325 1.25 10 1.25C5.16751 1.25 1.25 5.16751 1.25 10C1.25 14.8325 5.16751 18.75 10 18.75Z" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_634_20661">
+          <rect width="20" height="20" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>
 
     .company-features__content
 
-      .company-features__field
+      .company-features__checkbox-wrapper
+        .company-features__checkbox-group
+          .company-features__checkbox-item 
+            input(type="checkbox", id="japanese"  name="japanese")
+            label(for="japanese") Японская баня
 
-        label(for="textarea-features") 
+          .company-features__checkbox-item       
+            input(type="checkbox", id="finnish" value="finnish"  name="finnish")
+            label(for="finnish") Финская баня
 
-        textarea(id="textarea-features" placeholder="Введите описание")
+          .company-features__checkbox-item        
+            input(type="checkbox", id="turkish"  name="turkish")
+            label(for="turkish") Турецкая баня 
+
+        .company-features__checkbox-group
+          .company-features__checkbox-item 
+            input(type="checkbox", id="firewood" name="firewood")
+            label(for="firewood") На дровах
+
+          .company-features__checkbox-item 
+            input(type="checkbox", id="irish"  name="irish")
+            label(for="irish") Ирландская баня
+
+          .company-features__checkbox-item       
+            input(type="checkbox", id="roman" name="roman")
+            label(for="roman") Римская парная
+
+        .company-features__checkbox-group
+          .company-features__checkbox-item 
+            input(type="checkbox", id="sport"  name="sport")
+            label(for="sport") Сауна-спорт
+
+
+  .company-features__item
+    h3.company-features__sub-title  
+      p Описание услуг
+      button(type='button' data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="<p> С понедельника по пятницу с 9:00 до 17:00 - 3 часа отдыха: </p> <span> 700 грн. в усадьбе, </span>  <span> 800 грн. в срубе </span>" )
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_634_20661)">
+          <path d="M10 5V6.25M10 8.75V14.375V8.75Z"  stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10 18.75C14.8325 18.75 18.75 14.8325 18.75 10C18.75 5.16751 14.8325 1.25 10 1.25C5.16751 1.25 1.25 5.16751 1.25 10C1.25 14.8325 5.16751 18.75 10 18.75Z" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_634_20661">
+          <rect width="20" height="20" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>
+
+    .company-features__content
+
+      .company-features__toggle
+        .company-features__switch
+          label.switch
+            input(type='checkbox' checked)
+            span.slider.round
+          p Кухня
+        .company-features__textarea    
+          textarea(id="kitchen" placeholder="Введите описание")
+
+      .company-features__toggle
+        .company-features__switch
+          label.switch
+            input(type='checkbox' checked)
+            span.slider.round
+          p Банные услуги
+        .company-features__textarea    
+          textarea(id="kitchen" placeholder="Введите описание")
+
+      .company-features__toggle
+        .company-features__switch
+          label.switch
+            input(type='checkbox' checked)
+            span.slider.round     
+          p Аква зона
+        .company-features__textarea    
+          textarea(id="kitchen" placeholder="Введите описание")
+
+      .company-features__checkbox-wrapper.company-features__checkbox-bottom
+        .company-features__checkbox-group
+          .company-features__checkbox-item 
+            input(type="checkbox", id="pool"  name="pool")
+            label(for="pool") Бассейн
+
+          .company-features__checkbox-item       
+            input(type="checkbox", id="children" value="children"  name="children")
+            label(for="children") Детский бассейн
+
+          .company-features__checkbox-item        
+            input(type="checkbox", id="jacuzzi"  name="jacuzzi")
+            label(for="jacuzzi") Джакузи
+
+          .company-features__checkbox-item        
+            input(type="checkbox", id="heated"  name="heated")
+            label(for="heated") Бассейн с подогревом
+
+        .company-features__checkbox-group
+          .company-features__checkbox-item 
+            input(type="checkbox", id="baptistery" name="baptistery")
+            label(for="baptistery") Купель
+
+          .company-features__checkbox-item 
+            input(type="checkbox", id="bucket"  name="bucket")
+            label(for="bucket") Обливное ведро
+
+          .company-features__checkbox-item       
+            input(type="checkbox", id="shower" name="shower")
+            label(for="shower") Душ
+            
+          .company-features__checkbox-item        
+            input(type="checkbox", id="barrel"  name="barrel")
+            label(for="barrel") Кедровая бочка
+      
+      .company-features__toggle
+              .company-features__switch
+                label.switch
+                  input(type='checkbox' checked)
+                  span.slider.round     
+                p Удобства
+              .company-features__textarea    
+                textarea(id="comfort" placeholder="Введите описание")
+
+      .company-features__toggle
+              .company-features__switch
+                label.switch
+                  input(type='checkbox' checked)
+                  span.slider.round     
+                p Развлечения
+              .company-features__textarea
+                textarea(id="entertainment" placeholder="Введите описание")
+
+      .company-features__bottom
+
+        a(href="company-description.html") Назад
+
+        a(href="#") Сохранить

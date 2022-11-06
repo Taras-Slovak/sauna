@@ -12,6 +12,7 @@ module.exports = {
     company: "./src/js/company.js",
     companyContacts: "./src/js/company-contacts.js",
     companyPhotos: "./src/js/company-photos.js",
+    companyFeatures: "./src/js/company-features.js",
   },
 
   output: {
