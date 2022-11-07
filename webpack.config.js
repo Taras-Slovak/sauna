@@ -13,6 +13,7 @@ module.exports = {
     companyContacts: "./src/js/company-contacts.js",
     companyPhotos: "./src/js/company-photos.js",
     companyFeatures: "./src/js/company-features.js",
+    companyDepartments: "./src/js/company-departments.js",
   },
 
   output: {
