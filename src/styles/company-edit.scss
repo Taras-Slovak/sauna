@@ -1,0 +1,21 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+
+// CSS-файлы библиотек
+@import "vendor/libs-company";
+
+// Основное
+@import "base/fonts";
+@import "base/general";
+
+@import "../blocks/components/COMPANY";
+@import "../blocks/modules/COMPANY/header/header";
+@import "../blocks/modules/COMPANY/company-edit/company-edit";
+@import "../blocks/modules/COMPANY/footer/footer";
+
+.main {
+  position: relative;
+  display: flex;
+  margin-top: 70px;
+}

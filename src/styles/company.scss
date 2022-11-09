@@ -10,7 +10,9 @@
 @import "base/general";
 
 @import "../blocks/components/COMPANY";
-@import "../blocks/modules/COMPANY";
+@import "../blocks/modules/COMPANY/header/header";
+@import "../blocks/modules/COMPANY/company-profile/company-profile";
+@import "../blocks/modules/COMPANY/footer/footer";
 
 .main {
   position: relative;
