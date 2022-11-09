@@ -1,0 +1,109 @@
+.account-edit
+
+  h1.account-edit__title Доступы / Аккаунты (редактирование)
+
+  .account-edit__inner
+
+    .account-edit__content
+        .account-edit__field
+          label(for="employee") Имя сотрудника
+          input(id="employee" name="employee" type="text" placeholder="Название")
+
+        .account-edit__field
+          label(for="telephone") Телефон
+          input(id="telephone" name="telephone" type="text" placeholder="+38 067 123-23-23")
+
+        .account-edit__field
+          a.account-edit__link(href="#") Изменить
+
+
+    .account-edit__content
+
+      .account-edit__field
+        p Филиал, отделение
+          button.account-edit__popover(type='button' data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="<p> С понедельника по пятницу с 9:00 до 17:00 - 3 часа отдыха: </p> <span> 700 грн. в усадьбе, </span>  <span> 800 грн. в срубе </span>" )
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_634_20661)">
+              <path d="M10 5V6.25M10 8.75V14.375V8.75Z"  stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 18.75C14.8325 18.75 18.75 14.8325 18.75 10C18.75 5.16751 14.8325 1.25 10 1.25C5.16751 1.25 1.25 5.16751 1.25 10C1.25 14.8325 5.16751 18.75 10 18.75Z" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_634_20661">
+              <rect width="20" height="20" fill="white"/>
+              </clipPath>
+              </defs>
+            </svg>
+        button.account-edit__dropdown-button( id="dropdown-item" type='button' onclick="this.classList.toggle('dropdown-opened')")
+          p.account-edit__dropdown-txt Баня Емеля (сруб Дубовый)
+
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.175 7.1582L10 10.9749L13.825 7.1582L15 8.3332L10 13.3332L5 8.3332L6.175 7.1582Z" fill="#2F2F2F"/>
+          </svg>
+          
+          .account-edit__dropdown-menu(id="menu-sauna")
+            span.account-edit__dropdown-item(data-city="some-city") Баня Емеля (сруб Дубовый)-1
+            span.account-edit__dropdown-item(data-city="some-city") Баня Емеля (сруб Дубовый)-2
+            span.account-edit__dropdown-item(data-city="some-city") Баня Емеля (сруб Дубовый)-3
+            span.account-edit__dropdown-item(data-city="some-city") Баня Емеля (сруб Дубовый)-4
+            span.account-edit__dropdown-item(data-city="some-city") Баня Емеля (сруб Дубовый)-5
+
+            span.account-edit__dropdown-item(data-city="some-city") Баня Емеля (сруб Дубовый)-6
+
+            span.account-edit__dropdown-item(data-city="some-city") Баня Емеля (сруб Дубовый)-7
+
+            span.account-edit__dropdown-item(data-city="some-city") Баня Емеля (сруб Дубовый)-8
+
+            span.account-edit__dropdown-item(data-city="some-city") Баня Емеля (сруб Дубовый)-9
+
+            span.account-edit__dropdown-item(data-city="some-city") Баня Емеля (сруб Дубовый)-10
+
+      .account-edit__field
+        label(for="mail") Электронная почта
+        input(id="mail" name="mail" type="text" placeholder="example@example.com")
+
+      .account-edit__field
+          a.account-edit__link(href="#") Изменить
+
+    .account-edit__content
+
+      .account-edit__field
+        p Роль сотрудника
+          button.account-edit__popover(type='button' data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="<p> С понедельника по пятницу с 9:00 до 17:00 - 3 часа отдыха: </p> <span> 700 грн. в усадьбе, </span>  <span> 800 грн. в срубе </span>" )
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_634_20661)">
+              <path d="M10 5V6.25M10 8.75V14.375V8.75Z"  stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 18.75C14.8325 18.75 18.75 14.8325 18.75 10C18.75 5.16751 14.8325 1.25 10 1.25C5.16751 1.25 1.25 5.16751 1.25 10C1.25 14.8325 5.16751 18.75 10 18.75Z" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_634_20661">
+              <rect width="20" height="20" fill="white"/>
+              </clipPath>
+              </defs>
+            </svg>
+        button.account-edit__dropdown-button( id="dropdown-item" type='button' onclick="this.classList.toggle('dropdown-opened')")
+          p.account-edit__dropdown-txt Администратор
+
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.175 7.1582L10 10.9749L13.825 7.1582L15 8.3332L10 13.3332L5 8.3332L6.175 7.1582Z" fill="#2F2F2F"/>
+          </svg>
+          
+          .account-edit__dropdown-menu(id="menu-admin")
+            span.account-edit__dropdown-item(data-city="some-city") Администратор-1
+            span.account-edit__dropdown-item(data-city="some-city") Администратор-2
+            span.account-edit__dropdown-item(data-city="some-city") Администратор-3
+            span.account-edit__dropdown-item(data-city="some-city") Администратор-4
+            span.account-edit__dropdown-item(data-city="some-city") Администратор-5
+
+            span.account-edit__dropdown-item(data-city="some-city") Администратор-6
+      
+      .account-edit__field
+        p.account-edit__password Пароль для входа
+
+      .account-edit__field
+        a.account-edit__link(href="#") Изменить
+
+  .account-edit__bottom
+
+    a(href="company-account.html") Назад
+
+    a(href="#") Сохранить
