@@ -7416,7 +7416,7 @@ body {
   outline: 0;
 }
 
-.account {
+.stock {
   max-width: 1300px;
   flex-grow: 1;
   color: #2f2f2f;
@@ -7424,20 +7424,20 @@ body {
   font-family: "Montserrat";
 }
 
-.account__top {
+.stock__top {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.account__title {
+.stock__title {
   font-weight: 700;
   font-size: 22px;
   line-height: 130%;
   color: #2f2f2f;
 }
 
-.account__add {
+.stock__add {
   width: 227px;
   height: 36px;
   display: flex;
@@ -7449,48 +7449,52 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.account__add:hover {
+.stock__add:hover {
   color: rgb(255, 255, 255);
   background: #4f4f4f;
   box-shadow: 0px 0px 4px 0px rgba(79, 79, 79, 0.4666666667);
 }
 
-.account__add:active {
+.stock__add:active {
   transform: scale(0.98);
 }
 
-.account__item-group {
+.stock__item-group {
   margin-top: 40px;
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
-.account__item {
+.stock__item {
   width: 100%;
 }
 
-.account__item-top {
+.stock__item-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 }
 
-.account__item-left {
+.stock__item-left {
+  max-width: 560px;
+  flex-grow: 1;
   display: flex;
   align-items: center;
-  gap: 30px;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.account__item-title {
+.stock__item-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 130%;
   color: #2f2f2f;
 }
 
-.account__item-btn {
-  width: 122px;
+.stock__item-btn {
+  width: 88px;
   height: 28px;
   display: flex;
   align-items: center;
@@ -7506,43 +7510,51 @@ body {
   transition: all 0.1s ease-in-out;
 }
 
-.account__item-btn.account-enabled {
+.stock__item-btn:hover {
+  transform: scale(1.05);
+}
+
+.stock__item-btn:active {
+  transform: scale(1);
+}
+
+.stock__item-btn.stock-enabled {
   border-color: #707070;
   background: #707070;
   color: #ffffff;
 }
 
-.account__item-right {
+.stock__item-right {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.account__item-right svg {
+.stock__item-right svg {
   fill: black;
   transition: all 0.2s ease-in-out;
 }
 
-.account__item-right svg circle {
+.stock__item-right svg circle {
   transition: all 0.2s ease-in-out;
   stroke: black;
 }
 
-.account__item-right a:hover svg {
+.stock__item-right a:hover svg {
   fill: #ff8a00;
 }
 
-.account__item-right a:hover svg circle {
+.stock__item-right a:hover svg circle {
   stroke: #ff8a00;
 }
 
-.account__item-body {
+.stock__item-body {
   margin-top: 25px;
   display: flex;
   gap: 125px;
 }
 
-.account__item-content {
+.stock__item-content {
   max-width: 350px;
   flex-grow: 1;
   display: flex;
@@ -7550,21 +7562,21 @@ body {
   gap: 10px;
 }
 
-.account__item-content span {
+.stock__item-content span {
   font-weight: 400;
   font-size: 14px;
   line-height: 120%;
   color: #707070;
 }
 
-.account__item-content p {
-  font-weight: 500;
+.stock__item-content p {
+  font-weight: 400;
   font-size: 16px;
-  line-height: 120%;
+  line-height: 130%;
   color: #2f2f2f;
 }
 
-.account__line {
+.stock__line {
   margin-top: 15px;
   display: block;
   width: 100%;
@@ -12822,7 +12834,7 @@ body {
 }
 
 @media only screen and (max-width: 1400px) {
-  .account__item-body {
+  .stock__item-body {
     gap: 25px;
   }
 }
@@ -13020,7 +13032,7 @@ body {
 }
 
 @media only screen and (max-width: 1100px) {
-  .account__item-content {
+  .stock__item-content {
     max-width: 250px;
   }
 }
@@ -13087,7 +13099,7 @@ body {
     display: block;
   }
 
-  .account {
+  .stock {
     margin: 70px 16px 50px 16px;
   }
 }
@@ -13195,12 +13207,12 @@ body {
 }
 
 @media only screen and (max-width: 800px) {
-  .account__item-body {
+  .stock__item-body {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .account__item-content {
+  .stock__item-content {
     max-width: 100%;
   }
 }
@@ -13423,12 +13435,12 @@ body {
 }
 
 @media only screen and (max-width: 550px) {
-  .account__top {
+  .stock__top {
     flex-direction: column;
     gap: 30px;
   }
 
-  .account__item-left {
+  .stock__item-left {
     flex-direction: column;
     gap: 10px;
   }
@@ -13610,4 +13622,4 @@ body {
     display: none !important;
   }
 }
-/*# sourceMappingURL=maps/company-account.css.map */
+/*# sourceMappingURL=maps/company-stock.css.map */
