@@ -1,29 +1,27 @@
 /* eslint-disable no-useless-escape */
 /* eslint-disable no-unused-vars */
 /* eslint-disable quotes */
-import { Popover } from "bootstrap";
-import Sortable from "sortablejs";
+import { Popover } from 'bootstrap';
+import Sortable from 'sortablejs';
 
 function initPopover() {
-  const popoverTriggerList = document.querySelectorAll(
-    '[data-bs-toggle="popover"]',
-  );
+  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
   const popoverList = [...popoverTriggerList].map(
     (popoverTriggerEl) =>
       new Popover(popoverTriggerEl, {
-        html: true,
-      }),
+        html: true
+      })
   );
 }
 initPopover();
 
 function addOrRemove() {
-  const getMainField = document.querySelector(".company-edit__telephone-group");
-  const getAddButtons = document.querySelector(".company-edit__telephone-add");
+  const getMainField = document.querySelector('.company-edit__telephone-group');
+  const getAddButtons = document.querySelector('.company-edit__telephone-add');
 
   function addNewElement() {
-    let newTelephone = document.createElement("div");
-    newTelephone.classList.add("company-edit__telephone");
+    let newTelephone = document.createElement('div');
+    newTelephone.classList.add('company-edit__telephone');
     newTelephone.innerHTML = `
     <div class="company-edit__field">
       <label for="telephone">Телефон</label>
@@ -40,15 +38,14 @@ function addOrRemove() {
     getMainField.appendChild(newTelephone);
   }
 
-  getAddButtons.addEventListener("click", () => {
+  getAddButtons.addEventListener('click', () => {
     addNewElement();
 
     [...getMainField.children].forEach((element) => {
       let btn = element.firstElementChild.nextElementSibling;
 
-      btn.addEventListener("click", () => {
-        if (btn.classList.contains("company-edit__telephone-delete"))
-          element.remove();
+      btn.addEventListener('click', () => {
+        if (btn.classList.contains('company-edit__telephone-delete')) element.remove();
       });
     });
   });
@@ -56,18 +53,16 @@ function addOrRemove() {
 addOrRemove();
 
 function removeAddTime() {
-  const getAddBtn = document.querySelector(".company-edit__time-add");
-  getAddBtn.addEventListener("click", () => {
+  const getAddBtn = document.querySelector('.company-edit__time-add');
+  getAddBtn.addEventListener('click', () => {
     createNewDate();
-    const getAllDelete = document.querySelectorAll(".company-edit__date");
+    const getAllDelete = document.querySelectorAll('.company-edit__date');
     getText();
     getAllDelete.forEach((item) => {
-      let getDeleteBtn =
-        item.firstElementChild.nextElementSibling.nextElementSibling;
+      let getDeleteBtn = item.firstElementChild.nextElementSibling.nextElementSibling;
 
-      getDeleteBtn.addEventListener("click", () => {
-        if (getDeleteBtn.classList.contains("company-edit__time-delete"))
-          item.remove();
+      getDeleteBtn.addEventListener('click', () => {
+        if (getDeleteBtn.classList.contains('company-edit__time-delete')) item.remove();
         getText();
       });
     });
@@ -75,11 +70,11 @@ function removeAddTime() {
 }
 
 function createNewDate() {
-  const getDatePicker = document.querySelector(".company-edit__date-picker");
+  const getDatePicker = document.querySelector('.company-edit__date-picker');
 
-  let newDate = document.createElement("div");
+  let newDate = document.createElement('div');
 
-  newDate.classList.add("company-edit__date");
+  newDate.classList.add('company-edit__date');
 
   newDate.innerHTML = `
 
@@ -358,15 +353,12 @@ function createNewDate() {
 removeAddTime();
 
 function getText() {
-  const getAllText = document.querySelectorAll(".company-edit__dropdown-item");
+  const getAllText = document.querySelectorAll('.company-edit__dropdown-item');
 
   getAllText.forEach((element) => {
-    element.addEventListener("click", () => {
-      element.parentElement.parentElement.firstElementChild.innerText =
-        element.innerText;
-      console.log(
-        element.parentElement.parentElement.firstElementChild.innerText,
-      );
+    element.addEventListener('click', () => {
+      element.parentElement.parentElement.firstElementChild.innerText = element.innerText;
+      console.log(element.parentElement.parentElement.firstElementChild.innerText);
     });
   });
 }
@@ -374,16 +366,16 @@ getText();
 
 function uploadingPhotos() {
   let files = [],
-    input = document.querySelector("#photos-upload"),
-    container = document.querySelector(".company-edit__gallery");
+    input = document.querySelector('#photos-upload'),
+    container = document.querySelector('.company-edit__gallery');
 
-  input.addEventListener("change", () => {
+  input.addEventListener('change', () => {
     let file = input.files;
 
     if (file.length == 0) return;
 
     for (let i = 0; i < file.length; i++) {
-      if (file[i].type.split("/")[0] != "image") continue;
+      if (file[i].type.split('/')[0] != 'image') continue;
       if (!files.some((e) => e.name == file[i].name)) files.push(file[i]);
     }
 
@@ -393,11 +385,11 @@ function uploadingPhotos() {
 
   function showImages() {
     if (files.length > 0) {
-      container.classList.add("show-gallery");
-      container.parentElement.classList.add("show-gallery");
+      container.classList.add('show-gallery');
+      container.parentElement.classList.add('show-gallery');
     } else {
-      container.classList.remove("show-gallery");
-      container.parentElement.classList.remove("show-gallery");
+      container.classList.remove('show-gallery');
+      container.parentElement.classList.remove('show-gallery');
     }
 
     container.innerHTML = files.reduce((prev, curr) => {
@@ -410,10 +402,10 @@ function uploadingPhotos() {
         </svg>        
         <img src="${URL.createObjectURL(curr)}" />
       </div>`;
-    }, "");
+    }, '');
 
-    document.querySelectorAll(".company-edit__delete").forEach((element, i) => {
-      element.addEventListener("click", () => {
+    document.querySelectorAll('.company-edit__delete').forEach((element, i) => {
+      element.addEventListener('click', () => {
         delImage(i);
       });
     });
@@ -427,7 +419,7 @@ function uploadingPhotos() {
 uploadingPhotos();
 
 function sortPhotos() {
-  const el = document.querySelector(".company-edit__gallery");
+  const el = document.querySelector('.company-edit__gallery');
   const sortable = Sortable.create(el);
 }
 
