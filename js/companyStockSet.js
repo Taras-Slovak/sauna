@@ -44,7 +44,9 @@ getMainSideBar.addEventListener("click", function (e) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
+/* harmony import */ var nouislider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! nouislider */ "./node_modules/nouislider/dist/nouislider.js");
+/* harmony import */ var nouislider__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(nouislider__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -60,11 +62,12 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 /* eslint-disable no-unused-vars */
 
 
+
 function initPopover() {
   var popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
 
   var popoverList = _toConsumableArray(popoverTriggerList).map(function (popoverTriggerEl) {
-    return new bootstrap__WEBPACK_IMPORTED_MODULE_0__.Popover(popoverTriggerEl, {
+    return new bootstrap__WEBPACK_IMPORTED_MODULE_1__.Popover(popoverTriggerEl, {
       html: true
     });
   });
@@ -79,7 +82,6 @@ function changeOffers() {
   function hideAllDynamicContent() {
     document.querySelectorAll('.stock-set__dynamic-content').forEach(function (element) {
       element.style.display = 'none';
-      console.log(element);
     });
   }
 
@@ -129,24 +131,122 @@ function getText() {
 
 getText();
 
-function addOrDeleteDate() {
-  var getAddBtn = document.querySelector('.stock-set__date-add');
+function createNewDate() {
+  var getDateField = document.querySelector('.stock-set__date-content');
+  var dateElement = document.createElement('div');
+  dateElement.classList.add('stock-set__field');
+  dateElement.innerHTML = "\n  <button class=\"stock-set__dropdown-button\" id=\"dropdown-item\" type=\"button\"\n  onclick=\"this.classList.toggle('dropdown-opened')\">\n    <p class=\"stock-set__dropdown-txt\">21.06.21-18.07.21 (\u043F\u043D, \u0432\u0442, \u0441\u0431,\u0432\u0441)</p>\n    <svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M6.175 7.1582L10 10.9749L13.825 7.1582L15 8.3332L10 13.3332L5 8.3332L6.175 7.1582Z\" fill=\"#2F2F2F\">\n    </path>\n    </svg>\n    <div class=\"stock-set__dropdown-menu\" id=\"menu-branches\"><span class=\"stock-set__dropdown-item\"\n      data-branches=\"some-branches\">21.06.21-18.07.21 (\u043F\u043D, \u0432\u0442, \u0441\u0431,\u0432\u0441)-1</span><span class=\"stock-set__dropdown-item\"\n      data-branches=\"some-branches\">21.06.21-18.07.21 (\u043F\u043D, \u0432\u0442, \u0441\u0431,\u0432\u0441)-2</span><span class=\"stock-set__dropdown-item\"\n      data-branches=\"some-branches\">21.06.21-18.07.21 (\u043F\u043D, \u0432\u0442, \u0441\u0431,\u0432\u0441)-3</span><span class=\"stock-set__dropdown-item\"\n      data-branches=\"some-branches\">21.06.21-18.07.21 (\u043F\u043D, \u0432\u0442, \u0441\u0431,\u0432\u0441)-4</span><span class=\"stock-set__dropdown-item\"\n      data-branches=\"some-branches\">21.06.21-18.07.21 (\u043F\u043D, \u0432\u0442, \u0441\u0431,\u0432\u0441)-5</span><span class=\"stock-set__dropdown-item\"\n      data-branches=\"some-branches\">21.06.21-18.07.21 (\u043F\u043D, \u0432\u0442, \u0441\u0431,\u0432\u0441)-6</span><span class=\"stock-set__dropdown-item\"\n      data-branches=\"some-branches\">21.06.21-18.07.21 (\u043F\u043D, \u0432\u0442, \u0441\u0431,\u0432\u0441)-7</span><span class=\"stock-set__dropdown-item\"\n      data-branches=\"some-branches\">21.06.21-18.07.21 (\u043F\u043D, \u0432\u0442, \u0441\u0431,\u0432\u0441)-8</span><span class=\"stock-set__dropdown-item\"\n      data-branches=\"some-branches\">21.06.21-18.07.21 (\u043F\u043D, \u0432\u0442, \u0441\u0431,\u0432\u0441)-9</span><span class=\"stock-set__dropdown-item\"\n      data-branches=\"some-branches\">21.06.21-18.07.21 (\u043F\u043D, \u0432\u0442, \u0441\u0431,\u0432\u0441)-10</span>\n    </div>    \n  </button>\n  <svg class=\"stock-set__remove\" viewBox=\"0 0 26 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" onclick=\"this.parentElement.remove()\">\n    <circle cx=\"13\" cy=\"13\" r=\"11.3\" stroke=\"black\" stroke-width=\"1.4\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9.9505 8.88994C9.65761 8.59705 9.18274 8.59705 8.88984 8.88994C8.59695 9.18284 8.59695 9.65771 8.88984 9.9506L11.9392 13L8.88984 16.0494C8.59695 16.3423 8.59695 16.8172 8.88984 17.1101C9.18274 17.403 9.65761 17.403 9.9505 17.1101L12.9999 14.0607L16.0493 17.1101C16.3422 17.403 16.8171 17.403 17.11 17.1101C17.4029 16.8172 17.4029 16.3423 17.11 16.0494L14.0606 13L17.11 9.9506C17.4029 9.65771 17.4029 9.18284 17.11 8.88994C16.8171 8.59705 16.3422 8.59705 16.0493 8.88994L12.9999 11.9393L9.9505 8.88994Z\" fill=\"#2F2F2F\"/>\n  </svg>  \n  ";
+  getDateField.appendChild(dateElement);
+}
 
-  function createNewDate() {
-    var getDateField = document.querySelector('.stock-set__date-content');
-    var dateElement = document.createElement('div');
-    dateElement.classList.add('stock-set__field');
-    dateElement.innerHTML = "\n    <button class=\"stock-set__dropdown-button\" id=\"dropdown-item\" type=\"button\"\n    onclick=\"this.classList.toggle('dropdown-opened')\">\n      <p class=\"stock-set__dropdown-txt\">21.06.21-18.07.21 (\u043F\u043D, \u0432\u0442, \u0441\u0431,\u0432\u0441)</p>\n      <svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path d=\"M6.175 7.1582L10 10.9749L13.825 7.1582L15 8.3332L10 13.3332L5 8.3332L6.175 7.1582Z\" fill=\"#2F2F2F\">\n      </path>\n      </svg>\n      <div class=\"stock-set__dropdown-menu\" id=\"menu-branches\"><span class=\"stock-set__dropdown-item\"\n        data-branches=\"some-branches\">21.06.21-18.07.21 (\u043F\u043D, \u0432\u0442, \u0441\u0431,\u0432\u0441)-1</span><span class=\"stock-set__dropdown-item\"\n        data-branches=\"some-branches\">21.06.21-18.07.21 (\u043F\u043D, \u0432\u0442, \u0441\u0431,\u0432\u0441)-2</span><span class=\"stock-set__dropdown-item\"\n        data-branches=\"some-branches\">21.06.21-18.07.21 (\u043F\u043D, \u0432\u0442, \u0441\u0431,\u0432\u0441)-3</span><span class=\"stock-set__dropdown-item\"\n        data-branches=\"some-branches\">21.06.21-18.07.21 (\u043F\u043D, \u0432\u0442, \u0441\u0431,\u0432\u0441)-4</span><span class=\"stock-set__dropdown-item\"\n        data-branches=\"some-branches\">21.06.21-18.07.21 (\u043F\u043D, \u0432\u0442, \u0441\u0431,\u0432\u0441)-5</span><span class=\"stock-set__dropdown-item\"\n        data-branches=\"some-branches\">21.06.21-18.07.21 (\u043F\u043D, \u0432\u0442, \u0441\u0431,\u0432\u0441)-6</span><span class=\"stock-set__dropdown-item\"\n        data-branches=\"some-branches\">21.06.21-18.07.21 (\u043F\u043D, \u0432\u0442, \u0441\u0431,\u0432\u0441)-7</span><span class=\"stock-set__dropdown-item\"\n        data-branches=\"some-branches\">21.06.21-18.07.21 (\u043F\u043D, \u0432\u0442, \u0441\u0431,\u0432\u0441)-8</span><span class=\"stock-set__dropdown-item\"\n        data-branches=\"some-branches\">21.06.21-18.07.21 (\u043F\u043D, \u0432\u0442, \u0441\u0431,\u0432\u0441)-9</span><span class=\"stock-set__dropdown-item\"\n        data-branches=\"some-branches\">21.06.21-18.07.21 (\u043F\u043D, \u0432\u0442, \u0441\u0431,\u0432\u0441)-10</span>\n      </div>    \n    </button>\n    <svg class=\"stock-set__date-remove\" viewBox=\"0 0 26 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" onclick=\"this.parentElement.remove()\">\n      <circle cx=\"13\" cy=\"13\" r=\"11.3\" stroke=\"black\" stroke-width=\"1.4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9.9505 8.88994C9.65761 8.59705 9.18274 8.59705 8.88984 8.88994C8.59695 9.18284 8.59695 9.65771 8.88984 9.9506L11.9392 13L8.88984 16.0494C8.59695 16.3423 8.59695 16.8172 8.88984 17.1101C9.18274 17.403 9.65761 17.403 9.9505 17.1101L12.9999 14.0607L16.0493 17.1101C16.3422 17.403 16.8171 17.403 17.11 17.1101C17.4029 16.8172 17.4029 16.3423 17.11 16.0494L14.0606 13L17.11 9.9506C17.4029 9.65771 17.4029 9.18284 17.11 8.88994C16.8171 8.59705 16.3422 8.59705 16.0493 8.88994L12.9999 11.9393L9.9505 8.88994Z\" fill=\"#2F2F2F\"/>\n    </svg>  \n    ";
-    getDateField.appendChild(dateElement);
+function addNewElement(className, createFun, getTextFun) {
+  var getAddBtn = document.querySelector(className);
+  var number = 0;
+
+  function someRandomId() {
+    number++;
   }
 
   getAddBtn.addEventListener('click', function () {
-    createNewDate();
-    getText();
+    createFun(number);
+    getTextFun();
+    someRandomId();
   });
 }
 
-addOrDeleteDate();
+addNewElement('.stock-set__date-add', createNewDate, getText);
+
+function rangeDuration(rangeItemId, inputMinId, inputMaxId, options) {
+  var range = document.getElementById(rangeItemId);
+  nouislider__WEBPACK_IMPORTED_MODULE_0___default().create(range, {
+    start: [10, 15],
+    step: 1,
+    range: {
+      min: 8,
+      max: 15
+    },
+    connect: true
+  });
+  var inputMin = document.getElementById(inputMinId);
+  var inputMax = document.getElementById(inputMaxId);
+  range.noUiSlider.on('update', function (values) {
+    inputMin.value = "c ".concat(Math.round(values[0]), ":00");
+    inputMax.value = "\u043F\u043E ".concat(Math.round(values[1]), ":00");
+  });
+  inputMin.addEventListener('change', function () {
+    range.noUiSlider.set([inputMin.value, null]);
+  });
+  inputMax.addEventListener('change', function () {
+    range.noUiSlider.set([null, inputMax.value]);
+  });
+}
+
+rangeDuration('range', 'input-min', 'input-max');
+
+function createNewRange(id) {
+  var getRangeField = document.querySelector('.stock-set__range-content');
+  var rangeElement = document.createElement('div');
+  rangeElement.classList.add('stock-set__range');
+  rangeElement.innerHTML = "\n    <div id=\"range-".concat(id, "\" class=\"stock-set__range-line\"></div>\n    <div class=\"stock-set__field-group\">\n      <div class=\"stock-set__field\">\n        <input type=\"text\" id=\"input-min-").concat(id, "\">\n      </div>\n      <div class=\"stock-set__field\">\n        <input type=\"text\" id=\"input-max-").concat(id, "\">\n      </div>\n    </div>\n    <svg class=\"stock-set__remove\" viewBox=\"0 0 26 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" onclick=\"this.parentElement.remove()\">\n    <circle cx=\"13\" cy=\"13\" r=\"11.3\" stroke=\"black\" stroke-width=\"1.4\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9.9505 8.88994C9.65761 8.59705 9.18274 8.59705 8.88984 8.88994C8.59695 9.18284 8.59695 9.65771 8.88984 9.9506L11.9392 13L8.88984 16.0494C8.59695 16.3423 8.59695 16.8172 8.88984 17.1101C9.18274 17.403 9.65761 17.403 9.9505 17.1101L12.9999 14.0607L16.0493 17.1101C16.3422 17.403 16.8171 17.403 17.11 17.1101C17.4029 16.8172 17.4029 16.3423 17.11 16.0494L14.0606 13L17.11 9.9506C17.4029 9.65771 17.4029 9.18284 17.11 8.88994C16.8171 8.59705 16.3422 8.59705 16.0493 8.88994L12.9999 11.9393L9.9505 8.88994Z\" fill=\"#2F2F2F\"/>\n  </svg>\n  ");
+  getRangeField.appendChild(rangeElement);
+  rangeDuration("range-".concat(id), "input-min-".concat(id), "input-max-".concat(id));
+}
+
+addNewElement('.stock-set__range-add', createNewRange, getText);
+
+function rangeHours(rangeItemId, inputMinId, inputMaxId) {
+  var range = document.getElementById(rangeItemId);
+  nouislider__WEBPACK_IMPORTED_MODULE_0___default().create(range, {
+    start: [3, 7],
+    step: 1,
+    range: {
+      min: 1,
+      max: 7
+    },
+    connect: true
+  });
+  var inputMin = document.getElementById(inputMinId);
+  var inputMax = document.getElementById(inputMaxId);
+  range.noUiSlider.on('update', function (values) {
+    inputMin.value = "\u043E\u0442 ".concat(Math.round(values[0]));
+    inputMax.value = "\u0434\u043E ".concat(Math.round(values[1]));
+  });
+  inputMin.addEventListener('change', function () {
+    range.noUiSlider.set([inputMin.value, null]);
+  });
+  inputMax.addEventListener('change', function () {
+    range.noUiSlider.set([null, inputMax.value]);
+  });
+}
+
+rangeHours('range-hours', 'input-min-hours', 'input-max-hours');
+
+function rangePeople(rangeItemId, inputMinId, inputMaxId) {
+  var range = document.getElementById(rangeItemId);
+  nouislider__WEBPACK_IMPORTED_MODULE_0___default().create(range, {
+    start: [2, 5],
+    step: 1,
+    range: {
+      min: 1,
+      max: 5
+    },
+    connect: true
+  });
+  var inputMin = document.getElementById(inputMinId);
+  var inputMax = document.getElementById(inputMaxId);
+  range.noUiSlider.on('update', function (values) {
+    inputMin.value = "\u043E\u0442 ".concat(Math.round(values[0]));
+    inputMax.value = "\u0434\u043E ".concat(Math.round(values[1]));
+  });
+  inputMin.addEventListener('change', function () {
+    range.noUiSlider.set([inputMin.value, null]);
+  });
+  inputMax.addEventListener('change', function () {
+    range.noUiSlider.set([null, inputMax.value]);
+  });
+}
+
+rangePeople('range-people', 'input-min-people', 'input-max-people');
 
 /***/ }),
 
