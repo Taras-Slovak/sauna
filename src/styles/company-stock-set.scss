@@ -1,18 +1,19 @@
-@import "helpers/variables";
-@import "helpers/mixins";
-@import "helpers/functions";
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/functions';
 
 // CSS-файлы библиотек
-@import "vendor/libs-company";
+@import 'vendor/libs-company';
+@import 'vendor/import/nouislider';
 
 // Основное
-@import "base/fonts";
-@import "base/general";
+@import 'base/fonts';
+@import 'base/general';
 
-@import "../blocks/components/COMPANY";
-@import "../blocks/modules/COMPANY/header/header";
-@import "../blocks/modules/COMPANY/company-stock-set/company-stock-set";
-@import "../blocks/modules/COMPANY/footer/footer";
+@import '../blocks/components/COMPANY';
+@import '../blocks/modules/COMPANY/header/header';
+@import '../blocks/modules/COMPANY/company-stock-set/company-stock-set';
+@import '../blocks/modules/COMPANY/footer/footer';
 
 .main {
   position: relative;

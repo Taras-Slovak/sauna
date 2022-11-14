@@ -23,6 +23,10 @@
     font-weight: 700;
     font-size: 22px;
     line-height: 130%;
+
+    @media only screen and (max-width: 490px) {
+      font-size: 18px;
+    }
   }
 
   &__switch {
@@ -129,7 +133,9 @@
   }
 
   &__sub-title {
+    width: 192px;
     display: flex;
+    flex-shrink: 0;
     align-items: flex-start;
     font-weight: 500;
     font-size: 16px;
@@ -147,6 +153,10 @@
     flex-direction: column;
     gap: 20px;
     max-width: 730px;
+    @media only screen and (max-width: 930px) {
+      max-width: 100%;
+      width: 100%;
+    }
   }
 
   &__field {
@@ -254,6 +264,11 @@
     align-items: center;
     justify-content: space-between;
     background: #f2f2f2;
+    @media only screen and (max-width: 470px) {
+      padding: 16px;
+      height: auto;
+      gap: 10px;
+    }
   }
   &__term-left,
   &__term-right {
@@ -267,6 +282,9 @@
       font-weight: 700;
       font-size: 16px;
       line-height: 120%;
+      @media only screen and (max-width: 470px) {
+        font-size: 14px;
+      }
     }
 
     svg {
@@ -302,6 +320,10 @@
   &__dynamic-content {
     display: none;
     width: max-content;
+    @media only screen and (max-width: 520px) {
+      flex-direction: column;
+    }
+
     input {
       max-width: 190px;
     }
@@ -366,6 +388,9 @@
     font-size: 16px;
     line-height: 150%;
     color: #2f2f2f;
+    @media only screen and (max-width: 390px) {
+      font-size: 14px;
+    }
   }
 
   &__dropdown-menu {
@@ -409,19 +434,19 @@
       line-height: 120%;
       color: #282828;
     }
+  }
 
-    svg {
-      display: block;
-      width: 30px;
-      height: 30px;
-      cursor: pointer;
-      transition: all 0.1s ease-in-out;
-      &:hover {
-        transform: scale(1.1);
-      }
-      &:active {
-        transform: scale(1);
-      }
+  &__add-btn {
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:active {
+      transform: scale(1);
     }
   }
 
@@ -431,7 +456,7 @@
     gap: 10px;
   }
 
-  &__date-remove {
+  &__remove {
     width: 23px;
     height: 23px;
     display: block;
@@ -451,10 +476,132 @@
   &__duration-content {
     margin-top: 25px;
     display: flex;
+    @media only screen and (max-width: 490px) {
+      gap: 26px;
+      flex-direction: column;
+    }
   }
 
   &__duration {
     flex-direction: row;
     gap: 26px;
+    @media only screen and (max-width: 490px) {
+      flex-direction: column;
+    }
   }
+  &__range-content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    input {
+      max-width: 100px;
+    }
+  }
+
+  &__range {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 70px;
+    @media only screen and (max-width: 1100px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    @media only screen and (max-width: 1000px) {
+      flex-direction: row;
+      gap: 40px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__range-add {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+  }
+
+  &__field-group {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__range-line {
+    width: 220px;
+  }
+
+  &__add-condition {
+    margin-top: 20px;
+    height: 46px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    color: #282828;
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover {
+      color: #282828;
+      background: rgb(226, 226, 226);
+    }
+  }
+
+  &__save-stock {
+    margin: 20px auto 0 auto;
+    width: 173px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background: #2f2f2f;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background: #626262;
+      color: #ffffff;
+    }
+  }
+}
+
+.noUi-horizontal {
+  height: 4px;
+  border: none;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  top: -8px;
+  border-radius: 100%;
+  cursor: pointer;
+  background: #fff;
+  border: 3px solid #707070;
+  box-sizing: border-box;
+
+  &:active {
+    background: #c4c4c4;
+  }
+}
+
+.noUi-connect {
+  background: #707070;
 }

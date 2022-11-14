@@ -302,7 +302,7 @@
             <div class="stock-set__line"></div>
             <div class="stock-set__date">
               <div class="stock-set__date-top">
-                <p>Период действия (даты)</p><svg class="stock-set__date-add" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <p>Период действия (даты)</p><svg class="stock-set__date-add stock-set__add-btn" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="16.9999" cy="17" r="11.3" transform="rotate(-45 16.9999 17)" fill="#2F2F2F" stroke="#2F2F2F" stroke-width="1.4"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9373 16.25C11.523 16.25 11.1873 16.5858 11.1873 17C11.1873 17.4142 11.523 17.75 11.9373 17.75H16.2498V22.0625C16.2498 22.4767 16.5855 22.8125 16.9998 22.8125C17.414 22.8125 17.7498 22.4767 17.7498 22.0625V17.75H22.0623C22.4765 17.75 22.8123 17.4142 22.8123 17C22.8123 16.5858 22.4765 16.25 22.0623 16.25H17.7498V11.9375C17.7498 11.5233 17.414 11.1875 16.9998 11.1875C16.5855 11.1875 16.2498 11.5233 16.2498 11.9375V16.25H11.9373Z" fill="white"/>
 </svg>
@@ -333,8 +333,57 @@
                 </div>
               </div>
             </div>
-            <div class="stock-set__range-content"></div>
+            <div class="stock-set__range-content"><svg class="stock-set__range-add stock-set__add-btn" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="16.9999" cy="17" r="11.3" transform="rotate(-45 16.9999 17)" fill="#2F2F2F" stroke="#2F2F2F" stroke-width="1.4"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.9373 16.25C11.523 16.25 11.1873 16.5858 11.1873 17C11.1873 17.4142 11.523 17.75 11.9373 17.75H16.2498V22.0625C16.2498 22.4767 16.5855 22.8125 16.9998 22.8125C17.414 22.8125 17.7498 22.4767 17.7498 22.0625V17.75H22.0623C22.4765 17.75 22.8123 17.4142 22.8123 17C22.8123 16.5858 22.4765 16.25 22.0623 16.25H17.7498V11.9375C17.7498 11.5233 17.414 11.1875 16.9998 11.1875C16.5855 11.1875 16.2498 11.5233 16.2498 11.9375V16.25H11.9373Z" fill="white"/>
+</svg>
+              <div class="stock-set__range">          
+                <div class="stock-set__range-line" id="range"></div>
+                <div class="stock-set__field-group">
+                  <div class="stock-set__field">
+                    <input type="text" id="input-min">
+                  </div>
+                  <div class="stock-set__field">
+                    <input type="text" id="input-max">
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="stock-set__line"></div>
+            <div class="stock-set__range-content">
+              <div class="stock-set__field">
+                <p>Кол-во часов (от-до)</p>
+              </div>
+              <div class="stock-set__range">          
+                <div class="stock-set__range-line" id="range-hours"></div>
+                <div class="stock-set__field-group">
+                  <div class="stock-set__field">
+                    <input type="text" id="input-min-hours">
+                  </div>
+                  <div class="stock-set__field">
+                    <input type="text" id="input-max-hours">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="stock-set__line"></div>
+            <div class="stock-set__range-content">
+              <div class="stock-set__field">
+                <p>Кол-во человек (от-до)</p>
+              </div>
+              <div class="stock-set__range">          
+                <div class="stock-set__range-line" id="range-people"></div>
+                <div class="stock-set__field-group">
+                  <div class="stock-set__field">
+                    <input type="text" id="input-min-people">
+                  </div>
+                  <div class="stock-set__field">
+                    <input type="text" id="input-max-people">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="stock-set__line"> </div><a class="stock-set__add-condition" href="#">Добавить условие</a><a class="stock-set__save-stock" href="#">Сохранить акцию</a>
           </div>
         </div>
       </div>
