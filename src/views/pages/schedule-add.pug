@@ -1,0 +1,15 @@
+extends ../layouts/default
+
+block variables
+	- const title = "Schedule new"
+
+block links
+	link(rel="stylesheet" href="styles/schedule-add.css")
+
+block content
+	main.main
+		include ../../blocks/modules/SCHEDULE/schedule-add/schedule-add
+	
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/scheduleAdd.js")
