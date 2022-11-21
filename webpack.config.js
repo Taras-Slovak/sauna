@@ -18,6 +18,7 @@ module.exports = {
     companyAccountEdit: "./src/js/company-account-edit.js",
     companyStock: "./src/js/company-stock.js",
     companyStockSet: "./src/js/company-stock-set.js",
+    schedule: "./src/js/schedule",
   },
 
   output: {
