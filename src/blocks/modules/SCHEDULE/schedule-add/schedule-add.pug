@@ -62,3 +62,82 @@
         </svg>
     
     .schedule-add__content
+
+      .schedule-add__field         
+        p Период
+        .schedule-add__field   
+          .schedule-add__field          
+            button.schedule-add__dropdown-button( id="dropdown-item" type='button' onclick="this.classList.toggle('dropdown-opened')")
+              p.schedule-add__dropdown-txt 11 ноября 2021 — 20 января 2022
+
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.175 7.1582L10 10.9749L13.825 7.1582L15 8.3332L10 13.3332L5 8.3332L6.175 7.1582Z" fill="#2F2F2F"/>
+              </svg>
+              
+              .schedule-add__dropdown-menu(id="menu-branches")
+                span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-1
+                span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-2
+                span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-3
+                span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-4
+                span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-5
+                span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-6
+                span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-7
+                span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-8
+                span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-9
+                span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-10
+
+            <svg class="schedule-add__date-add schedule-add__add-btn" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16.9999" cy="17" r="11.3" transform="rotate(-45 16.9999 17)" fill="#2F2F2F" stroke="#2F2F2F" stroke-width="1.4"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9373 16.25C11.523 16.25 11.1873 16.5858 11.1873 17C11.1873 17.4142 11.523 17.75 11.9373 17.75H16.2498V22.0625C16.2498 22.4767 16.5855 22.8125 16.9998 22.8125C17.414 22.8125 17.7498 22.4767 17.7498 22.0625V17.75H22.0623C22.4765 17.75 22.8123 17.4142 22.8123 17C22.8123 16.5858 22.4765 16.25 22.0623 16.25H17.7498V11.9375C17.7498 11.5233 17.414 11.1875 16.9998 11.1875C16.5855 11.1875 16.2498 11.5233 16.2498 11.9375V16.25H11.9373Z" fill="white"/>
+            </svg>
+
+      .schedule-add__field
+        p Интервал для записи:
+
+        .schedule-add__radio-group
+
+          .schedule-add__radio-wrap
+            input.schedule-add__radio-discount(type="radio", id="one-hour" name="recording")
+            label(for="one-hour") 1 час
+
+          .schedule-add__radio-wrap
+            input.schedule-add__radio-discount(type="radio", id="two-hours" name="recording")
+            label(for="two-hours") 2 часа
+
+          .schedule-add__radio-wrap
+            input.schedule-add__radio-discount(type="radio", id="three-hours" name="recording")
+            label(for="three-hours") 3 часа
+
+      
+      .schedule-add__field        
+
+        .schedule-add__toggle
+          .schedule-add__field  
+            p Интервал для записи:
+            .schedule-add__radio-group
+              .schedule-add__radio-wrap
+                input.schedule-add__radio-discount(type="radio", id="room" name="calculation")
+                label(for="room") За помещение
+
+              .schedule-add__radio-wrap
+                input.schedule-add__radio-discount(type="radio", id="person" name="calculation")
+                label(for="person") За человека
+
+          .schedule-add__input-group
+            .schedule-add__field
+              label(for="place") Основных мест
+              input(type="text" id="place")
+
+            .schedule-add__field
+              label(for="add-place") Доп. мест
+              input(type="text" id="add-place")
+
+          .schedule-add__input-group
+            .schedule-add__field
+              label(for="price") Цена основная
+              input(type="text" id="price")
+
+            .schedule-add__field
+              label(for="add-price") Цена доп. места
+              input(type="text" id="add-price")
+        
