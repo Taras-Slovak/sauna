@@ -60,7 +60,78 @@
 </svg>
             </button>
           </h3>
-          <div class="schedule-add__content"></div>
+          <div class="schedule-add__content">
+            <div class="schedule-add__field">        
+              <p>Период</p>
+              <div class="schedule-add__field">  
+                <div class="schedule-add__field">         
+                  <button class="schedule-add__dropdown-button" id="dropdown-item" type="button" onclick="this.classList.toggle('dropdown-opened')">
+                    <p class="schedule-add__dropdown-txt">11 ноября 2021 — 20 января 2022</p><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.175 7.1582L10 10.9749L13.825 7.1582L15 8.3332L10 13.3332L5 8.3332L6.175 7.1582Z" fill="#2F2F2F"/>
+</svg>
+                    <div class="schedule-add__dropdown-menu" id="menu-branches"><span class="schedule-add__dropdown-item" data-branches="some-branches">11 ноября 2021 — 20 января 2022-1</span><span class="schedule-add__dropdown-item" data-branches="some-branches">11 ноября 2021 — 20 января 2022-2</span><span class="schedule-add__dropdown-item" data-branches="some-branches">11 ноября 2021 — 20 января 2022-3</span><span class="schedule-add__dropdown-item" data-branches="some-branches">11 ноября 2021 — 20 января 2022-4</span><span class="schedule-add__dropdown-item" data-branches="some-branches">11 ноября 2021 — 20 января 2022-5</span><span class="schedule-add__dropdown-item" data-branches="some-branches">11 ноября 2021 — 20 января 2022-6</span><span class="schedule-add__dropdown-item" data-branches="some-branches">11 ноября 2021 — 20 января 2022-7</span><span class="schedule-add__dropdown-item" data-branches="some-branches">11 ноября 2021 — 20 января 2022-8</span><span class="schedule-add__dropdown-item" data-branches="some-branches">11 ноября 2021 — 20 января 2022-9</span><span class="schedule-add__dropdown-item" data-branches="some-branches">11 ноября 2021 — 20 января 2022-10</span></div>
+                  </button><svg class="schedule-add__date-add schedule-add__add-btn" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="16.9999" cy="17" r="11.3" transform="rotate(-45 16.9999 17)" fill="#2F2F2F" stroke="#2F2F2F" stroke-width="1.4"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.9373 16.25C11.523 16.25 11.1873 16.5858 11.1873 17C11.1873 17.4142 11.523 17.75 11.9373 17.75H16.2498V22.0625C16.2498 22.4767 16.5855 22.8125 16.9998 22.8125C17.414 22.8125 17.7498 22.4767 17.7498 22.0625V17.75H22.0623C22.4765 17.75 22.8123 17.4142 22.8123 17C22.8123 16.5858 22.4765 16.25 22.0623 16.25H17.7498V11.9375C17.7498 11.5233 17.414 11.1875 16.9998 11.1875C16.5855 11.1875 16.2498 11.5233 16.2498 11.9375V16.25H11.9373Z" fill="white"/>
+</svg>
+                </div>
+              </div>
+            </div>
+            <div class="schedule-add__field">
+              <p>Интервал для записи:</p>
+              <div class="schedule-add__radio-group">
+                <div class="schedule-add__radio-wrap">
+                  <input class="schedule-add__radio-discount" type="radio" id="one-hour" name="recording">
+                  <label for="one-hour">1 час</label>
+                </div>
+                <div class="schedule-add__radio-wrap">
+                  <input class="schedule-add__radio-discount" type="radio" id="two-hours" name="recording">
+                  <label for="two-hours">2 часа</label>
+                </div>
+                <div class="schedule-add__radio-wrap">
+                  <input class="schedule-add__radio-discount" type="radio" id="three-hours" name="recording">
+                  <label for="three-hours">3 часа</label>
+                </div>
+              </div>
+            </div>
+            <div class="schedule-add__field">       
+              <div class="schedule-add__toggle">
+                <div class="schedule-add__field"> 
+                  <p>Интервал для записи:</p>
+                  <div class="schedule-add__radio-group">
+                    <div class="schedule-add__radio-wrap">
+                      <input class="schedule-add__radio-discount" type="radio" id="room" name="calculation">
+                      <label for="room">За помещение</label>
+                    </div>
+                    <div class="schedule-add__radio-wrap">
+                      <input class="schedule-add__radio-discount" type="radio" id="person" name="calculation">
+                      <label for="person">За человека</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="schedule-add__input-group">
+                  <div class="schedule-add__field">
+                    <label for="place">Основных мест</label>
+                    <input type="text" id="place">
+                  </div>
+                  <div class="schedule-add__field">
+                    <label for="add-place">Доп. мест</label>
+                    <input type="text" id="add-place">
+                  </div>
+                </div>
+                <div class="schedule-add__input-group">
+                  <div class="schedule-add__field">
+                    <label for="price">Цена основная</label>
+                    <input type="text" id="price">
+                  </div>
+                  <div class="schedule-add__field">
+                    <label for="add-price">Цена доп. места</label>
+                    <input type="text" id="add-price">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
