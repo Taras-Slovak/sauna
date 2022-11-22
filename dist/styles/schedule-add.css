@@ -7663,7 +7663,9 @@ body {
 }
 
 .schedule-add__add-btn {
-  display: block;
+  display: flex;
+  flex-grow: 5;
+  flex-shrink: 0;
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -13611,8 +13613,7 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-  .schedule-add__times {
-    gap: 5px;
+  .schedule-add__date {
     flex-direction: column;
   }
 }
@@ -13715,17 +13716,46 @@ body {
 
 @media only screen and (max-width: 450px) {
   .schedule-add__top {
-    flex-direction: column;
-    gap: 20px;
+    gap: 10px;
+  }
+
+  .schedule-add__title {
+    font-size: 20px;
   }
 
   .schedule-add__sub-title {
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .schedule-add__field label,
+  .schedule-add__field p {
+    font-size: 14px;
+  }
+
+  .schedule-add__field input[type=text],
+  .schedule-add__field textarea {
+    font-size: 14px;
+  }
+
+  .schedule-add__field input[type=text]::placeholder,
+  .schedule-add__field textarea::placeholder {
+    font-size: 14px;
+  }
+
+  .schedule-add__dropdown-menu span {
+    font-size: 14px;
+  }
+
+  .schedule-add__add-btn {
+    font-size: 14px;
   }
 }
 
 @media only screen and (max-width: 390px) {
+  .schedule-add__dropdown-button {
+    height: auto;
+  }
+
   .schedule-add__dropdown-txt {
     font-size: 14px;
   }

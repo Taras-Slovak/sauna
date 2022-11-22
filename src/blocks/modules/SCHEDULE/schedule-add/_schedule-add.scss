@@ -14,8 +14,7 @@
     align-items: center;
     justify-content: space-between;
     @media only screen and (max-width: 450px) {
-      flex-direction: column;
-      gap: 20px;
+      gap: 10px;
     }
   }
 
@@ -24,6 +23,9 @@
     font-size: 22px;
     line-height: 130%;
     color: #2f2f2f;
+    @media only screen and (max-width: 450px) {
+      font-size: 20px;
+    }
   }
 
   &__item {
@@ -69,8 +71,7 @@
     line-height: 120%;
 
     @media only screen and (max-width: 450px) {
-      font-size: 20px;
-      font-weight: 700;
+      font-size: 14px;
     }
   }
 
@@ -99,6 +100,9 @@
       font-size: 16px;
       line-height: 150%;
       color: #282828;
+      @media only screen and (max-width: 450px) {
+        font-size: 14px;
+      }
     }
     input[type='text'],
     textarea {
@@ -112,6 +116,9 @@
       color: #2f2f2f;
       border: 1px solid #2f2f2f;
       transition: all 0.2s ease-in-out;
+      @media only screen and (max-width: 450px) {
+        font-size: 14px;
+      }
 
       &:focus {
         box-shadow: 0px 0px 5px 1px rgba(255, 136, 0, 0.25);
@@ -123,6 +130,9 @@
         font-size: 16px;
         line-height: 150%;
         color: #2f2f2f;
+        @media only screen and (max-width: 450px) {
+          font-size: 14px;
+        }
       }
     }
 
@@ -209,6 +219,9 @@
     background: #ffffff;
     border: 1px solid #2f2f2f;
     transition: all 0.2s;
+    @media only screen and (max-width: 390px) {
+      height: auto;
+    }
 
     &.dropdown-opened {
       border: none;
@@ -261,6 +274,9 @@
       background-color: #fff;
       cursor: pointer;
       transition: all 0.1s ease-in-out;
+      @media only screen and (max-width: 450px) {
+        font-size: 14px;
+      }
 
       &:hover {
         background-color: #ff8a00;
@@ -270,11 +286,18 @@
   }
 
   &__add-btn {
-    display: block;
+    display: flex;
+    flex-grow: 5;
+    flex-shrink: 0;
     width: 30px;
     height: 30px;
     cursor: pointer;
     transition: all 0.1s ease-in-out;
+
+    @media only screen and (max-width: 450px) {
+      font-size: 14px;
+    }
+
     &:hover {
       transform: scale(1.1);
     }
@@ -294,6 +317,10 @@
     align-items: center;
     gap: 20px;
     justify-content: space-between;
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+    }
 
     .schedule-add__dropdown-button {
       width: 92px;
@@ -338,8 +365,6 @@
     align-items: center;
 
     @media only screen and (max-width: 600px) {
-      gap: 5px;
-      flex-direction: column;
     }
 
     .company-contacts__dropdown-menu {
