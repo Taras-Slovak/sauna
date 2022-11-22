@@ -7416,88 +7416,65 @@ body {
   outline: 0;
 }
 
-.schedule-add {
-  max-width: 1400px;
+.account-edit {
+  max-width: 1110px;
   flex-grow: 1;
   color: #2f2f2f;
   margin: 50px 16px 279px 300px;
   font-family: "Montserrat";
 }
 
-.schedule-add__top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.schedule-add__title {
+.account-edit__title {
   font-weight: 700;
   font-size: 22px;
   line-height: 130%;
   color: #2f2f2f;
 }
 
-.schedule-add__item {
-  margin-top: 45px;
-  max-width: 1120px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 50px;
-}
-
-.schedule-add__popover {
-  width: max-content;
-  border: none;
-  background: white;
-  transition: all 0.2s;
-}
-
-.schedule-add__popover:hover svg {
-  stroke: #ff8a00;
-}
-
-.schedule-add__popover svg {
-  transition: all 0.2s;
-  stroke: black;
-}
-
-.schedule-add__sub-title {
-  width: 215px;
-  display: flex;
-  flex-shrink: 0;
-  align-items: flex-start;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 120%;
-}
-
-.schedule-add__content {
-  flex-grow: 1;
+.account-edit__inner {
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  max-width: 730px;
+  gap: 20px;
 }
 
-.schedule-add__field {
+.account-edit__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.account-edit__field {
   position: relative;
   display: flex;
-  flex-grow: 3;
+  flex-grow: 1;
   flex-direction: column;
   gap: 7px;
 }
 
-.schedule-add__field label,
-.schedule-add__field p {
+.account-edit__field:nth-child(1) {
+  max-width: 444px;
+}
+
+.account-edit__field:nth-child(2) {
+  max-width: 350px;
+}
+
+.account-edit__field:nth-child(3) {
+  max-width: 80px;
+}
+
+.account-edit__field label,
+.account-edit__field p {
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
   color: #282828;
 }
 
-.schedule-add__field input[type=text],
-.schedule-add__field textarea {
+.account-edit__field input {
   width: auto;
   height: 35px;
   padding-left: 16px;
@@ -7510,94 +7487,35 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.schedule-add__field input[type=text]:focus,
-.schedule-add__field textarea:focus {
+.account-edit__field input:focus {
   box-shadow: 0px 0px 5px 1px rgba(255, 136, 0, 0.25);
   border: 1px solid #ff8a00;
 }
 
-.schedule-add__field input[type=text]::placeholder,
-.schedule-add__field textarea::placeholder {
+.account-edit__field input::placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   color: #2f2f2f;
 }
 
-.schedule-add__field [type=radio]:checked,
-.schedule-add__field [type=radio]:not(:checked) {
-  position: absolute;
-  left: -9999px;
+.account-edit__popover {
+  width: max-content;
+  border: none;
+  background: white;
+  transition: all 0.2s;
 }
 
-.schedule-add__field [type=radio]:checked + label,
-.schedule-add__field [type=radio]:not(:checked) + label {
-  position: relative;
-  padding-left: 28px;
-  font-weight: 400;
-  cursor: pointer;
-  line-height: 20px;
-  display: inline-block;
-  color: #282828;
+.account-edit__popover:hover svg {
+  stroke: #ff8a00;
 }
 
-.schedule-add__field [type=radio]:checked + label:before,
-.schedule-add__field [type=radio]:not(:checked) + label:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 18px;
-  height: 18px;
-  border: 1px solid #707070;
-  border-radius: 100%;
-  background: #fff;
+.account-edit__popover svg {
+  transition: all 0.2s;
+  stroke: black;
 }
 
-.schedule-add__field [type=radio]:checked + label:after,
-.schedule-add__field [type=radio]:not(:checked) + label:after {
-  content: "";
-  width: 18px;
-  height: 18px;
-  border: 5px solid #707070;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  border-radius: 100%;
-  transition: all 0.2s ease;
-}
-
-.schedule-add__field [type=radio]:not(:checked) + label:after {
-  opacity: 0;
-  -webkit-transform: scale(0);
-  transform: scale(0);
-}
-
-.schedule-add__field [type=radio]:checked + label:after {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
-
-.schedule-add__field textarea {
-  height: 202px;
-  padding: 8px 16px;
-}
-
-.schedule-add__flat-field {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 30px;
-}
-
-.schedule-add__branch-field {
-  max-width: 540px;
-}
-
-.schedule-add__dropdown-button {
-  position: relative;
-  max-width: 100%;
+.account-edit__dropdown-button {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -7607,14 +7525,13 @@ body {
   transition: all 0.2s;
 }
 
-.schedule-add__dropdown-button.dropdown-opened {
+.account-edit__dropdown-button.dropdown-opened {
   border: none;
   border-radius: 10px 10px 0px 0px;
   box-shadow: 0px -2px 10px -3px rgba(0, 0, 0, 0.25);
 }
 
-.schedule-add__dropdown-button.dropdown-opened .schedule-add__dropdown-menu {
-  width: 100%;
+.account-edit__dropdown-button.dropdown-opened .account-edit__dropdown-menu {
   box-shadow: 0 0 5px #333;
   transition: all 0.2s ease-in-out;
   border-radius: 0px 0px 10px 10px;
@@ -7624,7 +7541,7 @@ body {
   opacity: 1;
 }
 
-.schedule-add__dropdown-txt {
+.account-edit__dropdown-txt {
   padding-left: 10px;
   font-weight: 400;
   font-size: 16px;
@@ -7632,10 +7549,11 @@ body {
   color: #2f2f2f;
 }
 
-.schedule-add__dropdown-menu {
+.account-edit__dropdown-menu {
+  width: 100%;
   height: 0;
   position: absolute;
-  top: 50px;
+  top: 80px;
   right: 0;
   display: flex;
   flex-direction: column;
@@ -7645,7 +7563,7 @@ body {
   z-index: 200;
 }
 
-.schedule-add__dropdown-menu span {
+.account-edit__dropdown-menu span {
   width: 100%;
   padding: 5px;
   font-weight: 400;
@@ -7657,149 +7575,40 @@ body {
   transition: all 0.1s ease-in-out;
 }
 
-.schedule-add__dropdown-menu span:hover {
+.account-edit__dropdown-menu span:hover {
   background-color: #ff8a00;
   color: #fff;
 }
 
-.schedule-add__add-btn {
+.account-edit__link {
+  padding-top: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  color: #2f2f2f;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.account-edit__link:hover {
+  color: #ff8a00;
+}
+
+.account-edit__password {
+  padding-top: 35px;
   display: block;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
-}
-
-.schedule-add__add-btn:hover {
-  transform: scale(1.1);
-}
-
-.schedule-add__add-btn:active {
-  transform: scale(1);
-}
-
-.schedule-add__date-group {
-  gap: 21px;
-}
-
-.schedule-add__date {
-  max-width: 100%;
-  display: flex;
-  flex-grow: 1;
-  align-items: center;
-  gap: 20px;
-  justify-content: space-between;
-}
-
-.schedule-add__date .schedule-add__dropdown-button {
-  width: 92px;
-}
-
-.schedule-add__days {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.schedule-add__day {
-  width: 50px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #ffffff;
-  border: 1px solid #2f2f2f;
-  border-radius: 4px;
   font-weight: 500;
   font-size: 16px;
-  text-decoration: none;
-  line-height: 120%;
-  transition: all 0.1s ease-in-out;
+  color: #282828;
 }
 
-.schedule-add__day:hover {
-  transform: scale(1.1);
-}
-
-.schedule-add__day:active {
-  transform: scale(1);
-}
-
-.schedule-add__times {
+.account-edit__bottom {
+  margin-top: 60px;
   display: flex;
   align-items: center;
 }
 
-.schedule-add__times .company-contacts__dropdown-menu {
-  top: 40px;
-}
-
-.schedule-add__line {
-  width: 16px;
-  margin: 0 5px;
-  height: 1px;
-  background: #2f2f2f;
-}
-
-.schedule-add__radio-group {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.schedule-add__toggle {
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
-}
-
-.schedule-add__input-group {
-  max-width: 160px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.schedule-add__remove-btn {
-  width: max-content;
-  height: max-content;
-  padding: 0;
-  border-radius: 50%;
-  cursor: pointer;
-  background: #ffffff;
-  border: none;
-}
-
-.schedule-add__remove-btn svg {
-  display: block;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
-}
-
-.schedule-add__remove-btn svg:hover {
-  transform: scale(1.1);
-}
-
-.schedule-add__remove-btn svg:active {
-  transform: scale(1);
-}
-
-.schedule-add__line-buttom {
-  display: block;
-  width: 100%;
-  height: 1px;
-  background: #b3b3b3;
-}
-
-.schedule-add__bottom {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.schedule-add__bottom a {
+.account-edit__bottom a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7813,29 +7622,13 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.schedule-add__bottom a:hover {
+.account-edit__bottom a:hover {
   background-color: #000000;
   color: #fff;
 }
 
-.schedule-add__bottom a:active {
+.account-edit__bottom a:active {
   transform: scale(0.98);
-}
-
-.background-grey {
-  background: #707070;
-  border: 1px solid #707070;
-  color: #fff;
-  box-shadow: 0px 0px 5px 0px rgba(112, 112, 112, 0.5803921569);
-}
-
-.input-active {
-  background: #f2f2f2;
-  border: 1px solid #b3b3b3 !important;
-}
-
-.input-active:focus {
-  box-shadow: 0px 0px 2px 1px rgba(179, 179, 179, 0.2470588235) !important;
 }
 
 .footer {
@@ -13087,12 +12880,6 @@ body {
   }
 }
 
-@media only screen and (max-width: 1470px) {
-  .schedule-add {
-    margin: 16px;
-  }
-}
-
 @media (max-width: 1399.98px) {
   .table-responsive-xxl {
     overflow-x: auto;
@@ -13186,6 +12973,41 @@ body {
 @media (max-width: 1399.98px) and (prefers-reduced-motion: reduce) {
   .offcanvas-xxl {
     transition: none;
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  .account-edit__inner {
+    gap: 40px;
+  }
+
+  .account-edit__content {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .account-edit__field:nth-child(1) {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .account-edit__field:nth-child(2) {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .account-edit__field:nth-child(3) {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .account-edit__link {
+    padding-top: 0px;
+  }
+
+  .account-edit__password {
+    padding-top: 0px;
   }
 }
 
@@ -13305,25 +13127,6 @@ body {
   }
 }
 
-@media only screen and (max-width: 1010px) {
-  .schedule-add__item {
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-  }
-
-  .schedule-add__content {
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .schedule-add__branch-field {
-    max-width: 100%;
-  }
-}
-
 @media only screen and (max-width: 1000px) {
   .side-bar {
     height: 100%;
@@ -13364,6 +13167,10 @@ body {
 
   .side-bar__open {
     display: block;
+  }
+
+  .account-edit {
+    margin: 70px 16px 50px 16px;
   }
 }
 
@@ -13466,26 +13273,6 @@ body {
 @media only screen and (max-width: 950px) {
   .header__left {
     gap: 27px;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .schedule-add__days {
-    justify-content: flex-start;
-  }
-}
-
-@media only screen and (max-width: 820px) {
-  .schedule-add__field textarea {
-    height: 100px;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .schedule-add__toggle {
-    gap: 20px;
-    flex-direction: column;
-    align-items: center;
   }
 }
 
@@ -13610,13 +13397,6 @@ body {
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .schedule-add__times {
-    gap: 5px;
-    flex-direction: column;
-  }
-}
-
 @media (max-width: 575.98px) {
   .table-responsive-sm {
     overflow-x: auto;
@@ -13710,24 +13490,6 @@ body {
 @media (max-width: 575.98px) and (prefers-reduced-motion: reduce) {
   .offcanvas-sm {
     transition: none;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .schedule-add__top {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .schedule-add__sub-title {
-    font-size: 20px;
-    font-weight: 700;
-  }
-}
-
-@media only screen and (max-width: 390px) {
-  .schedule-add__dropdown-txt {
-    font-size: 14px;
   }
 }
 
@@ -13907,4 +13669,4 @@ body {
     display: none !important;
   }
 }
-/*# sourceMappingURL=maps/schedule-add.css.map */
+/*# sourceMappingURL=maps/company-account-edit.css.map */

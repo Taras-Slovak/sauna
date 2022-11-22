@@ -62,34 +62,127 @@
         </svg>
     
     .schedule-add__content
-
       .schedule-add__field         
         p Период
-        .schedule-add__field   
-          .schedule-add__field          
-            button.schedule-add__dropdown-button( id="dropdown-item" type='button' onclick="this.classList.toggle('dropdown-opened')")
-              p.schedule-add__dropdown-txt 11 ноября 2021 — 20 января 2022
+        .schedule-add__field 
+          .schedule-add__flat-field    
+            .schedule-add__field      
+              button.schedule-add__dropdown-button( id="dropdown-item" type='button' onclick="this.classList.toggle('dropdown-opened')")
+                p.schedule-add__dropdown-txt 11 ноября 2021 — 20 января 2022
 
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.175 7.1582L10 10.9749L13.825 7.1582L15 8.3332L10 13.3332L5 8.3332L6.175 7.1582Z" fill="#2F2F2F"/>
-              </svg>
-              
-              .schedule-add__dropdown-menu(id="menu-branches")
-                span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-1
-                span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-2
-                span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-3
-                span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-4
-                span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-5
-                span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-6
-                span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-7
-                span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-8
-                span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-9
-                span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-10
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.175 7.1582L10 10.9749L13.825 7.1582L15 8.3332L10 13.3332L5 8.3332L6.175 7.1582Z" fill="#2F2F2F"/>
+                </svg>
+                
+                .schedule-add__dropdown-menu(id="menu-branches")
+                  span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-1
+                  span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-2
+                  span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-3
+                  span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-4
+                  span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-5
+                  span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-6
+                  span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-7
+                  span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-8
+                  span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-9
+                  span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-10
 
             <svg class="schedule-add__date-add schedule-add__add-btn" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="16.9999" cy="17" r="11.3" transform="rotate(-45 16.9999 17)" fill="#2F2F2F" stroke="#2F2F2F" stroke-width="1.4"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9373 16.25C11.523 16.25 11.1873 16.5858 11.1873 17C11.1873 17.4142 11.523 17.75 11.9373 17.75H16.2498V22.0625C16.2498 22.4767 16.5855 22.8125 16.9998 22.8125C17.414 22.8125 17.7498 22.4767 17.7498 22.0625V17.75H22.0623C22.4765 17.75 22.8123 17.4142 22.8123 17C22.8123 16.5858 22.4765 16.25 22.0623 16.25H17.7498V11.9375C17.7498 11.5233 17.414 11.1875 16.9998 11.1875C16.5855 11.1875 16.2498 11.5233 16.2498 11.9375V16.25H11.9373Z" fill="white"/>
             </svg>
+
+      .schedule-add__field.schedule-add__date-group
+        .schedule-add__flat-field.schedule-add__date-item
+          .schedule-add__date
+            .schedule-add__days
+              button.schedule-add__day(type='button' onclick="this.classList.toggle('background-grey')" ) Пн 
+              button.schedule-add__day(type='button' onclick="this.classList.toggle('background-grey')") Вт
+              button.schedule-add__day(type='button' onclick="this.classList.toggle('background-grey')") Ср
+              button.schedule-add__day(type='button' onclick="this.classList.toggle('background-grey')") Чт
+              button.schedule-add__day(type='button' onclick="this.classList.toggle('background-grey')") Пт
+              button.schedule-add__day(type='button' onclick="this.classList.toggle('background-grey')") Сб
+              button.schedule-add__day(type='button' onclick="this.classList.toggle('background-grey')") Вс
+
+            .schedule-add__times
+              .schedule-add__field
+
+                button.schedule-add__dropdown-button( id="dropdown-item" type='button' onclick="this.classList.toggle('dropdown-opened')")
+                  p.schedule-add__dropdown-txt 00:00
+
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.175 7.1582L10 10.9749L13.825 7.1582L15 8.3332L10 13.3332L5 8.3332L6.175 7.1582Z" fill="#2F2F2F"/>
+                  </svg>
+                  
+                  .schedule-add__dropdown-menu(id="menu-hour")
+                    span.schedule-add__dropdown-item(data-hour="00:00") 00:00
+                    span.schedule-add__dropdown-item(data-hour="01:00") 01:00
+                    span.schedule-add__dropdown-item(data-hour="02:00") 02:00
+                    span.schedule-add__dropdown-item(data-hour="03:00") 03:00
+                    span.schedule-add__dropdown-item(data-hour="04:00") 04:00
+                    span.schedule-add__dropdown-item(data-hour="05:00") 05:00
+                    span.schedule-add__dropdown-item(data-hour="06:00") 06:00
+                    span.schedule-add__dropdown-item(data-hour="07:00") 07:00
+                    span.schedule-add__dropdown-item(data-hour="08:00") 08:00
+                    span.schedule-add__dropdown-item(data-hour="09:00") 09:00
+                    span.schedule-add__dropdown-item(data-hour="10:00") 10:00
+                    span.schedule-add__dropdown-item(data-hour="11:00") 11:00
+                    span.schedule-add__dropdown-item(data-hour="12:00") 12:00
+                    span.schedule-add__dropdown-item(data-hour="13:00") 13:00
+                    span.schedule-add__dropdown-item(data-hour="14:00") 14:00
+                    span.schedule-add__dropdown-item(data-hour="15:00") 15:00
+                    span.schedule-add__dropdown-item(data-hour="16:00") 16:00
+                    span.schedule-add__dropdown-item(data-hour="17:00") 17:00
+                    span.schedule-add__dropdown-item(data-hour="18:00") 18:00
+                    span.schedule-add__dropdown-item(data-hour="19:00") 19:00
+                    span.schedule-add__dropdown-item(data-hour="20:00") 20:00
+                    span.schedule-add__dropdown-item(data-hour="21:00") 21:00
+                    span.schedule-add__dropdown-item(data-hour="22:00") 22:00
+                    span.schedule-add__dropdown-item(data-hour="23:00") 23:00
+                    span.schedule-add__dropdown-item(data-hour="24:00") 24:00
+              
+              span.schedule-add__line 
+
+              .schedule-add__field
+
+                button.schedule-add__dropdown-button( id="dropdown-item" type='button' onclick="this.classList.toggle('dropdown-opened')")
+                  p.schedule-add__dropdown-txt 00:00
+
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.175 7.1582L10 10.9749L13.825 7.1582L15 8.3332L10 13.3332L5 8.3332L6.175 7.1582Z" fill="#2F2F2F"/>
+                  </svg>
+                
+                  .schedule-add__dropdown-menu(id="menu-hour")
+                    span.schedule-add__dropdown-item(data-hour="00:00") 00:00
+                    span.schedule-add__dropdown-item(data-hour="01:00") 01:00
+                    span.schedule-add__dropdown-item(data-hour="02:00") 02:00
+                    span.schedule-add__dropdown-item(data-hour="03:00") 03:00
+                    span.schedule-add__dropdown-item(data-hour="04:00") 04:00
+                    span.schedule-add__dropdown-item(data-hour="05:00") 05:00
+                    span.schedule-add__dropdown-item(data-hour="06:00") 06:00
+                    span.schedule-add__dropdown-item(data-hour="07:00") 07:00
+                    span.schedule-add__dropdown-item(data-hour="08:00") 08:00
+                    span.schedule-add__dropdown-item(data-hour="09:00") 09:00
+                    span.schedule-add__dropdown-item(data-hour="10:00") 10:00
+                    span.schedule-add__dropdown-item(data-hour="11:00") 11:00
+                    span.schedule-add__dropdown-item(data-hour="12:00") 12:00
+                    span.schedule-add__dropdown-item(data-hour="13:00") 13:00
+                    span.schedule-add__dropdown-item(data-hour="14:00") 14:00
+                    span.schedule-add__dropdown-item(data-hour="15:00") 15:00
+                    span.schedule-add__dropdown-item(data-hour="16:00") 16:00
+                    span.schedule-add__dropdown-item(data-hour="17:00") 17:00
+                    span.schedule-add__dropdown-item(data-hour="18:00") 18:00
+                    span.schedule-add__dropdown-item(data-hour="19:00") 19:00
+                    span.schedule-add__dropdown-item(data-hour="20:00") 20:00
+                    span.schedule-add__dropdown-item(data-hour="21:00") 21:00
+                    span.schedule-add__dropdown-item(data-hour="22:00") 22:00
+                    span.schedule-add__dropdown-item(data-hour="23:00") 23:00
+                    span.schedule-add__dropdown-item(data-hour="24:00") 24:00
+
+    
+          <svg class="schedule-add__time-add schedule-add__add-btn" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16.9999" cy="17" r="11.3" transform="rotate(-45 16.9999 17)" fill="#2F2F2F" stroke="#2F2F2F" stroke-width="1.4"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9373 16.25C11.523 16.25 11.1873 16.5858 11.1873 17C11.1873 17.4142 11.523 17.75 11.9373 17.75H16.2498V22.0625C16.2498 22.4767 16.5855 22.8125 16.9998 22.8125C17.414 22.8125 17.7498 22.4767 17.7498 22.0625V17.75H22.0623C22.4765 17.75 22.8123 17.4142 22.8123 17C22.8123 16.5858 22.4765 16.25 22.0623 16.25H17.7498V11.9375C17.7498 11.5233 17.414 11.1875 16.9998 11.1875C16.5855 11.1875 16.2498 11.5233 16.2498 11.9375V16.25H11.9373Z" fill="white"/>
+          </svg>
 
       .schedule-add__field
         p Интервал для записи:
@@ -97,18 +190,17 @@
         .schedule-add__radio-group
 
           .schedule-add__radio-wrap
-            input.schedule-add__radio-discount(type="radio", id="one-hour" name="recording")
+            input.schedule-add__radio-recording(type="radio", id="one-hour" name="recording")
             label(for="one-hour") 1 час
 
           .schedule-add__radio-wrap
-            input.schedule-add__radio-discount(type="radio", id="two-hours" name="recording")
+            input.schedule-add__radio-recording(type="radio", id="two-hours" name="recording")
             label(for="two-hours") 2 часа
 
           .schedule-add__radio-wrap
-            input.schedule-add__radio-discount(type="radio", id="three-hours" name="recording")
+            input.schedule-add__radio-recording(type="radio", id="three-hours" name="recording")
             label(for="three-hours") 3 часа
 
-      
       .schedule-add__field        
 
         .schedule-add__toggle
@@ -116,11 +208,11 @@
             p Интервал для записи:
             .schedule-add__radio-group
               .schedule-add__radio-wrap
-                input.schedule-add__radio-discount(type="radio", id="room" name="calculation")
+                input.schedule-add__radio-place.schedule-add__radio-calculation(type="radio", id="room" name="calculation")
                 label(for="room") За помещение
 
               .schedule-add__radio-wrap
-                input.schedule-add__radio-discount(type="radio", id="person" name="calculation")
+                input.schedule-add__radio-price.schedule-add__radio-calculation(type="radio", id="person" name="calculation")
                 label(for="person") За человека
 
           .schedule-add__input-group
@@ -140,4 +232,187 @@
             .schedule-add__field
               label(for="add-price") Цена доп. места
               input(type="text" id="add-price")
+
+      .schedule-add__line-buttom
+
+
+      .schedule-add__content      
+
+        .schedule-add__field         
+          p Период
+          .schedule-add__field 
+            .schedule-add__flat-field    
+              .schedule-add__field      
+                button.schedule-add__dropdown-button( id="dropdown-item" type='button' onclick="this.classList.toggle('dropdown-opened')")
+                  p.schedule-add__dropdown-txt 11 ноября 2021 — 20 января 2022
+
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.175 7.1582L10 10.9749L13.825 7.1582L15 8.3332L10 13.3332L5 8.3332L6.175 7.1582Z" fill="#2F2F2F"/>
+                  </svg>
+                  
+                  .schedule-add__dropdown-menu(id="menu-branches")
+                    span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-1
+                    span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-2
+                    span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-3
+                    span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-4
+                    span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-5
+                    span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-6
+                    span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-7
+                    span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-8
+                    span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-9
+                    span.schedule-add__dropdown-item(data-branches="some-branches") 11 ноября 2021 — 20 января 2022-10
+
+              <svg class="schedule-add__add-btn"   viewBox="0 0 34 34" onclick = "this.parentElement.parentElement.parentElement.parentElement.remove()" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                <circle cx="16.9999" cy="17" r="12" transform="rotate(-45 16.9999 17)" fill="#2F2F2F"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9505 12.8899C13.6576 12.597 13.1827 12.597 12.8898 12.8899C12.5969 13.1828 12.597 13.6577 12.8898 13.9506L15.9392 17L12.8898 20.0494C12.597 20.3423 12.5969 20.8172 12.8898 21.1101C13.1827 21.403 13.6576 21.403 13.9505 21.1101L16.9999 18.0607L20.0493 21.1101C20.3422 21.403 20.8171 21.403 21.11 21.1101C21.4029 20.8172 21.4029 20.3423 21.11 20.0494L18.0606 17L21.11 13.9506C21.4029 13.6577 21.4029 13.1828 21.11 12.8899C20.8171 12.597 20.3422 12.597 20.0493 12.8899L16.9999 15.9393L13.9505 12.8899Z" fill="white"/>
+              </svg>
         
+        .schedule-add__field.schedule-add__date-group
+          .schedule-add__flat-field.schedule-add__date-item
+            .schedule-add__date
+              .schedule-add__days
+                button.schedule-add__day(type='button' onclick="this.classList.toggle('background-grey')" ) Пн 
+                button.schedule-add__day(type='button' onclick="this.classList.toggle('background-grey')") Вт
+                button.schedule-add__day(type='button' onclick="this.classList.toggle('background-grey')") Ср
+                button.schedule-add__day(type='button' onclick="this.classList.toggle('background-grey')") Чт
+                button.schedule-add__day(type='button' onclick="this.classList.toggle('background-grey')") Пт
+                button.schedule-add__day(type='button' onclick="this.classList.toggle('background-grey')") Сб
+                button.schedule-add__day(type='button' onclick="this.classList.toggle('background-grey')") Вс
+
+              .schedule-add__times
+                .schedule-add__field
+
+                  button.schedule-add__dropdown-button( id="dropdown-item" type='button' onclick="this.classList.toggle('dropdown-opened')")
+                    p.schedule-add__dropdown-txt 00:00
+
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.175 7.1582L10 10.9749L13.825 7.1582L15 8.3332L10 13.3332L5 8.3332L6.175 7.1582Z" fill="#2F2F2F"/>
+                    </svg>
+                    
+                    .schedule-add__dropdown-menu(id="menu-hour")
+                      span.schedule-add__dropdown-item(data-hour="00:00") 00:00
+                      span.schedule-add__dropdown-item(data-hour="01:00") 01:00
+                      span.schedule-add__dropdown-item(data-hour="02:00") 02:00
+                      span.schedule-add__dropdown-item(data-hour="03:00") 03:00
+                      span.schedule-add__dropdown-item(data-hour="04:00") 04:00
+                      span.schedule-add__dropdown-item(data-hour="05:00") 05:00
+                      span.schedule-add__dropdown-item(data-hour="06:00") 06:00
+                      span.schedule-add__dropdown-item(data-hour="07:00") 07:00
+                      span.schedule-add__dropdown-item(data-hour="08:00") 08:00
+                      span.schedule-add__dropdown-item(data-hour="09:00") 09:00
+                      span.schedule-add__dropdown-item(data-hour="10:00") 10:00
+                      span.schedule-add__dropdown-item(data-hour="11:00") 11:00
+                      span.schedule-add__dropdown-item(data-hour="12:00") 12:00
+                      span.schedule-add__dropdown-item(data-hour="13:00") 13:00
+                      span.schedule-add__dropdown-item(data-hour="14:00") 14:00
+                      span.schedule-add__dropdown-item(data-hour="15:00") 15:00
+                      span.schedule-add__dropdown-item(data-hour="16:00") 16:00
+                      span.schedule-add__dropdown-item(data-hour="17:00") 17:00
+                      span.schedule-add__dropdown-item(data-hour="18:00") 18:00
+                      span.schedule-add__dropdown-item(data-hour="19:00") 19:00
+                      span.schedule-add__dropdown-item(data-hour="20:00") 20:00
+                      span.schedule-add__dropdown-item(data-hour="21:00") 21:00
+                      span.schedule-add__dropdown-item(data-hour="22:00") 22:00
+                      span.schedule-add__dropdown-item(data-hour="23:00") 23:00
+                      span.schedule-add__dropdown-item(data-hour="24:00") 24:00
+                
+                span.schedule-add__line 
+
+                .schedule-add__field
+
+                  button.schedule-add__dropdown-button( id="dropdown-item" type='button' onclick="this.classList.toggle('dropdown-opened')")
+                    p.schedule-add__dropdown-txt 00:00
+
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.175 7.1582L10 10.9749L13.825 7.1582L15 8.3332L10 13.3332L5 8.3332L6.175 7.1582Z" fill="#2F2F2F"/>
+                    </svg>
+                  
+                    .schedule-add__dropdown-menu(id="menu-hour")
+                      span.schedule-add__dropdown-item(data-hour="00:00") 00:00
+                      span.schedule-add__dropdown-item(data-hour="01:00") 01:00
+                      span.schedule-add__dropdown-item(data-hour="02:00") 02:00
+                      span.schedule-add__dropdown-item(data-hour="03:00") 03:00
+                      span.schedule-add__dropdown-item(data-hour="04:00") 04:00
+                      span.schedule-add__dropdown-item(data-hour="05:00") 05:00
+                      span.schedule-add__dropdown-item(data-hour="06:00") 06:00
+                      span.schedule-add__dropdown-item(data-hour="07:00") 07:00
+                      span.schedule-add__dropdown-item(data-hour="08:00") 08:00
+                      span.schedule-add__dropdown-item(data-hour="09:00") 09:00
+                      span.schedule-add__dropdown-item(data-hour="10:00") 10:00
+                      span.schedule-add__dropdown-item(data-hour="11:00") 11:00
+                      span.schedule-add__dropdown-item(data-hour="12:00") 12:00
+                      span.schedule-add__dropdown-item(data-hour="13:00") 13:00
+                      span.schedule-add__dropdown-item(data-hour="14:00") 14:00
+                      span.schedule-add__dropdown-item(data-hour="15:00") 15:00
+                      span.schedule-add__dropdown-item(data-hour="16:00") 16:00
+                      span.schedule-add__dropdown-item(data-hour="17:00") 17:00
+                      span.schedule-add__dropdown-item(data-hour="18:00") 18:00
+                      span.schedule-add__dropdown-item(data-hour="19:00") 19:00
+                      span.schedule-add__dropdown-item(data-hour="20:00") 20:00
+                      span.schedule-add__dropdown-item(data-hour="21:00") 21:00
+                      span.schedule-add__dropdown-item(data-hour="22:00") 22:00
+                      span.schedule-add__dropdown-item(data-hour="23:00") 23:00
+                      span.schedule-add__dropdown-item(data-hour="24:00") 24:00
+
+      
+            <svg class="schedule-add__time-add schedule-add__add-btn" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16.9999" cy="17" r="11.3" transform="rotate(-45 16.9999 17)" fill="#2F2F2F" stroke="#2F2F2F" stroke-width="1.4"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9373 16.25C11.523 16.25 11.1873 16.5858 11.1873 17C11.1873 17.4142 11.523 17.75 11.9373 17.75H16.2498V22.0625C16.2498 22.4767 16.5855 22.8125 16.9998 22.8125C17.414 22.8125 17.7498 22.4767 17.7498 22.0625V17.75H22.0623C22.4765 17.75 22.8123 17.4142 22.8123 17C22.8123 16.5858 22.4765 16.25 22.0623 16.25H17.7498V11.9375C17.7498 11.5233 17.414 11.1875 16.9998 11.1875C16.5855 11.1875 16.2498 11.5233 16.2498 11.9375V16.25H11.9373Z" fill="white"/>
+            </svg>
+
+        .schedule-add__field
+          p Интервал для записи:
+
+          .schedule-add__radio-group
+
+            .schedule-add__radio-wrap
+              input.schedule-add__radio-recording(type="radio", id="one-hour-2" name="recording-2")
+              label(for="one-hour-2") 1 час
+
+            .schedule-add__radio-wrap
+              input.schedule-add__radio-recording(type="radio", id="two-hours-2" name="recording-2")
+              label(for="two-hours-2") 2 часа
+
+            .schedule-add__radio-wrap
+              input.schedule-add__radio-recording(type="radio", id="three-hours-2" name="recording-2")
+              label(for="three-hours-2") 3 часа
+
+        .schedule-add__field        
+
+          .schedule-add__toggle
+            .schedule-add__field  
+              p Интервал для записи:
+              .schedule-add__radio-group
+                .schedule-add__radio-wrap
+                  input.schedule-add__radio-place.schedule-add__radio-calculation(type="radio", id="room-2" name="calculation-2")
+                  label(for="room-2") За помещение
+
+                .schedule-add__radio-wrap
+                  input.schedule-add__radio-price.schedule-add__radio-calculation(type="radio", id="person-2" name="calculation-2")
+                  label(for="person-2") За человека
+
+            .schedule-add__input-group
+              .schedule-add__field
+                label(for="place") Основных мест
+                input(type="text" id="place")
+
+              .schedule-add__field
+                label(for="add-place") Доп. мест
+                input(type="text" id="add-place")
+
+            .schedule-add__input-group
+              .schedule-add__field
+                label(for="price") Цена основная
+                input(type="text" id="price")
+
+              .schedule-add__field
+                label(for="add-price") Цена доп. места
+                input(type="text" id="add-price")
+
+        .schedule-add__line-buttom
+
+      .schedule-add__bottom
+
+        a(href="schedule.html") Отмена
+
+        a(href="#") Сохранить

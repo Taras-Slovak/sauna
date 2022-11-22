@@ -5,8 +5,8 @@
   margin: 50px 16px 279px 300px;
   font-family: 'Montserrat';
 
-  @media only screen and (max-width: 1000px) {
-    margin: 70px 16px 50px 16px;
+  @media only screen and (max-width: 1470px) {
+    margin: 16px;
   }
 
   &__top {
@@ -34,7 +34,7 @@
     align-items: flex-start;
     gap: 50px;
 
-    @media only screen and (max-width: 930px) {
+    @media only screen and (max-width: 1010px) {
       position: relative;
       flex-direction: column;
       justify-content: center;
@@ -80,7 +80,7 @@
     flex-direction: column;
     gap: 40px;
     max-width: 730px;
-    @media only screen and (max-width: 930px) {
+    @media only screen and (max-width: 1010px) {
       max-width: 100%;
       width: 100%;
     }
@@ -185,8 +185,18 @@
     }
   }
 
+  &__flat-field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+  }
+
   &__branch-field {
     max-width: 540px;
+    @media only screen and (max-width: 1010px) {
+      max-width: 100%;
+    }
   }
 
   &__dropdown-button {
@@ -273,10 +283,75 @@
     }
   }
 
-  &__date-add {
-    position: absolute;
-    top: 2px;
-    right: -55px;
+  &__date-group {
+    gap: 21px;
+  }
+
+  &__date {
+    max-width: 100%;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+
+    .schedule-add__dropdown-button {
+      width: 92px;
+    }
+  }
+
+  &__days {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    @media only screen and (max-width: 900px) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__day {
+    width: 50px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: 1px solid #2f2f2f;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    line-height: 120%;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:active {
+      transform: scale(1);
+    }
+  }
+
+  &__times {
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: 600px) {
+      gap: 5px;
+      flex-direction: column;
+    }
+
+    .company-contacts__dropdown-menu {
+      top: 40px;
+    }
+  }
+
+  &__line {
+    width: 16px;
+    margin: 0 5px;
+    height: 1px;
+    background: #2f2f2f;
   }
 
   &__radio-group {
@@ -289,6 +364,12 @@
     display: flex;
     align-items: flex-start;
     gap: 40px;
+
+    @media only screen and (max-width: 800px) {
+      gap: 20px;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__input-group {
@@ -298,20 +379,80 @@
     gap: 20px;
   }
 
-  &__remove {
-    width: 23px;
-    height: 23px;
-    display: block;
-    position: absolute;
-    top: 6px;
-    right: 0;
+  &__remove-btn {
+    width: max-content;
+    height: max-content;
+    padding: 0;
+    border-radius: 50%;
     cursor: pointer;
-    transition: all 0.1s ease-in-out;
-    &:hover {
-      transform: scale(1.1);
+    background: #ffffff;
+    border: none;
+
+    svg {
+      display: block;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &:active {
+        transform: scale(1);
+      }
     }
-    &:active {
-      transform: scale(1);
+  }
+
+  &__line-buttom {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #b3b3b3;
+  }
+
+  &__bottom {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 120px;
+      height: 36px;
+      color: #2f2f2f;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 150%;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #000000;
+        color: #fff;
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
     }
+  }
+}
+
+.background-grey {
+  background: #707070;
+  border: 1px solid #707070;
+  color: #fff;
+  box-shadow: 0px 0px 5px 0px #70707094;
+}
+
+.input-active {
+  background: #f2f2f2;
+  border: 1px solid #b3b3b3 !important;
+
+  &:focus {
+    box-shadow: 0px 0px 2px 1px #b3b3b33f !important;
   }
 }

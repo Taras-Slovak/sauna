@@ -3,7 +3,7 @@
   flex-grow: 1;
   color: #2f2f2f;
   margin: 50px 16px 279px 300px;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
 
   @media only screen and (max-width: 1000px) {
     margin: 70px 16px 50px 16px;
@@ -67,7 +67,7 @@
 
     .slider:before {
       position: absolute;
-      content: "";
+      content: '';
       height: 24px;
       width: 24px;
       left: 2px;
@@ -291,7 +291,7 @@
     align-items: flex-end;
     gap: 25px;
 
-    .company-contacts__field {
+    .company-edit__field {
       max-width: 350px;
     }
   }
@@ -333,7 +333,8 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    .company-contacts__dropdown-button {
+
+    .company-edit__dropdown-button {
       width: 92px;
     }
   }
@@ -380,7 +381,7 @@
       flex-direction: column;
     }
 
-    .company-contacts__dropdown-menu {
+    .company-edit__dropdown-menu {
       top: 40px;
     }
   }
@@ -476,7 +477,7 @@
         left: 5px;
         top: 2px;
         font-weight: 500;
-        content: "\2713";
+        content: '\2713';
         text-align: center;
         color: #ffffff;
         position: absolute;
