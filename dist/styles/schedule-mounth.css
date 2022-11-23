@@ -7416,105 +7416,285 @@ body {
   outline: 0;
 }
 
-.company-profile {
-  width: 100%;
+.schedule-mounth {
+  max-width: 1585px;
+  flex-grow: 1;
   color: #2f2f2f;
-  margin-left: 260px;
-  margin-bottom: 130px;
-  margin-right: 16px;
+  margin: 50px 16px 279px 300px;
+  font-family: "Montserrat";
 }
 
-.company-profile__inner {
-  margin: 40px 0 0 145px;
+.schedule-mounth__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.company-profile__title {
+.schedule-mounth__title {
   font-weight: 700;
   font-size: 22px;
   line-height: 130%;
+  color: #2f2f2f;
 }
 
-.company-profile__group-item {
-  margin-top: 25px;
-}
-
-.company-profile__item {
+.schedule-mounth__btn-group {
   display: flex;
-  justify-content: space-between;
-  padding: 25px;
-  max-width: 920px;
-  background: #ffffff;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
-  gap: 15px;
+  gap: 20px;
+  align-items: center;
 }
 
-.company-profile__item-content {
+.schedule-mounth__btn {
+  width: 196px;
+  height: 36px;
   display: flex;
-  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  color: #ffffff;
+  background: #707070;
+  transition: all 0.2s ease-in-out;
 }
 
-.company-profile__item-content img {
-  display: block;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.company-profile__item-text {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 550px;
-}
-
-.company-profile__item-text h4 {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 130%;
-}
-
-.company-profile__item-text p {
+.schedule-mounth__btn span {
+  margin-left: 10px;
+  font-size: 30px;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 130%;
 }
 
-.company-profile__item-btn {
+.schedule-mounth__btn:hover {
+  background: #2f2f2f;
+  color: #ffffff;
+}
+
+.schedule-mounth__panel {
+  margin-top: 27px;
   display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: space-between;
+}
+
+.schedule-mounth__toggle-group {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
   color: #2f2f2f;
-  transition: all 0.2s;
 }
 
-.company-profile__item-btn:hover {
-  color: #ff8a00;
+.schedule-mounth__toggle-left {
+  width: 82px;
+  height: 37px;
+  border: 1px solid #b3b3b3;
+  border-radius: 4px 0px 0px 4px;
+  border-right: none;
+  background-color: #ffffff;
+  transition: all 0.1s ease;
 }
 
-.company-profile__item-btn:hover svg {
+.schedule-mounth__toggle-left.active-toggle {
+  background: #f2f2f2;
+  border: 3px solid #2f80ed;
+  transition: all 0.1s ease;
+}
+
+.schedule-mounth__toggle-left.active-toggle + .schedule__toggle-right {
+  border-left: none;
+  transition: all 0.1s ease;
+}
+
+.schedule-mounth__toggle-right {
+  width: 75px;
+  height: 37px;
+  border: 1px solid #b3b3b3;
+  border-radius: 0px 4px 4px 0px;
+  background-color: #ffffff;
+  transition: all 0.1s ease;
+}
+
+.schedule-mounth__toggle-right.active-toggle {
+  background: #f2f2f2;
+  border: 3px solid #2f80ed;
+  transition: all 0.1s ease;
+}
+
+.schedule-mounth__nav {
+  display: flex;
+  align-items: center;
+}
+
+.schedule-mounth__nav-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 37px;
+  text-decoration: none;
+}
+
+.schedule-mounth__nav-arrow svg {
+  width: 32px;
+  height: 32px;
+  fill: #000000;
+  transition: all 0.2s ease-in-out;
+}
+
+.schedule-mounth__nav-arrow:hover svg {
   fill: #ff8a00;
 }
 
-.company-profile__item-btn p {
+.schedule-mounth__nav-arrow:active {
+  transform: scale(0.98);
+}
+
+.schedule-mounth__nav-text {
   font-weight: 500;
   font-size: 16px;
   line-height: 120%;
+  color: #000000;
 }
 
-.company-profile__item-btn svg {
-  transition: all 0.2s;
-  fill: black;
+.schedule-mounth__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  color: #000;
+  transition: all 0.2s ease-in-out;
 }
 
-.company-profile__item-green {
-  color: #2e7d32;
+.schedule-mounth__link:hover {
+  color: #ff8a00;
 }
 
-.company-profile__item-green svg {
-  transition: all 0.2s;
-  fill: #2e7d32;
+.schedule-mounth__link svg {
+  width: 26px;
+  height: 26px;
+  fill: #000000;
+  transition: all 0.2s ease-in-out;
+}
+
+.schedule-mounth__link:hover svg {
+  fill: #ff8a00;
+}
+
+.schedule-mounth__calendar {
+  margin-top: 38px;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #f2f2f2;
+  padding: 10px 7px;
+}
+
+.schedule-mounth__calendar-top {
+  display: flex;
+}
+
+.schedule-mounth__calendar-top p {
+  flex-grow: 1;
+  max-width: 222px;
+  text-align: center;
+}
+
+.schedule-mounth__calendar-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  width: 100%;
+}
+
+.schedule-mounth__day {
+  max-width: 224px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid rgba(179, 179, 179, 0.4862745098);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.schedule-mounth__day-top {
+  display: flex;
+  padding: 0 4px;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  background: #f2f2f2;
+}
+
+.schedule-mounth__day-top p,
+.schedule-mounth__day-top span {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  color: #2f2f2f;
+}
+
+.schedule-mounth__day-content {
+  padding: 15px 0 24px 4px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
+.schedule-mounth__day-item {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.schedule-mounth__day-item p {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 120%;
+  color: #2f2f2f;
+}
+
+.schedule-mounth__day-add {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.schedule-mounth__day-add p {
+  text-align: center;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 120%;
+  color: black;
+}
+
+.schedule-mounth__day-add a {
+  width: 112px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2f2f2f;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.schedule-mounth__day-add a:hover {
+  background: #595959;
+  color: #fff;
+}
+
+.schedule-mounth__day-add a:active {
+  transform: scale(0.98);
 }
 
 .footer {
@@ -12749,6 +12929,35 @@ body {
   }
 }
 
+@media only screen and (min-width: 1900px) {
+  .schedule-mounth__day-top span {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1899px) {
+  .schedule-mounth__calendar {
+    margin-top: 18px;
+    border: none;
+  }
+
+  .schedule-mounth__calendar-top {
+    display: none;
+  }
+
+  .schedule-mounth__calendar-content {
+    justify-content: flex-start;
+  }
+
+  .schedule-mounth__day {
+    max-width: 230px;
+  }
+
+  .schedule-mounth__day-content {
+    padding: 15px 4px 24px 4px;
+  }
+}
+
 @media only screen and (max-width: 1600px) {
   .wrapper {
     padding: 0 16px;
@@ -12958,12 +13167,6 @@ body {
   }
 }
 
-@media only screen and (max-width: 1100px) {
-  .company-profile__inner {
-    margin: 40px 0 0 16px;
-  }
-}
-
 @media only screen and (max-width: 1050px) {
   .footer {
     padding-top: 46px;
@@ -13026,9 +13229,8 @@ body {
     display: block;
   }
 
-  .company-profile {
-    margin-top: 20px;
-    margin-left: 0px;
+  .schedule-mounth {
+    margin: 70px 16px 50px 16px;
   }
 }
 
@@ -13230,6 +13432,20 @@ body {
   }
 }
 
+@media only screen and (max-width: 750px) {
+  .schedule-mounth__panel {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  .schedule-mounth__calendar-content {
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   .footer {
     flex-direction: column;
@@ -13255,9 +13471,9 @@ body {
   }
 }
 
-@media only screen and (max-width: 620px) {
-  .company-profile__item-content img {
-    display: none;
+@media only screen and (max-width: 650px) {
+  .schedule-mounth__btn-group {
+    flex-direction: column;
   }
 }
 
@@ -13358,20 +13574,9 @@ body {
 }
 
 @media only screen and (max-width: 450px) {
-  .company-profile__item {
-    padding: 10px;
-  }
-
-  .company-profile__item-text h4 {
-    font-size: 15px;
-  }
-
-  .company-profile__item-text p {
-    font-size: 13px;
-  }
-
-  .company-profile__item-btn p {
-    font-size: 14px;
+  .schedule-mounth__top {
+    flex-direction: column;
+    gap: 20px;
   }
 }
 
@@ -13551,4 +13756,4 @@ body {
     display: none !important;
   }
 }
-/*# sourceMappingURL=maps/company.css.map */
+/*# sourceMappingURL=maps/schedule-mounth.css.map */

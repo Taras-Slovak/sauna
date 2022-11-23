@@ -20,6 +20,7 @@ module.exports = {
     companyStockSet: './src/js/company-stock-set.js',
     schedule: './src/js/schedule',
     scheduleAdd: './src/js/schedule-add.js',
+    scheduleMounth: './src/js/schedule-mounth.js',
   },
 
   output: {

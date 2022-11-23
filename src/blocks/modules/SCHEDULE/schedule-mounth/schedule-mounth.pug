@@ -1,0 +1,135 @@
+mixin day(date,day)
+  .schedule-mounth__day
+    .schedule-mounth__day-top
+      p=date
+      span=day
+    
+    .schedule-mounth__day-content
+      .schedule-mounth__day-item
+        p.schedule-mounth__day-hour 00:00 - 01:00
+        p.schedule-mounth__day-hour 01:00 - 02:00
+        p.schedule-mounth__day-hour 03:00 - 04:00
+        p.schedule-mounth__day-hour 05:00 - 06:00
+        p.schedule-mounth__day-hour 07:00 - 08:00
+        p.schedule-mounth__day-hour 09:00 - 10:00
+        p.schedule-mounth__day-hour 11:00 - 12:00
+        p.schedule-mounth__day-hour 13:00 - 14:00
+        p.schedule-mounth__day-hour 15:00 - 16:00
+        p.schedule-mounth__day-hour 17:00 - 18:00
+        p.schedule-mounth__day-hour 19:00 - 20:00
+        p.schedule-mounth__day-hour 21:00 - 22:00
+        p.schedule-mounth__day-hour 23:00 - 24:00        
+
+      .schedule-mounth__day-item
+        p.schedule-mounth__day-price 1 100 (+200) грн.
+        p.schedule-mounth__day-price 1 100 (+200) грн.
+        p.schedule-mounth__day-price 1 100 (+200) грн.
+        p.schedule-mounth__day-price 1 100 (+200) грн.        
+        p.schedule-mounth__day-price 1 100 (+200) грн.        
+        p.schedule-mounth__day-price 1 100 (+200) грн.        
+        p.schedule-mounth__day-price 1 100 (+200) грн.        
+        p.schedule-mounth__day-price 1 100 (+200) грн.        
+        p.schedule-mounth__day-price 1 100 (+200) грн.        
+        p.schedule-mounth__day-price 1 100 (+200) грн.        
+        p.schedule-mounth__day-price 1 100 (+200) грн.        
+        p.schedule-mounth__day-price 1 100 (+200) грн.        
+        p.schedule-mounth__day-price 1 100 (+200) грн.
+
+.schedule-mounth
+    .schedule-mounth__top
+      h1.schedule-mounth__title Расписание
+
+      .schedule-mounth__btn-group 
+        a.schedule-mounth__btn(href="#") Изменение цен
+        a.schedule-mounth__btn(href="schedule-add.html") Расписание 
+          span +
+
+    .schedule-mounth__panel
+      .schedule-mounth__toggle-group
+        button.schedule-mounth__toggle-left(type='button') Неделя
+        button.schedule-mounth__toggle-right.active-toggle(type='button') Месяц
+
+      .schedule-mounth__nav
+        a.schedule-mounth__nav-arrow(href="#")        
+          <svg  viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.4401 25.3324C18.2409 25.3331 18.0441 25.2891 17.8641 25.2037C17.6841 25.1184 17.5255 24.9938 17.4001 24.8391L10.9601 16.8391C10.7639 16.6005 10.6567 16.3012 10.6567 15.9924C10.6567 15.6836 10.7639 15.3843 10.9601 15.1457L17.6267 7.14573C17.853 6.87344 18.1783 6.70221 18.5308 6.6697C18.8834 6.6372 19.2344 6.74608 19.5067 6.9724C19.779 7.19872 19.9502 7.52393 19.9828 7.8765C20.0153 8.22907 19.9064 8.58011 19.6801 8.8524L13.7201 15.9991L19.4801 23.1457C19.6431 23.3414 19.7467 23.5798 19.7785 23.8325C19.8103 24.0852 19.7691 24.3418 19.6597 24.5718C19.5503 24.8019 19.3773 24.9958 19.1612 25.1305C18.945 25.2653 18.6948 25.3354 18.4401 25.3324Z"/>
+          </svg>
+
+        p.schedule-mounth__nav-text Июнь 2021
+
+        a.schedule-mounth__nav-arrow(href="#")  
+          <svg  viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.5599 25.3324C13.7591 25.3331 13.9559 25.2891 14.1359 25.2037C14.3159 25.1184 14.4745 24.9938 14.5999 24.8391L21.0399 16.8391C21.2361 16.6005 21.3433 16.3012 21.3433 15.9924C21.3433 15.6836 21.2361 15.3843 21.0399 15.1457L14.3733 7.14573C14.147 6.87344 13.8217 6.70221 13.4692 6.6697C13.1166 6.6372 12.7656 6.74608 12.4933 6.9724C12.221 7.19872 12.0498 7.52393 12.0172 7.8765C11.9847 8.22907 12.0936 8.58011 12.3199 8.8524L18.2799 15.9991L12.5199 23.1457C12.3569 23.3414 12.2533 23.5798 12.2215 23.8325C12.1897 24.0852 12.2309 24.3418 12.3403 24.5718C12.4497 24.8019 12.6227 24.9958 12.8388 25.1305C13.055 25.2653 13.3052 25.3354 13.5599 25.3324Z"/>
+          </svg>
+
+      a.schedule-mounth__link(href="#")
+        p Баня Емеля, сруб Кедровый
+        <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.41645 11.0179C5.4159 11.1797 5.45162 11.3396 5.52098 11.4858C5.59035 11.6321 5.69159 11.7609 5.81728 11.8629L12.3173 17.0954C12.5111 17.2547 12.7543 17.3418 13.0052 17.3418C13.2561 17.3418 13.4993 17.2547 13.6931 17.0954L20.1931 11.6787C20.4144 11.4948 20.5535 11.2306 20.5799 10.9441C20.6063 10.6576 20.5178 10.3724 20.3339 10.1512C20.1501 9.92995 19.8858 9.79082 19.5994 9.76441C19.3129 9.738 19.0277 9.82647 18.8064 10.0104L12.9998 14.8529L7.19312 10.1729C7.0341 10.0404 6.84046 9.95623 6.63512 9.93036C6.42977 9.90449 6.22131 9.93798 6.03441 10.0269C5.8475 10.1158 5.68998 10.2563 5.58046 10.432C5.47095 10.6076 5.41403 10.8109 5.41645 11.0179Z"/>
+        </svg>
+
+    .schedule-mounth__calendar
+      .schedule-mounth__calendar-top
+        p Понедельник
+        p Вторник
+        p Среда
+        p Четверг
+        p Пятница
+        p Суббота
+        p Воскресенье
+
+      .schedule-mounth__calendar-content
+
+        +day('22.11','Понедельник')
+        +day('23.11','Вторник')
+        +day('24.11','Среда')
+        +day('25.11','Четверг')
+        +day('26.11','Пятница')
+        +day('26.11','Суббота')
+        +day('26.11','Воскресенье')
+
+        +day('22.11','Понедельник')
+        +day('23.11','Вторник')
+        +day('24.11','Среда')
+        +day('25.11','Четверг')
+        +day('26.11','Пятница')
+        +day('26.11','Суббота')
+        +day('26.11','Воскресенье')
+
+        +day('22.11','Понедельник')
+        +day('23.11','Вторник')
+        +day('24.11','Среда')
+        +day('25.11','Четверг')
+        +day('26.11','Пятница')
+        +day('26.11','Суббота')
+        +day('26.11','Воскресенье')
+
+        +day('22.11','Понедельник')
+        +day('23.11','Вторник')
+        +day('24.11','Среда')
+        +day('25.11','Четверг')
+        +day('26.11','Пятница')
+        +day('26.11','Суббота')
+        +day('26.11','Воскресенье')
+
+        +day('22.11','Понедельник')
+        +day('23.11','Вторник')
+        +day('24.11','Среда')
+        +day('25.11','Четверг')
+        +day('26.11','Пятница')
+
+        .schedule-mounth__day
+          .schedule-mounth__day-top
+            p 05.12
+          .schedule-mounth__day-content
+            .schedule-mounth__day-add
+              p Расписание <br> не задано
+              a(href="#") Добавить 
+
+        .schedule-mounth__day
+          .schedule-mounth__day-top
+            p 05.12
+          .schedule-mounth__day-content
+            .schedule-mounth__day-add
+              p Расписание <br> не задано
+              a(href="#") Добавить 
