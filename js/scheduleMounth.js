@@ -43,8 +43,8 @@ getMainSideBar.addEventListener("click", function (e) {
 /***/ (function() {
 
 function toggleSchedule() {
-  var getLeftBtn = document.querySelector('.schedule-mounth__toggle-left');
-  var getRightBtn = document.querySelector('.schedule-mounth__toggle-right');
+  var getLeftBtn = document.querySelector('.schedule-month__toggle-left');
+  var getRightBtn = document.querySelector('.schedule-month__toggle-right');
 
   getLeftBtn.onclick = function () {
     if (!getLeftBtn.classList.contains('active-toggle')) {
@@ -62,6 +62,22 @@ function toggleSchedule() {
 }
 
 toggleSchedule();
+
+function currentDaysOfMonth() {
+  var getCurrentDay = document.querySelector('.schedule-month__nav-text');
+  var getAllDays = document.querySelectorAll('.schedule-month__day');
+  getAllDays.forEach(function (day) {
+    if (getCurrentDay.dataset.month === day.dataset.month) {
+      day.style.opacity = '1';
+    } else if (day.dataset.month == undefined || day.dataset.month == null) {
+      day.style.opacity = '1';
+    } else {
+      day.style.opacity = '0.5';
+    }
+  });
+}
+
+currentDaysOfMonth();
 
 /***/ }),
 
