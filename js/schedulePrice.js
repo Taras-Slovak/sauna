@@ -36,85 +36,13 @@ getMainSideBar.addEventListener("click", function (e) {
 
 /***/ }),
 
-/***/ "./src/blocks/modules/SCHEDULE/schedule-week/schedule-week.js":
-/*!********************************************************************!*\
-  !*** ./src/blocks/modules/SCHEDULE/schedule-week/schedule-week.js ***!
-  \********************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var air_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! air-datepicker */ "./node_modules/air-datepicker/index.es.js");
-/* harmony import */ var air_datepicker_locale_ru__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! air-datepicker/locale/ru */ "./node_modules/air-datepicker/locale/ru.js");
-/* eslint-disable no-unused-vars */
+/***/ "./src/blocks/modules/SCHEDULE/schedule-price/schedule-price.js":
+/*!**********************************************************************!*\
+  !*** ./src/blocks/modules/SCHEDULE/schedule-price/schedule-price.js ***!
+  \**********************************************************************/
+/***/ (function() {
 
 
-
-function dataPicker() {
-  var monthText = document.querySelector('.schedule-week__nav-month');
-  var yearText = document.querySelector('.schedule-week__nav-year');
-  var getCurrentMonth = document.querySelector('.schedule-week__nav-text');
-  var startDate = new Date();
-  yearText.textContent = startDate.getFullYear();
-  monthText.textContent = air_datepicker_locale_ru__WEBPACK_IMPORTED_MODULE_1__["default"].months[startDate.getMonth()];
-  getCurrentMonth.dataset.month = startDate.getMonth() + 1;
-  var datepicker = new air_datepicker__WEBPACK_IMPORTED_MODULE_0__["default"]('#data-picker', {
-    locale: air_datepicker_locale_ru__WEBPACK_IMPORTED_MODULE_1__["default"],
-    dateFormat: 'MM.d',
-    multipleDates: true,
-    range: true,
-    multipleDatesSeparator: ' - ',
-    selectedDates: [startDate, startDate],
-    autoClose: true,
-    position: 'bottom center',
-    onSelect: function onSelect(_ref) {
-      var date = _ref.date;
-      monthText.textContent = air_datepicker_locale_ru__WEBPACK_IMPORTED_MODULE_1__["default"].months[date[0].getMonth()];
-      yearText.textContent = date[0].getFullYear();
-      getCurrentMonth.dataset.month = date[0].getMonth();
-      currentDaysOfMonth();
-    }
-  });
-}
-
-dataPicker();
-
-function toggleSchedule() {
-  var getLeftBtn = document.querySelector('.schedule-week__toggle-left');
-  var getRightBtn = document.querySelector('.schedule-week__toggle-right');
-
-  getLeftBtn.onclick = function () {
-    if (!getLeftBtn.classList.contains('active-toggle')) {
-      getLeftBtn.classList.add('active-toggle');
-      getRightBtn.classList.remove('active-toggle');
-    }
-  };
-
-  getRightBtn.onclick = function () {
-    if (!getRightBtn.classList.contains('active-toggle')) {
-      getRightBtn.classList.add('active-toggle');
-      getLeftBtn.classList.remove('active-toggle');
-    }
-  };
-}
-
-toggleSchedule();
-
-function currentDaysOfMonth() {
-  var getCurrentDay = document.querySelector('.schedule-week__nav-text');
-  var getAllDays = document.querySelectorAll('.schedule-week__day');
-  getAllDays.forEach(function (day) {
-    if (getCurrentDay.dataset.month === day.dataset.month) {
-      day.style.opacity = '1';
-    } else if (day.dataset.month == undefined || day.dataset.month == null) {
-      day.style.opacity = '1';
-    } else {
-      day.style.opacity = '0.5';
-    }
-  });
-}
-
-currentDaysOfMonth();
 
 /***/ }),
 
@@ -132,31 +60,31 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/js/import/modules-schedule-week.js":
-/*!************************************************!*\
-  !*** ./src/js/import/modules-schedule-week.js ***!
-  \************************************************/
+/***/ "./src/js/import/modules-schedule-price.js":
+/*!*************************************************!*\
+  !*** ./src/js/import/modules-schedule-price.js ***!
+  \*************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_SCHEDULE_schedule_week_schedule_week__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %modules%/SCHEDULE/schedule-week/schedule-week */ "./src/blocks/modules/SCHEDULE/schedule-week/schedule-week.js");
-
+/* harmony import */ var _modules_SCHEDULE_schedule_price_schedule_price__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %modules%/SCHEDULE/schedule-price/schedule-price */ "./src/blocks/modules/SCHEDULE/schedule-price/schedule-price.js");
+/* harmony import */ var _modules_SCHEDULE_schedule_price_schedule_price__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_SCHEDULE_schedule_price_schedule_price__WEBPACK_IMPORTED_MODULE_0__);
 
 
 /***/ }),
 
-/***/ "./src/js/schedule-week.js":
-/*!*********************************!*\
-  !*** ./src/js/schedule-week.js ***!
-  \*********************************/
+/***/ "./src/js/schedule-price.js":
+/*!**********************************!*\
+  !*** ./src/js/schedule-price.js ***!
+  \**********************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
 /* harmony import */ var _import_components_company__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./import/components-company */ "./src/js/import/components-company.js");
-/* harmony import */ var _import_modules_schedule_week__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./import/modules-schedule-week */ "./src/js/import/modules-schedule-week.js");
+/* harmony import */ var _import_modules_schedule_price__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./import/modules-schedule-price */ "./src/js/import/modules-schedule-price.js");
 /* eslint-disable no-unused-vars */
 
 
@@ -276,7 +204,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"scheduleWeek": 0
+/******/ 			"schedulePrice": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -328,9 +256,9 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendor"], function() { return __webpack_require__("./src/js/schedule-week.js"); })
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendor"], function() { return __webpack_require__("./src/js/schedule-price.js"); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=scheduleWeek.js.map
+//# sourceMappingURL=schedulePrice.js.map
