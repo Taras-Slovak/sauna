@@ -36,10 +36,10 @@ getMainSideBar.addEventListener("click", function (e) {
 
 /***/ }),
 
-/***/ "./src/blocks/modules/SCHEDULE/schedule-mounth/schedule-mounth.js":
-/*!************************************************************************!*\
-  !*** ./src/blocks/modules/SCHEDULE/schedule-mounth/schedule-mounth.js ***!
-  \************************************************************************/
+/***/ "./src/blocks/modules/SCHEDULE/schedule-month/schedule-month.js":
+/*!**********************************************************************!*\
+  !*** ./src/blocks/modules/SCHEDULE/schedule-month/schedule-month.js ***!
+  \**********************************************************************/
 /***/ (function() {
 
 function toggleSchedule() {
@@ -95,31 +95,31 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/js/import/modules-schedule-mounth.js":
-/*!**************************************************!*\
-  !*** ./src/js/import/modules-schedule-mounth.js ***!
-  \**************************************************/
+/***/ "./src/js/import/modules-schedule-month.js":
+/*!*************************************************!*\
+  !*** ./src/js/import/modules-schedule-month.js ***!
+  \*************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_SCHEDULE_schedule_mounth_schedule_mounth__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %modules%/SCHEDULE/schedule-mounth/schedule-mounth */ "./src/blocks/modules/SCHEDULE/schedule-mounth/schedule-mounth.js");
-/* harmony import */ var _modules_SCHEDULE_schedule_mounth_schedule_mounth__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_SCHEDULE_schedule_mounth_schedule_mounth__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _modules_SCHEDULE_schedule_month_schedule_month__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %modules%/SCHEDULE/schedule-month/schedule-month */ "./src/blocks/modules/SCHEDULE/schedule-month/schedule-month.js");
+/* harmony import */ var _modules_SCHEDULE_schedule_month_schedule_month__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_SCHEDULE_schedule_month_schedule_month__WEBPACK_IMPORTED_MODULE_0__);
 
 
 /***/ }),
 
-/***/ "./src/js/schedule-mounth.js":
-/*!***********************************!*\
-  !*** ./src/js/schedule-mounth.js ***!
-  \***********************************/
+/***/ "./src/js/schedule-month.js":
+/*!**********************************!*\
+  !*** ./src/js/schedule-month.js ***!
+  \**********************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
 /* harmony import */ var _import_components_company__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./import/components-company */ "./src/js/import/components-company.js");
-/* harmony import */ var _import_modules_schedule_mounth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./import/modules-schedule-mounth */ "./src/js/import/modules-schedule-mounth.js");
+/* harmony import */ var _import_modules_schedule_month__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./import/modules-schedule-month */ "./src/js/import/modules-schedule-month.js");
 /* eslint-disable no-unused-vars */
 
 
@@ -239,7 +239,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"scheduleMounth": 0
+/******/ 			"scheduleMonth": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -291,9 +291,9 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendor"], function() { return __webpack_require__("./src/js/schedule-mounth.js"); })
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendor"], function() { return __webpack_require__("./src/js/schedule-month.js"); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=scheduleMounth.js.map
+//# sourceMappingURL=scheduleMonth.js.map
