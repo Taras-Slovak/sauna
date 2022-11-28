@@ -6,10 +6,13 @@ function dataPicker() {
   const monthText = document.querySelector('.schedule-week__nav-month');
   const yearText = document.querySelector('.schedule-week__nav-year');
 
+  const getCurrentMonth = document.querySelector('.schedule-week__nav-text');
+
   let startDate = new Date();
 
   yearText.textContent = startDate.getFullYear();
   monthText.textContent = localeRu.months[startDate.getMonth()];
+  getCurrentMonth.dataset.month = startDate.getMonth() + 1;
 
   const datepicker = new AirDatepicker('#data-picker', {
     locale: localeRu,
@@ -24,6 +27,8 @@ function dataPicker() {
     onSelect: function({ date }) {
       monthText.textContent = localeRu.months[date[0].getMonth()];
       yearText.textContent = date[0].getFullYear();
+      getCurrentMonth.dataset.month = date[0].getMonth();
+      currentDaysOfMonth();
     },
   });
 }
@@ -49,3 +54,18 @@ function toggleSchedule() {
   };
 }
 toggleSchedule();
+
+function currentDaysOfMonth() {
+  const getCurrentDay = document.querySelector('.schedule-week__nav-text');
+  const getAllDays = document.querySelectorAll('.schedule-week__day');
+  getAllDays.forEach((day) => {
+    if (getCurrentDay.dataset.month === day.dataset.month) {
+      day.style.opacity = '1';
+    } else if (day.dataset.month == undefined || day.dataset.month == null) {
+      day.style.opacity = '1';
+    } else {
+      day.style.opacity = '0.5';
+    }
+  });
+}
+currentDaysOfMonth();

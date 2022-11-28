@@ -22,6 +22,7 @@ module.exports = {
     scheduleAdd: './src/js/schedule-add.js',
     scheduleMonth: './src/js/schedule-month.js',
     scheduleWeek: './src/js/schedule-week.js',
+    schedulePrice: './src/js/schedule-price.js',
   },
 
   output: {
