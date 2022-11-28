@@ -1,4 +1,4 @@
 /* eslint-disable no-unused-vars */
 import { Modal } from 'bootstrap';
 import './import/components-company';
-import './import/modules-schedule-mounth';
+import './import/modules-schedule-month';

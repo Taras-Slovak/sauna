@@ -7416,7 +7416,7 @@ body {
   outline: 0;
 }
 
-.schedule-month {
+.schedule-week {
   max-width: 1585px;
   flex-grow: 1;
   color: #2f2f2f;
@@ -7424,26 +7424,26 @@ body {
   font-family: "Montserrat";
 }
 
-.schedule-month__top {
+.schedule-week__top {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.schedule-month__title {
+.schedule-week__title {
   font-weight: 700;
   font-size: 22px;
   line-height: 130%;
   color: #2f2f2f;
 }
 
-.schedule-month__btn-group {
+.schedule-week__btn-group {
   display: flex;
   gap: 20px;
   align-items: center;
 }
 
-.schedule-month__btn {
+.schedule-week__btn {
   width: 196px;
   height: 36px;
   display: flex;
@@ -7458,25 +7458,25 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.schedule-month__btn span {
+.schedule-week__btn span {
   margin-left: 10px;
   font-size: 30px;
   font-weight: 400;
 }
 
-.schedule-month__btn:hover {
+.schedule-week__btn:hover {
   background: #2f2f2f;
   color: #ffffff;
 }
 
-.schedule-month__panel {
+.schedule-week__panel {
   margin-top: 27px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.schedule-month__toggle-group {
+.schedule-week__toggle-group {
   display: flex;
   align-items: center;
   font-weight: 500;
@@ -7485,7 +7485,21 @@ body {
   color: #2f2f2f;
 }
 
-.schedule-month__toggle-left {
+.schedule-week__toggle-left,
+.schedule-week__toggle-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #2f2f2f;
+}
+
+.schedule-week__toggle-left:hover,
+.schedule-week__toggle-right:hover {
+  color: #2f2f2f;
+}
+
+.schedule-week__toggle-left {
   width: 82px;
   height: 37px;
   border: 1px solid #b3b3b3;
@@ -7495,18 +7509,18 @@ body {
   transition: all 0.1s ease;
 }
 
-.schedule-month__toggle-left.active-toggle {
+.schedule-week__toggle-left.active-toggle {
   background: #f2f2f2;
   border: 3px solid #2f80ed;
   transition: all 0.1s ease;
 }
 
-.schedule-month__toggle-left.active-toggle + .schedule__toggle-right {
+.schedule-week__toggle-left.active-toggle + .schedule__toggle-right {
   border-left: none;
   transition: all 0.1s ease;
 }
 
-.schedule-month__toggle-right {
+.schedule-week__toggle-right {
   width: 75px;
   height: 37px;
   border: 1px solid #b3b3b3;
@@ -7515,18 +7529,18 @@ body {
   transition: all 0.1s ease;
 }
 
-.schedule-month__toggle-right.active-toggle {
+.schedule-week__toggle-right.active-toggle {
   background: #f2f2f2;
   border: 3px solid #2f80ed;
   transition: all 0.1s ease;
 }
 
-.schedule-month__nav {
+.schedule-week__nav {
   display: flex;
   align-items: center;
 }
 
-.schedule-month__nav-arrow {
+.schedule-week__nav-arrow {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7534,29 +7548,32 @@ body {
   text-decoration: none;
 }
 
-.schedule-month__nav-arrow svg {
+.schedule-week__nav-arrow svg {
   width: 32px;
   height: 32px;
   fill: #000000;
   transition: all 0.2s ease-in-out;
 }
 
-.schedule-month__nav-arrow:hover svg {
+.schedule-week__nav-arrow:hover svg {
   fill: #ff8a00;
 }
 
-.schedule-month__nav-arrow:active {
+.schedule-week__nav-arrow:active {
   transform: scale(0.98);
 }
 
-.schedule-month__nav-text {
+.schedule-week__nav-text {
+  display: flex;
+  align-items: center;
+  gap: 7px;
   font-weight: 500;
   font-size: 16px;
   line-height: 120%;
   color: #000000;
 }
 
-.schedule-month__link {
+.schedule-week__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7569,22 +7586,22 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.schedule-month__link:hover {
+.schedule-week__link:hover {
   color: #ff8a00;
 }
 
-.schedule-month__link svg {
+.schedule-week__link svg {
   width: 26px;
   height: 26px;
   fill: #000000;
   transition: all 0.2s ease-in-out;
 }
 
-.schedule-month__link:hover svg {
+.schedule-week__link:hover svg {
   fill: #ff8a00;
 }
 
-.schedule-month__calendar {
+.schedule-week__calendar {
   margin-top: 38px;
   width: 100%;
   background: #ffffff;
@@ -7592,24 +7609,24 @@ body {
   padding: 10px 7px;
 }
 
-.schedule-month__calendar-top {
+.schedule-week__calendar-top {
   display: flex;
 }
 
-.schedule-month__calendar-top p {
+.schedule-week__calendar-top p {
   flex-grow: 1;
   max-width: 222px;
   text-align: center;
 }
 
-.schedule-month__calendar-content {
+.schedule-week__calendar-content {
   display: flex;
   flex-wrap: wrap;
   margin-top: 12px;
   width: 100%;
 }
 
-.schedule-month__day {
+.schedule-week__day {
   max-width: 224px;
   flex-grow: 1;
   display: flex;
@@ -7620,7 +7637,7 @@ body {
   overflow: hidden;
 }
 
-.schedule-month__day-top {
+.schedule-week__day-top {
   display: flex;
   padding: 0 4px;
   align-items: center;
@@ -7629,72 +7646,52 @@ body {
   background: #f2f2f2;
 }
 
-.schedule-month__day-top p,
-.schedule-month__day-top span {
+.schedule-week__day-top p,
+.schedule-week__day-top span {
   font-weight: 500;
   font-size: 14px;
   line-height: 120%;
   color: #2f2f2f;
 }
 
-.schedule-month__day-content {
+.schedule-week__day-content {
   padding: 15px 0 24px 4px;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 35px;
 }
 
-.schedule-month__day-item {
+.schedule-week__day-item {
   display: flex;
   flex-direction: column;
   gap: 11px;
 }
 
-.schedule-month__day-item p {
+.schedule-week__day-item p {
   font-weight: 400;
   font-size: 13px;
   line-height: 120%;
   color: #2f2f2f;
 }
 
-.schedule-month__day-add {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-.schedule-month__day-add p {
-  text-align: center;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 120%;
-  color: black;
-}
-
-.schedule-month__day-add a {
-  width: 112px;
-  height: 36px;
+.schedule-week__picker {
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: #2f2f2f;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 140%;
-  text-decoration: none;
-  color: #fff;
-  transition: all 0.2s ease-in-out;
+  gap: 10px;
 }
 
-.schedule-month__day-add a:hover {
-  background: #595959;
-  color: #fff;
-}
-
-.schedule-month__day-add a:active {
-  transform: scale(0.98);
+.schedule-week__picker input {
+  width: 110px;
+  padding-left: 7px;
+  border: none;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-radius: 7px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
 }
 
 .footer {
@@ -12930,30 +12927,30 @@ body {
 }
 
 @media only screen and (min-width: 1900px) {
-  .schedule-month__day-top span {
+  .schedule-week__day-top span {
     display: none;
   }
 }
 
 @media only screen and (max-width: 1899px) {
-  .schedule-month__calendar {
+  .schedule-week__calendar {
     margin-top: 18px;
     border: none;
   }
 
-  .schedule-month__calendar-top {
+  .schedule-week__calendar-top {
     display: none;
   }
 
-  .schedule-month__calendar-content {
+  .schedule-week__calendar-content {
     justify-content: flex-start;
   }
 
-  .schedule-month__day {
+  .schedule-week__day {
     max-width: 230px;
   }
 
-  .schedule-month__day-content {
+  .schedule-week__day-content {
     padding: 15px 4px 24px 4px;
   }
 }
@@ -13229,7 +13226,7 @@ body {
     display: block;
   }
 
-  .schedule-month {
+  .schedule-week {
     margin: 70px 16px 50px 16px;
   }
 }
@@ -13433,14 +13430,14 @@ body {
 }
 
 @media only screen and (max-width: 750px) {
-  .schedule-month__panel {
+  .schedule-week__panel {
     flex-direction: column;
     gap: 20px;
   }
 }
 
 @media only screen and (max-width: 730px) {
-  .schedule-month__calendar-content {
+  .schedule-week__calendar-content {
     justify-content: center;
     gap: 10px;
   }
@@ -13472,7 +13469,7 @@ body {
 }
 
 @media only screen and (max-width: 650px) {
-  .schedule-month__btn-group {
+  .schedule-week__btn-group {
     flex-direction: column;
   }
 }
@@ -13574,7 +13571,7 @@ body {
 }
 
 @media only screen and (max-width: 450px) {
-  .schedule-month__top {
+  .schedule-week__top {
     flex-direction: column;
     gap: 20px;
   }
@@ -13756,4 +13753,4 @@ body {
     display: none !important;
   }
 }
-/*# sourceMappingURL=maps/schedule-mounth.css.map */
+/*# sourceMappingURL=maps/schedule-month.css.map */

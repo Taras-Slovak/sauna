@@ -1,10 +1,10 @@
 extends ../layouts/default
 
 block variables
-	- const title = "schedule | mounth"
+	- const title = "schedule | month"
 
 block links
-	link(rel="stylesheet" href="styles/schedule-mounth.css")
+	link(rel="stylesheet" href="styles/schedule-month.css")
 
 block content
 
@@ -13,11 +13,11 @@ block content
 	main.main
 
 		include ../../blocks/components/COMPANY/side-bar/side-bar
-		include ../../blocks/modules/SCHEDULE/schedule-mounth/schedule-mounth
+		include ../../blocks/modules/SCHEDULE/schedule-month/schedule-month
 	
 
 	include ../../blocks/modules/COMPANY/footer/footer
 
 block scripts
 	script(src="js/vendor.js")
-	script(src="js/scheduleMounth.js")
+	script(src="js/scheduleMonth.js")
