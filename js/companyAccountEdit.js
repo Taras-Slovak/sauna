@@ -76,6 +76,17 @@ function initPopover() {
 
 initPopover();
 
+function getText() {
+  var getAllText = document.querySelectorAll('.account-edit__dropdown-item');
+  getAllText.forEach(function (element) {
+    element.addEventListener('click', function () {
+      element.parentElement.parentElement.firstElementChild.innerText = element.innerText;
+    });
+  });
+}
+
+getText();
+
 /***/ }),
 
 /***/ "./src/js/company-account-edit.js":

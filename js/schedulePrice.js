@@ -42,7 +42,16 @@ getMainSideBar.addEventListener("click", function (e) {
   \**********************************************************************/
 /***/ (function() {
 
+function getText() {
+  var getAllText = document.querySelectorAll('.schedule-price__dropdown-item');
+  getAllText.forEach(function (element) {
+    element.addEventListener('click', function () {
+      element.parentElement.parentElement.firstElementChild.innerText = element.innerText;
+    });
+  });
+}
 
+getText();
 
 /***/ }),
 
