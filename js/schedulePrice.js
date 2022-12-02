@@ -53,6 +53,22 @@ function getText() {
 
 getText();
 
+function currentDaysOfMonth() {
+  var getCurrentDay = document.querySelector('.schedule-price__nav-text');
+  var getAllDays = document.querySelectorAll('.schedule-price__day');
+  getAllDays.forEach(function (day) {
+    if (getCurrentDay.dataset.month === day.dataset.month) {
+      day.style.opacity = '1';
+    } else if (day.dataset.month == undefined || day.dataset.month == null) {
+      day.style.opacity = '1';
+    } else {
+      day.style.opacity = '0.5';
+    }
+  });
+}
+
+currentDaysOfMonth();
+
 /***/ }),
 
 /***/ "./src/js/import/components-company.js":
