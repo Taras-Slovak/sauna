@@ -190,9 +190,25 @@ mixin day(date,day,month)
                   .schedule-price__field
                     label(for="price-place") Цена
                     input(type="text" id="price-place")
-                    
+
           p.form__text-bottom После нажатия на кнопку Применить отменить изменение стоимости будет невозможно
+          .form__btn-group
+            
+            button.form__btn-cancel(data-bs-dismiss="modal" aria-label="Close")  Отменить
+            button.form__btn-change(data-bs-target='#changedPrice' data-bs-toggle='modal')  Изменить
 
-          button.form__btn-main(data-bs-target='#schedule-priceSingUp' data-bs-toggle='modal')  Изменить
-
-          button.form__btn-log(data-bs-target='#schedule-priceLogIn' data-bs-toggle='modal')  Отменить
+#changedPrice.modal.fade(tabindex='-1' aria-labelledby='changedPriceLabel' aria-hidden='true')
+  .modal-dialog.schedule-price__modal-dialog
+    .modal-content.schedule-price__modal-content 
+      .modal-header.schedule-price__modal-header
+        button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+      .modal-body.schedule-price__modal-body 
+        .form
+          h3.form__title Изменение цен завершено
+          .form__field
+            h4.form__sub-title Изменена стоимость:
+            ul  
+              li 105 (ти) записей
+              li 5 записей проигнорировано, т.к. уже существут бронирование
+          .form__btn-group            
+            button.form__btn-change(data-bs-dismiss="modal" aria-label="Close") Ok

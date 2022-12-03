@@ -7416,61 +7416,149 @@ body {
   outline: 0;
 }
 
-.schedule-price {
-  max-width: 1585px;
+.company-edit {
+  max-width: 975px;
   flex-grow: 1;
   color: #2f2f2f;
   margin: 50px 16px 279px 300px;
   font-family: "Montserrat";
 }
 
-.schedule-price__top {
+.company-edit__top {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.schedule-price__title {
+.company-edit__title {
   font-weight: 700;
   font-size: 22px;
   line-height: 130%;
-  color: #2f2f2f;
 }
 
-.schedule-price__btn-group {
+.company-edit__switch {
+  max-width: 200px;
+  flex-grow: 3;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.company-edit__switch p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  color: #000000;
+}
+
+.company-edit__switch .switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 28px;
+}
+
+.company-edit__switch .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.company-edit__switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #b3b3b3;
+  transition: 0.4s;
+  box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.15);
+}
+
+.company-edit__switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.company-edit__switch input:checked + .slider {
+  background-color: #000000;
+}
+
+.company-edit__switch input:focus + .slider {
+  box-shadow: 0 0 1px #b3b3b3;
+}
+
+.company-edit__switch input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.company-edit__switch .slider.round {
+  border-radius: 34px;
+}
+
+.company-edit__switch .slider.round:before {
+  border-radius: 50%;
+}
+
+.company-edit__item {
+  margin-top: 50px;
+  max-width: 920px;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.company-edit__picker {
+  max-width: 100%;
+}
+
+.company-edit__popover {
+  width: max-content;
+  border: none;
+  background: white;
+  transition: all 0.2s;
+}
+
+.company-edit__popover:hover svg {
+  stroke: #ff8a00;
+}
+
+.company-edit__popover svg {
+  transition: all 0.2s;
+  stroke: black;
+}
+
+.company-edit__sub-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+}
+
+.company-edit__content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 634px;
+}
+
+.company-edit__field-group {
+  margin-top: 20px;
   display: flex;
   gap: 20px;
-  align-items: center;
 }
 
-.schedule-price__btn {
-  width: 196px;
-  height: 36px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 140%;
-  color: #ffffff;
-  background: #707070;
-  transition: all 0.2s ease-in-out;
-}
-
-.schedule-price__btn span {
-  margin-left: 10px;
-  font-size: 30px;
-  font-weight: 400;
-}
-
-.schedule-price__btn:hover {
-  background: #2f2f2f;
-  color: #ffffff;
-}
-
-.schedule-price__field {
-  max-width: 540px;
+.company-edit__field {
   position: relative;
   display: flex;
   flex-grow: 3;
@@ -7478,16 +7566,16 @@ body {
   gap: 7px;
 }
 
-.schedule-price__field label,
-.schedule-price__field p {
+.company-edit__field label,
+.company-edit__field p {
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
   color: #282828;
 }
 
-.schedule-price__field input[type=text],
-.schedule-price__field textarea {
+.company-edit__field input,
+.company-edit__field textarea {
   width: auto;
   height: 35px;
   padding-left: 16px;
@@ -7500,97 +7588,46 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.schedule-price__field input[type=text]:focus,
-.schedule-price__field textarea:focus {
+.company-edit__field input:focus,
+.company-edit__field textarea:focus {
   box-shadow: 0px 0px 5px 1px rgba(255, 136, 0, 0.25);
   border: 1px solid #ff8a00;
 }
 
-.schedule-price__field input[type=text]::placeholder,
-.schedule-price__field textarea::placeholder {
+.company-edit__field input::placeholder,
+.company-edit__field textarea::placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   color: #2f2f2f;
 }
 
-.schedule-price__field [type=radio]:checked,
-.schedule-price__field [type=radio]:not(:checked) {
-  position: absolute;
-  left: -9999px;
-}
-
-.schedule-price__field [type=radio]:checked + label,
-.schedule-price__field [type=radio]:not(:checked) + label {
-  position: relative;
-  padding-left: 28px;
-  font-weight: 400;
-  cursor: pointer;
-  line-height: 20px;
-  display: inline-block;
-  color: #282828;
-}
-
-.schedule-price__field [type=radio]:checked + label:before,
-.schedule-price__field [type=radio]:not(:checked) + label:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 18px;
-  height: 18px;
-  border: 1px solid #707070;
-  border-radius: 100%;
-  background: #fff;
-}
-
-.schedule-price__field [type=radio]:checked + label:after,
-.schedule-price__field [type=radio]:not(:checked) + label:after {
-  content: "";
-  width: 18px;
-  height: 18px;
-  border: 5px solid #707070;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  border-radius: 100%;
-  transition: all 0.2s ease;
-}
-
-.schedule-price__field [type=radio]:not(:checked) + label:after {
-  opacity: 0;
-  -webkit-transform: scale(0);
-  transform: scale(0);
-}
-
-.schedule-price__field [type=radio]:checked + label:after {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
-
-.schedule-price__field textarea {
-  height: 202px;
+.company-edit__field textarea {
+  height: 218px;
   padding: 8px 16px;
 }
 
-.schedule-price__dropdown-button {
+.company-edit__building {
+  flex-grow: 0;
+}
+
+.company-edit__dropdown-button {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 35px;
-  background: #f2f2f2;
-  border: 1px solid #b3b3b3;
+  background: #ffffff;
+  border: 1px solid #2f2f2f;
   transition: all 0.2s;
 }
 
-.schedule-price__dropdown-button.dropdown-opened {
+.company-edit__dropdown-button.dropdown-opened {
   border: none;
   border-radius: 10px 10px 0px 0px;
   box-shadow: 0px -2px 10px -3px rgba(0, 0, 0, 0.25);
 }
 
-.schedule-price__dropdown-button.dropdown-opened .schedule-price__dropdown-menu {
+.company-edit__dropdown-button.dropdown-opened .company-edit__dropdown-menu {
   box-shadow: 0 0 5px #333;
   transition: all 0.2s ease-in-out;
   border-radius: 0px 0px 10px 10px;
@@ -7600,7 +7637,7 @@ body {
   opacity: 1;
 }
 
-.schedule-price__dropdown-txt {
+.company-edit__dropdown-txt {
   padding-left: 10px;
   font-weight: 400;
   font-size: 16px;
@@ -7608,7 +7645,7 @@ body {
   color: #2f2f2f;
 }
 
-.schedule-price__dropdown-menu {
+.company-edit__dropdown-menu {
   width: 100%;
   height: 0;
   position: absolute;
@@ -7622,7 +7659,7 @@ body {
   z-index: 200;
 }
 
-.schedule-price__dropdown-menu span {
+.company-edit__dropdown-menu span {
   width: 100%;
   padding: 5px;
   font-weight: 400;
@@ -7634,28 +7671,151 @@ body {
   transition: all 0.1s ease-in-out;
 }
 
-.schedule-price__dropdown-menu span:hover {
+.company-edit__dropdown-menu span:hover {
   background-color: #ff8a00;
   color: #fff;
 }
 
-.schedule-price__text-content {
-  margin-top: 40px;
-  max-width: 810px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 120%;
-  color: #000000;
+.company-edit__telephone-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.schedule-price__panel {
-  margin-top: 40px;
+.company-edit__telephone {
+  display: flex;
+  align-items: flex-end;
+  gap: 25px;
+}
+
+.company-edit__telephone .company-edit__field {
+  max-width: 350px;
+}
+
+.company-edit__telephone-add,
+.company-edit__telephone-delete,
+.company-edit__time-add,
+.company-edit__time-delete {
+  width: max-content;
+  height: max-content;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  background: #ffffff;
+  border: none;
+}
+
+.company-edit__telephone-add svg,
+.company-edit__telephone-delete svg,
+.company-edit__time-add svg,
+.company-edit__time-delete svg {
+  display: block;
+  transition: all 0.1s ease-in-out;
+  fill: white;
+}
+
+.company-edit__telephone-add svg:hover,
+.company-edit__telephone-delete svg:hover,
+.company-edit__time-add svg:hover,
+.company-edit__time-delete svg:hover {
+  transform: scale(1.1);
+}
+
+.company-edit__telephone-add svg:active,
+.company-edit__telephone-delete svg:active,
+.company-edit__time-add svg:active,
+.company-edit__time-delete svg:active {
+  transform: scale(1);
+}
+
+.company-edit__date-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.company-edit__date {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 20px;
 }
 
-.schedule-price__checkbox-item {
+.company-edit__date .company-edit__dropdown-button {
+  width: 92px;
+}
+
+.company-edit__days {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.company-edit__day {
+  width: 50px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #2f2f2f;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  line-height: 120%;
+  transition: all 0.1s ease-in-out;
+}
+
+.company-edit__day:hover {
+  transform: scale(1.1);
+}
+
+.company-edit__day:active {
+  transform: scale(1);
+}
+
+.company-edit__times {
+  display: flex;
+  align-items: center;
+}
+
+.company-edit__times .company-edit__dropdown-menu {
+  top: 40px;
+}
+
+.company-edit__time-add,
+.company-edit__time-delete {
+  width: 34px;
+  height: 34px;
+  box-sizing: border-box;
+}
+
+.company-edit__line {
+  width: 10px;
+  margin: 0 5px;
+  height: 1px;
+  background: #2f2f2f;
+}
+
+.company-edit__object {
+  max-width: 160px;
+}
+
+.company-edit__checkbox-wrapper {
+  display: flex;
+  flex-shrink: 1;
+  flex-grow: 0;
+  align-items: center;
+  gap: 60px;
+}
+
+.company-edit__checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.company-edit__checkbox-item {
   position: relative;
   display: flex;
   height: max-content;
@@ -7664,21 +7824,24 @@ body {
   transition: all 0.2s;
 }
 
-.schedule-price__checkbox-item label {
+.company-edit__checkbox-item label {
   font-weight: 500;
   font-size: 14px;
   transition: all 0.2s;
   cursor: pointer;
 }
 
-.schedule-price__checkbox-item label:hover {
+.company-edit__checkbox-item label:hover {
   color: #ff8a00;
 }
 
-.schedule-price__checkbox-item input {
+.company-edit__checkbox-item input {
   width: 18px;
   height: 18px;
   margin-top: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
   appearance: none;
   border: 1px solid #707070;
   border-radius: 2px;
@@ -7688,15 +7851,15 @@ body {
   cursor: pointer;
 }
 
-.schedule-price__checkbox-item input:checked {
+.company-edit__checkbox-item input:checked {
   border: 1px solid #ff8a00;
   background-color: #ff8a00;
   font-size: 14px;
 }
 
-.schedule-price__checkbox-item input:checked + label::before {
+.company-edit__checkbox-item input:checked + label::before {
   display: block;
-  left: 4px;
+  left: 5px;
   top: 2px;
   font-weight: 500;
   content: "✓";
@@ -7706,390 +7869,151 @@ body {
   font-size: 14px;
 }
 
-.schedule-price__checkbox-day {
-  position: relative;
-  width: 100%;
-  justify-content: space-between;
-  flex-direction: row-reverse;
-}
-
-.schedule-price__checkbox-day label {
-  font-weight: 500;
-  font-size: 14px;
-  transition: all 0.2s;
-  cursor: pointer;
-}
-
-.schedule-price__checkbox-day label:hover {
-  color: #2e7d32;
-}
-
-.schedule-price__checkbox-day input {
-  width: 18px;
-  height: 18px;
-  margin-top: 0;
-  appearance: none;
-  border: 1px solid #707070;
-  border-radius: 2px;
-  outline: none;
-  transition-duration: 0.3s;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.schedule-price__checkbox-day input:checked {
-  border: 1px solid #2f2f2f;
-  background-color: rgba(255, 255, 255, 0);
-  font-size: 14px;
-}
-
-.schedule-price__checkbox-day input:checked + label::after {
-  position: absolute;
-  display: block;
-  right: 4px;
-  top: 2px;
-  font-weight: 700;
-  content: "✓";
-  text-align: center;
-  color: #2e7d32;
-  position: absolute;
-  font-size: 14px;
-}
-
-.schedule-price__checkbox-day input:checked + label::before {
-  display: none;
-}
-
-.schedule-price__nav {
+.company-edit__bottom {
+  margin-top: 60px;
   display: flex;
   align-items: center;
 }
 
-.schedule-price__nav-arrow {
+.company-edit__bottom a {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 37px;
-  text-decoration: none;
-}
-
-.schedule-price__nav-arrow svg {
-  width: 32px;
-  height: 32px;
-  fill: #000000;
-  transition: all 0.2s ease-in-out;
-}
-
-.schedule-price__nav-arrow:hover svg {
-  fill: #ff8a00;
-}
-
-.schedule-price__nav-arrow:active {
-  transform: scale(0.98);
-}
-
-.schedule-price__nav-text {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 120%;
-  color: #000000;
-}
-
-.schedule-price__calendar {
-  margin-top: 38px;
-  width: 100%;
-  background: #ffffff;
-  border: 1px solid #f2f2f2;
-  padding: 10px 7px;
-}
-
-.schedule-price__calendar-top {
-  display: flex;
-}
-
-.schedule-price__calendar-top p {
-  flex-grow: 1;
-  max-width: 222px;
-  text-align: center;
-}
-
-.schedule-price__calendar-content {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 12px;
-  width: 100%;
-}
-
-.schedule-price__day {
-  max-width: 224px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  background: #ffffff;
-  border: 1px solid rgba(179, 179, 179, 0.4862745098);
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.schedule-price__day-top {
-  display: flex;
-  padding: 0 4px;
-  align-items: center;
-  gap: 10px;
-  justify-content: space-between;
-  height: 30px;
-  background: #f2f2f2;
-}
-
-.schedule-price__day-top p,
-.schedule-price__day-top span {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 120%;
-  color: #2f2f2f;
-}
-
-.schedule-price__day-content {
-  padding: 15px 0 24px 4px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 35px;
-}
-
-.schedule-price__day-item {
-  display: flex;
-  flex-direction: column;
-  gap: 11px;
-}
-
-.schedule-price__day-item p {
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 120%;
-  color: #2f2f2f;
-}
-
-.schedule-price__day-add {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-.schedule-price__day-add p {
-  text-align: center;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 120%;
-  color: black;
-}
-
-.schedule-price__day-add a {
-  width: 112px;
+  width: 120px;
   height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #2f2f2f;
+  color: #2f2f2f;
   font-weight: 600;
   font-size: 14px;
-  line-height: 140%;
+  line-height: 150%;
   text-decoration: none;
-  color: #fff;
   transition: all 0.2s ease-in-out;
 }
 
-.schedule-price__day-add a:hover {
-  background: #595959;
+.company-edit__bottom a:hover {
+  background-color: #000000;
   color: #fff;
 }
 
-.schedule-price__day-add a:active {
+.company-edit__bottom a:active {
   transform: scale(0.98);
 }
 
-.schedule-price__modal-content {
-  left: 50% !important;
-  transform: translate(-50%, 0) !important;
-  width: 540px !important;
-}
-
-.schedule-price__modal-body {
-  padding: 0;
-}
-
-.schedule-price__modal-header {
-  border-bottom: none;
-  padding-top: 15px;
-  padding-right: 15px;
-}
-
-.schedule-price__toggle {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: flex-start;
-  gap: 40px;
-}
-
-.schedule-price__radio-group {
+.company-edit__uploading-group {
+  padding: 20px;
   display: flex;
   align-items: center;
-  gap: 40px;
-}
-
-.schedule-price__input-group {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
-.schedule-price__input-group input[type=text] {
+  flex-wrap: wrap;
   width: 100%;
-}
-
-.form {
-  max-width: 350px;
-  padding-bottom: 35px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  color: #2f2f2f;
-}
-
-.form__title {
-  text-align: center;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 130%;
-}
-
-.form__field {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.form__field ul {
-  padding-left: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.form__field li {
-  position: relative;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 130%;
-}
-
-.form__field li::before {
-  position: absolute;
-  top: 10px;
-  left: -15px;
-  display: block;
-  content: "";
-  width: 3px;
-  height: 3px;
-  background: #000000;
-  border-radius: 100%;
-}
-
-.form__field label {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 120%;
-}
-
-.form__field input {
-  width: 100%;
-  height: 36px;
-  padding-left: 5px;
   background: #ffffff;
-  border: 1px solid #2f2f2f;
+  border: 1px dashed #b3b3b3;
+  border-radius: 8px;
+}
+
+.company-edit__uploading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 130px;
+  background: #ffffff;
+  border: 1px dashed #b3b3b3;
+  border-radius: 10px;
   box-sizing: border-box;
 }
 
-.form__field input:placeholder {
-  color: rgb(27, 27, 27) f2f;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
+.company-edit__uploading input {
+  visibility: hidden;
+  width: 0;
+  height: 0;
 }
 
-.form__sub-title {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 130%;
-  color: #000000;
-}
-
-.form__text-bottom {
-  margin-top: 40px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 130%;
-}
-
-.form__btn-group {
-  margin-top: 40px;
+.company-edit__uploading label {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 130px;
+  height: 130px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+.company-edit__uploading label:hover {
+  box-shadow: 0px 0px 4px 1px rgba(52, 52, 52, 0.2588235294);
+}
+
+.company-edit__uploading h3 {
+  display: block;
+  width: 95px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  color: #2f2f2f;
+}
+
+.company-edit__uploading img {
+  display: block;
+  object-fit: cover;
+}
+
+.company-edit__gallery {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.company-edit .show-gallery {
   gap: 20px;
 }
 
-.form__btn-cancel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 115px;
-  height: 31px;
-  background: #fff;
-  color: #2f2f2f;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 150%;
-  text-decoration: none;
-  transition: all 0.2s;
-  border: none;
+.company-edit__image {
+  position: relative;
+  display: block;
+  width: 130px;
+  height: 130px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px 1px rgba(52, 52, 52, 0.5254901961);
+  cursor: grab;
+  transition: all 0.2s ease-in-out;
 }
 
-.form__btn-cancel:hover {
-  background: #ff8a00;
-  color: #fff;
-  border: 1px solid #ff8a00;
+.company-edit__image:active {
+  cursor: grabbing;
 }
 
-.form__btn-cancel:active {
-  transform: scale(0.98);
+.company-edit__image img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-.form__btn-change {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 115px;
-  height: 31px;
-  background: #2f2f2f;
-  color: #fff;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 150%;
-  text-decoration: none;
-  transition: all 0.2s;
-  border: none;
+.company-edit__image svg {
+  width: 26px;
+  height: 26px;
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  fill: #000000;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
-.form__btn-change:hover {
+.company-edit__image svg:hover {
+  fill: #ff8a00;
+}
+
+.background-grey {
   background: #707070;
+  border: 1px solid #707070;
   color: #fff;
-}
-
-.form__btn-change:active {
-  transform: scale(0.98);
+  box-shadow: 0px 0px 5px 0px rgba(112, 112, 112, 0.5803921569);
 }
 
 .footer {
@@ -13324,35 +13248,6 @@ body {
   }
 }
 
-@media only screen and (min-width: 1900px) {
-  .schedule-price__day-top span {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 1899px) {
-  .schedule-price__calendar {
-    margin-top: 18px;
-    border: none;
-  }
-
-  .schedule-price__calendar-top {
-    display: none;
-  }
-
-  .schedule-price__calendar-content {
-    justify-content: flex-start;
-  }
-
-  .schedule-price__day {
-    max-width: 230px;
-  }
-
-  .schedule-price__day-content {
-    padding: 15px 4px 24px 4px;
-  }
-}
-
 @media only screen and (max-width: 1600px) {
   .wrapper {
     padding: 0 16px;
@@ -13562,6 +13457,19 @@ body {
   }
 }
 
+@media only screen and (max-width: 1150px) {
+  .company-edit__checkbox-wrapper {
+    gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 1090px) {
+  .company-edit__checkbox-wrapper {
+    max-width: 400px;
+    flex-wrap: wrap;
+  }
+}
+
 @media only screen and (max-width: 1050px) {
   .footer {
     padding-top: 46px;
@@ -13624,7 +13532,7 @@ body {
     display: block;
   }
 
-  .schedule-price {
+  .company-edit {
     margin: 70px 16px 50px 16px;
   }
 }
@@ -13731,17 +13639,42 @@ body {
   }
 }
 
+@media only screen and (max-width: 930px) {
+  .company-edit__item {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .company-edit__top {
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .company-edit__days {
+    justify-content: flex-start;
+  }
+}
+
 @media only screen and (max-width: 820px) {
-  .schedule-price__field textarea {
+  .company-edit__field textarea {
     height: 100px;
+  }
+
+  .company-edit__checkbox-wrapper {
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
 @media only screen and (max-width: 800px) {
-  .schedule-price__toggle {
-    gap: 20px;
+  .company-edit__field-group {
     flex-direction: column;
-    align-items: center;
   }
 }
 
@@ -13841,14 +13774,15 @@ body {
   }
 }
 
-@media only screen and (max-width: 730px) {
-  .schedule-price__calendar-content {
-    justify-content: center;
-    gap: 10px;
-  }
-}
-
 @media only screen and (max-width: 700px) {
+  .company-edit__uploading-group {
+    justify-content: center;
+  }
+
+  .company-edit__gallery {
+    justify-content: space-around;
+  }
+
   .footer {
     flex-direction: column;
   }
@@ -13873,8 +13807,9 @@ body {
   }
 }
 
-@media only screen and (max-width: 650px) {
-  .schedule-price__btn-group {
+@media only screen and (max-width: 600px) {
+  .company-edit__times {
+    gap: 5px;
     flex-direction: column;
   }
 }
@@ -13975,35 +13910,10 @@ body {
   }
 }
 
-@media only screen and (max-width: 570px) {
-  .schedule-price__modal-content {
-    width: auto !important;
-  }
-
-  .form {
-    padding: 0 5px;
-  }
-}
-
 @media only screen and (max-width: 450px) {
-  .schedule-price__top {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .schedule-price__field label,
-  .schedule-price__field p {
-    font-size: 14px;
-  }
-
-  .schedule-price__field input[type=text],
-  .schedule-price__field textarea {
-    font-size: 14px;
-  }
-
-  .schedule-price__field input[type=text]::placeholder,
-  .schedule-price__field textarea::placeholder {
-    font-size: 14px;
+  .company-edit__sub-title {
+    font-size: 20px;
+    font-weight: 700;
   }
 }
 
@@ -14183,4 +14093,4 @@ body {
     display: none !important;
   }
 }
-/*# sourceMappingURL=maps/schedule-price.css.map */
+/*# sourceMappingURL=maps/company-edit.css.map */
