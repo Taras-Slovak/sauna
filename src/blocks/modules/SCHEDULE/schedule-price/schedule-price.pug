@@ -41,8 +41,8 @@ mixin day(date,day,month)
     .schedule-price__top
       h1.schedule-price__title Изменение / Удаление цен      
       .schedule-price__btn-group 
-        a.schedule-price__btn(href="#") Изменение цен
-        a.schedule-price__btn(href="schedule-add.html") Расписание 
+        a.schedule-price__btn(data-bs-toggle="modal" href="#changePrice" role="button") Изменение цен
+        a.schedule-price__btn(href="schedule-price.html") Расписание 
           span +
     .schedule-price__field
       p Филиал
@@ -149,3 +149,50 @@ mixin day(date,day,month)
             .schedule-price__day-add
               p Расписание <br> не задано
               a(href="#") Добавить 
+
+#changePrice.modal.fade(tabindex='-1' aria-labelledby='changePriceLabel' aria-hidden='true')
+  .modal-dialog.schedule-price__modal-dialog
+    .modal-content.schedule-price__modal-content 
+      .modal-header.schedule-price__modal-header
+        button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+      .modal-body.schedule-price__modal-body 
+        .form
+          h3.form__title Введите новую стоимость услуги
+
+          .form__field 
+            .schedule-price__field 
+              .schedule-price__toggle
+                .schedule-price__field  
+                  p Расчет стоимости:
+                  .schedule-price__radio-group
+                    .schedule-price__radio-wrap
+                      input.schedule-price__radio-place.schedule-price__radio-calculation(type="radio", id="room" name="calculation")
+                      label(for="room") За помещение
+
+                    .schedule-price__radio-wrap
+                      input.schedule-price__radio-price.schedule-price__radio-calculation(type="radio", id="person" name="calculation")
+                      label(for="person") За человека
+
+                .schedule-price__input-group
+                  .schedule-price__field
+                    label(for="add-place") Доп. мест
+                    input(type="text" id="add-place")
+
+                  .schedule-price__field
+                    label(for="add-price") Цена
+                    input(type="text" id="add-price")
+
+                .schedule-price__input-group
+                  .schedule-price__field
+                    label(for="place") Основных мест
+                    input(type="text" id="place")
+
+                  .schedule-price__field
+                    label(for="price-place") Цена
+                    input(type="text" id="price-place")
+                    
+          p.form__text-bottom После нажатия на кнопку Применить отменить изменение стоимости будет невозможно
+
+          button.form__btn-main(data-bs-target='#schedule-priceSingUp' data-bs-toggle='modal')  Изменить
+
+          button.form__btn-log(data-bs-target='#schedule-priceLogIn' data-bs-toggle='modal')  Отменить

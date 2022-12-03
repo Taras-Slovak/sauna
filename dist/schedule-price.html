@@ -119,7 +119,7 @@
       <div class="schedule-price">
         <div class="schedule-price__top">
           <h1 class="schedule-price__title">Изменение / Удаление цен      </h1>
-          <div class="schedule-price__btn-group"> <a class="schedule-price__btn" href="#">Изменение цен</a><a class="schedule-price__btn" href="schedule-add.html">Расписание <span>+</span></a></div>
+          <div class="schedule-price__btn-group"> <a class="schedule-price__btn" data-bs-toggle="modal" href="#changePrice" role="button">Изменение цен</a><a class="schedule-price__btn" href="schedule-price.html">Расписание <span>+</span></a></div>
         </div>
         <div class="schedule-price__field">
           <p>Филиал</p>
@@ -1496,6 +1496,62 @@
                 <div class="schedule-price__day-add">
                   <p>Расписание <br> не задано</p><a href="#">Добавить </a>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="changePrice" tabindex="-1" aria-labelledby="changePriceLabel" aria-hidden="true">
+        <div class="modal-dialog schedule-price__modal-dialog">
+          <div class="modal-content schedule-price__modal-content"> 
+            <div class="modal-header schedule-price__modal-header">
+              <button class="modal-close-btn btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">   </button>
+            </div>
+            <div class="modal-body schedule-price__modal-body"> 
+              <div class="form">
+                <h3 class="form__title">Введите новую стоимость услуги</h3>
+                <div class="form__field"> 
+                  <div class="schedule-price__field"> 
+                    <div class="schedule-price__toggle">
+                      <div class="schedule-price__field"> 
+                        <p>Расчет стоимости:</p>
+                        <div class="schedule-price__radio-group">
+                          <div class="schedule-price__radio-wrap">
+                            <input class="schedule-price__radio-place schedule-price__radio-calculation" type="radio" id="room" name="calculation">
+                            <label for="room">За помещение</label>
+                          </div>
+                          <div class="schedule-price__radio-wrap">
+                            <input class="schedule-price__radio-price schedule-price__radio-calculation" type="radio" id="person" name="calculation">
+                            <label for="person">За человека</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="schedule-price__input-group">
+                        <div class="schedule-price__field">
+                          <label for="add-place">Доп. мест</label>
+                          <input type="text" id="add-place">
+                        </div>
+                        <div class="schedule-price__field">
+                          <label for="add-price">Цена</label>
+                          <input type="text" id="add-price">
+                        </div>
+                      </div>
+                      <div class="schedule-price__input-group">
+                        <div class="schedule-price__field">
+                          <label for="place">Основных мест</label>
+                          <input type="text" id="place">
+                        </div>
+                        <div class="schedule-price__field">
+                          <label for="price-place">Цена</label>
+                          <input type="text" id="price-place">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="form__text-bottom">После нажатия на кнопку Применить отменить изменение стоимости будет невозможно</p>
+                <button class="form__btn-main" data-bs-target="#schedule-priceSingUp" data-bs-toggle="modal"> Изменить</button>
+                <button class="form__btn-log" data-bs-target="#schedule-priceLogIn" data-bs-toggle="modal"> Отменить</button>
               </div>
             </div>
           </div>
