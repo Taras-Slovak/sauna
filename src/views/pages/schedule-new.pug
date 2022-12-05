@@ -1,0 +1,19 @@
+extends ../layouts/default
+
+block variables
+	- const title = "schedule | new"
+
+block links
+	link(rel="stylesheet" href="styles/schedule-new.css")
+
+block content
+
+	main.main
+	
+		include ../../blocks/modules/SCHEDULE/schedule-new/schedule-new
+	
+
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/scheduleNew.js")

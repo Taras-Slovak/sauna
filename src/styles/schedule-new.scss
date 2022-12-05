@@ -1,0 +1,18 @@
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/functions';
+
+// CSS-файлы библиотек
+@import 'vendor/libs-schedule-new';
+
+// Основное
+@import 'base/fonts';
+@import 'base/general';
+
+@import '../blocks/modules/SCHEDULE/schedule-new/schedule-new';
+
+.main {
+  position: relative;
+  display: flex;
+  margin-top: 70px;
+}
