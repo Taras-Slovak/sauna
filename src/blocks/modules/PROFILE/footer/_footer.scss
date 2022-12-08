@@ -1,0 +1,141 @@
+.footer {
+  margin-top: 100px;
+  display: flex;
+  padding: 75px 16px 178px 16px;
+  background: #f2f2f2;
+  color: #000000;
+
+  @media only screen and (max-width: 700px) {
+    flex-direction: column;
+  }
+
+  @media only screen and (max-width: 350px) {
+    margin-top: 50px;
+    padding-top: 0;
+    flex-direction: column;
+  }
+
+  &__logo {
+    display: none;
+    @media only screen and (max-width: 350px) {
+      margin-top: 30px;
+      margin-left: 20px;
+      margin-bottom: 45px;
+      display: block;
+      width: 144px;
+      height: 70px;
+    }
+  }
+
+  @media only screen and (max-width: 1050px) {
+    padding-top: 46px;
+    padding-bottom: 157px;
+
+    @media only screen and (max-width: 700px) {
+      padding-top: 30px;
+      padding-bottom: 57px;
+    }
+  }
+
+  &__inner {
+    max-width: 1433px;
+    margin: auto;
+    display: flex;
+    gap: 125px;
+
+    @media only screen and (max-width: 1050px) {
+      max-width: 634px;
+      flex-wrap: wrap;
+      gap: 52px;
+    }
+
+    @media only screen and (max-width: 700px) {
+      justify-content: center;
+
+      gap: 57px;
+    }
+  }
+
+  &__block-navigation {
+    width: 1110px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 1476px) {
+      max-width: 634px;
+      flex-wrap: wrap-reverse;
+    }
+
+    @media only screen and (max-width: 700px) {
+      width: 100%;
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+    }
+  }
+
+  &__item-nav {
+    width: 255px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @media only screen and (max-width: 1476px) {
+      &:nth-child(1) {
+        display: none;
+      }
+    }
+
+    @media only screen and (max-width: 700px) {
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    margin-bottom: 5px;
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    text-decoration: none;
+    color: #000000;
+    transition: all 0.2s;
+
+    &:hover {
+      color: #ff8a00;
+    }
+  }
+
+  &__btn {
+    width: 198px;
+    height: 48px;
+    border-radius: 0px;
+    background: #000000;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    font-family: 'Montserrat';
+    border: none;
+    color: #ffffff;
+    transition: all 0.2s;
+
+    &:hover {
+      background: #373737;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+
+    @media only screen and (max-width: 700px) {
+      width: 254px;
+    }
+  }
+}

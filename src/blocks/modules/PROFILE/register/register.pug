@@ -1,0 +1,97 @@
+#registerPhone.modal.fade.register__modal(tabindex='-1' aria-labelledby='registerPhoneLabel' aria-hidden='true')
+  .modal-dialog.register__modal-dialog
+    .modal-content.register__modal-content 
+      .modal-header.register__modal-header
+        button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+      .modal-body.register__modal-body 
+
+        .form
+
+          h3.form__title Войдите или зарегистируйтесь
+
+          .form__field 
+
+            label(for="telephone") Номер телефона
+
+            input(type="tel" id="telephone" placeholder='+38 067 123-23-23')
+
+          .form__field 
+            p.form__text-big Вам будет отправлен SMS, чтобы подтвердить указанный номер телефона. 
+
+          .form__btn-group
+
+            button.form__btn-primary(data-bs-target='#registerPhoneCode' data-bs-toggle='modal')  Продолжить
+
+            button.form__btn-secondary(data-bs-target='#registerMail' data-bs-toggle='modal')  Войти с помощию email
+
+#registerMail.modal.fade.register__modal(tabindex='-1' aria-labelledby='registerMailLabel' aria-hidden='true')
+  .modal-dialog.register__modal-dialog
+    .modal-content.register__modal-content 
+      .modal-header.register__modal-header
+        button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+      .modal-body.register__modal-body 
+
+        .form
+
+          h3.form__title Войдите или зарегистируйтесь
+
+          .form__field 
+
+            label(for="mail") e-mail
+
+            input(type="mail" id="mail" placeholder='kulako_irina@mail.com')
+          
+          .form__btn-group
+
+            button.form__btn-primary(data-bs-target='#' data-bs-toggle='modal')  Продолжить
+
+            button.form__btn-secondary(data-bs-target='#registerPhone' data-bs-toggle='modal')  Войти по номеру телефона
+          
+#registerPhoneCode.modal.fade.register__modal(tabindex='-1' aria-labelledby='registerPhoneCodeLabel' aria-hidden='true')
+  .modal-dialog.register__modal-dialog
+    .modal-content.register__modal-content 
+      .modal-header.register__modal-header
+        button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+      .modal-body.register__modal-body 
+        .form        
+          h3.form__title Войдите или зарегистируйтесь
+          .form__field
+            p.form__text-big Мы отправили код подтверждения на номер +38 067 123-23-23 
+              span.form__text-change(data-bs-target='#registerPhone' data-bs-toggle='modal') Изменить
+          
+          .form__field 
+            input(type="tel" id="telReg" placeholder='_ _ _ _ _')
+
+          .form__field 
+            p.form__text-small Получить новый код можно через 00:45
+
+          .form__checkbox-group
+            .form__checkbox-field 
+              input(type="checkbox", id="agreement" value="agreement"  name="agreement")
+              label(for="agreement") Согласен с уловиями бронирования услуг и обработки данных
+            .form__checkbox-field 
+              input(type="checkbox", id="notification" value="notification"  name="notification")
+              label(for="notification") Хочу получать информации об акциях и спецпредложениях
+
+          .form__btn-group
+            button.form__btn-primary#telRegBtn(type='button' disabled data-bs-target='#registerSingUp' data-bs-toggle='modal')  Продолжить
+
+          .form__field 
+            span.form__no-sms( data-bs-target='#noSMS' data-bs-toggle='modal') Не приходит СМС?
+
+#noSMS.modal.fade.register__modal(tabindex='-1' aria-labelledby='noSMSLabel' aria-hidden='true')
+  .modal-dialog.register__modal-dialog
+    .modal-content.register__modal-content 
+      .modal-header.register__modal-header
+        button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+      .modal-body.register__modal-body 
+        .form        
+          h3.form__title Введите код
+           .form__field 
+            p.form__text-big Время действия кода закончилось. Запросите повторно
+
+            .form__field 
+              span.form__no-sms( data-bs-target='#registerPhoneCode' data-bs-toggle='modal') Получить новый код
+
+            .form__field 
+              span.form__no-sms( data-bs-target='#noSMS' data-bs-toggle='modal') Не приходит СМС?

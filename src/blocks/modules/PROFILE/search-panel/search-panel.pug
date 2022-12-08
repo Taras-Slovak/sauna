@@ -1,0 +1,97 @@
+.search-panel
+
+  .search-panel__filter.search-panel__filter-sauna
+    img.search-panel__arrow-back(src="img/search-panel/arrow-back.svg", alt="arrow-back")
+
+    .search-panel__item.search-panel__sauna 
+
+      img.search-panel__arrow-down(src="img/search-panel/arrow-down.svg", alt="arrow-down") 
+      p.search-panel__sauna-txt Тип парной
+      span.search-panel__sauna-filter Не важно
+      
+
+    .search-panel__dropdown.search-panel__dropdown-sauna
+      .search-panel__dropdown-item        
+        input(type="checkbox", id="finnish" value="finnish"  name="finnish")
+        label(for="finnish") Финская баня
+
+      .search-panel__dropdown-item        
+        input(type="checkbox", id="turkish"  name="turkish")
+        label(for="turkish") Турецкая баня
+
+      .search-panel__dropdown-item
+        input(type="checkbox", id="japanese"  name="japanese")
+        label(for="japanese") Японская баня
+
+      .search-panel__dropdown-item
+        input(type="checkbox", id="firewood" name="firewood")
+        label(for="firewood") На дровах
+
+      .search-panel__dropdown-item        
+        input(type="checkbox", id="roman" name="roman")
+        label(for="roman") Римская парная
+
+      .search-panel__dropdown-item        
+        input(type="checkbox", id="phyto"  name="phyto")
+        label(for="phyto") Фитосауна
+
+  .search-panel__filter
+    img.search-panel__arrow-back(src="img/search-panel/arrow-back.svg", alt="arrow-back")
+
+    .search-panel__item
+
+      img.search-panel__arrow-down(src="img/search-panel/arrow-down.svg", alt="arrow-down") 
+      p.search-panel__location-txt Расположение
+      span.search-panel__location-filter Район города
+      
+
+    .search-panel__dropdown.search-panel__location    
+      .search-panel__dropdown-item  
+        input(type="checkbox", id="obolonsky"  name="obolonsky")
+        label(for="obolonsky") Оболонский 
+      
+      .search-panel__dropdown-item        
+        input(type="checkbox", id="desnyansky"  name="desnyansky")
+        label(for="desnyansky") Деснянский 
+
+      .search-panel__dropdown-item
+        input(type="checkbox", id="shevchenkovskiy"  name="shevchenkovskiy")
+        label(for="shevchenkovskiy") Шевченковский 
+
+      .search-panel__dropdown-item
+        input(type="checkbox", id="kharkivsky" name="firekharkivsky")
+        label(for="kharkivsky") Харьковский 
+
+      .search-panel__dropdown-item        
+        input(type="checkbox", id="solomensky" name="solomensky")
+        label(for="solomensky") Соломенский 
+
+      .search-panel__dropdown-item        
+        input(type="checkbox", id="dneprovskiy"  name="dneprovskiy")
+        label(for="dneprovskiy") Днепровский 
+  
+  .search-panel__filter    
+    img.search-panel__arrow-back(src="img/search-panel/arrow-back.svg", alt="arrow-back")
+
+    .search-panel__item    
+      img.search-panel__arrow-down(src="img/search-panel/arrow-down.svg", alt="arrow-down") 
+      p.search-panel__price-txt Цена
+      span.search-panel__price-hourly Цена за час
+      
+
+    .search-panel__dropdown.search-panel__dropdown-range
+      p.search-panel__price Цена грн./час
+      .search-panel__input-group
+        input(type="text" value='100' )#input-min
+        input(type="text" value='1500')#input-max
+      .search-panel__input-group#range
+
+  
+  .search-panel__filter 
+
+    .search-panel__data-picker 
+      p.search-panel__sauna-txt Дата
+      input#data-picker(type="text" )
+
+  .search-panel__button
+    button(for='search' type="button") Найти

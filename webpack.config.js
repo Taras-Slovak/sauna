@@ -8,7 +8,6 @@ module.exports = {
     order: './src/js/order.js',
     payment: './src/js/payment.js',
     connection: './src/js/connection.js',
-    profile: './src/js/profile.js',
     company: './src/js/company.js',
     companyContacts: './src/js/company-contacts.js',
     companyPhotos: './src/js/company-photos.js',
@@ -26,6 +25,7 @@ module.exports = {
     scheduleBooking: './src/js/schedule-booking.js',
     scheduleNew: './src/js/schedule-new.js',
     scheduleBookingWeek: './src/js/schedule-booking-week',
+    profile: './src/js/profile.js',
   },
 
   output: {
