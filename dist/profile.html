@@ -75,7 +75,7 @@
     <div class="modal fade header__modal" id="modalHeader" tabindex="-1" aria-labelledby="modalHeaderLabel" aria-hidden="true">
       <div class="modal-dialog header__modal-dialog">
         <div class="modal-content">     
-          <div class="modal-body header__modal-body"><a class="header__modal-link" href="#">Войти</a><a class="header__modal-link" data-bs-toggle="modal" href="#registerPhone" role="button">Зарегистрироваться</a></div>
+          <div class="modal-body header__modal-body"><a class="header__modal-link" data-bs-toggle="modal" href="#logInMail" role="button">Войти</a><a class="header__modal-link" data-bs-toggle="modal" href="#registerPhone" role="button">Зарегистрироваться</a></div>
         </div>
       </div>
     </div>
@@ -96,7 +96,7 @@
                 <p class="form__text-big">Вам будет отправлен SMS, чтобы подтвердить указанный номер телефона. </p>
               </div>
               <div class="form__btn-group">
-                <button class="form__btn-primary" data-bs-target="#registerPhoneCode" data-bs-toggle="modal"> Продолжить</button>
+                <button class="form__btn-primary" id="sendPhone" data-bs-target="#registerPhoneCode" data-bs-toggle="modal"> Продолжить</button>
                 <button class="form__btn-secondary" data-bs-target="#registerMail" data-bs-toggle="modal"> Войти с помощию email</button>
               </div>
             </div>
@@ -118,7 +118,7 @@
                 <input type="mail" id="mail" placeholder="kulako_irina@mail.com">
               </div>
               <div class="form__btn-group">
-                <button class="form__btn-primary" data-bs-target="#" data-bs-toggle="modal"> Продолжить</button>
+                <button class="form__btn-primary" data-bs-target="#registerMailForm" data-bs-toggle="modal"> Продолжить</button>
                 <button class="form__btn-secondary" data-bs-target="#registerPhone" data-bs-toggle="modal"> Войти по номеру телефона</button>
               </div>
             </div>
@@ -139,25 +139,27 @@
                 <p class="form__text-big">Мы отправили код подтверждения на номер +38 067 123-23-23 <span class="form__text-change" data-bs-target="#registerPhone" data-bs-toggle="modal">Изменить</span></p>
               </div>
               <div class="form__field"> 
-                <input type="tel" id="telReg" placeholder="_ _ _ _ _">
+                <input type="tel" id="telReg" maxlength="5" placeholder="_ _ _ _ _">
               </div>
               <div class="form__field"> 
-                <p class="form__text-small">Получить новый код можно через 00:45</p>
+                <p class="form__text-small">Получить новый код можно через 00:<span id="countdown">--</span></p>
               </div>
               <div class="form__checkbox-group">
                 <div class="form__checkbox-field"> 
-                  <input type="checkbox" id="agreement" value="agreement" name="agreement">
-                  <label for="agreement">Согласен с уловиями бронирования услуг и обработки данных</label>
+                  <input type="checkbox" id="agreeTel" value="agreeTel" name="agreeTel">
+                  <label for="agreeTel">Согласен с уловиями бронирования услуг и обработки данных</label>
                 </div>
                 <div class="form__checkbox-field"> 
-                  <input type="checkbox" id="notification" value="notification" name="notification">
-                  <label for="notification">Хочу получать информации об акциях и спецпредложениях</label>
+                  <input type="checkbox" id="notTel" value="notTel" name="notTel">
+                  <label for="notTel">Хочу получать информации об акциях и спецпредложениях</label>
                 </div>
               </div>
               <div class="form__btn-group">
-                <button class="form__btn-primary" id="telRegBtn" type="button" disabled data-bs-target="#registerSingUp" data-bs-toggle="modal"> Продолжить</button>
+                <button class="form__btn-primary" id="telRegBtn" type="button" disabled data-bs-target="#registerPhoneForm" data-bs-toggle="modal"> Продолжить</button>
               </div>
-              <div class="form__field"> <span class="form__no-sms" data-bs-target="#noSMS" data-bs-toggle="modal">Не приходит СМС?</span></div>
+              <div class="form__field"> 
+                <button class="form__no-sms" id="no-sms" type="button" disabled data-bs-target="#noSMS" data-bs-toggle="modal">Не приходит СМС?</button>
+              </div>
             </div>
           </div>
         </div>
@@ -174,11 +176,183 @@
               <h3 class="form__title">Введите код
                 <div class="form__field"> 
                   <p class="form__text-big">Время действия кода закончилось. Запросите повторно</p>
-                  <div class="form__field"> <span class="form__no-sms" data-bs-target="#registerPhoneCode" data-bs-toggle="modal">Получить новый код</span></div>
-                  <div class="form__field"> <span class="form__no-sms" data-bs-target="#noSMS" data-bs-toggle="modal">Не приходит СМС?</span></div>
+                  <div class="form__field"> <span class="form__no-sms" id="newCode" data-bs-target="#registerPhoneCode" data-bs-toggle="modal">Получить новый код</span></div>
+                  <div class="form__field"> <span class="form__no-sms" data-bs-target="#registerPhone" data-bs-toggle="modal">Не приходит СМС?</span></div>
                 </div>
               </h3>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade register__modal" id="registerPhoneForm" tabindex="-1" aria-labelledby="registerPhoneFormLabel" aria-hidden="true">
+      <div class="modal-dialog register__modal-dialog">
+        <div class="modal-content register__modal-content"> 
+          <div class="modal-header register__modal-header">
+            <button class="modal-close-btn btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">   </button>
+          </div>
+          <div class="modal-body register__modal-body"> 
+            <form class="form">       
+              <h3 class="form__title">Завершите регистрацию</h3>
+              <div class="form__field">
+                <label for="phoneFirstName">Имя</label>
+                <input class="form__phone-field" type="text" id="phoneFirstName" name="phoneFirstName" placeholder="Имя" required>
+              </div>
+              <div class="form__field">
+                <label for="phoneSecondName">Фамилия</label>
+                <input class="form__phone-field" type="text" id="phoneSecondName" name="phoneSecondName" placeholder="Фамилия" required>
+              </div>
+              <div class="form__field">
+                <label for="phoneBirthDay">Дата рождения</label>
+                <input class="form__phone-field" type="text" id="phoneBirthDay" name="phoneBirthDay" placeholder="дд.мм.гггг">
+              </div>
+              <div class="form__field"> 
+                <label for="phoneMail">Почта</label>
+                <input class="form__phone-field" type="mail" id="phoneMail" placeholder="kulako_irina@mail.com">
+              </div>
+              <div class="form__checkbox-group">
+                <div class="form__checkbox-field"> 
+                  <input type="checkbox" id="agreeTelForm" value="agreeTelForm" name="agreeTelForm">
+                  <label for="agreeTelForm">Согласен с уловиями бронирования услуг и обработки данных</label>
+                </div>
+                <div class="form__checkbox-field"> 
+                  <input type="checkbox" id="notTelForm" value="notTelForm" name="notTelForm">
+                  <label for="notTelForm">Хочу получать информации об акциях и спецпредложениях</label>
+                </div>
+              </div>
+              <div class="form__btn-group">
+                <button class="form__btn-primary" id="telRegFormBtn" type="button" disabled data-bs-target="#registerEnd" data-bs-toggle="modal">Зарегистрироваться</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade register__modal" id="registerEnd" tabindex="-1" aria-labelledby="registerEndLabel" aria-hidden="true">
+      <div class="modal-dialog register__modal-dialog">
+        <div class="modal-content register__modal-content"> 
+          <div class="modal-header register__modal-header">
+            <button class="modal-close-btn btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">   </button>
+          </div>
+          <div class="modal-body register__modal-body"> 
+            <div class="form">       
+              <h3 class="form__title">Вы успешно зарегистрированы на портале Хочу в баню!</h3>
+              <div class="form__btn-group"><a class="form__btn-primary" href="index.html"> Начать поиск</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade register__modal" id="registerMailForm" tabindex="-1" aria-labelledby="registerMailFormLabel" aria-hidden="true">
+      <div class="modal-dialog register__modal-dialog">
+        <div class="modal-content register__modal-content"> 
+          <div class="modal-header register__modal-header">
+            <button class="modal-close-btn btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">   </button>
+          </div>
+          <div class="modal-body register__modal-body"> 
+            <form class="form">       
+              <h3 class="form__title">Завершите регистрацию</h3>
+              <div class="form__field">
+                <label for="mailFirstName">Имя</label>
+                <input class="form__mail-field" type="text" id="mailFirstName" name="mailFirstName" placeholder="Имя" required>
+              </div>
+              <div class="form__field">
+                <label for="mailSecondName">Фамилия</label>
+                <input class="form__mail-field" type="text" id="mailSecondName" name="mailSecondName" placeholder="Фамилия" required>
+              </div>
+              <div class="form__field">
+                <label for="mailBirthDay">Дата рождения</label>
+                <input class="form__mail-field" type="text" id="mailBirthDay" name="mailBirthDay" placeholder="дд.мм.гггг">
+              </div>
+              <div class="form__field"> 
+                <label for="mailMail">Почта</label>
+                <input class="form__mail-field" type="mail" id="mailMail" placeholder="kulako_irina@mail.com">
+              </div>
+              <div class="form__field"> 
+                <label for="mailPass">Пароль</label>
+                <input class="form__mail-field" type="password" id="mailPass" placeholder="Пароль" required><span class="form__show-password">Показать</span>
+              </div>
+              <div class="form__field"> 
+                <label for="mailTelephone">Номер телефона</label>
+                <input class="form__mail-field" type="text" id="mailTelephone" placeholder="+38 067 123-23-23">
+              </div>
+              <div class="form__checkbox-group">
+                <div class="form__checkbox-field"> 
+                  <input type="checkbox" id="agreeMailForm" value="agreeMailForm" name="agreeMailForm">
+                  <label for="agreeMailForm">Согласен с уловиями бронирования услуг и обработки данных</label>
+                </div>
+                <div class="form__checkbox-field"> 
+                  <input type="checkbox" id="notMailForm" value="notMailForm" name="notMailForm">
+                  <label for="notMailForm">Хочу получать информации об акциях и спецпредложениях</label>
+                </div>
+              </div>
+              <div class="form__btn-group">
+                <button class="form__btn-primary" id="mailRegFormBtn" type="button" disabled data-bs-target="#registerEnd" data-bs-toggle="modal">Зарегистрироваться</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade register__modal" id="logInMail" tabindex="-1" aria-labelledby="logInMailLabel" aria-hidden="true">
+      <div class="modal-dialog register__modal-dialog">
+        <div class="modal-content register__modal-content"> 
+          <div class="modal-header register__modal-header">
+            <button class="modal-close-btn btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">   </button>
+          </div>
+          <div class="modal-body register__modal-body"> 
+            <div class="form">
+              <h3 class="form__title">Войдите или зарегистируйтесь</h3>
+              <div class="form__field"> 
+                <label for="logmail">e-mail</label>
+                <input type="mail" id="logmail" placeholder="kulako_irina@mail.com">
+              </div>
+              <div class="form__btn-group">
+                <button class="form__btn-primary" data-bs-target="#logPassword" data-bs-toggle="modal"> Продолжить</button>
+                <button class="form__btn-secondary" data-bs-target="#logTel" data-bs-toggle="modal"> Войти по номеру телефона</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade register__modal" id="logTel" tabindex="-1" aria-labelledby="logTelLabel" aria-hidden="true">
+      <div class="modal-dialog register__modal-dialog">
+        <div class="modal-content register__modal-content"> 
+          <div class="modal-header register__modal-header">
+            <button class="modal-close-btn btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">   </button>
+          </div>
+          <div class="modal-body register__modal-body"> 
+            <div class="form">
+              <h3 class="form__title">Войдите или зарегистируйтесь</h3>
+              <div class="form__field"> 
+                <label for="logtel">Номер телефона</label>
+                <input type="text" id="logtel" placeholder="+38 067 123-23-23">
+              </div>
+              <div class="form__btn-group">
+                <button class="form__btn-primary" data-bs-target="#logPassword" data-bs-toggle="modal"> Продолжить</button>
+                <button class="form__btn-secondary" data-bs-target="#logInMail" data-bs-toggle="modal"> Войти с помощию email</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade register__modal" id="logPassword" tabindex="-1" aria-labelledby="logPasswordLabel" aria-hidden="true">
+      <div class="modal-dialog register__modal-dialog">
+        <div class="modal-content register__modal-content"> 
+          <div class="modal-header register__modal-header">
+            <button class="modal-close-btn btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">   </button>
+          </div>
+          <div class="modal-body register__modal-body"> 
+            <form class="form">
+              <h3 class="form__title">Введите пароль</h3>
+              <div class="form__field"> 
+                <label for="logpass">Ввод пароля</label>
+                <input type="password" id="logpass" placeholder="Пароль">
+              </div>
+              <div class="form__btn-group"><a class="form__btn-primary" href="profile-logged"> Войти</a></div>
+            </form>
           </div>
         </div>
       </div>

@@ -66,15 +66,25 @@
   }
 
   &__no-sms {
+    width: max-content;
+    height: max-content;
+    margin: auto;
+    background-color: white;
+    border: none;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 
     &:hover {
       color: #ff8a00;
     }
+
+    &:disabled {
+      color: #b3b3b3;
+    }
   }
 
   &__field {
+    position: relative;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -104,11 +114,27 @@
     }
 
     #telReg {
-      text-align: center;
+      padding-left: 125px;
+      letter-spacing: 8px;
+
       &::placeholder {
         font-size: 25px;
+        padding-left: 2px;
+        letter-spacing: 1px;
         color: rgb(27, 27, 27);
       }
+    }
+  }
+
+  &__phone-field {
+    &:invalid {
+      border-color: red;
+    }
+  }
+
+  &__mail-field {
+    &:invalid {
+      border-color: red;
     }
   }
 
@@ -225,6 +251,21 @@
 
     &:active {
       transform: scale(0.98);
+    }
+  }
+
+  &__show-password {
+    position: absolute;
+    bottom: 7px;
+    right: 10px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    transition: all 0.2s;
+
+    &:hover {
+      color: #ff8a00;
     }
   }
 }
