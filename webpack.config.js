@@ -26,6 +26,7 @@ module.exports = {
     scheduleNew: './src/js/schedule-new.js',
     scheduleBookingWeek: './src/js/schedule-booking-week',
     profile: './src/js/profile.js',
+    account: './src/js/account.js',
   },
 
   output: {
