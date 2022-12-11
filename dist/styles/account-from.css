@@ -7350,7 +7350,7 @@ body {
   outline: 0;
 }
 
-.account-personal {
+.account-from {
   font-family: "Montserrat";
   margin: 80px auto 0 auto;
   padding: 0 16px;
@@ -7358,14 +7358,14 @@ body {
   box-sizing: border-box;
 }
 
-.account-personal__router {
+.account-from__router {
   padding-top: 30px;
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-.account-personal__router-item {
+.account-from__router-item {
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -7375,11 +7375,11 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.account-personal__router-item:hover {
+.account-from__router-item:hover {
   color: #ff8a00;
 }
 
-.account-personal__title {
+.account-from__title {
   margin-top: 20px;
   font-weight: 700;
   font-size: 32px;
@@ -7387,7 +7387,7 @@ body {
   color: #2f2f2f;
 }
 
-.account-personal__content {
+.account-from__content {
   width: 100%;
   margin-top: 40px;
   display: flex;
@@ -7395,41 +7395,86 @@ body {
   justify-content: space-between;
 }
 
-.account-personal__card-group {
+.account-from__card-group {
   max-width: 635px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
-.account-personal__card {
+.account-from__card {
   padding: 25px 0 30px 0;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-}
-
-.account-personal__card-content {
-  display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 30px;
 }
 
-.account-personal__card-title {
+.account-from__card-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.account-from__card-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 130%;
   color: #2f2f2f;
 }
 
-.account-personal__card-info {
+.account-from__card-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.account-from__card-field {
+  max-width: 300px;
+  position: relative;
+  display: flex;
+  flex-grow: 3;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.account-from__card-field label,
+.account-from__card-field p {
   font-weight: 500;
-  font-size: 18px;
-  line-height: 120%;
+  font-size: 16px;
+  line-height: 150%;
+  color: #282828;
+}
+
+.account-from__card-field input {
+  width: auto;
+  height: 35px;
+  padding-left: 16px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #2f2f2f;
+  border: 1px solid #2f2f2f;
+  transition: all 0.2s ease-in-out;
+}
+
+.account-from__card-field input:focus {
+  box-shadow: 0px 0px 5px 1px rgba(255, 136, 0, 0.25);
+  border: 1px solid #ff8a00;
+}
+
+.account-from__card-field input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
   color: #2f2f2f;
 }
 
-.account-personal__card-link {
+.account-from__card-btn {
   width: 105px;
   height: 31px;
   display: flex;
@@ -7440,36 +7485,56 @@ body {
   line-height: 150%;
   text-decoration: none;
   color: #2f2f2f;
+  background-color: #fff;
   border: 2px solid rgba(255, 255, 255, 0);
   transition: all 0.2s ease-in-out;
 }
 
-.account-personal__card-link:hover {
+.account-from__card-btn:hover {
   color: #2f2f2f;
   border-color: #2f80ed;
 }
 
-.account-personal__card-line {
+.account-from__card-line {
   width: 100%;
   height: 1px;
   margin: auto;
   background-color: #b3b3b3;
 }
 
-.account-personal__side-bar {
+.account-from__card-save {
+  width: max-content;
+  margin-left: auto;
+  display: block;
+  padding: 12px 32px;
+  background: #2f2f2f;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  transition: all 0.2s ease-in-out;
+}
+
+.account-from__card-save:hover {
+  background: #ff8a00;
+  color: #fff;
+}
+
+.account-from__side-bar {
   max-width: 350px;
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
-.account-personal__navigation {
+.account-from__navigation {
   display: flex;
   flex-direction: column;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-.account-personal__nav-item {
+.account-from__nav-item {
   height: 60px;
   padding-left: 25px;
   display: flex;
@@ -7482,23 +7547,23 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.account-personal__nav-item:hover {
+.account-from__nav-item:hover {
   background: #f2f2f2;
   color: #000;
 }
 
-.account-personal__nav-current {
+.account-from__nav-current {
   background: #f2f2f2;
 }
 
-.account-personal__nav-line {
+.account-from__nav-line {
   width: calc(100% - 10px);
   height: 1px;
   margin: auto;
   background-color: #b3b3b3;
 }
 
-.account-personal__text {
+.account-from__text {
   font-weight: 400;
   font-size: 16px;
   line-height: 130%;
@@ -13091,13 +13156,13 @@ body {
 }
 
 @media only screen and (max-width: 800px) {
-  .account-personal__content {
+  .account-from__content {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  .account-personal__card-group {
+  .account-from__card-group {
     width: 100%;
   }
 }
@@ -13325,6 +13390,14 @@ body {
   }
 }
 
+@media only screen and (max-width: 500px) {
+  .account-from__card-form {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 @media only screen and (max-width: 470px) {
   .header {
     height: 50px;
@@ -13535,4 +13608,4 @@ body {
     display: none !important;
   }
 }
-/*# sourceMappingURL=maps/account-personal.css.map */
+/*# sourceMappingURL=maps/account-from.css.map */

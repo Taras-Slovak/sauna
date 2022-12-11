@@ -3,7 +3,7 @@
   flex-grow: 1;
   color: #2f2f2f;
   margin: 50px 16px 279px 300px;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
 
   @media only screen and (max-width: 1000px) {
     margin: 70px 16px 50px 16px;
@@ -94,14 +94,6 @@
     border: 1px solid #000000;
     border-radius: 6px;
     transition: all 0.1s ease-in-out;
-
-    // &:hover {
-    //   transform: scale(1.05);
-    // }
-
-    // &:active {
-    //   transform: scale(1);
-    // }
 
     &.account-enabled {
       border-color: #707070;

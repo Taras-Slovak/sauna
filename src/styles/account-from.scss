@@ -1,0 +1,14 @@
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/functions';
+
+// CSS-файлы библиотек
+@import 'vendor/libs-account';
+
+// Основное
+@import 'base/fonts';
+@import 'base/general';
+
+@import '../blocks/modules/ACCOUNT/header/header';
+@import '../blocks/modules/ACCOUNT/account-from/account-from';
+@import '../blocks/modules/ACCOUNT/footer/footer';

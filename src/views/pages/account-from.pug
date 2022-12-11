@@ -1,0 +1,16 @@
+extends ../layouts/default
+
+block variables
+	- const title = "account | forms";
+
+block links
+	link(rel="stylesheet" href="styles/account-from.css")
+
+block content
+	include ../../blocks/modules/ACCOUNT/header/header
+	include ../../blocks/modules/ACCOUNT/account-from/account-from
+	include ../../blocks/modules/ACCOUNT/footer/footer
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/accountForm.js")
