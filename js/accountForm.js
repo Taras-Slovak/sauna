@@ -1,6 +1,29 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/blocks/modules/ACCOUNT/account-from/account-from.js":
+/*!*****************************************************************!*\
+  !*** ./src/blocks/modules/ACCOUNT/account-from/account-from.js ***!
+  \*****************************************************************/
+/***/ (function() {
+
+function toggleText() {
+  var getAllCardBtn = document.querySelectorAll('.account-from__card-btn');
+  getAllCardBtn.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (btn.textContent === 'Изменить') {
+        btn.textContent = 'Отменить';
+      } else {
+        btn.textContent = 'Изменить';
+      }
+    });
+  });
+}
+
+toggleText();
+
+/***/ }),
+
 /***/ "./src/blocks/modules/ACCOUNT/footer/footer.js":
 /*!*****************************************************!*\
   !*** ./src/blocks/modules/ACCOUNT/footer/footer.js ***!
@@ -26,43 +49,33 @@ var modalHeader = new bootstrap__WEBPACK_IMPORTED_MODULE_0__.Modal("#modalHeader
 
 /***/ }),
 
-/***/ "./src/blocks/modules/ACCOUNT/main/main.js":
-/*!*************************************************!*\
-  !*** ./src/blocks/modules/ACCOUNT/main/main.js ***!
-  \*************************************************/
-/***/ (function() {
-
-
-
-/***/ }),
-
-/***/ "./src/js/account.js":
-/*!***************************!*\
-  !*** ./src/js/account.js ***!
-  \***************************/
+/***/ "./src/js/account-from.js":
+/*!********************************!*\
+  !*** ./src/js/account-from.js ***!
+  \********************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
-/* harmony import */ var _import_modules_account__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./import/modules-account */ "./src/js/import/modules-account.js");
+/* harmony import */ var _import_modules_account_from__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./import/modules-account-from */ "./src/js/import/modules-account-from.js");
 /* eslint-disable no-unused-vars */
 
 
 
 /***/ }),
 
-/***/ "./src/js/import/modules-account.js":
-/*!******************************************!*\
-  !*** ./src/js/import/modules-account.js ***!
-  \******************************************/
+/***/ "./src/js/import/modules-account-from.js":
+/*!***********************************************!*\
+  !*** ./src/js/import/modules-account-from.js ***!
+  \***********************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_ACCOUNT_header_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %modules%/ACCOUNT/header/header */ "./src/blocks/modules/ACCOUNT/header/header.js");
-/* harmony import */ var _modules_ACCOUNT_main_main__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/ACCOUNT/main/main */ "./src/blocks/modules/ACCOUNT/main/main.js");
-/* harmony import */ var _modules_ACCOUNT_main_main__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_ACCOUNT_main_main__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_ACCOUNT_account_from_account_from__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/ACCOUNT/account-from/account-from */ "./src/blocks/modules/ACCOUNT/account-from/account-from.js");
+/* harmony import */ var _modules_ACCOUNT_account_from_account_from__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_ACCOUNT_account_from_account_from__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _modules_ACCOUNT_footer_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/ACCOUNT/footer/footer */ "./src/blocks/modules/ACCOUNT/footer/footer.js");
 /* harmony import */ var _modules_ACCOUNT_footer_footer__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_ACCOUNT_footer_footer__WEBPACK_IMPORTED_MODULE_2__);
 
@@ -183,7 +196,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"account": 0
+/******/ 			"accountForm": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -235,9 +248,9 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendor"], function() { return __webpack_require__("./src/js/account.js"); })
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendor"], function() { return __webpack_require__("./src/js/account-from.js"); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=account.js.map
+//# sourceMappingURL=accountForm.js.map
