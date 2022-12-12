@@ -11,7 +11,7 @@ const requireDir = require('require-dir'),
     },
     styles: {
       // src: './src/styles/*.{scss,sass}',
-      src: './src/styles/account-from.scss',
+      src: './src/styles/account-paid.scss',
       dist: './dist/styles/',
       watch: ['./src/blocks/**/*.{scss,sass}', './src/styles/**/*.{scss,sass}'],
     },
