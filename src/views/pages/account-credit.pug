@@ -1,0 +1,16 @@
+extends ../layouts/default
+
+block variables
+	- const title = "account | credit";
+
+block links
+	link(rel="stylesheet" href="styles/account-credit.css")
+
+block content
+	include ../../blocks/modules/ACCOUNT/header/header
+	include ../../blocks/modules/ACCOUNT/account-credit/account-credit
+	include ../../blocks/modules/ACCOUNT/footer/footer
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/account.js")

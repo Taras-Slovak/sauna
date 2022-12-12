@@ -7350,7 +7350,7 @@ body {
   outline: 0;
 }
 
-.account-paid {
+.account-credit {
   font-family: "Montserrat";
   margin: 80px auto 0 auto;
   padding: 0 16px;
@@ -7358,14 +7358,14 @@ body {
   box-sizing: border-box;
 }
 
-.account-paid__router {
+.account-credit__router {
   padding-top: 30px;
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-.account-paid__router-item {
+.account-credit__router-item {
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -7375,11 +7375,11 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.account-paid__router-item:hover {
+.account-credit__router-item:hover {
   color: #ff8a00;
 }
 
-.account-paid__title {
+.account-credit__title {
   margin-top: 20px;
   font-weight: 700;
   font-size: 32px;
@@ -7387,7 +7387,7 @@ body {
   color: #2f2f2f;
 }
 
-.account-paid__content {
+.account-credit__content {
   width: 100%;
   margin-top: 40px;
   display: flex;
@@ -7395,41 +7395,91 @@ body {
   justify-content: space-between;
 }
 
-.account-paid__card-group {
+.account-credit__card-group {
   max-width: 635px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
-.account-paid__card {
+.account-credit__card {
   padding: 25px 0 30px 0;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-}
-
-.account-paid__card-content {
-  display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 30px;
 }
 
-.account-paid__card-title {
+.account-credit__card-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.account-credit__card-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 130%;
   color: #2f2f2f;
 }
 
-.account-paid__card-info {
+.account-credit__card-form {
+  max-width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.account-credit__card-field {
+  max-width: 158px;
+  position: relative;
+  display: flex;
+  flex-grow: 3;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.account-credit__card-field label,
+.account-credit__card-field p {
   font-weight: 500;
-  font-size: 18px;
-  line-height: 120%;
+  font-size: 16px;
+  line-height: 150%;
+  color: #282828;
+}
+
+.account-credit__card-field input {
+  width: auto;
+  height: 35px;
+  padding-left: 16px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #2f2f2f;
+  border: 1px solid #2f2f2f;
+  transition: all 0.2s ease-in-out;
+}
+
+.account-credit__card-field input:focus {
+  box-shadow: 0px 0px 5px 1px rgba(255, 136, 0, 0.25);
+  border: 1px solid #ff8a00;
+}
+
+.account-credit__card-field input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
   color: #2f2f2f;
 }
 
-.account-paid__card-link {
+.account-credit__card-number {
+  max-width: 350px;
+}
+
+.account-credit__card-btn {
   width: 105px;
   height: 31px;
   display: flex;
@@ -7440,35 +7490,55 @@ body {
   line-height: 150%;
   text-decoration: none;
   color: #2f2f2f;
+  background-color: #fff;
   border: 2px solid rgba(255, 255, 255, 0);
   transition: all 0.2s ease-in-out;
 }
 
-.account-paid__card-link:hover {
+.account-credit__card-btn:hover {
   color: #2f2f2f;
   border-color: #2f80ed;
 }
 
-.account-paid__card-line {
+.account-credit__card-line {
   width: 100%;
   height: 1px;
   background-color: #b3b3b3;
 }
 
-.account-paid__side-bar {
+.account-credit__card-save {
+  width: max-content;
+  margin-left: auto;
+  display: block;
+  padding: 12px 32px;
+  background: #2f2f2f;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  transition: all 0.2s ease-in-out;
+}
+
+.account-credit__card-save:hover {
+  background: #ff8a00;
+  color: #fff;
+}
+
+.account-credit__side-bar {
   max-width: 350px;
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
-.account-paid__navigation {
+.account-credit__navigation {
   display: flex;
   flex-direction: column;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-.account-paid__nav-item {
+.account-credit__nav-item {
   height: 60px;
   padding-left: 25px;
   display: flex;
@@ -7481,23 +7551,23 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.account-paid__nav-item:hover {
+.account-credit__nav-item:hover {
   background: #f2f2f2;
   color: #000;
 }
 
-.account-paid__nav-current {
+.account-credit__nav-current {
   background: #f2f2f2;
 }
 
-.account-paid__nav-line {
+.account-credit__nav-line {
   width: calc(100% - 10px);
   height: 1px;
   margin: auto;
   background-color: #b3b3b3;
 }
 
-.account-paid__text {
+.account-credit__text {
   font-weight: 400;
   font-size: 16px;
   line-height: 130%;
@@ -13090,13 +13160,13 @@ body {
 }
 
 @media only screen and (max-width: 800px) {
-  .account-paid__content {
+  .account-credit__content {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  .account-paid__card-group {
+  .account-credit__card-group {
     width: 100%;
   }
 }
@@ -13324,6 +13394,14 @@ body {
   }
 }
 
+@media only screen and (max-width: 500px) {
+  .account-credit__card-form {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 @media only screen and (max-width: 470px) {
   .header {
     height: 50px;
@@ -13534,4 +13612,4 @@ body {
     display: none !important;
   }
 }
-/*# sourceMappingURL=maps/account-paid.css.map */
+/*# sourceMappingURL=maps/account-credit.css.map */
