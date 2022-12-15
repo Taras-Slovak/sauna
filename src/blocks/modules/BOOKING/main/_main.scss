@@ -1,0 +1,51 @@
+.booking {
+  margin: 80px auto auto;
+  padding: 0 16px 200px 16px;
+  max-width: 1111px;
+  box-sizing: border-box;
+
+  @media only screen and (max-width: 1400px) {
+    padding: 0 16px 0px 16px;
+  }
+
+  &__router {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__router-item {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 120%;
+    text-decoration: none;
+    color: #2f2f2f;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: #ff8a00;
+    }
+  }
+
+  &__title {
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 150%;
+    color: #2f2f2f;
+  }
+
+  &__text {
+    margin-top: 40px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    color: #000000;
+  }
+
+  &__panel {
+    margin-top: 40px;
+  }
+}
