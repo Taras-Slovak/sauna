@@ -9,4 +9,6 @@
 @import 'base/fonts';
 @import 'base/general';
 
-@import '../blocks/modules/BOOKING';
+@import '../blocks/modules/BOOKING/header/header';
+@import '../blocks/modules/BOOKING/booking-list/booking-list';
+@import '../blocks/modules/BOOKING/footer/footer';
