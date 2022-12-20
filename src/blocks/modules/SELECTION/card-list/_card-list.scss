@@ -1,0 +1,16 @@
+.card-list {
+  max-width: 730px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @media only screen and (max-width: 1600px) {
+    max-width: 930px;
+    width: 100%;
+    flex-grow: 1;
+  }
+  @media only screen and (max-width: 1000px) {
+    margin-top: 0;
+    padding: 0 16px;
+  }
+}

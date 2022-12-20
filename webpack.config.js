@@ -30,6 +30,7 @@ module.exports = {
     accountForm: './src/js/account-from.js',
     booking: './src/js/booking.js',
     bookingList: './src/js/booking-list.js',
+    selection: './src/js/selection.js',
   },
 
   output: {

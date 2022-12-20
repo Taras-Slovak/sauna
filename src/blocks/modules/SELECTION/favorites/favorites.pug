@@ -1,0 +1,33 @@
+#addNew.modal.fade.favorites__modal(tabindex='-1' aria-labelledby='addNewLabel' aria-hidden='true')
+  .modal-dialog.favorites__modal-dialog
+    .modal-content.favorites__modal-content 
+      .modal-header.favorites__modal-header
+        button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+      .modal-body.favorites__modal-body 
+        .form
+          h3.form__title Добавить в Мои подборки
+          
+          .form__btn-group
+            button.form__btn-primary#sendPhone(data-bs-target='#saveNew' data-bs-toggle='modal')  Создать новую подборку
+
+          .form__favorites          
+            .form__favorites-content
+              h3.form__favorites-title Отдых с друзьями
+              .form__favorites-text 7 вариантов
+            a.form__favorites-btn(href='#') &plus;
+
+
+#saveNew.modal.fade.favorites__modal(tabindex='-1' aria-labelledby='favoritesMailLabel' aria-hidden='true')
+  .modal-dialog.favorites__modal-dialog
+    .modal-content.favorites__modal-content 
+      .modal-header.favorites__modal-header
+        button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+      .modal-body.favorites__modal-body 
+        .form
+          h3.form__title Введите название
+          .form__field 
+            label(for="enterName") Введите название
+            input(type="text" id="enterName" placeholder='Название')
+          
+          .form__btn-group
+            button.form__btn-primary(data-bs-dismiss="modal" aria-label="Close")  Сохранить подборку

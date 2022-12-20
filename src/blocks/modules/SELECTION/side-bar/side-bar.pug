@@ -1,0 +1,146 @@
+section.side-bar 
+  h2.side-bar__title Поиск бани 
+  .side-bar__data-picker 
+      p.side-bar__txt Дата бронирования
+      input#side-bar-picker(type="text" value="Дата")
+      img(src="img/SEARCH/side-bar/calendar.svg", alt="calendar")
+
+  .side-bar__range-group
+
+    .side-bar__range
+      p.side-bar__txt Время бронирования
+      .side-bar__input-group
+        input.side-bar__value-min(type="text")#time-min
+        input.side-bar__value-max(type="text")#time-max
+      .side-bar__range-item.range-time
+
+    .side-bar__range
+      p.side-bar__txt Цена грн./час
+      .side-bar__input-group
+        input.side-bar__value-min(type="text" )#price-min
+        input.side-bar__value-max(type="text" )#price-max
+      .side-bar__range-item.range-price
+
+  .side-bar__search 
+    label.side-bar__txt(for="side-bar-search") Название бани
+    input(type="search" placeholder="Поиск")#side-bar-search
+
+  .side-bar__location
+    p.side-bar__txt Район
+
+    button.side-bar__button
+      img(src="img/SEARCH/side-bar/location_icon.svg", alt="location")
+      p Найти поблизости
+  
+  .side-bar__block-checkboxes
+
+    .side-bar__checkbox-group
+      
+      .side-bar__checkbox-inner  
+        .side-bar__checkbox-item
+          input(type="checkbox", id="obolonsky"  name="obolonsky")
+          label(for="obolonsky") Оболонский 
+        
+        .side-bar__checkbox-item        
+          input(type="checkbox", id="desnyansky"  name="desnyansky")
+          label(for="desnyansky") Деснянский 
+
+        .side-bar__checkbox-item
+          input(type="checkbox", id="shevchenkovskiy"  name="shevchenkovskiy")
+          label(for="shevchenkovskiy") Шевченковский 
+
+        .side-bar__checkbox-item
+          input(type="checkbox", id="kharkivsky" name="firekharkivsky")
+          label(for="kharkivsky") Харьковский 
+
+        .side-bar__checkbox-item       
+          input(type="checkbox", id="solomensky" name="solomensky")
+          label(for="solomensky") Соломенский 
+
+        .side-bar__checkbox-item        
+          input(type="checkbox", id="dneprovskiy"  name="dneprovskiy")
+          label(for="dneprovskiy") Днепровский 
+
+      span.side-bar__btn-capacity(data-open="false")
+        p Показать больше
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"   xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.825 6.66663L10 10.4833L6.175 6.66663L5 7.84163L10 12.8416L15 7.84163L13.825 6.66663Z"/>
+        </svg>
+
+    .side-bar__checkbox-group
+        
+        .side-bar__checkbox-inner
+          .side-bar__txt Тип парной  
+          .side-bar__checkbox-item       
+            input(type="checkbox", id="finnish" value="finnish"  name="finnish")
+            label(for="finnish") Финская баня
+
+          .side-bar__checkbox-item        
+            input(type="checkbox", id="turkish"  name="turkish")
+            label(for="turkish") Турецкая баня
+
+          .side-bar__checkbox-item 
+            input(type="checkbox", id="japanese"  name="japanese")
+            label(for="japanese") Японская баня
+
+          .side-bar__checkbox-item 
+            input(type="checkbox", id="firewood" name="firewood")
+            label(for="firewood") На дровах
+
+          .side-bar__checkbox-item       
+            input(type="checkbox", id="roman" name="roman")
+            label(for="roman") Римская парная
+
+        span.side-bar__btn-capacity(data-open="false")
+          p Показать больше
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"   xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.825 6.66663L10 10.4833L6.175 6.66663L5 7.84163L10 12.8416L15 7.84163L13.825 6.66663Z"/>
+          </svg>
+  
+    .side-bar__checkbox-group
+      .side-bar__checkbox-inner
+        .side-bar__txt Вместимость бани
+        .side-bar__checkbox-item
+          input(type="checkbox", id="capacity-1-4" name="capacity-1-4")
+          label(for="capacity-1-4") 1-4 
+        
+        .side-bar__checkbox-item       
+          input(type="checkbox", id="capacity-5-8" name="capacity-5-8")
+          label(for="capacity-5-8") 5-8 
+
+        .side-bar__checkbox-item
+          input(type="checkbox", id="capacity-9-15" name="capacity-9-15")
+          label(for="capacity-9-15") 9-15
+
+        .side-bar__checkbox-item
+          input(type="checkbox", id="capacity-more-15" name="capacity-more-15")
+          label(for="capacity-more-15") Более 15
+  
+    .side-bar__checkbox-group              
+      .side-bar__checkbox-inner
+        .side-bar__txt Аква зона  
+        .side-bar__checkbox-item       
+          input(type="checkbox", id="swimming-pool" value="swimming-pool"  name="swimming-pool")
+          label(for="swimming-pool") Бассейн
+
+        .side-bar__checkbox-item        
+          input(type="checkbox", id="jacuzzi"  name="jacuzzi")
+          label(for="jacuzzi") Джакузи
+
+        .side-bar__checkbox-item 
+          input(type="checkbox", id="baptistery"  name="baptistery")
+          label(for="baptistery") Купель
+
+        .side-bar__checkbox-item 
+          input(type="checkbox", id="cedar-barrel" name="cedar-barrel")
+          label(for="cedar-barrel") Кедровая бочка
+
+        .side-bar__checkbox-item       
+          input(type="checkbox", id="massage" name="massage")
+          label(for="massage") Массаж
+
+      span.side-bar__btn-capacity(data-open="false")
+        p Показать больше
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"   xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.825 6.66663L10 10.4833L6.175 6.66663L5 7.84163L10 12.8416L15 7.84163L13.825 6.66663Z"/>
+        </svg>
