@@ -1,0 +1,14 @@
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/functions';
+
+// CSS-файлы библиотек
+@import 'vendor/libs-booking';
+
+// Основное
+@import 'base/fonts';
+@import 'base/general';
+
+@import '../blocks/modules/SELECTION/header/header';
+@import '../blocks/modules/SELECTION/selection-list/selection-list';
+@import '../blocks/modules/SELECTION/footer/footer';
