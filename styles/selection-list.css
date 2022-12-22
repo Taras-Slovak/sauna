@@ -7428,6 +7428,12 @@ body {
   flex-direction: column;
   gap: 25px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  transition: all 0.1s ease;
+}
+
+.booking-list__card:hover {
+  transform: scale(1.03);
 }
 
 .booking-list__card-pic {
