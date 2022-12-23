@@ -1,0 +1,16 @@
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/functions';
+
+// CSS-файлы библиотек
+@import 'vendor/libs-selection-my';
+
+// Основное
+@import 'base/fonts';
+@import 'base/general';
+
+@import '../blocks/modules/SELECTION/header/header';
+@import '../blocks/modules/SELECTION/my-card/my-card';
+@import '../blocks/modules/SELECTION/my-map/my-map';
+@import '../blocks/modules/SELECTION/selection-my/selection-my';
+@import '../blocks/modules/SELECTION/footer/footer';

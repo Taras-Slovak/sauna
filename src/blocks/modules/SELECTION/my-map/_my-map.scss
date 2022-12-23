@@ -1,0 +1,90 @@
+.my-map {
+  position: relative;
+
+  &__content {
+    width: calc(100vw - 782px);
+    height: 965px;
+    &.card-full-screen {
+      width: calc(100vw - 317px);
+    }
+
+    @media only screen and (max-width: 1600px) {
+      width: calc(100vw - 750px);
+    }
+
+    @media only screen and (max-width: 1400px) {
+      width: calc(100vw - 650px);
+    }
+
+    @media only screen and (max-width: 1200px) {
+      width: calc(100vw - 550px);
+    }
+
+    @media only screen and (max-width: 1000px) {
+      width: 100vw;
+      height: calc(100vh - 650px);
+    }
+  }
+
+  &__location {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    cursor: pointer;
+
+    @media only screen and (max-width: 1000px) {
+      display: none;
+    }
+  }
+  .leaflet-control {
+    margin-top: 110px;
+    margin-right: 38px;
+    @media only screen and (max-width: 1400px) {
+      margin-top: 140px;
+    }
+    @media only screen and (max-width: 730px) {
+      margin-top: 80px;
+      margin-right: 10px;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    padding: 0 15px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    @media only screen and (max-width: 730px) {
+      display: none;
+    }
+
+    input {
+      &:checked + label::before {
+        top: 2px;
+      }
+    }
+  }
+}
+
+.my-list-hide {
+  display: none;
+}

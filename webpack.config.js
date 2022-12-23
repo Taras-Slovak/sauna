@@ -32,6 +32,7 @@ module.exports = {
     bookingList: './src/js/booking-list.js',
     selection: './src/js/selection.js',
     selectionList: './src/js/selection-list.js',
+    selectionMy: './src/js/selection-my.js',
   },
 
   output: {

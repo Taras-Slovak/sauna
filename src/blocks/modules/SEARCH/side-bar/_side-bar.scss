@@ -248,7 +248,7 @@
         left: 5px;
         top: 2px;
         font-weight: 500;
-        content: "\2713";
+        content: '\2713';
         text-align: center;
         color: #ffffff;
         position: absolute;
@@ -311,4 +311,8 @@
 
 .noUi-connect {
   background: #ff8a00;
+}
+
+.air-datepicker {
+  z-index: 500;
 }
