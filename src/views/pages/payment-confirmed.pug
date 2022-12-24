@@ -1,0 +1,32 @@
+extends ../layouts/default
+
+block variables
+	- const title = "Payment | confirmed";
+
+block links
+	link(rel="stylesheet" href="styles/payment-confirmed.css")
+
+block content
+	header.header
+		.header__nav
+			.header__link 
+				p Оплата подтверждена
+
+	main.main
+		.main__content
+			h2.main__title Ваш заказ успешно оплачен
+
+			p.main__order Номер заказа 136565
+
+			p.main__text На номер +38 067 123-23-23 отправлено подтверждение заказа и детали бронирования
+
+			a.main__button(href="payment-confirmed.html") Вернуться к каталогу
+		
+		.main__image
+			img(src="img/other/rectangle.webp", alt="some-pic")
+
+	footer.footer
+		.footer__inner
+			p.footer__item 2022 Портал бронирования саун «Хочу в Баню»
+
+block scripts
