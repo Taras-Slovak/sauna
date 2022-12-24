@@ -33,6 +33,7 @@ module.exports = {
     selection: './src/js/selection.js',
     selectionList: './src/js/selection-list.js',
     selectionMy: './src/js/selection-my.js',
+    message: './src/js/message.js',
   },
 
   output: {
