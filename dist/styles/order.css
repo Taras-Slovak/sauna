@@ -7713,44 +7713,44 @@ body {
   color: #2f2f2f;
 }
 
-.form {
+.order-form {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-.form__title {
+.order-form__title {
   font-weight: 700;
   font-size: 22px;
   line-height: 130%;
 }
 
-.form__description {
+.order-form__description {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.form__description h5 {
+.order-form__description h5 {
   font-weight: 700;
   font-size: 18px;
   line-height: 130%;
 }
 
-.form__description p {
+.order-form__description p {
   font-weight: 400;
   font-size: 16px;
   line-height: 135%;
 }
 
-.form__fields {
+.order-form__fields {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
-.form__item {
+.order-form__item {
   max-width: 350px;
   display: flex;
   flex-direction: column;
@@ -7758,22 +7758,22 @@ body {
   transition: all 0.2s;
 }
 
-.form__item:hover label {
+.order-form__item:hover label {
   color: #ff8a00;
 }
 
-.form__item:hover input {
+.order-form__item:hover input {
   border: 1px solid #ff8a00;
 }
 
-.form__item label {
+.order-form__item label {
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
   transition: all 0.2s;
 }
 
-.form__item input {
+.order-form__item input {
   width: 100%;
   height: 35px;
   padding-left: 16px;
@@ -7787,17 +7787,17 @@ body {
   transition: all 0.2s;
 }
 
-.form__item input:focus {
+.order-form__item input:focus {
   border: 1px solid #ff8a00;
 }
 
-.form__agreement {
+.order-form__agreement {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.form__radio {
+.order-form__radio {
   position: relative;
   display: flex;
   align-items: flex-start;
@@ -7805,7 +7805,7 @@ body {
   gap: 15px;
 }
 
-.form__radio label {
+.order-form__radio label {
   max-width: 340px;
   font-weight: 500;
   font-size: 14px;
@@ -7813,7 +7813,7 @@ body {
   cursor: pointer;
 }
 
-.form__radio input {
+.order-form__radio input {
   width: 20px;
   height: 20px;
   margin-top: 0;
@@ -7828,12 +7828,12 @@ body {
   cursor: pointer;
 }
 
-.form__radio input:checked {
+.order-form__radio input:checked {
   border: 1px solid #ff8a00;
   background-color: #ff8a00;
 }
 
-.form__radio input:checked + label::before {
+.order-form__radio input:checked + label::before {
   display: block;
   left: 5px;
   top: 3px;
@@ -7844,25 +7844,25 @@ body {
   position: absolute;
 }
 
-.form__submission {
+.order-form__submission {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.form__submission h5 {
+.order-form__submission h5 {
   font-weight: 700;
   font-size: 18px;
   line-height: 130%;
 }
 
-.form__submission p {
+.order-form__submission p {
   font-weight: 400;
   font-size: 16px;
   line-height: 135%;
 }
 
-.form__submission a {
+.order-form__submission a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7880,13 +7880,13 @@ body {
   transition: all 0.2s;
 }
 
-.form__submission a:hover {
+.order-form__submission a:hover {
   border: none;
   background: #ff8a00;
   color: #ffffff;
 }
 
-.form__submission a:active {
+.order-form__submission a:active {
   transform: scale(0.98);
 }
 
@@ -8128,6 +8128,268 @@ body {
   font-size: 18px;
   line-height: 130%;
   color: black;
+}
+
+.register__modal {
+  --bs-modal-width: 540px;
+}
+
+.register__modal-dialog {
+  margin-right: auto !important;
+  margin-top: 0 !important;
+}
+
+.register__modal-header {
+  border-bottom: none;
+  padding-top: 15px;
+  padding-right: 15px;
+}
+
+.register__modal-body {
+  padding: 0;
+}
+
+.register .modal {
+  --bs-modal-width: 540px !;
+}
+
+.form {
+  max-width: 350px;
+  padding-bottom: 35px;
+  margin-left: 95px;
+  margin-right: 95px;
+  display: flex;
+  flex-direction: column;
+  color: #2f2f2f;
+}
+
+.form__title {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 130%;
+}
+
+.form__text-big {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+}
+
+.form__text-change {
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.form__text-change:hover {
+  color: #ff8a00;
+}
+
+.form__text-small,
+.form__no-sms {
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+}
+
+.form__no-sms {
+  width: max-content;
+  height: max-content;
+  margin: auto;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.form__no-sms:hover {
+  color: #ff8a00;
+}
+
+.form__no-sms:disabled {
+  color: #b3b3b3;
+}
+
+.form__field {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form__field label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+}
+
+.form__field input {
+  width: 100%;
+  height: 36px;
+  padding-left: 5px;
+  background: #ffffff;
+  border: 1px solid #2f2f2f;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.form__field input::placeholder {
+  color: rgb(27, 27, 27);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.form__field #telReg {
+  padding-left: 125px;
+  letter-spacing: 8px;
+}
+
+.form__field #telReg::placeholder {
+  font-size: 25px;
+  padding-left: 2px;
+  letter-spacing: 1px;
+  color: rgb(27, 27, 27);
+}
+
+.form__phone-field:invalid {
+  border-color: red;
+}
+
+.form__mail-field:invalid {
+  border-color: red;
+}
+
+.form__checkbox-group {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form__checkbox-field {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.form__checkbox-field label {
+  width: auto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  cursor: pointer;
+}
+
+.form__checkbox-field input {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: 1px solid #707070;
+  border-radius: 2px;
+  outline: none;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.form__checkbox-field input:checked {
+  border: 1px solid #ff8a00;
+  background-color: #ff8a00;
+}
+
+.form__checkbox-field input:checked + label::before {
+  display: block;
+  left: 5px;
+  top: 3px;
+  font-weight: 700;
+  content: "✓";
+  text-align: center;
+  color: #ffffff;
+  position: absolute;
+}
+
+.form__btn-group {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.form__btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  background: #ff8a00;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: none;
+}
+
+.form__btn-primary:hover {
+  background: #ffab4b;
+  color: #fff;
+}
+
+.form__btn-primary:active {
+  transform: scale(0.98);
+}
+
+.form__btn-primary:disabled {
+  background: #f2f2f2;
+  border: 1px solid #b3b3b3;
+  color: #b3b3b3;
+}
+
+.form__btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  background: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  border: none;
+  color: #2f2f2f;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.form__btn-secondary:hover {
+  background: #ff8a00;
+  color: #fff;
+}
+
+.form__btn-secondary:active {
+  transform: scale(0.98);
+}
+
+.form__show-password {
+  position: absolute;
+  bottom: 7px;
+  right: 10px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  transition: all 0.2s;
+}
+
+.form__show-password:hover {
+  color: #ff8a00;
 }
 
 .footer {
@@ -13885,6 +14147,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 570px) {
+  .form {
+    padding: 0 5px;
+  }
+}
+
 @media only screen and (max-width: 500px) {
   .editing__top p {
     font-size: 16px;
@@ -13936,40 +14204,40 @@ body {
 }
 
 @media only screen and (max-width: 420px) {
-  .form__title {
+  .order-form__title {
     font-size: 18px;
   }
 
-  .form__description h5 {
+  .order-form__description h5 {
     font-size: 14px;
   }
 
-  .form__description p {
+  .order-form__description p {
     font-size: 12px;
   }
 
-  .form__item label {
+  .order-form__item label {
     font-size: 12px;
   }
 
-  .form__item input {
+  .order-form__item input {
     height: 30px;
     font-size: 12px;
   }
 
-  .form__radio label {
+  .order-form__radio label {
     font-size: 12px;
   }
 
-  .form__submission h5 {
+  .order-form__submission h5 {
     font-size: 14px;
   }
 
-  .form__submission p {
+  .order-form__submission p {
     font-size: 12px;
   }
 
-  .form__submission a {
+  .order-form__submission a {
     margin: 10px auto 0 auto;
     width: 220px;
     height: 42px;

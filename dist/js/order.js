@@ -60,6 +60,126 @@ pickerAmount();
 
 /***/ }),
 
+/***/ "./src/blocks/modules/ORDER/register/register.js":
+/*!*******************************************************!*\
+  !*** ./src/blocks/modules/ORDER/register/register.js ***!
+  \*******************************************************/
+/***/ (function() {
+
+function validationRegisterPhone() {
+  var getInputCode = document.querySelector('#telReg');
+  var getButtonCode = document.querySelector('#telRegBtn');
+  var getAgreeTel = document.querySelector('#agreeTel');
+  getInputCode.addEventListener('input', function () {
+    if (getInputCode.value.length >= 5 && getAgreeTel.checked) {
+      getButtonCode.disabled = false;
+    } else {
+      getButtonCode.disabled = true;
+    }
+  });
+  getAgreeTel.addEventListener('click', function () {
+    if (getInputCode.value.length >= 5 && getAgreeTel.checked) {
+      getButtonCode.disabled = false;
+    } else {
+      getButtonCode.disabled = true;
+    }
+  });
+}
+
+validationRegisterPhone();
+
+function validationCountdown() {
+  var getRegBtn = document.querySelector('#sendPhone');
+  var getCountdown = document.querySelector('#countdown');
+  var getSmsBtn = document.querySelector('#no-sms');
+  var getInputCode = document.querySelector('#telReg');
+  var getNewCode = document.querySelector('#newCode');
+  var intervalId;
+  getRegBtn.addEventListener('click', function () {
+    getInputCode.value = '';
+    countdown();
+  });
+  getNewCode.addEventListener('click', function () {
+    getInputCode.value = '';
+    countdown();
+  });
+
+  function countdown() {
+    var seconds = 5;
+    clearInterval(intervalId);
+    intervalId = null;
+
+    if (!intervalId) {
+      intervalId = setInterval(function () {
+        if (seconds >= 0) {
+          getCountdown.innerHTML = seconds;
+          getSmsBtn.disabled = true;
+
+          if (seconds < 10) {
+            getCountdown.innerHTML = "0".concat(seconds);
+          }
+
+          seconds -= 1;
+        } else {
+          getSmsBtn.disabled = false;
+        }
+      }, 1000);
+    }
+  }
+}
+
+validationCountdown();
+
+function validationForm(regBtn, field, require, agree) {
+  var getTelRegFormBtn = document.querySelector(regBtn);
+  var getAllField = document.querySelectorAll(field);
+  var getAllRequired = document.querySelectorAll(require);
+  var getAgreeTelForm = document.querySelector(agree);
+  getAllField.forEach(function (input) {
+    input.addEventListener('input', function () {
+      var trueRequired = [];
+      getAllRequired.forEach(function (element) {
+        if (element.checkValidity()) {
+          trueRequired.push(element);
+        }
+      });
+
+      if (trueRequired.length === getAllRequired.length && getAgreeTelForm.checked) {
+        getTelRegFormBtn.disabled = false;
+      } else {
+        getTelRegFormBtn.disabled = true;
+      }
+
+      getAgreeTelForm.addEventListener('change', function () {
+        if (trueRequired.length === getAllRequired.length && getAgreeTelForm.checked) {
+          getTelRegFormBtn.disabled = false;
+        } else {
+          getTelRegFormBtn.disabled = true;
+        }
+      });
+    });
+  });
+}
+
+validationForm('#telRegFormBtn', '.form__phone-field', '.form__phone-field[required]', '#agreeTelForm');
+validationForm('#mailRegFormBtn', '.form__mail-field', '.form__mail-field[required]', '#agreeMailForm');
+
+function togglePassword() {
+  var getPassword = document.querySelector('#mailPass');
+  var getTogglePass = document.querySelector('.form__show-password');
+  getTogglePass.addEventListener('click', function () {
+    if (getPassword.type === 'password') {
+      getPassword.type = 'text';
+    } else {
+      getPassword.type = 'password';
+    }
+  });
+}
+
+togglePassword();
+
+/***/ }),
+
 /***/ "./src/blocks/modules/ORDER/share/share.js":
 /*!*************************************************!*\
   !*** ./src/blocks/modules/ORDER/share/share.js ***!
@@ -136,6 +256,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_ORDER_share_share__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %modules%/ORDER/share/share */ "./src/blocks/modules/ORDER/share/share.js");
 /* harmony import */ var _modules_ORDER_editing_editing__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/ORDER/editing/editing */ "./src/blocks/modules/ORDER/editing/editing.js");
 /* harmony import */ var _modules_ORDER_editing_editing__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_ORDER_editing_editing__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_ORDER_register_register__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/ORDER/register/register */ "./src/blocks/modules/ORDER/register/register.js");
+/* harmony import */ var _modules_ORDER_register_register__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_ORDER_register_register__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 

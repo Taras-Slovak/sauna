@@ -1,0 +1,227 @@
+#registerPhone.modal.fade.register__modal(tabindex='-1' aria-labelledby='registerPhoneLabel' aria-hidden='true')
+  .modal-dialog.register__modal-dialog
+    .modal-content.register__modal-content 
+      .modal-header.register__modal-header
+        button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+      .modal-body.register__modal-body 
+        .form
+          h3.form__title Войдите или зарегистируйтесь
+
+          .form__field 
+            label(for="telephone") Номер телефона
+            input(type="tel" id="telephone" placeholder='+38 067 123-23-23')
+
+          .form__field 
+            p.form__text-big Вам будет отправлен SMS, чтобы подтвердить указанный номер телефона. 
+
+          .form__btn-group
+            button.form__btn-primary(data-bs-target='#registerPhoneCode' data-bs-toggle='modal')  Продолжить
+            button.form__btn-secondary(data-bs-target='#registerMail' data-bs-toggle='modal')  Войти с помощию email
+
+#registerMail.modal.fade.register__modal(tabindex='-1' aria-labelledby='registerMailLabel' aria-hidden='true')
+  .modal-dialog.register__modal-dialog
+    .modal-content.register__modal-content 
+      .modal-header.register__modal-header
+        button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+      .modal-body.register__modal-body 
+        .form
+          h3.form__title Войдите или зарегистируйтесь
+          .form__field 
+            label(for="mail") e-mail
+            input(type="mail" id="mail" placeholder='kulako_irina@mail.com')
+          
+          .form__btn-group
+            button.form__btn-primary(data-bs-target='#registerMailForm' data-bs-toggle='modal')  Продолжить
+            button.form__btn-secondary(data-bs-target='#registerPhone' data-bs-toggle='modal')  Войти по номеру телефона
+          
+#registerPhoneCode.modal.fade.register__modal(tabindex='-1' aria-labelledby='registerPhoneCodeLabel' aria-hidden='true')
+  .modal-dialog.register__modal-dialog
+    .modal-content.register__modal-content 
+      .modal-header.register__modal-header
+        button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+      .modal-body.register__modal-body 
+        .form        
+          h3.form__title Войдите или зарегистируйтесь
+          .form__field
+            p.form__text-big Мы отправили код подтверждения на номер +38 067 123-23-23 
+              span.form__text-change(data-bs-target='#registerPhone' data-bs-toggle='modal') Изменить
+          
+          .form__field 
+            input(type="tel" id="telReg" maxlength="5" placeholder='_ _ _ _ _')
+
+          .form__field 
+            p.form__text-small Получить новый код можно через 00:
+              span#countdown --
+
+          .form__checkbox-group
+            .form__checkbox-field 
+              input(type="checkbox", id="agreeTel" value="agreeTel"  name="agreeTel")
+              label(for="agreeTel") Согласен с уловиями бронирования услуг и обработки данных
+            .form__checkbox-field 
+              input(type="checkbox", id="notTel" value="notTel"  name="notTel")
+              label(for="notTel") Хочу получать информации об акциях и спецпредложениях
+
+          .form__btn-group
+            button.form__btn-primary#telRegBtn(type='button' disabled data-bs-dismiss="modal" aria-label="Close")  Продолжить
+
+          .form__field 
+            button.form__no-sms#no-sms(type='button' disabled data-bs-target='#noSMS' data-bs-toggle='modal') Не приходит СМС?
+
+#noSMS.modal.fade.register__modal(tabindex='-1' aria-labelledby='noSMSLabel' aria-hidden='true')
+  .modal-dialog.register__modal-dialog
+    .modal-content.register__modal-content 
+      .modal-header.register__modal-header
+        button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+      .modal-body.register__modal-body 
+        .form        
+          h3.form__title Введите код
+           .form__field 
+            p.form__text-big Время действия кода закончилось. Запросите повторно
+
+            .form__field 
+              span.form__no-sms#newCode( data-bs-target='#registerPhoneCode' data-bs-toggle='modal') Получить новый код
+
+            .form__field 
+              span.form__no-sms( data-bs-dismiss="modal" aria-label="Close") Не приходит СМС?
+
+#registerPhoneForm.modal.fade.register__modal(tabindex='-1' aria-labelledby='registerPhoneFormLabel' aria-hidden='true')
+  .modal-dialog.register__modal-dialog
+    .modal-content.register__modal-content 
+      .modal-header.register__modal-header
+        button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+      .modal-body.register__modal-body 
+
+        form.form        
+          h3.form__title Завершите регистрацию
+
+          .form__field
+            label(for="phoneFirstName") Имя
+            input.form__phone-field(type="text" id="phoneFirstName" name="phoneFirstName" placeholder="Имя" required)
+
+          .form__field
+            label(for="phoneSecondName") Фамилия
+            input.form__phone-field(type="text" id="phoneSecondName" name="phoneSecondName" placeholder="Фамилия" required)
+
+          .form__field
+            label(for="phoneBirthDay") Дата рождения
+            input.form__phone-field(type="text" id="phoneBirthDay" name="phoneBirthDay" placeholder="дд.мм.гггг")
+          
+          .form__field 
+            label(for="phoneMail") Почта
+            input.form__phone-field(type="mail" id="phoneMail" placeholder='kulako_irina@mail.com')
+
+          .form__checkbox-group
+            .form__checkbox-field 
+              input(type="checkbox", id="agreeTelForm" value="agreeTelForm"  name="agreeTelForm")
+              label(for="agreeTelForm") Согласен с уловиями бронирования услуг и обработки данных
+            .form__checkbox-field 
+              input(type="checkbox", id="notTelForm" value="notTelForm"  name="notTelForm")
+              label(for="notTelForm") Хочу получать информации об акциях и спецпредложениях
+
+          .form__btn-group
+            button.form__btn-primary#telRegFormBtn(type='button' disabled data-bs-target='#registerEnd' data-bs-toggle='modal' ) Зарегистрироваться
+
+#registerEnd.modal.fade.register__modal(tabindex='-1' aria-labelledby='registerEndLabel' aria-hidden='true')
+  .modal-dialog.register__modal-dialog
+    .modal-content.register__modal-content 
+      .modal-header.register__modal-header
+        button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+      .modal-body.register__modal-body 
+        .form        
+          h3.form__title Вы успешно зарегистрированы на портале Хочу в баню!
+
+          .form__btn-group
+            a.form__btn-primary( href="index.html")  Начать поиск
+
+#registerMailForm.modal.fade.register__modal(tabindex='-1' aria-labelledby='registerMailFormLabel' aria-hidden='true')
+  .modal-dialog.register__modal-dialog
+    .modal-content.register__modal-content 
+      .modal-header.register__modal-header
+        button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+      .modal-body.register__modal-body 
+
+        form.form        
+          h3.form__title Завершите регистрацию
+
+          .form__field
+            label(for="mailFirstName") Имя
+            input.form__mail-field(type="text" id="mailFirstName" name="mailFirstName" placeholder="Имя" required)
+
+          .form__field
+            label(for="mailSecondName") Фамилия
+            input.form__mail-field(type="text" id="mailSecondName" name="mailSecondName" placeholder="Фамилия" required)
+
+          .form__field
+            label(for="mailBirthDay") Дата рождения
+            input.form__mail-field(type="text" id="mailBirthDay" name="mailBirthDay" placeholder="дд.мм.гггг")
+          
+          .form__field 
+            label(for="mailMail") Почта
+            input.form__mail-field(type="mail" id="mailMail" placeholder='kulako_irina@mail.com')
+
+          .form__field 
+            label(for="mailPass") Пароль
+            input.form__mail-field(type="password" id="mailPass" placeholder='Пароль' required)
+            span.form__show-password Показать
+
+          .form__field 
+            label(for="mailTelephone") Номер телефона
+            input.form__mail-field(type="text" id="mailTelephone" placeholder='+38 067 123-23-23')
+
+          .form__checkbox-group
+            .form__checkbox-field 
+              input(type="checkbox", id="agreeMailForm" value="agreeMailForm"  name="agreeMailForm")
+              label(for="agreeMailForm") Согласен с уловиями бронирования услуг и обработки данных
+            .form__checkbox-field 
+              input(type="checkbox", id="notMailForm" value="notMailForm"  name="notMailForm")
+              label(for="notMailForm") Хочу получать информации об акциях и спецпредложениях
+
+          .form__btn-group
+            button.form__btn-primary#mailRegFormBtn(type='button' disabled data-bs-target='#registerEnd' data-bs-toggle='modal' ) Зарегистрироваться
+
+#logInMail.modal.fade.register__modal(tabindex='-1' aria-labelledby='logInMailLabel' aria-hidden='true')
+  .modal-dialog.register__modal-dialog
+    .modal-content.register__modal-content 
+      .modal-header.register__modal-header
+        button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+      .modal-body.register__modal-body 
+        .form
+          h3.form__title Войдите или зарегистируйтесь
+          .form__field 
+            label(for="logmail") e-mail
+            input(type="mail" id="logmail" placeholder='kulako_irina@mail.com')
+          
+          .form__btn-group
+            button.form__btn-primary(data-bs-target='#logPassword' data-bs-toggle='modal')  Продолжить
+            button.form__btn-secondary(data-bs-target='#logTel' data-bs-toggle='modal')  Войти по номеру телефона
+
+#logTel.modal.fade.register__modal(tabindex='-1' aria-labelledby='logTelLabel' aria-hidden='true')
+  .modal-dialog.register__modal-dialog
+    .modal-content.register__modal-content 
+      .modal-header.register__modal-header
+        button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+      .modal-body.register__modal-body 
+        .form
+          h3.form__title Войдите или зарегистируйтесь
+          .form__field 
+            label(for="logtel") Номер телефона
+            input(type="text" id="logtel" placeholder='+38 067 123-23-23')
+          
+          .form__btn-group
+            button.form__btn-primary(data-bs-target='#logPassword' data-bs-toggle='modal')  Продолжить
+            button.form__btn-secondary(data-bs-target='#logInMail' data-bs-toggle='modal')  Войти с помощию email
+
+#logPassword.modal.fade.register__modal(tabindex='-1' aria-labelledby='logPasswordLabel' aria-hidden='true')
+  .modal-dialog.register__modal-dialog
+    .modal-content.register__modal-content 
+      .modal-header.register__modal-header
+        button.modal-close-btn(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")    
+      .modal-body.register__modal-body 
+        form.form
+          h3.form__title Введите пароль
+          .form__field 
+            label(for="logpass") Ввод пароля
+            input(type="password" id="logpass" placeholder='Пароль')
+          
+          .form__btn-group
+            a.form__btn-primary(href="profile-logged")  Войти
