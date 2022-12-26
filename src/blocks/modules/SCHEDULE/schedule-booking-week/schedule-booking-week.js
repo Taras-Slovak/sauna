@@ -1,6 +1,56 @@
 /* eslint-disable no-unused-vars */
 import AirDatepicker from 'air-datepicker';
 import localeRu from 'air-datepicker/locale/ru';
+import { Popover } from 'bootstrap';
+
+function initPopover() {
+  const popoverTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="popover"]'
+  );
+
+  popoverTriggerList.forEach((item) => {
+    item.dataset.bsContent = `
+    <div class="schedule-booking-week__modal">
+      <div class="schedule-booking-week__modal-item">
+        <span>Клиент</span>
+        <p>Петров Иван-2</p>
+      </div>
+      <div class="schedule-booking-week__modal-item">
+        <span>Контактный тел-2</span>
+        <p>+38 067 123-23-23</p>
+      </div>
+      <div class="schedule-booking-week__modal-item">
+        <span>Контактный тел-2</span>
+        <p>+38 067 123-23-23</p>
+      </div>
+      <div class="schedule-booking-week__modal-item">
+        <span>Дата / Время-2</span>
+        <p>31 мая 2021 / 01:00 - 02:00</p>
+      </div>
+      <div class="schedule-booking-week__modal-item">
+        <span>Человек-2</span>
+        <p>10</p>
+      </div>
+      <div class="schedule-booking-week__modal-bottom">
+        <a class="schedule-booking-week__modal-link" href="#">Бронь </a>
+        <a class="schedule-booking-week__modal-edit" href="#"> 
+          <img src="img/other/button.svg" alt="">
+        </a>
+      </div>
+    </div>
+    `;
+  });
+
+  const popoverList = [...popoverTriggerList].map(
+    (popoverTriggerEl) =>
+      new Popover(popoverTriggerEl, {
+        html: true,
+      })
+  );
+
+  // console.log(popoverList.dataset.bs.content);
+}
+initPopover();
 
 function dataPicker() {
   const monthText = document.querySelector('.schedule-booking-week__nav-month');

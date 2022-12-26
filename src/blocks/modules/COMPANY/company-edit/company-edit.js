@@ -5,11 +5,13 @@ import { Popover } from 'bootstrap';
 import Sortable from 'sortablejs';
 
 function initPopover() {
-  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+  const popoverTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="popover"]'
+  );
   const popoverList = [...popoverTriggerList].map(
     (popoverTriggerEl) =>
       new Popover(popoverTriggerEl, {
-        html: true
+        html: true,
       })
   );
 }
@@ -45,7 +47,8 @@ function addOrRemove() {
       let btn = element.firstElementChild.nextElementSibling;
 
       btn.addEventListener('click', () => {
-        if (btn.classList.contains('company-edit__telephone-delete')) element.remove();
+        if (btn.classList.contains('company-edit__telephone-delete'))
+          element.remove();
       });
     });
   });
@@ -59,10 +62,12 @@ function removeAddTime() {
     const getAllDelete = document.querySelectorAll('.company-edit__date');
     getText();
     getAllDelete.forEach((item) => {
-      let getDeleteBtn = item.firstElementChild.nextElementSibling.nextElementSibling;
+      let getDeleteBtn =
+        item.firstElementChild.nextElementSibling.nextElementSibling;
 
       getDeleteBtn.addEventListener('click', () => {
-        if (getDeleteBtn.classList.contains('company-edit__time-delete')) item.remove();
+        if (getDeleteBtn.classList.contains('company-edit__time-delete'))
+          item.remove();
         getText();
       });
     });
@@ -357,8 +362,11 @@ function getText() {
 
   getAllText.forEach((element) => {
     element.addEventListener('click', () => {
-      element.parentElement.parentElement.firstElementChild.innerText = element.innerText;
-      console.log(element.parentElement.parentElement.firstElementChild.innerText);
+      element.parentElement.parentElement.firstElementChild.innerText =
+        element.innerText;
+      console.log(
+        element.parentElement.parentElement.firstElementChild.innerText
+      );
     });
   });
 }

@@ -46,9 +46,39 @@ getMainSideBar.addEventListener("click", function (e) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var air_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! air-datepicker */ "./node_modules/air-datepicker/index.es.js");
 /* harmony import */ var air_datepicker_locale_ru__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! air-datepicker/locale/ru */ "./node_modules/air-datepicker/locale/ru.js");
+/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 /* eslint-disable no-unused-vars */
 
 
+
+
+function initPopover() {
+  var popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+  popoverTriggerList.forEach(function (item) {
+    item.dataset.bsContent = "\n    <div class=\"schedule-booking-week__modal\">\n      <div class=\"schedule-booking-week__modal-item\">\n        <span>\u041A\u043B\u0438\u0435\u043D\u0442</span>\n        <p>\u041F\u0435\u0442\u0440\u043E\u0432 \u0418\u0432\u0430\u043D-2</p>\n      </div>\n      <div class=\"schedule-booking-week__modal-item\">\n        <span>\u041A\u043E\u043D\u0442\u0430\u043A\u0442\u043D\u044B\u0439 \u0442\u0435\u043B-2</span>\n        <p>+38 067 123-23-23</p>\n      </div>\n      <div class=\"schedule-booking-week__modal-item\">\n        <span>\u041A\u043E\u043D\u0442\u0430\u043A\u0442\u043D\u044B\u0439 \u0442\u0435\u043B-2</span>\n        <p>+38 067 123-23-23</p>\n      </div>\n      <div class=\"schedule-booking-week__modal-item\">\n        <span>\u0414\u0430\u0442\u0430 / \u0412\u0440\u0435\u043C\u044F-2</span>\n        <p>31 \u043C\u0430\u044F 2021 / 01:00 - 02:00</p>\n      </div>\n      <div class=\"schedule-booking-week__modal-item\">\n        <span>\u0427\u0435\u043B\u043E\u0432\u0435\u043A-2</span>\n        <p>10</p>\n      </div>\n      <div class=\"schedule-booking-week__modal-bottom\">\n        <a class=\"schedule-booking-week__modal-link\" href=\"#\">\u0411\u0440\u043E\u043D\u044C </a>\n        <a class=\"schedule-booking-week__modal-edit\" href=\"#\"> \n          <img src=\"img/other/button.svg\" alt=\"\">\n        </a>\n      </div>\n    </div>\n    ";
+  });
+
+  var popoverList = _toConsumableArray(popoverTriggerList).map(function (popoverTriggerEl) {
+    return new bootstrap__WEBPACK_IMPORTED_MODULE_2__.Popover(popoverTriggerEl, {
+      html: true
+    });
+  }); // console.log(popoverList.dataset.bs.content);
+
+}
+
+initPopover();
 
 function dataPicker() {
   var monthText = document.querySelector('.schedule-booking-week__nav-month');
